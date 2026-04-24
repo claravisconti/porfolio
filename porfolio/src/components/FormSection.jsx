@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function FormSection() {
+  const form = useRef();
+  const [status, setStatus] = useState(''); // '', 'enviando', 'exito', 'error'
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus('enviando');
+
+    emailjs.sendForm(
+      'service_075qthe', 
+      'template_fstgil7', 
+      form.current, 
+      'vtg61ipfhKbdmTdoX'
+    )
+    .then(() => {
+        setStatus('exito');
+        form.current.reset();
+        setTimeout(() => setStatus(''), 5000);
+    })
+    .catch((error) => {
+        console.error('EmailJS Error:', error);
+        setStatus('error');
+    });
+  };
+
   return (
     <div className="bg-white min-h-screen pt-32 pb-20 px-6 md:px-24">
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -20,17 +45,14 @@ export default function FormSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
-            {/* Localidad 1 */}
             <div className="space-y-4">
               <h3 className="text-xl font-bold uppercase tracking-tighter">Buenos Aires</h3>
               <div className="w-8 h-[1px] bg-gray-300 mb-4"></div>
               <div className="text-sm space-y-1 text-gray-600 tracking-wide font-light">
                 <p>mclaravisconti@gmail.com</p>
-                {/* <p>+54 9 11 2485 5678</p> */}
               </div>
             </div>
 
-            {/* Localidad 2 o Información Extra */}
             <div className="space-y-4">
               <h3 className="text-xl font-bold uppercase tracking-tighter">Remoto</h3>
               <div className="w-8 h-[1px] bg-gray-300 mb-4"></div>
@@ -43,9 +65,22 @@ export default function FormSection() {
 
         {/* COLUMNA DERECHA: Formulario */}
         <div className="bg-white">
-          <h2 className="text-3xl font-bold mb-12 tracking-tight"></h2>
-          
-          <form className="space-y-10">
+          <form ref={form} onSubmit={sendEmail} className="space-y-10">
+            
+            {/* Input Asunto (Title) */}
+            <div className="relative group">
+              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
+                Asunto
+              </label>
+              <input 
+                type="text" 
+                name="title" 
+                required
+                className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
+                placeholder="¿En qué puedo ayudarte?"
+              />
+            </div>
+
             {/* Input Nombre */}
             <div className="relative group">
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
@@ -53,8 +88,9 @@ export default function FormSection() {
               </label>
               <input 
                 type="text" 
+                name="name" 
+                required
                 className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
-                placeholder=""
               />
             </div>
 
@@ -65,6 +101,8 @@ export default function FormSection() {
               </label>
               <input 
                 type="email" 
+                name="email" 
+                required
                 className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
               />
             </div>
@@ -75,22 +113,34 @@ export default function FormSection() {
                 Mensaje
               </label>
               <textarea 
+                name="message" 
                 rows="4"
+                required
                 className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light resize-none"
               ></textarea>
             </div>
 
-            {/* Botón Submit */}
-            <div className="pt-6">
+            {/* Botón Submit y Feedback */}
+            <div className="pt-6 flex flex-col gap-4">
               <button 
                 type="submit"
-                className="relative inline-block px-12 py-4 group overflow-hidden border border-black"
+                disabled={status === 'enviando'}
+                className="relative inline-block px-12 py-4 group overflow-hidden border border-black disabled:border-gray-300"
               >
-                <span className="relative z-10 text-[11px] font-bold uppercase tracking-[0.4em] group-hover:text-white transition-colors duration-500">
-                  Enviar
+                <span className={`relative z-10 text-[11px] font-bold uppercase tracking-[0.4em] transition-colors duration-500 ${status === 'enviando' ? 'text-gray-400' : 'group-hover:text-white'}`}>
+                  {status === 'enviando' ? 'Enviando...' : 'Enviar'}
                 </span>
-                <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                {status !== 'enviando' && (
+                  <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                )}
               </button>
+
+              {status === 'exito' && (
+                <p className="text-[#00adb5] text-sm font-medium tracking-wide">¡Mensaje enviado con éxito!</p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-500 text-sm font-medium tracking-wide">Hubo un error. Intentá de nuevo.</p>
+              )}
             </div>
           </form>
         </div>
