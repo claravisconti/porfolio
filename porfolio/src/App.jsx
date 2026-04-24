@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      {/* El flex-grow hace que el contenido empuje al footer hacia abajo */}
-      <main className="flex-grow max-w-7xl mx-auto px-8 w-full">
+      {/* Eliminamos max-w-7xl, mx-auto y px-8 para que el contenido sea libre */}
+      <main className="flex-grow w-full">
         <AppRoutes />
       </main>
       <Footer />
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App; // <-- Verifica que esto esté ahí
+export default App;

@@ -1,15 +1,71 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: 'Home', href: '#' },
+    { name: 'Services', href: '#' },
+    { name: 'Portfolio', href: '#' },
+    { name: 'Contact', href: '#' },
+  ];
+
   return (
-    <nav className="sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-zinc-100">
-      <div className="flex justify-between items-center p-8 max-w-7xl mx-auto">
-        <div className="text-xl font-bold tracking-tighter">FRANZ_STUDIO</div>
-        <div className="flex gap-8 font-medium text-sm uppercase tracking-widest">
-          <Link to="/" className="hover:text-orange-500 transition-colors">Inicio</Link>
-          <Link to="/portfolio" className="hover:text-orange-500 transition-colors">Portfolio</Link>
-          <Link to="/about" className="hover:text-orange-500 transition-colors">Sobre Mí</Link>
-          <Link to="/contact" className="hover:text-orange-500 transition-colors">Contacto</Link>
+    <nav className="fixed w-full z-50 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-6 md:px-24">
+        <div className="flex justify-between items-center h-24">
+          
+          {/* LOGO */}
+          <div className="text-white font-black text-2xl tracking-tighter cursor-pointer">
+            Clara Visconti<span className="text-white">.</span>
+          </div>
+
+          {/* DESKTOP MENU - Sin fondos, solo texto */}
+          <div className="hidden md:flex space-x-12">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-white/80 hover:text-white text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:tracking-[0.35em]"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+
+          {/* MOBILE TOGGLE BUTTON */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white focus:outline-none p-2 z-50 relative"
+            >
+              <div className="relative w-6 h-5">
+                <span className={`absolute block w-full h-0.5 bg-white transition-all duration-300 ${isOpen ? 'rotate-45 top-2' : 'top-0'}`}></span>
+                <span className={`absolute block w-full h-0.5 bg-white transition-all duration-300 top-2 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                <span className={`absolute block w-full h-0.5 bg-white transition-all duration-300 ${isOpen ? '-rotate-45 top-2' : 'top-4'}`}></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* MOBILE MENU - Solo aparece al clickear, con fondo negro para contraste */}
+      <div 
+        className={`md:hidden fixed inset-0 bg-black transition-all duration-500 ease-in-out z-40 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center h-full space-y-10">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="text-white text-2xl font-bold uppercase tracking-[0.4em] hover:text-gray-400 transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
