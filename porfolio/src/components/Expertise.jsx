@@ -12,7 +12,7 @@ export default function Expertise() {
     /* pt-10: Reducimos el margen superior significativamente.
        pb-32: Mantenemos el margen inferior para separar de la siguiente sección.
     */
-    <section className="hidden md:block bg-white pt-10 pb-32 px-24">
+    <section className="hidden md:block bg-white py-16 px-24">
       <div className="max-w-[90rem] mx-auto grid grid-cols-2 gap-32 items-start">
         
         {/* Columna Izquierda */}

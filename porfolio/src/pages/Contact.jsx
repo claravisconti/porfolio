@@ -1,8 +1,18 @@
+import Banner from '../components/Banner';
+import FormSection from "../components/FormSection";
+
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80vh]">
-      <h1 className="text-5xl font-black tracking-tighter text-zinc-900">CONTACTO</h1>
-      <p className="text-zinc-500 mt-4">Bienvenido al espacio creativo.</p>
+    <div>
+      <Banner 
+        title="Contacto" 
+        image="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600" 
+      />
+      
+      {/* Aquí debajo va el resto del código de contacto que ya armamos */}
+      <div className="max-w-[90rem] mx-auto grid ...">
+         <FormSection/>
+      </div>
     </div>
   );
 }

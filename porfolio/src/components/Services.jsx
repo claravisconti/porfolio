@@ -25,7 +25,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-12">
         {/* Cuadrícula: 1 columna en móvil, 4 en escritorio */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
