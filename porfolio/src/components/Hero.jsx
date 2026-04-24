@@ -1,24 +1,27 @@
 import { useState, useEffect } from 'react';
+import Hero1 from '../assets/images/Hero1.jpg';
+import Hero2 from '../assets/images/Hero2.jpg';
+// import hero3 from '../assets/hero-art.jpg';
 
 const slides = [
   {
     id: '01',
     title: "DE LA IDEA\nAL IMPACTO.",
     subtitle: "Diseño y dirección de arte desde Argentina. Transformo ideas en identidades visuales con propósito.",
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070" 
+    image: Hero1
   },
   {
     id: '02',
     title: "SIMPLICIDAD\nCONSCIENTE.",
     subtitle: "Busco la esencia de cada marca para crear mensajes visuales claros, potentes y atemporales.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069"
-  },
-  {
-    id: '03',
-    title: "ESTRATEGIA\nVISUAL.",
-    subtitle: "Construyo identidades digitales que no solo se ven bien, sino que perduran y evolucionan.",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2069"
+    image: Hero2
   }
+  // {
+  //   id: '03',
+  //   title: "ESTRATEGIA\nVISUAL.",
+  //   subtitle: "Construyo identidades digitales que no solo se ven bien, sino que perduran y evolucionan.",
+  //   image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2069"
+  // }
 ];
 
 export default function Hero() {

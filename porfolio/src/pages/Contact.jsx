@@ -1,12 +1,13 @@
 import Banner from '../components/Banner';
 import FormSection from "../components/FormSection";
+import Hero from '../assets/images/Hero1.jpg'
 
 export default function Contact() {
   return (
     <div>
       <Banner 
         title="Contacto" 
-        image="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600" 
+        image={Hero} 
       />
       
       {/* Aquí debajo va el resto del código de contacto que ya armamos */}
