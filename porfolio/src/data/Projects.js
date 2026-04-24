@@ -3,14 +3,14 @@ export const projects = [
   {
     id: 1,
     title: "Minimalist E-Commerce",
-    category: "Web",
+    category: "Redes",
     image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800",
     slug: "minimal-ecom"
   },
   {
     id: 2,
     title: "Architect Studio Portfolio",
-    category: "Web",
+    category: "Redes",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
     slug: "arch-studio"
   },

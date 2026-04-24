@@ -6,6 +6,7 @@ export default function PortfolioMenu() {
     { name: 'Web', href: '/portfolio/web' },
     { name: 'Marcas', href: '/portfolio/marcas' },
     { name: 'Packaging', href: '/portfolio/packaging' },
+    { name: 'Campañas', href: '/portfolio/redes' },
   ];
 
   return (
