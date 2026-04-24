@@ -8,10 +8,10 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-/* PALETA DE COLORES PROFESIONAL */
-  --color-main: #ffffff;       /* Fondo limpio */
-  --color-content: #121212;    /* Texto principal (casi negro) */
-  --color-accent: #f97316;     /* Tu color de marca (Naranja, cámbialo si quieres) */
-  --color-muted: #71717a;      /* Textos secundarios o detalles sutiles */
-  --color-surface: #f4f4f5;    /* Gris muy suave para bloques o tarjetas */
-}
+  --color-main: #ffffff;           /* Fondo blanco puro */
+  --color-content: #121212;        /* El negro potente que te gustaba para los H1 */
+  --color-accent: #6db4b6;         /* El turquesa del colibrí para detalles y botones */
+  --color-secondary: #b1c762;      /* El verde manzana para toques frescos */
+  --color-muted: #71717a;          /* Gris neutro para párrafos largos */
+  --color-surface: #f8fafc;        /* Gris casi blanco para fondos de sección */
+} 

@@ -3,22 +3,26 @@ import { ArrowRight } from 'lucide-react';
 // src/pages/Home.jsx
 export default function Home() {
   return (
-    // Añadimos items-center y text-center
-    <div className="bg-main min-h-[80vh] flex flex-col justify-center items-center text-center">
-      <h1 className="text-content text-7xl font-black tracking-tighter leading-none">
-        DESIGNING <br />
-        <span className="text-accent">DIGITAL</span> EXPERIENCES
+    <div className="bg-main flex flex-col items-center py-20">
+      {/* Título con el negro potente que elegiste */}
+      <h1 className="text-content text-7xl font-black tracking-tighter">
+        DISEÑO CON <span className="text-accent">ALMA</span>
       </h1>
-      
-      <p className="mt-6 text-muted text-xl max-w-lg font-light italic">
-        Creative studio based in Argentina, specialized in branding and visual identity.
+
+      {/* Subtítulo usando el verde del logo para separar */}
+      <p className="text-secondary uppercase tracking-[0.3em] text-xs font-bold mt-4">
+        Clara Visconti • Visual Studio
       </p>
 
-      <div className="mt-10 flex gap-4 justify-center"> {/* justify-center para los botones */}
-        <button className="bg-accent text-main px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-content transition-all">
-          View Projects
-        </button>
-      </div>
+      {/* Párrafo en el gris muted para que sea fácil de leer */}
+      <p className="mt-8 text-muted text-lg max-w-xl text-center leading-relaxed">
+        Especializada en branding y sistemas visuales. Ayudo a marcas a encontrar su identidad a través de un diseño estratégico y consciente.
+      </p>
+
+      {/* Botón con el turquesa (accent) */}
+      <button className="mt-12 px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-content transition-all duration-300">
+        Ver Proyectos
+      </button>
     </div>
   );
 }
