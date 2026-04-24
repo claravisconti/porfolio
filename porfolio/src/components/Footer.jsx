@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* Columna 1: Branding y Social */}
         <div className="flex flex-col items-center text-center space-y-8">
-          <h3 className="text-3xl font-bold tracking-tighter">Ødger</h3>
+          <h3 className="text-3xl font-bold tracking-tighter">Clara Visconti</h3>
           <div className="space-y-4">
             <p className="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-bold">Follow Us</p>
             <div className="flex gap-8 text-xl justify-center">
@@ -24,10 +24,10 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center space-y-8">
           <h4 className="text-lg font-bold tracking-tight uppercase">Get In Touch</h4>
           <a 
-            href="mailto:odger@qodeinteractive.com" 
+            href="mailto:mclaravisconti@gmail.com" 
             className="text-gray-400 hover:text-white transition-colors font-light italic text-lg"
           >
-            odger@qodeinteractive.com
+            mclaravisconti@gmail.com
           </a>
         </div>
 
@@ -44,7 +44,7 @@ export default function Footer() {
       {/* Copyright Inferior */}
       <div className="max-w-[90rem] mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col items-center gap-6">
         <p className="text-[10px] text-gray-600 uppercase tracking-[0.4em]">
-          © 2026 ØDGER AGENCY. ALL RIGHTS RESERVED.
+          © 2026 Clara Visconti AGENCY. ALL RIGHTS RESERVED.
         </p>
         <div className="flex gap-8 text-[9px] text-gray-600 uppercase tracking-[0.2em] font-bold">
           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
