@@ -5,9 +5,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '#' },
-    { name: 'Services', href: '#' },
-    { name: 'Portfolio', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Portfolio', href: 'portfolio' },
+    { name: 'Services', href: 'about' },
+    { name: 'Contact', href: 'contact' },
   ];
 
   return (
@@ -18,7 +18,7 @@ export default function Navbar() {
           
           {/* LOGO */}
           <div className="text-white font-black text-2xl tracking-tighter cursor-pointer">
-            ODGER<span className="text-white">.</span>
+            Clara Visconti<span className="text-white">.</span>
           </div>
 
           {/* DESKTOP MENU */}
