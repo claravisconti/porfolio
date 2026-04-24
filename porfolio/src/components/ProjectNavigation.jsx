@@ -22,7 +22,7 @@ export default function ProjectNavigation({ currentId }) {
                 <img src={prevProject.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="" />
               </div>
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 group-hover:text-black transition-colors flex items-center gap-2">
-                <span className="text-lg">←</span> Prev
+                <span className="text-lg">←</span> Anterior
               </span>
             </Link>
           ) : <div />}
@@ -45,7 +45,7 @@ export default function ProjectNavigation({ currentId }) {
           {nextProject ? (
             <Link to={`/portfolio/project/${nextProject.slug}`} className="group flex items-center gap-4 text-right">
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 group-hover:text-black transition-colors flex items-center gap-2">
-                Next <span className="text-lg">→</span>
+                Siguiente <span className="text-lg">→</span>
               </span>
               <div className="w-16 h-16 hidden md:block overflow-hidden bg-gray-100">
                 <img src={nextProject.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="" />

@@ -40,7 +40,7 @@ export default function PortfolioCategory({ category }) {
       {allFilteredProjects.length > visibleCount && (
         <div className="flex justify-center items-center py-20">
           <button onClick={() => setVisibleCount(prev => prev + 6)} className="group flex items-center gap-6 cursor-pointer">
-            <span className="text-[11px] font-bold uppercase tracking-[0.4em] group-hover:text-[#00adb5] transition-colors">Load More</span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.4em] group-hover:text-[#00adb5] transition-colors">Cargar más</span>
             <div className="w-12 h-12 rounded-full border border-black flex items-center justify-center group-hover:border-[#00adb5] transition-colors">
               <div className="w-1.5 h-1.5 bg-black rounded-full group-hover:bg-[#00adb5]"></div>
             </div>
