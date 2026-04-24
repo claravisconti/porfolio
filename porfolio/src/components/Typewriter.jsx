@@ -50,11 +50,11 @@ export default function TypeWriter() {
   };
 
   return (
-    /* hidden: oculto en móvil 📱
-       md:flex: visible desde tablets/desktop 🖥️
-       py-0: eliminamos padding vertical para que no ocupe espacio si está arriba/abajo de otra sección
+    /* Ajustamos el padding:
+       pt-10: margen superior sutil.
+       pb-32: margen inferior generoso para separar de la galería.
     */
-    <section className="hidden md:flex bg-white py-10 px-24 justify-start w-full overflow-hidden">
+    <section className="hidden md:flex bg-white pt-10 pb-32 px-24 justify-start w-full overflow-hidden">
       {renderText()}
     </section>
   );

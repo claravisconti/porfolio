@@ -11,16 +11,17 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full z-50 transition-all duration-300">
+    /* Cambiamos 'fixed' por 'absolute' para que no siga al scroll */
+    <nav className="absolute w-full z-50 bg-transparent transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 md:px-24">
         <div className="flex justify-between items-center h-24">
           
           {/* LOGO */}
           <div className="text-white font-black text-2xl tracking-tighter cursor-pointer">
-            Clara Visconti<span className="text-white">.</span>
+            ODGER<span className="text-white">.</span>
           </div>
 
-          {/* DESKTOP MENU - Sin fondos, solo texto */}
+          {/* DESKTOP MENU */}
           <div className="hidden md:flex space-x-12">
             {navLinks.map((link) => (
               <a
@@ -49,7 +50,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE MENU - Solo aparece al clickear, con fondo negro para contraste */}
+      {/* MOBILE MENU OVERLAY */}
       <div 
         className={`md:hidden fixed inset-0 bg-black transition-all duration-500 ease-in-out z-40 ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -61,7 +62,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-white text-2xl font-bold uppercase tracking-[0.4em] hover:text-gray-400 transition-colors"
+              className="text-white text-2xl font-bold uppercase tracking-[0.4em] hover:text-[#00adb5] transition-colors"
             >
               {link.name}
             </a>
