@@ -3,24 +3,24 @@ import { useState, useEffect } from 'react';
 const testimonials = [
   {
     id: "01",
-    name: "Jodi Blackwell",
-    role: "Designer",
-    text: "Et molestie ac feugiat sed lectus. Non odio euismod lacinia at quis risus sed. Sodales neque sodales ut etiam. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat.",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800"
+    name: "Martina Zuber",
+    role: "Fundadora de Alura Joyas",
+    text: "Trabajar con Clara fue un antes y un después para mi marca. Logró captar la esencia minimalista que buscaba desde el primer día. Su ojo para el detalle en el packaging es realmente único.",
+    img: "https://images.unsplash.com/photo-1590035208773-6f6d33379679?q=80&w=800"
   },
   {
     id: "02",
-    name: "Alex Rivera",
-    role: "Creative Director",
-    text: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800"
+    name: "Facundo Rossi",
+    role: "Director de Marketing en TechBA",
+    text: "Buscábamos una identidad web que fuera moderna pero funcional, y el resultado superó nuestras expectativas. La comunicación fue fluida y entendió perfectamente los tiempos de nuestra empresa.",
+    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800"
   },
   {
     id: "03",
-    name: "Sarah Jenkins",
-    role: "Marketing Head",
-    text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800"
+    name: "Lucía Méndez",
+    role: "Emprendedora Gastronómica",
+    text: "Clara tiene una capacidad increíble para traducir conceptos abstractos en piezas visuales potentes. Las campañas que diseñó para el lanzamiento de mi local fueron clave para el éxito que tuvimos.",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800"
   }
 ];
 

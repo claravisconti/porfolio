@@ -1,32 +1,32 @@
 import React from 'react';
 
 const skills = [
-  { name: "Web Design", percentage: 46 },
-  { name: "Marketing", percentage: 27 },
-  { name: "Development", percentage: 60 },
-  { name: "Ui & UX", percentage: 39 },
+  { name: "Diseño Web", percentage: 90 },
+  { name: "Branding", percentage: 85 },
+  { name: "Packaging", percentage: 80 },
+  { name: "Campañas", percentage: 75 },
 ];
 
 export default function Expertise() {
   return (
-    /* pt-10: Reducimos el margen superior significativamente.
-       pb-32: Mantenemos el margen inferior para separar de la siguiente sección.
-    */
     <section className="hidden md:block bg-white py-16 px-24">
       <div className="max-w-[90rem] mx-auto grid grid-cols-2 gap-32 items-start">
         
         {/* Columna Izquierda */}
         <div className="space-y-10">
-          <h2 className="text-[3.5rem] font-bold text-black leading-[1.1] tracking-tighter">
-            Our agency’s <br /> fields of expertise
-          </h2>
+          <div className="space-y-4">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-[#00adb5] font-bold">Especialidades</p>
+            <h2 className="text-[3.5rem] font-bold text-black leading-[1.1] tracking-tighter">
+              Mis áreas de <br /> experiencia
+            </h2>
+          </div>
           
           <div className="flex gap-8 items-start">
             <div className="w-16 h-[1px] bg-black mt-4 flex-shrink-0"></div>
-            <p className="text-gray-500 text-lg leading-relaxed font-light max-w-md">
-              Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. 
-              Quisque id diam vel quam elementum. Sit amet cursus sit amet dictum 
-              sit amet justo donec ete.
+            <p className="text-gray-500 text-lg leading-relaxed font-light max-w-md italic">
+              Acompaño cada proyecto con una visión estratégica y creativa, 
+              buscando siempre el equilibrio entre la estética minimalista 
+              y la funcionalidad necesaria para cada marca.
             </p>
           </div>
         </div>
@@ -45,11 +45,13 @@ export default function Expertise() {
               </div>
               
               <div className="relative w-full h-[1px] bg-gray-200">
+                {/* Barra de progreso */}
                 <div 
                   className="absolute top-0 left-0 h-full bg-black transition-all duration-[2000ms] ease-in-out"
                   style={{ width: `${skill.percentage}%` }}
                 ></div>
                 
+                {/* Indicador visual (puntero) */}
                 <div 
                   className="absolute top-[-3px] h-[7px] w-[2px] bg-black transition-all duration-[2000ms] ease-in-out"
                   style={{ left: `${skill.percentage}%` }}

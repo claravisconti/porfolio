@@ -17,7 +17,7 @@ const ProjectNavigation = ({ currentId }) => {
               <div className="w-16 h-16 hidden md:block overflow-hidden bg-gray-100 border border-gray-100">
                 <img src={prevProject.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="" />
               </div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 group-hover:text-black transition-colors">← Prev</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 group-hover:text-black transition-colors">← Anterior</span>
             </Link>
           )}
         </div>
@@ -31,7 +31,7 @@ const ProjectNavigation = ({ currentId }) => {
         <div className="flex-1 flex justify-end">
           {nextProject && (
             <Link to={`/portfolio/project/${nextProject.slug}`} className="group flex items-center gap-4 text-right">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 group-hover:text-black transition-colors">Next →</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 group-hover:text-black transition-colors">Siguiente →</span>
               <div className="w-16 h-16 hidden md:block overflow-hidden bg-gray-100 border border-gray-100">
                 <img src={nextProject.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="" />
               </div>

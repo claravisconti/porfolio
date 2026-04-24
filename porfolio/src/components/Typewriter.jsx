@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 export default function TypeWriter() {
   const [displayText, setDisplayText] = useState("");
   
-  const line1 = "Our Creative Agency Is Always";
-  const line2Part1 = "Ready for ";
-  const line2Part2 = "New Projects.|"; 
+const line1 = "Mi proceso creativo siempre está";
+const line2Part1 = "listo para ";
+const line2Part2 = "nuevos desafíos.|";
   
   const fullContent = `${line1}\n${line2Part1}${line2Part2}`;
 

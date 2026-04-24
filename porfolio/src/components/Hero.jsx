@@ -3,20 +3,20 @@ import { useState, useEffect } from 'react';
 const slides = [
   {
     id: '01',
-    title: "FROM CONCEPT\nTO FINAL RESULT.",
-    subtitle: "Creative studio based in Argentina, specialized in branding.",
+    title: "DE LA IDEA\nAL IMPACTO.",
+    subtitle: "Diseño y dirección de arte desde Argentina. Transformo ideas en identidades visuales con propósito.",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070" 
   },
   {
     id: '02',
-    title: "MINIMALISM\nAS A STANDARD.",
-    subtitle: "We believe that less is more when it comes to visual impact.",
+    title: "SIMPLICIDAD\nCONSCIENTE.",
+    subtitle: "Busco la esencia de cada marca para crear mensajes visuales claros, potentes y atemporales.",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069"
   },
   {
     id: '03',
-    title: "DESIGNING\nFOR THE FUTURE.",
-    subtitle: "Building digital identities that stand the test of time.",
+    title: "ESTRATEGIA\nVISUAL.",
+    subtitle: "Construyo identidades digitales que no solo se ven bien, sino que perduran y evolucionan.",
     image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2069"
   }
 ];
@@ -64,10 +64,10 @@ export default function Hero() {
           {/* Botones: Ajuste de color en el hover */}
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="w-full sm:w-auto px-10 py-4 md:px-12 md:py-5 bg-white text-black text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all"> {/* 👈 CAMBIADO AQUÍ */}
-              View More
+              Ver más
             </button>
             <button className="w-full sm:w-auto px-10 py-4 md:px-12 md:py-5 border border-white/40 text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
-              Read More
+              Leer más
             </button>
           </div>
         </div>

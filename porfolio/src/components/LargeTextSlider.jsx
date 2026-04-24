@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const TextSlider = () => {
-  const words = ["Web", "UX", "UI", "Branding", "Marketing", ""];
+  const words = ["Web", "UX", "UI", "Branding", "Campañas"];
 
   return (
     /* hidden en mobile, block en desktop para contener el Swiper */

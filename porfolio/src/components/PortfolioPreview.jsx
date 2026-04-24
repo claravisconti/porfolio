@@ -50,7 +50,7 @@ export default function PortfolioPreview() {
   <button className="flex items-center gap-4 md:gap-6 group px-6">
     {/* Texto: Más pequeño en móvil (text-[9px]) y tracking ajustado */}
     <span className="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-[#111] group-hover:text-[#00adb5] transition-colors whitespace-nowrap">
-      View All Projects
+      Ver todos 
     </span>
     
     {/* Círculo: Tamaño adaptativo (w-10 en móvil, w-12 en desktop) */}

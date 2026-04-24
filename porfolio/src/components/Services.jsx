@@ -1,25 +1,25 @@
-import { Type, Lightbulb, Image, PenTool } from 'lucide-react';
+import { Monitor, PenTool, Box, Megaphone } from 'lucide-react';
 
 const services = [
   {
-    title: "Web Design",
-    desc: "Tincidunt lobortis feugiat vivamus sed at.",
-    icon: <Type size={48} strokeWidth={1} />
+    title: "Diseño Web",
+    desc: "Diseño interfaces intuitivas y estéticas que priorizan la experiencia del usuario sin perder el impacto visual.",
+    icon: <Monitor size={48} strokeWidth={1} /> // Un monitor para lo digital
   },
   {
-    title: "Art Direction",
-    desc: "Tincidunt lobortis feugiat vivamus sed at.",
-    icon: <Lightbulb size={48} strokeWidth={1} />
+    title: "Branding",
+    desc: "Creo identidades visuales desde cero, buscando una narrativa coherente y atemporal para cada proyecto.",
+    icon: <PenTool size={48} strokeWidth={1} /> // La pluma para la creación de logos/trazos
   },
   {
-    title: "Packaging Design",
-    desc: "Tincidunt lobortis feugiat vivamus sed at.",
-    icon: <Image size={48} strokeWidth={1} />
+    title: "Packaging",
+    desc: "Desarrollo envases que cuentan historias, enfocándome en la funcionalidad y la materialidad del diseño.",
+    icon: <Box size={48} strokeWidth={1} /> // Una caja para representar el producto físico
   },
   {
-    title: "Motion Design",
-    desc: "Tincidunt lobortis feugiat vivamus sed at.",
-    icon: <PenTool size={48} strokeWidth={1} />
+    title: "Campañas",
+    desc: "Planifico y diseño el universo visual de campañas integrales, optimizando la comunicación en cada pieza.",
+    icon: <Megaphone size={48} strokeWidth={1} /> // Un megáfono para la comunicación y difusión
   }
 ];
 
