@@ -3,6 +3,7 @@ import Services from '../components/Services';
 import Typewriter from '../components/Typewriter';
 import PortfolioPreview from '../components/PortfolioPreview';
 import Expertise from '../components/Expertise';
+import Testimonials from '../components/Testimonials';
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Typewriter />
       <PortfolioPreview/>
       <Expertise/>
+      <Testimonials/>
     </>
   );
 }

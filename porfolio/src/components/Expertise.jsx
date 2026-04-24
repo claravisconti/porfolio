@@ -9,19 +9,19 @@ const skills = [
 
 export default function Expertise() {
   return (
-    /* hidden: no se muestra en móviles
-       md:block: aparece a partir de tablets/desktop */
-    <section className="hidden md:block bg-white py-32 px-24">
+    /* pt-10: Reducimos el margen superior significativamente.
+       pb-32: Mantenemos el margen inferior para separar de la siguiente sección.
+    */
+    <section className="hidden md:block bg-white pt-10 pb-32 px-24">
       <div className="max-w-[90rem] mx-auto grid grid-cols-2 gap-32 items-start">
         
-        {/* Columna Izquierda: Título y Párrafo */}
+        {/* Columna Izquierda */}
         <div className="space-y-10">
           <h2 className="text-[3.5rem] font-bold text-black leading-[1.1] tracking-tighter">
             Our agency’s <br /> fields of expertise
           </h2>
           
           <div className="flex gap-8 items-start">
-            {/* Línea horizontal estética */}
             <div className="w-16 h-[1px] bg-black mt-4 flex-shrink-0"></div>
             <p className="text-gray-500 text-lg leading-relaxed font-light max-w-md">
               Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. 
@@ -31,7 +31,7 @@ export default function Expertise() {
           </div>
         </div>
 
-        {/* Columna Derecha: Progress Bars */}
+        {/* Columna Derecha */}
         <div className="space-y-14 w-full pt-4">
           {skills.map((skill, index) => (
             <div key={index} className="group">
@@ -44,15 +44,12 @@ export default function Expertise() {
                 </span>
               </div>
               
-              {/* Carril de la barra */}
               <div className="relative w-full h-[1px] bg-gray-200">
-                {/* Progreso real */}
                 <div 
                   className="absolute top-0 left-0 h-full bg-black transition-all duration-[2000ms] ease-in-out"
                   style={{ width: `${skill.percentage}%` }}
                 ></div>
                 
-                {/* El "indicador" vertical al final de la barra */}
                 <div 
                   className="absolute top-[-3px] h-[7px] w-[2px] bg-black transition-all duration-[2000ms] ease-in-out"
                   style={{ left: `${skill.percentage}%` }}
