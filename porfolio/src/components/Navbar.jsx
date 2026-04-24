@@ -79,7 +79,7 @@ export default function Navbar() {
             </div>
 
             <Link to="/about" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:tracking-[0.35em] ${isHomePage ? "text-white/80 hover:text-white" : "text-black/60 hover:text-black"}`}>
-              Services
+              Sobre mí
             </Link>
             <Link to="/contact" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:tracking-[0.35em] ${isHomePage ? "text-white/80 hover:text-white" : "text-black/60 hover:text-black"}`}>
               Contact
