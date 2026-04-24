@@ -3,7 +3,7 @@ import { FaBehance, FaInstagram, FaFacebookF } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111] text-white pt-24 pb-12 px-6 md:px-24 relative overflow-hidden">
+    <footer className="bg-accent text-white pt-24 pb-12 px-6 md:px-24 relative overflow-hidden">
       
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 relative z-10">
         
@@ -25,7 +25,7 @@ export default function Footer() {
           <h4 className="text-lg font-bold tracking-tight uppercase">Get In Touch</h4>
           <a 
             href="mailto:mclaravisconti@gmail.com" 
-            className="text-gray-400 hover:text-white transition-colors font-light italic text-lg"
+            className="text-white-400 hover:text-white transition-colors font-light italic text-lg"
           >
             mclaravisconti@gmail.com
           </a>
@@ -34,7 +34,7 @@ export default function Footer() {
         {/* Columna 3: Contact Us */}
         <div className="flex flex-col items-center text-center space-y-8">
           <h4 className="text-lg font-bold tracking-tight uppercase">Contact Us</h4>
-          <p className="text-gray-400 font-light text-lg">
+          <p className="text-white-400 font-light text-lg">
             +44 (0) 2920 090 505
           </p>
         </div>
