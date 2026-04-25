@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBehance, FaLinkedin, FaFacebookF } from 'react-icons/fa';
 import { IoMailOutline } from 'react-icons/io5'; // Cambié a este para que haga mejor juego visual con los otros
+import Iso from '../assets/images/Iso_blanco.svg';
 
 export default function Footer() {
   return (
@@ -9,13 +10,27 @@ export default function Footer() {
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 relative z-10">
 
         {/* Columna 1: Branding / Logo */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-          <h3 className="text-4xl font-black tracking-tighter uppercase">
-            Clara Visconti<span className="text-[#00adb5]">.</span>
-          </h3>
-          <p className="text-gray-700 text-sm font-light max-w-[250px] leading-relaxed italic">
+        {/* Columna 1: Branding / Logo Centrado */}
+        <div className="flex flex-col items-center text-center space-y-6">
+
+          <Link to="/" className="flex flex-col items-center gap-4 group outline-none">
+            {/* Isotipo SVG - Ajustado el tamaño a w-20/h-20 porque w-30 es muy grande (120px) */}
+            <img
+              src={Iso}
+              alt="Clara Visconti Logo"
+              className="w-20 h-20 md:w-24 md:h-24 transition-transform duration-500 group-hover:rotate-12"
+            />
+
+            {/* Nombre en Chalet - Descomentado y centrado */}
+            <h3 className="font-logo text-3xl tracking-tight leading-none text-white">
+              Clara Visconti<span className="text-accent">.</span>
+            </h3>
+          </Link>
+
+          {/* Texto descriptivo centrado */}
+          {/* <p className="text-gray-600 text-sm font-light max-w-[280px] leading-relaxed italic">
             Diseño con propósito, estética minimalista y visión estratégica.
-          </p>
+          </p> */}
         </div>
 
         {/* Columna 2: Navegación */}

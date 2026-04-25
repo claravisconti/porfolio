@@ -1,23 +1,40 @@
-/* 1. Primero las fuentes externas */
+/* 1. Fuentes externas */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* 2. Luego Tailwind */
+/* 2. Tailwind CSS v4 */
 @import "tailwindcss";
 
-/* 3. Finalmente tu configuración de tema y estilos personalizados */
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+/* 3. Configuración de fuente local (fuera del theme) */
+@font-face {
+  font-family: 'NewYorkChalet';
+  src: url('./assets/fonts/NewYorkChalet.woff2') format('woff2'); 
+  font-weight: normal;
+  font-display: swap; /* Ayuda a que el texto no desaparezca mientras carga */
+}
 
-  --color-main: #ffffff;           /* Fondo blanco puro */
-  --color-content: #121212;        /* El negro potente que te gustaba para los H1 */
-  --color-accent: #6db4b6;         /* El turquesa del colibrí para detalles y botones */
-  --color-secondary: #b1c762;      /* El verde manzana para toques frescos */
-  --color-muted: #71717a;          /* Gris neutro para párrafos largos */
-  --color-surface: #f8fafc;        /* Gris casi blanco para fondos de sección */
-} 
+/* 4. Definición del Tema */
+@theme {
+  /* Renombramos para seguir la convención de Tailwind v4 */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-logo: "NewYorkChalet", serif; /* Ahora podés usar la clase font-logo */
+
+  --color-main: #ffffff;
+  --color-content: #121212;
+  --color-accent: #6db4b6;
+  --color-secondary: #b1c762;
+  --color-muted: #71717a;
+  --color-surface: #f8fafc;
+}
+
+/* 5. Estilos Base y Utilidades */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    @apply bg-white text-black; /* Aseguramos un inicio limpio */
+  }
+}
 
 @utility bg-hero {
-  /* Asegúrate de que la ruta a tu imagen sea correcta */
   background-image: url('./assets/hero-bg.jpg');
   background-size: cover;
   background-position: center;
