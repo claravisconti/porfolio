@@ -68,18 +68,7 @@ export default function FormSection() {
           <form ref={form} onSubmit={sendEmail} className="space-y-10">
             
             {/* Input Asunto (Title) */}
-            <div className="relative group">
-              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
-                Asunto
-              </label>
-              <input 
-                type="text" 
-                name="title" 
-                required
-                className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
-                placeholder="¿En qué puedo ayudarte?"
-              />
-            </div>
+           
 
             {/* Input Nombre */}
             <div className="relative group">
@@ -102,6 +91,18 @@ export default function FormSection() {
               <input 
                 type="email" 
                 name="email" 
+                required
+                className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
+              />
+            </div>
+
+             <div className="relative group">
+              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
+                Asunto
+              </label>
+              <input 
+                type="text" 
+                name="title" 
                 required
                 className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
               />

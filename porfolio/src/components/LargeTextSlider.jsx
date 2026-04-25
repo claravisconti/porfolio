@@ -10,7 +10,7 @@ const TextSlider = () => {
 
   return (
     /* hidden en mobile, block en desktop para contener el Swiper */
-    <div className="hidden md:block w-full py-20 bg-white overflow-hidden">
+    <div className="d:flex w-full py-20 bg-white overflow-hidden">
       <Swiper
         modules={[Autoplay]}
         loop={true}
