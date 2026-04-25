@@ -56,7 +56,7 @@ export default function Testimonials() {
         {/* LADO DERECHO: Contenido */}
         <div className="md:col-span-7 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 text-center md:text-left relative">
           <div className="space-y-6 max-w-xl flex-grow">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase mb-6">Clientes</h2>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase mb-6">Testimonio</h2>
             
             <div className="flex flex-col md:flex-row gap-4 items-center md:items-start mb-8">
                <div className="hidden md:block w-10 h-[1px] bg-white/60 mt-4 flex-shrink-0"></div>
