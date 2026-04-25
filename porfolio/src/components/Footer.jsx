@@ -1,62 +1,73 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBehance, FaInstagram, FaFacebookF } from 'react-icons/fa';
-import { Mail } from 'lucide-react';
+import { IoMailOutline } from 'react-icons/io5'; // Cambié a este para que haga mejor juego visual con los otros
 
 export default function Footer() {
   return (
     <footer className="bg-accent text-white pt-24 pb-12 px-6 md:px-24 relative overflow-hidden">
-
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 relative z-10">
 
-        {/* Columna 1: Redes Sociales */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-8">
-          <h3 className="text-3xl font-bold tracking-tighter">Clara Visconti</h3>
-          <div className="space-y-4">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-bold">Mis redes</p>
-            <div className="flex gap-8 text-xl justify-center md:justify-start">
-              <a href="#" className="hover:text-[#003f42] transition-colors"><FaBehance /></a>
-              <a href="#" className="hover:text-[#003f42] transition-colors"><FaInstagram /></a>
-              <a href="#" className="hover:text-[#003f42] transition-colors"><FaFacebookF /></a>
-            </div>
-          </div>
+        {/* Columna 1: Branding / Logo */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+          <h3 className="text-4xl font-black tracking-tighter uppercase">
+            Clara Visconti<span className="text-[#00adb5]">.</span>
+          </h3>
+          <p className="text-gray-700 text-sm font-light max-w-[250px] leading-relaxed italic">
+            Diseño con propósito, estética minimalista y visión estratégica.
+          </p>
         </div>
 
-        {/* Columna 2: Navegación (Repite el Nav) */}
+        {/* Columna 2: Navegación */}
         <div className="flex flex-col items-center text-center space-y-8">
           <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-gray-500">Explorar</h4>
           <nav className="flex flex-col gap-4">
-            <Link to="/" className="text-sm uppercase tracking-widest hover:text-[#003f42] transition-colors">Home</Link>
-            <Link to="/portfolio" className="text-sm uppercase tracking-widest hover:text-[#003f42] transition-colors">Portfolio</Link>
-            <Link to="/about" className="text-sm uppercase tracking-widest hover:text-[#003f42] transition-colors">Sobre Mí</Link>
-            <Link to="/contacto" className="text-sm uppercase tracking-widest hover:text-[#003f42] transition-colors">Contacto</Link>
+            <Link to="/" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#00adb5] transition-colors">Home</Link>
+            <Link to="/portfolio" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#00adb5] transition-colors">Portfolio</Link>
+            <Link to="/about" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#00adb5] transition-colors">Sobre Mí</Link>
+            <Link to="/contact" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#00adb5] transition-colors">Contacto</Link>
           </nav>
         </div>
 
-        {/* Columna 3: Contactame */}
+        {/* Columna 3: Redes e Iconos (Incluyendo Mail) */}
         <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-8">
-          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-gray-500">Contactame</h4>
+          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-gray-500">Seguime</h4>
 
-          <div className="flex items-center gap-3 group">
-            <Mail size={18} strokeWidth={1} className="text-white-500 group-hover:text-[#003f42] transition-colors" />
+          <div className="flex gap-8 text-2xl justify-center md:justify-end items-center">
+            {/* Icono de Mail integrado */}
+            <a
+              href="mailto:mclaravisconti@gmail.com"
+              className="hover:text-[#00adb5] transition-colors duration-300"
+              title="Email"
+            >
+              <IoMailOutline />
+            </a>
 
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=mclaravisconti@gmail.com&su=Consulta por Proyecto - Diseño&body=Hola Clara, te escribo desde tu portfolio porque me gustaría consultarte por..."
+              href="https://www.behance.net/mclaravisconti"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#003f42] transition-colors font-light text-lg block"
+              className="hover:text-[#00adb5] transition-colors duration-300"
+              title="Behance"
             >
-              mclaravisconti@gmail.com
+              <FaBehance />
             </a>
+            {/* <a href="#" className="hover:text-[#00adb5] transition-colors duration-300" title="Instagram">
+              <FaInstagram />
+            </a>
+            
+            <a href="#" className="hover:text-[#00adb5] transition-colors duration-300" title="Facebook">
+              <FaFacebookF size={20} /> 
+            </a> */}
           </div>
         </div>
 
       </div>
 
       {/* Copyright Inferior */}
-      <div className="max-w-[90rem] mx-auto mt-16 pt-10 border-t border-white/5 flex flex-col items-center gap-6">
-        <p className="text-[10px] text-gray-600 uppercase tracking-[0.4em] text-center">
-          © 2026 Clara Visconti.  TODOS LOS DERECHOS RESERVADOS.
+      <div className="max-w-[90rem] mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col items-center">
+        <p className="text-[9px] text-gray-600 uppercase tracking-[0.5em] text-center font-medium">
+          © 2026 Clara Visconti. TODOS LOS DERECHOS RESERVADOS.
         </p>
       </div>
     </footer>
