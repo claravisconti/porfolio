@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBehance, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { FaBehance, FaLinkedin, FaFacebookF } from 'react-icons/fa';
 import { IoMailOutline } from 'react-icons/io5'; // Cambié a este para que haga mejor juego visual con los otros
 
 export default function Footer() {
@@ -34,17 +34,19 @@ export default function Footer() {
           <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-gray-500">Seguime</h4>
 
           <div className="flex gap-8 text-2xl justify-center md:justify-end items-center">
-            {/* Icono de Mail integrado */}
+            {/* Icono de Mail redirigiendo a Gmail Web */}
             <a
-              href="mailto:mclaravisconti@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=mclaravisconti@gmail.com&su=Consulta desde Portfolio&body=Hola Clara,"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-[#00adb5] transition-colors duration-300"
-              title="Email"
+              title="Enviar Email"
             >
               <IoMailOutline />
             </a>
 
             <a
-              href="https://www.behance.net/mclaravisconti"
+              href="https://www.behance.net/mariaclaravisconti"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#00adb5] transition-colors duration-300"
@@ -52,13 +54,15 @@ export default function Footer() {
             >
               <FaBehance />
             </a>
-            {/* <a href="#" className="hover:text-[#00adb5] transition-colors duration-300" title="Instagram">
-              <FaInstagram />
+            <a href="https://www.linkedin.com/in/mariaclaravisconti" className="hover:text-[#00adb5] transition-colors duration-300" target="_blank"
+              rel="noopener noreferrer" title="LinkedinW">
+
+              <FaLinkedin />
             </a>
-            
-            <a href="#" className="hover:text-[#00adb5] transition-colors duration-300" title="Facebook">
+
+            {/* <a href="#" className="hover:text-[#00adb5] transition-colors duration-300" title="Facebook">
               <FaFacebookF size={20} /> 
-            </a> */}
+            </a>  */}
           </div>
         </div>
 
