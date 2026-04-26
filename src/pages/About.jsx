@@ -1,7 +1,7 @@
 import Banner from '../components/Banner';
 import Expertise from '../components/Expertise';
 import Services from "../components/Services";
-import Hero from '../assets/images/Hero1.jpg'
+import Hero from '../assets/images/Hero1.webp'
 
 export default function About() {
   return (

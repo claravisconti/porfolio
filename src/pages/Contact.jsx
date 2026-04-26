@@ -1,6 +1,6 @@
 import Banner from '../components/Banner';
 import FormSection from "../components/FormSection";
-import Hero from '../assets/images/Hero1.jpg'
+import Hero from '../assets/images/Hero1.webp'
 
 export default function Contact() {
   return (

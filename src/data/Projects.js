@@ -1,15 +1,15 @@
-import Portada_Bloom from '../assets/images/Web/Portada_Bloom.jpg';
-import Portada_Payslip from '../assets/images/Web/Portada_Payslip.jpg';
+import Portada_Bloom from '../assets/images/Web/Portada_Bloom.webp';
+import Portada_Payslip from '../assets/images/Web/Portada_Payslip.webp';
 import Portada_Fanfiction from '../assets/images/Web/Portada_Fanfiction.jpg';
-import Portada_SweetBlossom from '../assets/images/Web/Portada_SweetBlossom.jpg';
-import Portada_Foodie from '../assets/images/Web/Portada_Foodie.jpg';
-import Portada_Orpheus from '../assets/images/Web/Portada_Orpheus.jpg';
-import Portada_Electrohaus from '../assets/images/Web/Portada_Electrohaus.jpg';
-import Portada_MagicTravel from '../assets/images/Web/Portada_MagicTravel.jpg';
-import Portada_Hermes from '../assets/images/Web/Portada_Hermes.jpg';
-import Portada_WineNight from '../assets/images/Web/Portada_WineNight.jpg';
-import Portada_Maison from '../assets/images/Editorial/Portada_Maison.jpg';
-import Portada_Manifiesto from '../assets/images/Editorial/Portada_Manifiesto.jpg';
+import Portada_SweetBlossom from '../assets/images/Web/Portada_SweetBlossom.webp';
+import Portada_Foodie from '../assets/images/Web/Portada_Foodie.webp';
+import Portada_Orpheus from '../assets/images/Web/Portada_Orpheus.webp';
+import Portada_Electrohaus from '../assets/images/Web/Portada_Electrohaus.webp';
+import Portada_MagicTravel from '../assets/images/Web/Portada_MagicTravel.webp';
+import Portada_Hermes from '../assets/images/Web/Portada_Hermes.webp';
+import Portada_WineNight from '../assets/images/Web/Portada_WineNight.webp';
+import Portada_Maison from '../assets/images/Editorial/Portada_Maison.webp';
+import Portada_Manifiesto from '../assets/images/Editorial/Portada_Manifiesto.webp';
 
 export const projects = [
   // --- CATEGORÍA: REDES ---

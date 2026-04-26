@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import T1 from '../assets/images/Testimonials/T1.png';
-import T2 from '../assets/images/Testimonials/T2.png';
-import T3 from '../assets/images/Testimonials/T3.png';
+import T1 from '../assets/images/Testimonials/T1.webp';
+import T2 from '../assets/images/Testimonials/T2.webp';
+import T3 from '../assets/images/Testimonials/T3.webp';
 
 const testimonials = [
   {
