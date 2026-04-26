@@ -118,7 +118,7 @@ export default function Navbar() {
       </div>
 
       {/* --- OVERLAY MENÚ MÓVIL --- */}
-      <div className={`fixed inset-0 bg-black flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] z-[100] ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+      <div className={`fixed inset-0 bg-accent flex flex-col items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] z-[100] ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="flex flex-col items-center space-y-8 w-full overflow-y-auto pt-20 pb-10">
 
           <Link to="/" className="text-white text-3xl font-bold uppercase tracking-[0.3em] hover:text-[#00adb5]">
