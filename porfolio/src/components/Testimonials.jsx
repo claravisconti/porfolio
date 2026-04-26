@@ -6,7 +6,7 @@ const testimonials = [
     name: "Martina Zuber",
     role: "Fundadora de Alura Joyas",
     text: "Trabajar con Clara fue un antes y un después para mi marca. Logró captar la esencia minimalista que buscaba desde el primer día. Su ojo para el detalle en el packaging es realmente único.",
-    img: "https://images.unsplash.com/photo-1590035208773-6f6d33379679?q=80&w=800"
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800"
   },
   {
     id: "02",
