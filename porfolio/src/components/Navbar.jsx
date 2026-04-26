@@ -27,7 +27,7 @@ export default function Navbar() {
   const portfolioSubs = [
     { name: 'Todos', href: '/portfolio' },
     { name: 'Web', href: '/portfolio/web' },
-    { name: 'Marcas', href: '/portfolio/marcas' },
+    { name: 'Editorial', href: '/portfolio/editorial' },
     { name: 'Packaging', href: '/portfolio/packaging' },
     { name: 'Campañas', href: '/portfolio/redes' },
   ];

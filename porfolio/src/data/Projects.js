@@ -8,6 +8,8 @@ import Portada_Electrohaus from '../assets/images/Web/Portada_Electrohaus.jpg';
 import Portada_MagicTravel from '../assets/images/Web/Portada_MagicTravel.jpg';
 import Portada_Hermes from '../assets/images/Web/Portada_Hermes.jpg';
 import Portada_WineNight from '../assets/images/Web/Portada_WineNight.jpg';
+import Portada_Maison from '../assets/images/Editorial/Portada_Maison.jpg';
+import Portada_Manifiesto from '../assets/images/Editorial/Portada_Manifiesto.jpg';
 
 export const projects = [
   // --- CATEGORÍA: REDES ---
@@ -135,6 +137,32 @@ export const projects = [
     image: Portada_WineNight,
     slug: "winenight",
     description: "Landing Page para un evento de degustación de vinos",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 11,
+    title: "Revista Maison",
+    category: "Editorial",
+    image: Portada_Maison,
+    slug: "maison",
+    description: "Revista impresa de arquitectura y decoración de interiores",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+   {
+    id: 12,
+    title: "Wine Manifiesto",
+    category: "Editorial",
+    image: Portada_Manifiesto,
+    slug: "manifiesto",
+    description: "Revista impresa de interés general",
     gallery: [
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
       "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
