@@ -14,8 +14,8 @@ export default function Home() {
       <Services />
       <Typewriter />
       <PortfolioPreview/>
-      <Expertise/>
       <Testimonials/>
+      <Expertise/>
       <LargeTextSlider/>
     </>
   );
