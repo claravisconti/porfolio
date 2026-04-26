@@ -1,26 +1,29 @@
 import { useState, useEffect } from 'react';
+import T1 from '../assets/images/Testimonials/T1.png';
+import T2 from '../assets/images/Testimonials/T2.png';
+import T3 from '../assets/images/Testimonials/T3.png';
 
 const testimonials = [
   {
     id: "01",
     name: "Martina Zuber",
-    role: "Fundadora de Alura Joyas",
+    role: "Fundadora de Bloom",
     text: "Trabajar con Clara fue un antes y un después para mi marca. Logró captar la esencia minimalista que buscaba desde el primer día. Su ojo para el detalle en el packaging es realmente único.",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800"
+    img: T1
   },
   {
     id: "02",
     name: "Facundo Rossi",
     role: "Director de Marketing en TechBA",
     text: "Buscábamos una identidad web que fuera moderna pero funcional, y el resultado superó nuestras expectativas. La comunicación fue fluida y entendió perfectamente los tiempos de nuestra empresa.",
-    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800"
+    img: T2
   },
   {
     id: "03",
     name: "Lucía Méndez",
     role: "Emprendedora Gastronómica",
     text: "Clara tiene una capacidad increíble para traducir conceptos abstractos en piezas visuales potentes. Las campañas que diseñó para el lanzamiento de mi local fueron clave para el éxito que tuvimos.",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800"
+    img: T3
   }
 ];
 
@@ -36,7 +39,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="bg-[#00adb5] text-white flex flex-col items-center overflow-hidden">
+    <section className="bg-accent text-white flex flex-col items-center overflow-hidden">
       
       {/* SECCIÓN SUPERIOR: Contenido y Círculo */}
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center py-20 md:pt-32 md:pb-24 px-6 md:px-24 relative z-10">
@@ -96,9 +99,7 @@ export default function Testimonials() {
       </div>
 
       {/* SECCIÓN INFERIOR: Fila de 4 Fotos CUADRADAS */}
-      {/* hidden md:grid asegura que solo se vea en Desktop.
-          grid-cols-4 las pone en fila.
-          gap-0 elimina cualquier separación. */}
+      {/*  
       <div className="w-full grid-cols-4 gap-0 hidden md:grid relative z-0 mt-[-2px]">
         {[
           "https://images.unsplash.com/photo-1552058544-f2b08422138a",
@@ -106,7 +107,7 @@ export default function Testimonials() {
           "https://images.unsplash.com/photo-1517841905240-472988babdf9",
           "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"
         ].map((url, index) => (
-          // aspect-square fuerza la proporción cuadrada perfecta
+
           <div key={index} className="w-full aspect-square overflow-hidden bg-gray-100">
             <img
               src={`${url}?q=80&w=800`}
@@ -115,7 +116,7 @@ export default function Testimonials() {
             />
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

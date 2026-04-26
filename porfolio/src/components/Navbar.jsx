@@ -34,13 +34,13 @@ export default function Navbar() {
 
   // Configuración de estilos según el contexto (Home vs Internas)
   const theme = {
-    navBg: isHomePage ? "bg-transparent" : "bg-white border-b border-gray-100",
+    navBg: isHomePage ? "bg-transparent" : "bg-white",
     text: isHomePage ? "text-white" : "text-black",
     burger: isHomePage ? "bg-white" : "bg-black",
   };
 
   return (
-    <nav className={`absolute w-full z-[100] transition-all duration-500 ${theme.navBg}`}>
+    <nav className={`absolute w-full z-[100] transition-all duration-100 ${theme.navBg}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-24">
         <div className="flex justify-between items-center h-24">
 

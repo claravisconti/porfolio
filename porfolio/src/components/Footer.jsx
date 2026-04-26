@@ -26,11 +26,6 @@ export default function Footer() {
               Clara Visconti<span className="text-accent">.</span>
             </h3>
           </Link>
-
-          {/* Texto descriptivo centrado */}
-          {/* <p className="text-gray-600 text-sm font-light max-w-[280px] leading-relaxed italic">
-            Diseño con propósito, estética minimalista y visión estratégica.
-          </p> */}
         </div>
 
         {/* Columna 2: Navegación */}
@@ -84,7 +79,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Inferior */}
-      <div className="max-w-[90rem] mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col items-center">
+      <div className="max-w-[90rem] mx-auto mt-20 pt-10 border-white/5 flex flex-col items-center">
         <p className="text-[9px] text-gray-600 uppercase tracking-[0.5em] text-center font-medium">
           © 2026 Clara Visconti. TODOS LOS DERECHOS RESERVADOS.
         </p>
