@@ -56,14 +56,9 @@ export default function ProjectDetail() {
 
   return (
     <div className="bg-white min-h-screen">
-      
-      {/* 1. IMAGEN PRINCIPAL (PORTADA) */}
-      <section className="w-full h-[75vh] bg-gray-100">
-        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-      </section>
 
-      {/* 2. INFORMACIÓN DEL PROYECTO */}
-      <section className="max-w-7xl mx-auto px-6 md:px-24 py-24">
+      {/* 1. INFORMACIÓN DEL PROYECTO */}
+      <section className="max-w-7xl mx-auto px-6 md:px-24 pt-36 pb-16">
         <div className="flex flex-col md:flex-row gap-16">
           <div className="md:w-2/3">
             <p className="text-[11px] uppercase tracking-[0.5em] text-[#00adb5] font-bold mb-6">{project.category}</p>
@@ -77,11 +72,10 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {/* 3. GALERÍA DE TRES FOTOS (Aquí está el maquetado que faltaba) */}
-      <section className="max-w-7xl mx-auto px-6 md:px-24">
+      {/* 2. GALERÍA DE TRES FOTOS (Aquí está el maquetado que faltaba) */}
+      {/* <section className="max-w-7xl mx-auto px-6 md:px-24">
         <div className="flex flex-col gap-24">
-          
-          {/* FOTO 1: Formato Ancho (Full Width dentro del contenedor) */}
+         
           {project.gallery?.[0] && (
             <div className="w-full aspect-video overflow-hidden bg-gray-50">
               <img 
@@ -92,10 +86,10 @@ export default function ProjectDetail() {
             </div>
           )}
 
-          {/* FOTOS 2 Y 3: Grilla de dos columnas con efecto desfasado (Offset) */}
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
             
-            {/* Foto 2 (Izquierda) */}
+            
             {project.gallery?.[1] && (
               <div className="aspect-[3/4] overflow-hidden bg-gray-50">
                 <img 
@@ -106,7 +100,7 @@ export default function ProjectDetail() {
               </div>
             )}
 
-            {/* Foto 3 (Derecha - con margen superior para el efecto editorial) */}
+          
             {project.gallery?.[2] && (
               <div className="aspect-[3/4] overflow-hidden bg-gray-50 md:mt-32">
                 <img 
@@ -118,7 +112,7 @@ export default function ProjectDetail() {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 4. PAGINADOR (NAVEGACIÓN ENTRE PROYECTOS) */}
       <ProjectNavigation currentId={project.id} />
