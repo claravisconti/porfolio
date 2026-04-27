@@ -24,6 +24,9 @@ import Portada_Consumer from '../assets/images/Campañas/Portada_Consumer.webp';
 import Portada_Drupal from '../assets/images/Campañas/Portada_Drupal.webp';
 import Portada_AdvertisingWeek from '../assets/images/Campañas/Portada_AdvertisingWeek.webp';
 import Portada_DrupalCon from '../assets/images/Campañas/Portada_DrupalCon.webp';
+import Portada_IWD from '../assets/images/Campañas/Portada_IWD.webp';
+import Portada_STC from '../assets/images/Campañas/Portada_STC.webp';
+import Portada_HCIC from '../assets/images/Campañas/Portada_HCIC.webp';
 
 export const projects = [
   // --- CATEGORÍA: REDES ---
@@ -354,4 +357,43 @@ export const projects = [
       "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
     ]
   },
+   {
+    id: 26,
+    title: "Post International Women's Day",
+    category: "Campañas",
+    image: Portada_IWD,
+    slug: "IWD",
+    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 27,
+    title: "Post Shorty Awards: Save The Children",
+    category: "Campañas",
+    image: Portada_STC,
+    slug: "STC",
+    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 28,
+    title: "Post Healthcare Interactive Conference",
+    category: "Campañas",
+    image: Portada_HCIC,
+    slug: "STC",
+    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  }
 ];
