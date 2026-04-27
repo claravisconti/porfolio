@@ -13,8 +13,7 @@ import Portada_Hermes from '../assets/images/Web/Portada_Hermes.webp';
 import Portada_WineNight from '../assets/images/Web/Portada_WineNight.webp';
 import Portada_Maison from '../assets/images/Editorial/Portada_Maison.webp';
 import Portada_Manifiesto from '../assets/images/Editorial/Portada_Manifiesto.webp';
-import Portada_Sillkylatte from '../assets/images/Packaging/Portada_Sillkylatte.webp';
-import Portada_Sillkylatte_Botella from '../assets/images/Packaging/Portada_Sillkylatte_Botella.webp';
+import Portada_Silkylatte from '../assets/images/Packaging/Portada_Silkylatte.webp';
 import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
 import Portada_Crown from '../assets/images/Packaging/Portada_Crown.webp';
 import Portada_Fidelity from '../assets/images/Campañas/Portada_Fidelity.webp';
@@ -42,6 +41,9 @@ import Electrohaus1 from '../assets/images/Web/Galeria/Electrohaus1.webp';
 import MagicTravel1 from '../assets/images/Web/Galeria/MagicTravel1.webp';
 import Hermes1 from '../assets/images/Web/Galeria/Hermes1.webp';
 import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
+import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
+import Fruits1 from '../assets/images/Packaging/Galeria/Fruits1.webp';
+import Crown1 from '../assets/images/Packaging/Galeria/Crown1.webp';
 
 export const projects = [
   // --- WEB ---
@@ -209,28 +211,16 @@ export const projects = [
     id: 14,
     title: "Silkylatte Leche",
     category: "Packaging",
-    image: Portada_Sillkylatte,
+    image: Portada_Silkylatte,
     slug: "silkylatte",
     year: "2024",
     services: "Structural & Label Design",
     description: "Silkylatte necesitaba irrumpir en el mercado de leches vegetales orgánicas. El desafío era diferenciarse en una góndola llena de colores brillantes mediante una propuesta que gritara naturalidad y honestidad de marca.",
     solution: "Diseñamos un packaging con colores tierra y una textura de papel sin tratar. Las ilustraciones son grabados clásicos que comunican la tradición del origen orgánico. El resultado fue un incremento del 20% en la visibilidad del producto frente a la competencia directa.",
-    gallery: []
+    gallery: [Silkylatte1]
   },
   {
     id: 15,
-    title: "Silkylatte Botella",
-    category: "Packaging",
-    image: Portada_Sillkylatte_Botella,
-    slug: "silkylatte_botella",
-    year: "2025",
-    services: "Luxury Packaging Design",
-    description: "Para la edición limitada de Silkylatte en botella de vidrio, el reto era elevar el producto al estatus de 'luxury item'. Debía funcionar tanto en el hogar como en la mesa de un hotel de lujo.",
-    solution: "Aplicamos serigrafía directa sobre el vidrio para eliminar etiquetas adhesivas. El diseño utiliza un minimalismo radical con acabados en foil de cobre para los detalles técnicos, logrando una estética atemporal que invita a reutilizar el envase.",
-    gallery: []
-  },
-  {
-    id: 16,
     title: "Fruits Jugo",
     category: "Packaging",
     image: Portada_Fruits,
@@ -239,10 +229,10 @@ export const projects = [
     services: "Brand Identity / Packaging",
     description: "Fruits buscaba renovar su imagen para un público más consciente de la salud. El desafío era comunicar '100% fruta' sin utilizar las imágenes hiper-realistas y saturadas que inundan el mercado masivo.",
     solution: "Utilizamos un lenguaje visual basado en formas geométricas y colores planos que representan la fruta de manera abstracta pero reconocible. La transparencia estratégica del envase permite que el color real del jugo complete el diseño de la etiqueta.",
-    gallery: []
+    gallery: [Fruits1]
   },
   {
-    id: 17,
+    id: 16,
     title: "Crown Shampoo",
     category: "Packaging",
     image: Portada_Crown,
@@ -251,12 +241,12 @@ export const projects = [
     services: "Sustainable Packaging",
     description: "Crown requería un packaging sustentable para su línea premium de cuidado capilar. El reto era usar materiales reciclados (PCR) sin que el producto perdiera su percepción de alta calidad y lujo.",
     solution: "Desarrollamos una forma ergonómica única inspirada en piedras de río. El acabado mate del plástico reciclado se integró como una decisión de diseño, sumado a tipografías en bajorrelieve que reducen la necesidad de tintas contaminantes.",
-    gallery: []
+    gallery: [Crown1]
   },
 
   // --- CAMPAÑAS ---
   {
-    id: 18,
+    id: 17,
     title: "Campaña Fidelity",
     category: "Campañas",
     image: Portada_Fidelity,
@@ -268,7 +258,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 19,
+    id: 18,
     title: "Consumer Pulse",
     category: "Campañas",
     image: Portada_ConsumerPulse,
@@ -280,7 +270,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 20,
+    id: 19,
     title: "Post Consumer",
     category: "Campañas",
     image: Portada_Consumer,
@@ -292,7 +282,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 21,
+    id: 20,
     title: "True Loyalty",
     category: "Campañas",
     image: Portada_TrueLoyalty,
@@ -304,7 +294,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 22,
+    id: 21,
     title: "Bloomberg Screentime",
     category: "Campañas",
     image: Portada_BloombergScreentime,
@@ -316,7 +306,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 23,
+    id: 22,
     title: "Post Drupal",
     category: "Campañas",
     image: Portada_Drupal,
@@ -328,7 +318,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 24,
+    id: 23,
     title: "Advertising Week",
     category: "Campañas",
     image: Portada_AdvertisingWeek,
@@ -340,7 +330,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 25,
+    id: 24,
     title: "Post DrupalCon",
     category: "Campañas",
     image: Portada_DrupalCon,
@@ -352,7 +342,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 26,
+    id: 25,
     title: "IWD Campaign",
     category: "Campañas",
     image: Portada_IWD,
@@ -364,7 +354,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 27,
+    id: 26,
     title: "Save The Children",
     category: "Campañas",
     image: Portada_STC,
@@ -376,7 +366,7 @@ export const projects = [
     gallery: []
   },
   {
-    id: 28,
+    id: 27,
     title: "HCIC Branding",
     category: "Campañas",
     image: Portada_HCIC,
