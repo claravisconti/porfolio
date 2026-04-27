@@ -13,6 +13,7 @@ import Portada_Manifiesto from '../assets/images/Editorial/Portada_Manifiesto.we
 import Portada_Sillkylatte from '../assets/images/Packaging/Portada_Sillkylatte.webp';
 import Portada_Sillkylatte_Botella from '../assets/images/Packaging/Portada_Sillkylatte_Botella.webp';
 import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
+import Portada_Crown from '../assets/images/Packaging/Portada_Crown.webp';
 
 export const projects = [
   // --- CATEGORÍA: REDES ---
@@ -203,8 +204,21 @@ export const projects = [
     title: "Fruits Jugo",
     category: "Packaging",
     image: Portada_Fruits,
-    slug: "silkylatte_botella",
+    slug: "fruits",
     description: "Teatrbrick familiar de jugo de naranja",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 15,
+    title: "Shampoo & Acondicionador Crown",
+    category: "Packaging",
+    image: Portada_Crown,
+    slug: "crown",
+    description: "Envases de shampoo & Acondicionador",
     gallery: [
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
       "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
