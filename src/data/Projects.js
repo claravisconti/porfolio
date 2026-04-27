@@ -15,7 +15,10 @@ import Portada_Sillkylatte from '../assets/images/Packaging/Portada_Sillkylatte.
 import Portada_Sillkylatte_Botella from '../assets/images/Packaging/Portada_Sillkylatte_Botella.webp';
 import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
 import Portada_Crown from '../assets/images/Packaging/Portada_Crown.webp';
-
+import Portada_Fidelity from '../assets/images/Campañas/Portada_Fidelity.webp';
+import Portada_ConsumerPulse from '../assets/images/Campañas/Portada_ConsumerPulse.webp';
+import Portada_TrueLoyalty from '../assets/images/Campañas/Portada_TrueLoyalty.webp';
+import Portada_BloombergScreentime from '../assets/images/Campañas/Portada_BloombergScreentime.webp';
 
 export const projects = [
   // --- CATEGORÍA: REDES ---
@@ -234,6 +237,59 @@ export const projects = [
     image: Portada_Crown,
     slug: "crown",
     description: "Envases de shampoo & Acondicionador",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+    {
+    id: 18,
+    title: "Campaña Fidelity",
+    category: "Campañas",
+    image: Portada_Fidelity,
+    slug: "fidelity",
+    description: "Campaña para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+    {
+    id: 19,
+    title: "Campaña Consumer Pulse",
+    category: "Campañas",
+    image: Portada_ConsumerPulse,
+    slug: "consumerPulse",
+    description: "Campaña para redes sociales: Instagram ads y Linkedin Ads'",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+   {
+    id: 20,
+    title: "Campaña True Loyalty",
+    category: "Campañas",
+    image: Portada_TrueLoyalty,
+    slug: "trueLoyalty",
+    description: "Campaña para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  ,
+   {
+    id: 21,
+    title: "Campaña Bloomberg",
+    category: "Campañas",
+    image: Portada_BloombergScreentime,
+    slug: "bloombergScreentime",
+    description: "Campaña para redes sociales: Instagram ads y Linkedin Ads",
     gallery: [
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
       "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
