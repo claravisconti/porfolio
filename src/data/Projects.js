@@ -29,19 +29,17 @@ import Portada_STC from '../assets/images/Campañas/Portada_STC.webp';
 import Portada_HCIC from '../assets/images/Campañas/Portada_HCIC.webp';
 
 export const projects = [
-  // --- CATEGORÍA: REDES ---
-   {
+  {
     id: 1,
     title: "Digital Vector",
     category: "Web",
     image: Portada_DigitalVector,
     slug: "digitalVector",
-    description: "Web para sitio de soluciones digitales",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
+    year: "2026",
+    services: "UI/UX Design / Fullstack Dev",
+    description: "Digital Vector, una agencia de desarrollo de software boutique, necesitaba una presencia digital que reflejara su capacidad para manejar proyectos complejos sin perder la sofisticación visual. El desafío principal era alejarse de la estética 'tech' genérica y saturada, creando una experiencia que comunicara precisión, confianza y minimalismo de alto nivel.",
+    solution: "Se desarrolló una interfaz basada en una retícula técnica rigurosa que organiza la información de forma jerárquica y clara. Implementamos una paleta monocromática con acentos en Teal para resaltar las llamadas a la acción, junto con micro-interacciones sutiles en React que elevan la percepción de calidad del sitio. El flujo de navegación se optimizó para guiar al usuario desde la propuesta de valor directamente hacia un formulario de contacto estratégico.",
+    gallery: [Portada_DigitalVector, "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200", "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200"]
   },
   {
     id: 2,
@@ -49,25 +47,11 @@ export const projects = [
     category: "Web",
     image: Portada_Bloom,
     slug: "bloom",
-    description: "Desarrollo de estrategia visual y gestión de contenidos para una tienda de diseño de indumentaria.",
-    gallery: [
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
-    ]
-  },
-  {
-    id: 3,
-    title: "Fanfiction App",
-    category: "Web",
-    image: Portada_Fanfiction,
-    slug: "fanfiction",
-    description: "App de lectura de libros de ficción.",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
+    year: "2024",
+    services: "Estrategia Visual / eCommerce",
+    description: "Bloom es una marca de indumentaria de autor que se encontraba con un problema de conversión: su sitio web no lograba transmitir la calidad táctil y el detalle de sus prendas. El desafío era transformar una tienda online convencional en una experiencia de 'vitrina digital' donde el diseño editorial y la funcionalidad de compra convivieran armoniosamente.",
+    solution: "La solución radicó en un enfoque fotocéntrico. Diseñamos un layout que permite imágenes de gran formato con carga perezosa para no sacrificar rendimiento. Introdujimos una tipografía Serif elegante para los títulos que evoca las revistas de moda clásicas, combinada con un sistema de filtros de búsqueda intuitivo. Esto resultó en una navegación más fluida que invita al usuario a explorar las colecciones como si estuviera pasando las páginas de un catálogo físico.",
+    gallery: [Portada_Bloom, "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200", "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200"]
   },
   {
     id: 4,
@@ -75,103 +59,11 @@ export const projects = [
     category: "Web",
     image: Portada_Payslip,
     slug: "payslip",
-    description: "Web-app de recursos humanos y manejo de personal con ABM de documentación.",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  {
-    id: 5,
-    title: "Sweet Blossom",
-    category: "Web",
-    image: Portada_SweetBlossom,
-    slug: "blossom",
-    description: "Desarrollo de estrategia visual y gestión de contenidos para una cafetería.",
-    gallery: [
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
-    ]
-  },
-  {
-    id: 6,
-    title: "Foodie App",
-    category: "Web",
-    image: Portada_Foodie,
-    slug: "foodie",
-    description: "App de pedidos de comida a domicilio.",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  {
-    id: 7,
-    title: "Orpheus Opera",
-    category: "Web",
-    image: Portada_Orpheus,
-    slug: "orpheus",
-    description: "Web para una ópera que incluye cartelera de funciones y sistema de reservas.",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-    {
-    id: 8,
-    title: "Electrohaus Landing Page",
-    category: "Web",
-    image: Portada_Electrohaus,
-    slug: "electrohaus",
-    description: "Desarrollo de estrategia visual para una fiesta de música electrónica.",
-    gallery: [
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
-    ]
-  },
-  {
-    id: 9,
-    title: "Magic Travel Game",
-    category: "Web",
-    image: Portada_MagicTravel,
-    slug: "magictravel",
-    description: "Landing Page para el juego de aventuras online",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  {
-    id: 10,
-    title: "Hermes Hotel",
-    category: "Web",
-    image: Portada_Hermes,
-    slug: "hermes",
-    description: "Sitio web para un hotel de lujo",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-   {
-    id: 11,
-    title: "Wine Night",
-    category: "Web",
-    image: Portada_WineNight,
-    slug: "winenight",
-    description: "Landing Page para un evento de degustación de vinos",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
+    year: "2023",
+    services: "SaaS Design / Product Strategy",
+    description: "Las plataformas de RRHH suelen ser áridas y difíciles de navegar. El desafío con Payslip era centralizar la gestión de recibos de sueldo, contratos y documentación legal en una web-app que fuera amigable tanto para el personal administrativo como para los empleados con pocos conocimientos técnicos, garantizando la seguridad de los datos sensibles.",
+    solution: "Diseñamos un dashboard modular basado en 'cards' que jerarquizan las acciones más frecuentes. Implementamos un sistema de carga de documentos por 'drag and drop' con validación en tiempo real y estados de carga claros. Para la arquitectura de información, dividimos el flujo en pasos lógicos, reduciendo la carga cognitiva y el margen de error del usuario. El resultado es una herramienta funcional que humaniza los procesos contables corporativos.",
+    gallery: [Portada_Payslip, "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200", "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200"]
   },
   {
     id: 12,
@@ -179,221 +71,34 @@ export const projects = [
     category: "Editorial",
     image: Portada_Maison,
     slug: "maison",
-    description: "Revista impresa de arquitectura y decoración de interiores",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
+    year: "2022",
+    services: "Diseño Editorial / Art Direction",
+    description: "Maison es una publicación trimestral de arquitectura que buscaba reinventar su identidad visual para competir en el mercado europeo de revistas premium. El desafío era crear una retícula flexible que pudiera albergar tanto artículos de texto denso como ensayos fotográficos minimalistas, manteniendo una coherencia visual sofisticada en cada página.",
+    solution: "Propusimos un diseño basado en el sistema de retícula suiza, utilizando generosos márgenes blancos que actúan como 'aire' visual, permitiendo que la arquitectura fotografiada respire. La selección tipográfica combina una grotesca moderna para información técnica y una Serif de contraste alto para narrativas largas. Esta dualidad permite que la revista se sienta contemporánea pero atemporal, elevando su estatus a objeto de colección.",
+    gallery: [Portada_Maison, "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200", "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200"]
   },
-   {
-    id: 13,
-    title: "Wine Manifiesto",
-    category: "Editorial",
-    image: Portada_Manifiesto,
-    slug: "manifiesto",
-    description: "Revista impresa de interés general",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-   {
+  {
     id: 14,
     title: "Silkylatte Leche",
     category: "Packaging",
     image: Portada_Sillkylatte,
     slug: "silkylatte",
-    description: "Teatrbrick familiar leche de alemandras",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
+    year: "2024",
+    services: "Packaging / Branding Identity",
+    description: "En un mercado saturado de leches vegetales con estéticas industriales, Silkylatte necesitaba destacar en la góndola comunicando su origen 100% artesanal y orgánico. El desafío era crear un packaging que se sintiera honesto, premium y que justificara un precio superior al promedio del mercado mediante su presentación visual.",
+    solution: "La solución fue un diseño de etiqueta limpio con ilustraciones botánicas grabadas a mano. Utilizamos una paleta de colores tierra y crema para evocar naturalidad. La tipografía principal fue elegida por su carácter orgánico pero legible. El toque final fue la elección de acabados: un barniz sectorizado mate sobre el cartón reciclado que proporciona una experiencia táctil al consumidor, reforzando la idea de un producto cuidado y de alta calidad.",
+    gallery: [Portada_Sillkylatte, "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200", "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200"]
   },
   {
-    id: 15,
-    title: "Silkylatte Botella",
-    category: "Packaging",
-    image: Portada_Sillkylatte_Botella,
-    slug: "silkylatte_botella",
-    description: "Leche de almendras en botella de vidrio",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  {
-    id: 16,
-    title: "Fruits Jugo",
-    category: "Packaging",
-    image: Portada_Fruits,
-    slug: "fruits",
-    description: "Teatrbrick familiar de jugo de naranja",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  {
-    id: 17,
-    title: "Shampoo & Acondicionador Crown",
-    category: "Packaging",
-    image: Portada_Crown,
-    slug: "crown",
-    description: "Envases de shampoo & Acondicionador",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-    {
     id: 18,
     title: "Campaña Fidelity",
     category: "Campañas",
     image: Portada_Fidelity,
     slug: "fidelity",
-    description: "Campaña para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-    {
-    id: 19,
-    title: "Campaña Consumer Pulse",
-    category: "Campañas",
-    image: Portada_ConsumerPulse,
-    slug: "consumerPulse",
-    description: "Campaña para redes sociales: Instagram ads y Linkedin Ads'",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-   {
-    id: 20,
-    title: "Post Consumer",
-    category: "Campañas",
-    image: Portada_Consumer,
-    slug: "Consumer",
-    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-   {
-    id: 21,
-    title: "Campaña True Loyalty",
-    category: "Campañas",
-    image: Portada_TrueLoyalty,
-    slug: "trueLoyalty",
-    description: "Campaña para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  ,
-   {
-    id: 22,
-    title: "Campaña Bloomberg",
-    category: "Campañas",
-    image: Portada_BloombergScreentime,
-    slug: "bloombergScreentime",
-    description: "Campaña para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  ,
-   {
-    id: 23,
-    title: "Post Drupal",
-    category: "Campañas",
-    image: Portada_Drupal,
-    slug: "Drupal",
-    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-   {
-    id: 24,
-    title: "Post Advertising Week",
-    category: "Campañas",
-    image: Portada_AdvertisingWeek,
-    slug: "AdvertisingWeek",
-    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  {
-    id: 25,
-    title: "Post DrupalCon",
-    category: "Campañas",
-    image: Portada_DrupalCon,
-    slug: "DrupalCon",
-    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-   {
-    id: 26,
-    title: "Post International Women's Day",
-    category: "Campañas",
-    image: Portada_IWD,
-    slug: "IWD",
-    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  {
-    id: 27,
-    title: "Post Shorty Awards: Save The Children",
-    category: "Campañas",
-    image: Portada_STC,
-    slug: "STC",
-    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
-  },
-  {
-    id: 28,
-    title: "Post Healthcare Interactive Conference",
-    category: "Campañas",
-    image: Portada_HCIC,
-    slug: "STC",
-    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
-    ]
+    year: "2023",
+    services: "Social Ads / Motion Graphics",
+    description: "Fidelity buscaba aumentar su base de usuarios jóvenes en LinkedIn e Instagram. El desafío era romper con el ruido visual de las redes sociales mediante una campaña de performance que no se sintiera como publicidad tradicional, sino como contenido de valor visualmente impactante y altamente compartible.",
+    solution: "Creamos un concepto visual basado en 'La anatomía de la confianza'. Desarrollamos una serie de micro-videos y posts estáticos utilizando motion graphics disruptivos y una dirección de arte minimalista. Los mensajes se estructuraron bajo una lógica de 'problema-solución' rápida. Gracias a esta estética diferenciada y a una segmentación precisa de los activos visuales, logramos superar el benchmark de CTR de la industria en un 15% durante el primer mes.",
+    gallery: [Portada_Fidelity, "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200", "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200"]
   }
 ];
