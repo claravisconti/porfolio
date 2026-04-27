@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PortfolioMenu from '../components/PortfolioMenu';
 import Banner from '../components/Banner';
 import { projects } from '../data/projects';
-import Hero1 from '../assets/images/Hero1.webp';
+import Hero1 from '../assets/images/Hero/Hero1.webp';
 
 export default function PortfolioCategory({ category }) {
   const [visibleCount, setVisibleCount] = useState(6);

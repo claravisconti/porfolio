@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
-import Iso from '../assets/images/Iso_blanco.svg'; 
-import IsoTeal from '../assets/images/Iso_teal.svg'; 
+import Iso from '../assets/images/Logo/Iso_blanco.svg'; 
+import IsoTeal from '../assets/images/Logo/Iso_teal.svg'; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

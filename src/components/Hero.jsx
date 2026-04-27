@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import Hero1 from '../assets/images/Hero1.webp';
-import Hero2 from '../assets/images/Hero2.webp';
-// import hero3 from '../assets/hero-art.jpg';
+import Hero1 from '../assets/images/Hero/Hero1.webp';
+import Hero2 from '../assets/images/Hero/Hero2.webp';
+// import hero3 from '../assets/Hero/hero-art.jpg';
 import { Link } from 'react-router-dom';
 
 const slides = [

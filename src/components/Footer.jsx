@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Importamos useNavigate
 import Socials from "../components/Socials.jsx";
-import Iso from '../assets/images/Iso_blanco.svg';
+import Iso from '../assets/images/Logo/Iso_blanco.svg';
 
 export default function Footer() {
   const navigate = useNavigate();
