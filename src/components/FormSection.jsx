@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Socials from "../components/Socials.jsx"
 
 export default function FormSection() {
   const form = useRef();
@@ -10,26 +11,26 @@ export default function FormSection() {
     setStatus('enviando');
 
     emailjs.sendForm(
-      'service_075qthe', 
-      'template_fstgil7', 
-      form.current, 
+      'service_075qthe',
+      'template_fstgil7',
+      form.current,
       'vtg61ipfhKbdmTdoX'
     )
-    .then(() => {
+      .then(() => {
         setStatus('exito');
         form.current.reset();
         setTimeout(() => setStatus(''), 5000);
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
         console.error('EmailJS Error:', error);
         setStatus('error');
-    });
+      });
   };
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-20 px-6 md:px-24">
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
-        
+
         {/* COLUMNA IZQUIERDA: Información */}
         <div className="space-y-12">
           <div className="space-y-6">
@@ -37,10 +38,10 @@ export default function FormSection() {
               Escribime
             </h1>
             <div className="flex gap-4">
-               <div className="w-12 h-[1px] bg-black mt-4"></div>
-               <p className="text-gray-500 text-lg leading-relaxed max-w-md font-light italic">
-                 Estoy presente para dar vida a tus ideas. 
-               </p>
+              <div className="w-12 h-[1px] bg-black mt-4"></div>
+              <p className="text-gray-500 text-lg leading-relaxed max-w-md font-light italic">
+                Estoy presente para dar vida a tus ideas.
+              </p>
             </div>
           </div>
 
@@ -49,7 +50,7 @@ export default function FormSection() {
               <h3 className="text-xl font-bold uppercase tracking-tighter">Buenos Aires</h3>
               <div className="w-8 h-[1px] bg-gray-300 mb-4"></div>
               <div className="text-sm space-y-1 text-gray-600 tracking-wide font-light">
-                <p>mclaravisconti@gmail.com</p>
+                <Socials />
               </div>
             </div>
 
@@ -60,24 +61,26 @@ export default function FormSection() {
                 <p>Lunes a Viernes / 09:00 - 18:00</p>
               </div>
             </div>
+
           </div>
+
         </div>
 
         {/* COLUMNA DERECHA: Formulario */}
         <div className="bg-white">
           <form ref={form} onSubmit={sendEmail} className="space-y-10">
-            
+
             {/* Input Asunto (Title) */}
-           
+
 
             {/* Input Nombre */}
             <div className="relative group">
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
                 Nombre
               </label>
-              <input 
-                type="text" 
-                name="name" 
+              <input
+                type="text"
+                name="name"
                 required
                 className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
               />
@@ -88,21 +91,21 @@ export default function FormSection() {
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
                 Correo
               </label>
-              <input 
-                type="email" 
-                name="email" 
+              <input
+                type="email"
+                name="email"
                 required
                 className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
               />
             </div>
 
-             <div className="relative group">
+            <div className="relative group">
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
                 Asunto
               </label>
-              <input 
-                type="text" 
-                name="title" 
+              <input
+                type="text"
+                name="title"
                 required
                 className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light"
               />
@@ -113,8 +116,8 @@ export default function FormSection() {
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
                 Mensaje
               </label>
-              <textarea 
-                name="message" 
+              <textarea
+                name="message"
                 rows="4"
                 required
                 className="w-full border-b border-black py-2 focus:outline-none focus:border-[#00adb5] transition-colors bg-transparent text-lg font-light resize-none"
@@ -123,7 +126,7 @@ export default function FormSection() {
 
             {/* Botón Submit y Feedback */}
             <div className="pt-6 flex flex-col gap-4">
-              <button 
+              <button
                 type="submit"
                 disabled={status === 'enviando'}
                 className="relative inline-block px-12 py-4 group overflow-hidden border border-black disabled:border-gray-300"
