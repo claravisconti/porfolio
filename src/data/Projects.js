@@ -10,6 +10,9 @@ import Portada_Hermes from '../assets/images/Web/Portada_Hermes.webp';
 import Portada_WineNight from '../assets/images/Web/Portada_WineNight.webp';
 import Portada_Maison from '../assets/images/Editorial/Portada_Maison.webp';
 import Portada_Manifiesto from '../assets/images/Editorial/Portada_Manifiesto.webp';
+import Portada_Sillkylatte from '../assets/images/Packaging/Portada_Sillkylatte.webp';
+import Portada_Sillkylatte_Botella from '../assets/images/Packaging/Portada_Sillkylatte_Botella.webp';
+import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
 
 export const projects = [
   // --- CATEGORÍA: REDES ---
@@ -169,4 +172,43 @@ export const projects = [
       "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
     ]
   },
+   {
+    id: 13,
+    title: "Silkylatte Leche",
+    category: "Packaging",
+    image: Portada_Sillkylatte,
+    slug: "silkylatte",
+    description: "Teatrbrick familiar leche de alemandras",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 14,
+    title: "Silkylatte Botella",
+    category: "Packaging",
+    image: Portada_Sillkylatte_Botella,
+    slug: "silkylatte_botella",
+    description: "Leche de almendras en botella de vidrio",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 15,
+    title: "Fruits Jugo",
+    category: "Packaging",
+    image: Portada_Fruits,
+    slug: "silkylatte_botella",
+    description: "Teatrbrick familiar de jugo de naranja",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  }
 ];

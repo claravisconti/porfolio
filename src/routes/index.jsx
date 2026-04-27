@@ -21,7 +21,7 @@ export default function AppRoutes() {
       <Route path="/portfolio/web" element={<PortfolioCategory category="Web" />} />
       <Route path="/portfolio/editorial" element={<PortfolioCategory category="Editorial" />} />
       <Route path="/portfolio/packaging" element={<PortfolioCategory category="Packaging" />} />
-      <Route path="/portfolio/redes" element={<PortfolioCategory category="Redes" />} />
+      <Route path="/portfolio/redes" element={<PortfolioCategory category="Campañas" />} />
       <Route path="/portfolio/project/:slug" element={<ProjectDetail />} />
       
     </Routes>
