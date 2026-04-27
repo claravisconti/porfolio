@@ -16,7 +16,7 @@ const gridLayout = [
 
 export default function PortfolioPreview() {
   // Tomamos los primeros 8 proyectos de tu archivo JS
-  const previewProjects = realProjects.slice(0, 8);
+  const previewProjects = realProjects.slice().sort(() => Math.random() - 0.5).slice(0, 8);
 
   return (
     <section className="bg-white w-full overflow-hidden">
