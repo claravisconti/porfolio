@@ -213,7 +213,7 @@ export const projects = [
     ]
   },
   {
-    id: 15,
+    id: 16,
     title: "Shampoo & Acondicionador Crown",
     category: "Packaging",
     image: Portada_Crown,

@@ -7,6 +7,8 @@ import Hero1 from '../assets/images/Hero1.webp';
 
 export default function PortfolioCategory({ category }) {
   const [visibleCount, setVisibleCount] = useState(6);
+  const [allFilteredProjects, setAllFilteredProjects] = useState([]);
+  const [displayProjects, setDisplayProjects] = useState([]);
 
   // Imagen por defecto (la que tenías en el Hero o Banner)
   const defaultImg = Hero1; 
@@ -22,13 +24,14 @@ export default function PortfolioCategory({ category }) {
 
   useEffect(() => {
     setVisibleCount(6); 
+    setAllFilteredProjects(projects.filter(p => 
+      category.toLowerCase() === "todos" || p.category.toLowerCase() === category.toLowerCase()
+    ))
   }, [category]);
 
-  const allFilteredProjects = projects.filter(p => 
-    category.toLowerCase() === "todos" || p.category.toLowerCase() === category.toLowerCase()
-  );
-
-  const displayProjects = allFilteredProjects.slice(0, visibleCount);
+  useEffect(() => {
+    setDisplayProjects(allFilteredProjects.slice(0, visibleCount))
+  }, [visibleCount, allFilteredProjects]);
 
   // Seleccionamos la imagen (si no existe la categoría en el objeto, usa la de "todos")
   const bannerImage = categoryImages[category.toLowerCase()] || categoryImages.todos;
