@@ -1,3 +1,4 @@
+import Portada_DigitalVector from '../assets/images/Web/Portada_DigitalVector.webp';
 import Portada_Bloom from '../assets/images/Web/Portada_Bloom.webp';
 import Portada_Payslip from '../assets/images/Web/Portada_Payslip.webp';
 import Portada_Fanfiction from '../assets/images/Web/Portada_Fanfiction.jpg';
@@ -15,10 +16,24 @@ import Portada_Sillkylatte_Botella from '../assets/images/Packaging/Portada_Sill
 import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
 import Portada_Crown from '../assets/images/Packaging/Portada_Crown.webp';
 
+
 export const projects = [
   // --- CATEGORÍA: REDES ---
-  {
+   {
     id: 1,
+    title: "Digital Vector",
+    category: "Web",
+    image: Portada_DigitalVector,
+    slug: "digitalVector",
+    description: "Web para sitio de soluciones digitales",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 2,
     title: "Bloom Indumentaria",
     category: "Web",
     image: Portada_Bloom,
@@ -28,19 +43,6 @@ export const projects = [
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200",
       "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200",
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
-    ]
-  },
-  {
-    id: 2,
-    title: "Payslip App",
-    category: "Web",
-    image: Portada_Payslip,
-    slug: "payslip",
-    description: "Web-app de recursos humanos y manejo de personal con ABM de documentación.",
-    gallery: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
     ]
   },
   {
@@ -58,6 +60,19 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Payslip App",
+    category: "Web",
+    image: Portada_Payslip,
+    slug: "payslip",
+    description: "Web-app de recursos humanos y manejo de personal con ABM de documentación.",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 5,
     title: "Sweet Blossom",
     category: "Web",
     image: Portada_SweetBlossom,
@@ -70,7 +85,7 @@ export const projects = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "Foodie App",
     category: "Web",
     image: Portada_Foodie,
@@ -83,7 +98,7 @@ export const projects = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Orpheus Opera",
     category: "Web",
     image: Portada_Orpheus,
@@ -96,7 +111,7 @@ export const projects = [
     ]
   },
     {
-    id: 7,
+    id: 8,
     title: "Electrohaus Landing Page",
     category: "Web",
     image: Portada_Electrohaus,
@@ -109,7 +124,7 @@ export const projects = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     title: "Magic Travel Game",
     category: "Web",
     image: Portada_MagicTravel,
@@ -122,7 +137,7 @@ export const projects = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     title: "Hermes Hotel",
     category: "Web",
     image: Portada_Hermes,
@@ -135,7 +150,7 @@ export const projects = [
     ]
   },
    {
-    id: 10,
+    id: 11,
     title: "Wine Night",
     category: "Web",
     image: Portada_WineNight,
@@ -148,7 +163,7 @@ export const projects = [
     ]
   },
   {
-    id: 11,
+    id: 12,
     title: "Revista Maison",
     category: "Editorial",
     image: Portada_Maison,
@@ -161,7 +176,7 @@ export const projects = [
     ]
   },
    {
-    id: 12,
+    id: 13,
     title: "Wine Manifiesto",
     category: "Editorial",
     image: Portada_Manifiesto,
@@ -174,7 +189,7 @@ export const projects = [
     ]
   },
    {
-    id: 13,
+    id: 14,
     title: "Silkylatte Leche",
     category: "Packaging",
     image: Portada_Sillkylatte,
@@ -187,7 +202,7 @@ export const projects = [
     ]
   },
   {
-    id: 14,
+    id: 15,
     title: "Silkylatte Botella",
     category: "Packaging",
     image: Portada_Sillkylatte_Botella,
@@ -200,7 +215,7 @@ export const projects = [
     ]
   },
   {
-    id: 15,
+    id: 16,
     title: "Fruits Jugo",
     category: "Packaging",
     image: Portada_Fruits,
@@ -213,7 +228,7 @@ export const projects = [
     ]
   },
   {
-    id: 16,
+    id: 17,
     title: "Shampoo & Acondicionador Crown",
     category: "Packaging",
     image: Portada_Crown,

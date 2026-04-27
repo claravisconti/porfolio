@@ -1,6 +1,8 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AppRoutes from './routes';
+import ScrollToTopButton from './components/ScrollToTopButton';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <AppRoutes />
       </main>
       <Footer />
+      <ScrollToTopButton />
+      {/* <WhatsAppButton /> */}
     </div>
   );
 }
