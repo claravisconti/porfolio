@@ -47,7 +47,7 @@ export default function FormSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold uppercase tracking-tighter">Buenos Aires</h3>
+              <h3 className="text-xl font-bold uppercase tracking-tighter">Redes Sociales</h3>
               <div className="w-8 h-[1px] bg-gray-300 mb-4"></div>
               <div className="text-sm space-y-1 text-gray-600 tracking-wide font-light">
                 <Socials />
@@ -55,10 +55,10 @@ export default function FormSection() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-bold uppercase tracking-tighter">Remoto</h3>
+              <h3 className="text-xl font-bold uppercase tracking-tighter">Horarios</h3>
               <div className="w-8 h-[1px] bg-gray-300 mb-4"></div>
               <div className="text-sm space-y-1 text-gray-600 tracking-wide font-light">
-                <p>Lunes a Viernes / 09:00 - 18:00</p>
+                <p>Lunes a Sábados / 09:00 - 18:00</p>
               </div>
             </div>
 
