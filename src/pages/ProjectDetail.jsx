@@ -41,7 +41,7 @@ const ProjectNavigation = ({ currentId }) => {
 
 export default function ProjectDetail() {
   const { slug } = useParams();
-  
+
   // Buscamos el proyecto por slug
   const project = projects.find(p => p.slug === slug);
 
@@ -61,7 +61,7 @@ export default function ProjectDetail() {
 
   return (
     <div className="bg-white min-h-screen">
-      
+
       {/* --- SECCIÓN 1: HERO & FICHA TÉCNICA --- */}
       <section className="max-w-7xl mx-auto px-6 md:px-24 pt-40 pb-20">
         <div className="flex flex-col lg:flex-row gap-16">
@@ -75,7 +75,7 @@ export default function ProjectDetail() {
               {project.title}
             </h1>
           </div>
-          
+
           <div className="lg:w-1/3 flex flex-col justify-end space-y-8 pb-2 border-l border-gray-100 pl-8">
             <div>
               <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-2">Año</h4>
@@ -106,21 +106,24 @@ export default function ProjectDetail() {
 
       {/* --- SECCIÓN 3: GALERÍA Y SOLUCIÓN --- */}
       <section className="max-w-7xl mx-auto px-6 md:px-24 space-y-24">
-        {/* Imagen Principal (Desktop View) */}
-        {project.gallery && project.gallery[0] && (
+
+        {/* IMAGEN 1: Se muestra solo si existe al menos una imagen */}
+        {project.gallery && project.gallery.length >= 1 && (
           <div className="w-full aspect-video overflow-hidden bg-gray-50 rounded-sm shadow-sm">
-            <img 
-              src={project.gallery[0]} 
-              alt={`${project.title} principal`} 
-              className="w-full h-full object-cover" 
+            <img
+              src={project.gallery[0]}
+              alt={`${project.title} principal`}
+              className="w-full h-full object-cover"
             />
           </div>
         )}
 
-        {/* Bloque La Solución (Igualado a El Desafío) */}
+        {/* BLOQUE LA SOLUCIÓN: Siempre se muestra el texto */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-10">
           <div className="md:col-span-4">
-            <h3 className="text-[11px] uppercase tracking-[0.4em] font-bold text-black border-b border-black pb-2 inline-block">La Solución</h3>
+            <h3 className="text-[11px] uppercase tracking-[0.4em] font-bold text-black border-b border-black pb-2 inline-block">
+              La Solución
+            </h3>
           </div>
           <div className="md:col-span-8">
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -129,27 +132,33 @@ export default function ProjectDetail() {
           </div>
         </div>
 
-        {/* Grid de Imágenes Secundarias (Mobile/Detail View) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-          {project.gallery && project.gallery[1] && (
-            <div className="aspect-[3/4] overflow-hidden bg-gray-50 rounded-sm">
-              <img 
-                src={project.gallery[1]} 
-                alt={`${project.title} detalle 1`} 
-                className="w-full h-full object-cover" 
-              />
-            </div>
-          )}
-          {project.gallery && project.gallery[2] && (
-            <div className="aspect-[3/4] overflow-hidden bg-gray-50 rounded-sm md:mt-40">
-              <img 
-                src={project.gallery[2]} 
-                alt={`${project.title} detalle 2`} 
-                className="w-full h-full object-cover" 
-              />
-            </div>
-          )}
-        </div>
+        {/* GRID DE IMÁGENES 2 Y 3: Se muestra solo si hay más de una imagen */}
+        {project.gallery && project.gallery.length > 1 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+
+            {/* Imagen 2 */}
+            {project.gallery[1] && (
+              <div className="aspect-[3/4] overflow-hidden bg-gray-50 rounded-sm">
+                <img
+                  src={project.gallery[1]}
+                  alt={`${project.title} detalle 1`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+
+            {/* Imagen 3: Solo si existe, y mantiene el margen superior (mt-40) para el efecto visual */}
+            {project.gallery[2] && (
+              <div className="aspect-[3/4] overflow-hidden bg-gray-50 rounded-sm md:mt-40">
+                <img
+                  src={project.gallery[2]}
+                  alt={`${project.title} detalle 2`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+          </div>
+        )}
       </section>
 
       {/* --- SECCIÓN 4: NAVEGACIÓN ENTRE PROYECTOS --- */}
