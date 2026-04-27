@@ -19,6 +19,11 @@ import Portada_Fidelity from '../assets/images/Campañas/Portada_Fidelity.webp';
 import Portada_ConsumerPulse from '../assets/images/Campañas/Portada_ConsumerPulse.webp';
 import Portada_TrueLoyalty from '../assets/images/Campañas/Portada_TrueLoyalty.webp';
 import Portada_BloombergScreentime from '../assets/images/Campañas/Portada_BloombergScreentime.webp';
+import Portada_Engaging from '../assets/images/Campañas/Portada_Engaging.webp';
+import Portada_Consumer from '../assets/images/Campañas/Portada_Consumer.webp';
+import Portada_Drupal from '../assets/images/Campañas/Portada_Drupal.webp';
+import Portada_AdvertisingWeek from '../assets/images/Campañas/Portada_AdvertisingWeek.webp';
+import Portada_DrupalCon from '../assets/images/Campañas/Portada_DrupalCon.webp';
 
 export const projects = [
   // --- CATEGORÍA: REDES ---
@@ -271,6 +276,19 @@ export const projects = [
   },
    {
     id: 20,
+    title: "Post Consumer",
+    category: "Campañas",
+    image: Portada_Consumer,
+    slug: "Consumer",
+    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+   {
+    id: 21,
     title: "Campaña True Loyalty",
     category: "Campañas",
     image: Portada_TrueLoyalty,
@@ -284,7 +302,7 @@ export const projects = [
   },
   ,
    {
-    id: 21,
+    id: 22,
     title: "Campaña Bloomberg",
     category: "Campañas",
     image: Portada_BloombergScreentime,
@@ -295,5 +313,45 @@ export const projects = [
       "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
       "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
     ]
-  }
+  },
+  ,
+   {
+    id: 23,
+    title: "Post Drupal",
+    category: "Campañas",
+    image: Portada_Drupal,
+    slug: "Drupal",
+    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+   {
+    id: 24,
+    title: "Post Advertising Week",
+    category: "Campañas",
+    image: Portada_AdvertisingWeek,
+    slug: "AdvertisingWeek",
+    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
+  {
+    id: 25,
+    title: "Post DrupalCon",
+    category: "Campañas",
+    image: Portada_DrupalCon,
+    slug: "DrupalCon",
+    description: "Post para redes sociales: Instagram ads y Linkedin Ads",
+    gallery: [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1200",
+      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1200",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+    ]
+  },
 ];

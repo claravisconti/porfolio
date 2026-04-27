@@ -7,7 +7,7 @@ const services = [
     icon: <Monitor size={48} strokeWidth={1} /> // Un monitor para lo digital
   },
   {
-    title: "Branding",
+    title: "Institucional",
     desc: "Creo identidades visuales desde cero, buscando una narrativa coherente y atemporal para cada proyecto.",
     icon: <PenTool size={48} strokeWidth={1} /> // La pluma para la creación de logos/trazos
   },

@@ -17,9 +17,9 @@ export default function PortfolioCategory({ category }) {
   const categoryImages = {
     todos: defaultImg,
     web: defaultImg,
-    editorial: defaultImg,
+    redes: defaultImg,
     packaging: defaultImg,
-    redes: defaultImg
+    editorial: defaultImg
   };
 
   useEffect(() => {

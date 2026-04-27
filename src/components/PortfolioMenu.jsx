@@ -4,9 +4,9 @@ export default function PortfolioMenu() {
   const categories = [
     { name: 'Todos', href: '/portfolio' },
     { name: 'Web', href: '/portfolio/web' },
-    { name: 'Editorial', href: '/portfolio/editorial' },
-    { name: 'Packaging', href: '/portfolio/packaging' },
     { name: 'Campañas', href: '/portfolio/redes' },
+    { name: 'Packaging', href: '/portfolio/packaging' },
+    { name: 'Editorial', href: '/portfolio/editorial' }
   ];
 
   return (

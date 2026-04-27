@@ -2,7 +2,7 @@ import React from 'react';
 
 const skills = [
   { name: "Diseño Web", percentage: 90 },
-  { name: "Branding", percentage: 85 },
+  { name: "Mobile", percentage: 85 },
   { name: "Packaging", percentage: 80 },
   { name: "Campañas", percentage: 75 },
 ];
