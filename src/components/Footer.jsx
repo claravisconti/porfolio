@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBehance, FaLinkedin, FaFacebookF } from 'react-icons/fa';
+import { FaBehance, FaLinkedin, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 import { IoMailOutline } from 'react-icons/io5'; // Cambié a este para que haga mejor juego visual con los otros
 import Iso from '../assets/images/Iso_blanco.svg';
 
@@ -32,10 +32,10 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center space-y-8">
           <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-gray-500">Explorar</h4>
           <nav className="flex flex-col gap-4">
-            <Link to="/" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#00adb5] transition-colors">Home</Link>
-            <Link to="/portfolio" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#00adb5] transition-colors">Portfolio</Link>
-            <Link to="/about" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#00adb5] transition-colors">Sobre Mí</Link>
-            <Link to="/contact" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#00adb5] transition-colors">Contacto</Link>
+            <Link to="/" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#000000] transition-colors">Home</Link>
+            <Link to="/portfolio" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#000000] transition-colors">Portfolio</Link>
+            <Link to="/about" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#000000] transition-colors">Sobre Mí</Link>
+            <Link to="/contact" className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-[#000000] transition-colors">Contacto</Link>
           </nav>
         </div>
 
@@ -45,11 +45,22 @@ export default function Footer() {
 
           <div className="flex gap-8 text-2xl justify-center md:justify-end items-center">
             {/* Icono de Mail redirigiendo a Gmail Web */}
+
+            <a
+              href="https://wa.me/5491100000000?text=Hola%20Clara!%20Me%20gustaría%20consultarte%20por%20un%20proyecto."
+              className="hover:text-[#000000] transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Chat de WhatsApp"
+            >
+              <FaWhatsapp size={22} />
+            </a>
+
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=mclaravisconti@gmail.com&su=Consulta desde Portfolio&body=Hola Clara,"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#00adb5] transition-colors duration-300"
+              className="hover:text-[#000000] transition-colors duration-300"
               title="Enviar Email"
             >
               <IoMailOutline />
@@ -59,17 +70,17 @@ export default function Footer() {
               href="https://www.behance.net/mariaclaravisconti"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#00adb5] transition-colors duration-300"
+              className="hover:text-[#000000] transition-colors duration-300"
               title="Behance"
             >
               <FaBehance />
             </a>
-            <a href="https://www.linkedin.com/in/mariaclaravisconti" className="hover:text-[#00adb5] transition-colors duration-300" target="_blank"
+            <a href="https://www.linkedin.com/in/mariaclaravisconti" className="hover:text-[#000000] transition-colors duration-300" target="_blank"
               rel="noopener noreferrer" title="LinkedinW">
 
               <FaLinkedin />
             </a>
-
+            
             {/* <a href="#" className="hover:text-[#00adb5] transition-colors duration-300" title="Facebook">
               <FaFacebookF size={20} /> 
             </a>  */}

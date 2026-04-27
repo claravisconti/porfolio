@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Hero1 from '../assets/images/Hero1.webp';
 import Hero2 from '../assets/images/Hero2.webp';
 // import hero3 from '../assets/hero-art.jpg';
+import { Link } from 'react-router-dom';
 
 const slides = [
   {
@@ -40,15 +41,14 @@ export default function Hero() {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === current ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <img 
-            src={slide.image} 
-            className="w-full h-full object-cover" 
-            alt="" 
+          <img
+            src={slide.image}
+            className="w-full h-full object-cover"
+            alt=""
           />
         </div>
       ))}
@@ -59,20 +59,30 @@ export default function Hero() {
           <h1 className="text-white text-4xl sm:text-6xl md:text-8xl lg:text-[140px] font-black leading-[1] md:leading-[0.8] tracking-tighter whitespace-pre-line mb-6 md:mb-8 drop-shadow-2xl">
             {slides[current].title}
           </h1>
-          
+
           <p className="text-white/80 text-base md:text-xl max-w-xs md:max-w-md font-light mb-8 md:mb-12">
             {slides[current].subtitle}
           </p>
-          
+
           {/* Botones: Ajuste de color en el hover */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="w-full sm:w-auto px-10 py-4 md:px-12 md:py-5 bg-white text-black text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all"> {/* 👈 CAMBIADO AQUÍ */}
-              Ver más
-            </button>
-            <button className="w-full sm:w-auto px-10 py-4 md:px-12 md:py-5 border border-white/40 text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all">
-              Leer más
-            </button>
+            {/* Botón Primario */}
+            <Link
+              to="/portfolio"
+              className="w-full sm:w-auto px-10 py-4 md:px-12 md:py-5 bg-white text-black text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all text-center"
+            >
+              Ver proyectos
+            </Link>
+
+            {/* Botón Secundario */}
+            <Link
+              to="/About"
+              className="w-full sm:w-auto px-10 py-4 md:px-12 md:py-5 border border-white/40 text-white text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-white hover:text-black transition-all text-center"
+            >
+              Sobre mí
+            </Link>
           </div>
+
         </div>
       </div>
 
@@ -84,14 +94,12 @@ export default function Hero() {
             onClick={() => setCurrent(index)}
             className="group flex items-center gap-2 md:gap-4"
           >
-            <span className={`text-[10px] md:text-[11px] font-bold tracking-widest transition-all ${
-              index === current ? 'text-white scale-110' : 'text-white/40' // 👈 LÍNEA ACTIVA A BLANCO
-            }`}>
+            <span className={`text-[10px] md:text-[11px] font-bold tracking-widest transition-all ${index === current ? 'text-white scale-110' : 'text-white/40' // 👈 LÍNEA ACTIVA A BLANCO
+              }`}>
               {slide.id}
             </span>
-            <div className={`h-[1px] transition-all duration-500 ${
-              index === current ? 'w-10 md:w-16 bg-white' : 'w-0 bg-white/20 group-hover:w-8' // 👈 LÍNEA ACTIVA A BLANCO
-            }`}></div>
+            <div className={`h-[1px] transition-all duration-500 ${index === current ? 'w-10 md:w-16 bg-white' : 'w-0 bg-white/20 group-hover:w-8' // 👈 LÍNEA ACTIVA A BLANCO
+              }`}></div>
           </button>
         ))}
       </div>
