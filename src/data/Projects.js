@@ -44,6 +44,8 @@ import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
 import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
 import Fruits1 from '../assets/images/Packaging/Galeria/Fruits1.webp';
 import Crown1 from '../assets/images/Packaging/Galeria/Crown1.webp';
+import Maison1 from '../assets/images/Editorial/Galeria/Maison1.webp';
+import Manifiesto1 from '../assets/images/Editorial/Galeria/Manifiesto1.webp';
 
 export const projects = [
   // --- WEB ---
@@ -191,7 +193,7 @@ export const projects = [
     services: "Editorial Design / Layout",
     description: "Maison es una revista de arquitectura que buscaba una renovación total. El desafío era crear una retícula flexible que permitiera alojar desde ensayos extensos hasta layouts fotográficos de gran formato sin perder la consistencia visual.",
     solution: "Establecimos un sistema de 12 columnas que permite variaciones asimétricas. La elección tipográfica mezcla una Serif humanista con una Sans-Serif técnica, reforzando el equilibrio entre el arte y la precisión arquitectónica de la publicación.",
-    gallery: []
+    gallery: [Maison1]
   },
   {
     id: 13,
@@ -203,7 +205,7 @@ export const projects = [
     services: "Print Design / Art Direction",
     description: "Este libro objeto recopila las filosofías de los enólogos más disruptivos. El reto era diseñar un objeto físico que fuera tan sensorial como el vino mismo, utilizando el diseño editorial para contar historias de terroir.",
     solution: "La solución incluyó el uso de papeles texturizados y acabados en bajorrelieve. El diseño interior utiliza un flujo narrativo orgánico, con ilustraciones botánicas que conviven con una tipografía audaz y moderna, alejándose de los libros de vino tradicionales.",
-    gallery: []
+    gallery: [Manifiesto1]
   },
 
   // --- PACKAGING ---
