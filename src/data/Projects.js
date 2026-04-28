@@ -44,6 +44,19 @@ import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
 import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
 import Fruits1 from '../assets/images/Packaging/Galeria/Fruits1.webp';
 import Crown1 from '../assets/images/Packaging/Galeria/Crown1.webp';
+import Maison1 from '../assets/images/Editorial/Galeria/Maison1.webp';
+import Manifiesto1 from '../assets/images/Editorial/Galeria/Manifiesto1.webp';
+import Fidelity1 from '../assets/images/Campañas/Galeria/Fidelity1.webp';
+import ConsumerPulse1 from '../assets/images/Campañas/Galeria/ConsumerPulse1.webp';
+import Consumer1 from '../assets/images/Campañas/Galeria/Consumer1.webp';
+import TrueLoyalty1 from '../assets/images/Campañas/Galeria/TrueLoyalty1.webp';
+import BloombergScreentime1 from '../assets/images/Campañas/Galeria/BloombergScreentime1.webp';
+import Drupal1 from '../assets/images/Campañas/Galeria/Drupal1.webp';
+import AdvertisingWeek1 from '../assets/images/Campañas/Galeria/AdvertisingWeek1.webp';
+import DrupalCon1 from '../assets/images/Campañas/Galeria/DrupalCon1.webp';
+import WID1 from '../assets/images/Campañas/Galeria/WID1.webp';
+import STC1 from '../assets/images/Campañas/Galeria/STC1.webp';
+import HCIC1 from '../assets/images/Campañas/Galeria/HCIC1.webp';
 
 export const projects = [
   // --- WEB ---
@@ -191,7 +204,7 @@ export const projects = [
     services: "Editorial Design / Layout",
     description: "Maison es una revista de arquitectura que buscaba una renovación total. El desafío era crear una retícula flexible que permitiera alojar desde ensayos extensos hasta layouts fotográficos de gran formato sin perder la consistencia visual.",
     solution: "Establecimos un sistema de 12 columnas que permite variaciones asimétricas. La elección tipográfica mezcla una Serif humanista con una Sans-Serif técnica, reforzando el equilibrio entre el arte y la precisión arquitectónica de la publicación.",
-    gallery: []
+    gallery: [Maison1]
   },
   {
     id: 13,
@@ -203,7 +216,7 @@ export const projects = [
     services: "Print Design / Art Direction",
     description: "Este libro objeto recopila las filosofías de los enólogos más disruptivos. El reto era diseñar un objeto físico que fuera tan sensorial como el vino mismo, utilizando el diseño editorial para contar historias de terroir.",
     solution: "La solución incluyó el uso de papeles texturizados y acabados en bajorrelieve. El diseño interior utiliza un flujo narrativo orgánico, con ilustraciones botánicas que conviven con una tipografía audaz y moderna, alejándose de los libros de vino tradicionales.",
-    gallery: []
+    gallery: [Manifiesto1]
   },
 
   // --- PACKAGING ---
@@ -255,7 +268,7 @@ export const projects = [
     services: "Social Media Strategy",
     description: "Fidelity buscaba humanizar los servicios financieros para la Generación Z. El desafío era crear una campaña de redes sociales que fuera informativa pero que hablara el lenguaje visual rápido y dinámico de TikTok e Instagram.",
     solution: "Creamos un sistema de ilustración vibrante y animaciones fluidas que simplifican conceptos de inversión. La campaña logró un 40% más de engagement orgánico gracias a que el contenido se centraba en resolver dudas reales del usuario de forma visual.",
-    gallery: []
+    gallery: [Fidelity1]
   },
   {
     id: 18,
@@ -267,7 +280,7 @@ export const projects = [
     services: "Data Visualization / Campaign",
     description: "Para un informe global de consumo, el reto era hacer que los datos densos fueran compartibles en LinkedIn. Debía servir como herramienta de venta B2B y como contenido de valor para la industria.",
     solution: "Transformamos 200 páginas de datos en una serie de infografías cinéticas. Diseñamos un sistema de iconos personalizados que permiten entender tendencias de mercado globales con un solo vistazo, posicionando a la marca como líder de opinión.",
-    gallery: []
+    gallery: [ConsumerPulse1]
   },
   {
     id: 19,
@@ -279,7 +292,7 @@ export const projects = [
     services: "Social Design Strategy",
     description: "El desafío era estandarizar la comunicación visual de una marca de consumo masivo para sus equipos regionales. Se necesitaba un sistema flexible que mantuviera la coherencia sin importar el país de publicación.",
     solution: "Se creó un manual de diseño digital 'viviendo' en Figma, con componentes dinámicos que se ajustan automáticamente a diferentes formatos. Esto redujo los tiempos de producción gráfica de la marca en un 50% a nivel global.",
-    gallery: []
+    gallery: [Consumer1]
   },
   {
     id: 20,
@@ -291,7 +304,7 @@ export const projects = [
     services: "Art Direction / Branding",
     description: "True Loyalty buscaba premiar la fidelidad de sus clientes de banca privada. El reto era diseñar una campaña que no se sintiera transaccional, sino como un reconocimiento genuino a la relación a largo plazo.",
     solution: "Utilizamos una dirección de arte basada en retratos íntimos y monocromáticos. La narrativa se centró en historias de vida reales apoyadas por la marca, logrando una conexión emocional que aumentó el índice de recomendación (NPS) del banco.",
-    gallery: []
+    gallery: [TrueLoyalty1]
   },
   {
     id: 21,
@@ -303,7 +316,7 @@ export const projects = [
     services: "Motion Graphics / Advertising",
     description: "Para el evento anual de medios de Bloomberg, el desafío era crear un sistema visual que representara la intersección entre el contenido y la tecnología de pantallas modernas.",
     solution: "Desarrollamos una identidad basada en el concepto de 'fluidez digital'. El sistema visual utiliza gradientes dinámicos y tipografía en movimiento que se adapta a cualquier tamaño de pantalla, desde smartwatches hasta vallas monumentales en Times Square.",
-    gallery: []
+    gallery: [BloombergScreentime1]
   },
   {
     id: 22,
@@ -315,7 +328,7 @@ export const projects = [
     services: "Community Branding",
     description: "Drupal necesitaba revitalizar su comunicación para atraer a una nueva generación de desarrolladores. El reto era presentar a la comunidad técnica no solo como un software, sino como un ecosistema vivo de colaboración global.",
     solution: "Se diseñó una serie de ilustraciones conceptuales que transforman el código en formas orgánicas. La campaña 'Build Anything' mostró la versatilidad de la herramienta a través de casos de uso visualmente disruptivos en redes sociales.",
-    gallery: []
+    gallery: [Drupal1]
   },
   {
     id: 23,
@@ -327,7 +340,7 @@ export const projects = [
     services: "Event Branding / Real-time Design",
     description: "El reto era generar contenido visual atractivo en tiempo real durante una semana de conferencias masivas. Se necesitaba capturar la esencia de los ponentes más influyentes y distribuirla en redes sociales en cuestión de minutos.",
     solution: "Creamos un estudio de diseño 'in-situ' con plantillas dinámicas que permitían producir quotes visuales y resúmenes gráficos apenas terminaban las charlas. La campaña dominó la conversación orgánica de la industria durante todo el evento.",
-    gallery: []
+    gallery: [AdvertisingWeek1]
   },
   {
     id: 24,
@@ -339,7 +352,7 @@ export const projects = [
     services: "Event Identity / Motion",
     description: "En el primer evento post-pandemia, el desafío era generar una sensación de re-encuentro. La comunicación visual debía ser celebratoria, inclusiva y reflejar la madurez de la tecnología Drupal en el mercado enterprise.",
     solution: "Diseñamos un sistema visual basado en conexiones geométricas que representan la red global de talento. La campaña incluyó piezas animadas que celebraban el re-encuentro físico, logrando un récord de asistencia y registros anticipados.",
-    gallery: []
+    gallery: [DrupalCon1]
   },
   {
     id: 25,
@@ -351,7 +364,7 @@ export const projects = [
     services: "Social Impact Design",
     description: "Para el Día Internacional de la Mujer, el reto era alejarse de los mensajes genéricos y corporativos. La campaña debía empoderar a las mujeres en tecnología de una forma visualmente única y no estereotipada.",
     solution: "Desarrollamos una serie de retratos ilustrados de mujeres pioneras en la tecnología con un estilo vanguardista. La narrativa se centró en 'El futuro es diverso', logrando un nivel de compartición sin precedentes en la historia digital de la marca.",
-    gallery: []
+    gallery: [WID1]
   },
   {
     id: 26,
@@ -363,7 +376,7 @@ export const projects = [
     services: "Non-Profit Strategy",
     description: "El desafío era generar donaciones en una era de 'fatiga de información'. Necesitábamos una campaña visualmente poderosa que conectara al donante con la causa de una forma directa y sin filtros innecesarios.",
     solution: "Utilizamos una dirección de arte minimalista centrada en el blanco y negro con acentos rojos institucionales. La tipografía de gran escala gritaba los datos de impacto, mientras que la fotografía documental humanizaba la estadística, logrando un pico histórico en donaciones digitales.",
-    gallery: []
+    gallery: [STC1]
   },
   {
     id: 27,
@@ -375,6 +388,6 @@ export const projects = [
     services: "Healthcare Branding / Event",
     description: "Para la Healthcare Interactive Conference, el reto era diseñar una identidad que uniera la calidez humana de la medicina con la frialdad de la alta tecnología quirúrgica.",
     solution: "Se creó un logo dinámico que imita el ritmo cardíaco fusionado con circuitos digitales. La paleta de colores utiliza un azul médico moderno combinado con un naranja vibrante, simbolizando la innovación activa en el campo de la salud.",
-    gallery: []
+    gallery: [HCIC1]
   }
 ];
