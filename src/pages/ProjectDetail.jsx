@@ -18,10 +18,9 @@ export default function ProjectDetail() {
 
   return (
     <div className="bg-white min-h-screen text-black">
-      {/* SECCIÓN 1: HERO - Ajustada para que Año y Servicios se apilen en mobile */}
+      {/* SECCIÓN 1: HERO */}
       <section className="max-w-7xl mx-auto px-6 md:px-24 pt-32 md:pt-40 pb-12 md:pb-20">
         <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center md:items-start text-center md:text-left">
-
           <div className="lg:w-2/3">
             <p className="text-[10px] md:text-[11px] uppercase tracking-[0.5em] text-[#6db4b6] font-bold mb-4 md:mb-6 italic">
               {project.category}
@@ -31,19 +30,19 @@ export default function ProjectDetail() {
             </h1>
           </div>
 
-          {/* FICHA TÉCNICA: flex-col para mobile, lg:flex-col para mantener vertical en desktop si prefieres, 
-        o md:flex-row si quieres que en tablet se pongan de costado */}
           <div className="lg:w-1/3 flex flex-col sm:flex-row lg:flex-col justify-center lg:justify-end gap-8 md:gap-8 pt-6 pb-1 lg:border-l border-gray-100 lg:pl-8 w-full">
-            <div className="text-center lg:text-left">
-              <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Año</h4>
-              <p className="text-[10px] md:text-xs font-bold uppercase">{project.year}</p>
-            </div>
-            {/* Línea divisoria opcional para mobile */}
-            {/* <div className="h-[1px] w-10 bg-gray-100 mx-auto lg:mx-0 md:hidden"></div> */}
-            <div className="text-center lg:text-left">
-              <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Servicios</h4>
-              <p className="text-[10px] md:text-xs font-bold uppercase">{project.services}</p>
-            </div>
+            {project.year && (
+              <div className="text-center lg:text-left">
+                <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Año</h4>
+                <p className="text-[10px] md:text-xs font-bold uppercase">{project.year}</p>
+              </div>
+            )}
+            {project.services && (
+              <div className="text-center lg:text-left">
+                <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Servicios</h4>
+                <p className="text-[10px] md:text-xs font-bold uppercase">{project.services}</p>
+              </div>
+            )}
             <div className="text-center lg:text-left">
               <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Autor</h4>
               <p className="text-[10px] md:text-xs font-bold uppercase">María Clara Visconti</p>
@@ -52,112 +51,127 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {/* SECCIÓN FOTO 1: MÁS GRANDE (VERTICAL) EN MOBILE, VIDEO EN DESKTOP */}
-      <section className="max-w-7xl mx-auto md:px-24 mb-16 md:mb-24">
-        {/* En mobile aspect-[4/5] (más alto), en desktop aspect-video (16:9) */}
-        <div className="w-full aspect-[4/5] md:aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
-          <img src={project.gallery[0]} alt="Hero" className="w-full h-full object-cover" />
-        </div>
-      </section>
+      {/* SECCIÓN FOTO 1 */}
+      {project.gallery?.[0] && (
+        <section className="max-w-7xl mx-auto md:px-24 mb-16 md:mb-24">
+          <div className="w-full aspect-[4/5] md:aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
+            <img src={project.gallery[0]} alt="Hero" className="w-full h-full object-cover" />
+          </div>
+        </section>
+      )}
 
       {isWeb ? (
         <>
-          {/* SECCIÓN 2: ESTRATEGIA */}
-          <section className="max-w-7xl mx-auto px-6 md:px-24 py-12 md:py-20 border-b border-gray-50">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-              {[
-                { title: "Problema", desc: project.problem, icon: <Monitor size={48} strokeWidth={1} /> },
-                { title: "Objetivo", desc: project.objective, icon: <Target size={48} strokeWidth={1} /> },
-                { title: "Desafío", desc: project.challenge, icon: <Zap size={48} strokeWidth={1} /> },
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6">
-                  <div className="text-black/80">{item.icon}</div>
-                  <h3 className="text-xl md:text-lg font-bold uppercase tracking-tight">{item.title}</h3>
-                  <div className="w-6 h-[1px] bg-black/20"></div>
-                  <p className="text-gray-500 text-sm leading-relaxed font-light">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          {/* SECCIÓN 2: ESTRATEGIA - Solo si alguno de los 3 existe */}
+          {(project.problem || project.objective || project.challenge) && (
+            <section className="max-w-7xl mx-auto px-6 md:px-24 py-12 md:py-20 border-b border-gray-50">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+                {[
+                  { title: "Problema", desc: project.problem, icon: <Monitor size={48} strokeWidth={1} /> },
+                  { title: "Objetivo", desc: project.objective, icon: <Target size={48} strokeWidth={1} /> },
+                  { title: "Desafío", desc: project.challenge, icon: <Zap size={48} strokeWidth={1} /> },
+                ].map((item, i) => item.desc ? (
+                  <div key={i} className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6">
+                    <div className="text-black/80">{item.icon}</div>
+                    <h3 className="text-xl md:text-lg font-bold uppercase tracking-tight">{item.title}</h3>
+                    <div className="w-6 h-[1px] bg-black/20"></div>
+                    <p className="text-gray-500 text-sm leading-relaxed font-light">{item.desc}</p>
+                  </div>
+                ) : null)}
+              </div>
+            </section>
+          )}
 
           {/* SECCIÓN 3: PALETA Y FOTOS DETALLE */}
           <section className="max-w-7xl mx-auto px-6 md:px-24 py-16 md:py-24 text-center md:text-left">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
               <div className="md:col-span-4 space-y-12">
-                <div className="flex flex-col items-center md:items-start">
-                  <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold italic">Colors</h4>
-                  <div className="flex gap-4">
-                    {project.colors?.map((c, i) => (
-                      <div key={i} className="w-10 h-10 rounded-full border border-gray-100" style={{ backgroundColor: c }} />
-                    ))}
+                {project.colors?.length > 0 && (
+                  <div className="flex flex-col items-center md:items-start">
+                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold italic">Colors</h4>
+                    <div className="flex gap-4">
+                      {project.colors.map((c, i) => (
+                        <div key={i} className="w-10 h-10 rounded-full border border-gray-100" style={{ backgroundColor: c }} />
+                      ))}
+                    </div>
                   </div>
-                </div>
-                <div className="flex flex-col items-center md:items-start">
-                  <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold italic">Typography</h4>
-                  <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">{project.fonts}</h3>
-                </div>
+                )}
+                {project.fonts && (
+                  <div className="flex flex-col items-center md:items-start">
+                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold italic">Typography</h4>
+                    <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">{project.fonts}</h3>
+                  </div>
+                )}
               </div>
               <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-                <img src={project.gallery[1]} className="w-full aspect-[3/4] object-cover" alt="Detail 1" />
-                <img src={project.gallery[2]} className="w-full aspect-[3/4] object-cover" alt="Detail 2" />
+                {project.gallery?.[1] && <img src={project.gallery[1]} className="w-full aspect-[3/4] object-cover" alt="Detail 1" />}
+                {project.gallery?.[2] && <img src={project.gallery[2]} className="w-full aspect-[3/4] object-cover" alt="Detail 2" />}
               </div>
             </div>
           </section>
 
           {/* SECCIÓN 5: LA SOLUCIÓN Y MÉTRICAS */}
-          <section className="max-w-7xl mx-auto px-6 md:px-24 py-16 md:py-20 text-center md:text-left">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              <div className="flex flex-col items-center md:items-start space-y-6">
-                <h3 className="text-[11px] uppercase tracking-[0.4em] font-bold border-b border-black pb-2 inline-block">La Solución</h3>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed italic font-light">{project.solution}</p>
-              </div>
-              <div className="space-y-8 md:space-y-10">
-                {project.metrics?.map((m, i) => (
-                  <div key={i} className="group">
-                    <div className="flex justify-between mb-2 font-bold uppercase">
-                      <span className="text-[10px] tracking-widest">{m.name}</span>
-                      <span className="text-xs">{m.percentage}%</span>
-                    </div>
-                    <div className="h-[1px] bg-gray-100 relative">
-                      <div className="absolute h-full bg-black" style={{ width: `${m.percentage}%` }} />
-                    </div>
+          {(project.solution || project.metrics?.length > 0) && (
+            <section className="max-w-7xl mx-auto px-6 md:px-24 py-16 md:py-20 text-center md:text-left">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                {project.solution && (
+                  <div className="flex flex-col items-center md:items-start space-y-6">
+                    <h3 className="text-[11px] uppercase tracking-[0.4em] font-bold border-b border-black pb-2 inline-block">La Solución</h3>
+                    <p className="text-base md:text-lg text-gray-600 leading-relaxed italic font-light">{project.solution}</p>
                   </div>
-                ))}
+                )}
+                <div className="space-y-8 md:space-y-10">
+                  {project.metrics?.map((m, i) => (
+                    <div key={i} className="group">
+                      <div className="flex justify-between mb-2 font-bold uppercase">
+                        <span className="text-[10px] tracking-widest">{m.name}</span>
+                        <span className="text-xs">{m.percentage}%</span>
+                      </div>
+                      <div className="h-[1px] bg-gray-100 relative">
+                        <div className="absolute h-full bg-black" style={{ width: `${m.percentage}%` }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          )}
 
           {/* SECCIÓN 6: IMPACTO */}
-          <section className="max-w-7xl mx-auto px-6 md:px-24 py-20 md:py-32">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
-              <h2 className="text-4xl md:text-5xl font-black uppercase leading-none tracking-tighter">
-                Project<br />Impact
-              </h2>
-              <div className="flex flex-col md:flex-row gap-12 md:gap-16 w-full lg:w-auto items-center">
-                {project.impact?.map((imp, i) => (
-                  <div key={i} className="flex flex-col items-center">
-                    <p className="text-6xl md:text-8xl font-bold text-[#6db4b6] tracking-tighter leading-none mb-1">
-                      {imp.value}
-                    </p>
-                    <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-gray-400 font-bold">
-                      {imp.label}
-                    </p>
-                  </div>
-                ))}
+          {project.impact?.length > 0 && (
+            <section className="max-w-7xl mx-auto px-6 md:px-24 py-20 md:py-32">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
+                <h2 className="text-4xl md:text-5xl font-black uppercase leading-none tracking-tighter">
+                  Project<br />Impact
+                </h2>
+                <div className="flex flex-col md:flex-row gap-12 md:gap-16 w-full lg:w-auto items-center">
+                  {project.impact.map((imp, i) => (
+                    <div key={i} className="flex flex-col items-center">
+                      <p className="text-6xl md:text-8xl font-bold text-[#6db4b6] tracking-tighter leading-none mb-1">
+                        {imp.value}
+                      </p>
+                      <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-gray-400 font-bold">
+                        {imp.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          )}
 
-          {/* SECCIÓN 7: FOTO CIERRE - OCULTA EN MOBILE (hidden) */}
-          <section className="hidden md:block max-w-7xl mx-auto md:px-24 pb-24 md:pb-32">
-            <div className="w-full aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
-              <img
-                src={project.gallery[4] || project.gallery[0]}
-                alt="Final"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </section>
+          {/* SECCIÓN 7: FOTO CIERRE */}
+          {project.gallery?.[4] && (
+            <section className="hidden md:block max-w-7xl mx-auto md:px-24 pb-24 md:pb-32">
+              <div className="w-full aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
+                <img
+                  src={project.gallery[4]}
+                  alt="Final"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </section>
+          )}
         </>
       ) : (
         /* VISTA SIMPLE PARA OTROS */
@@ -171,7 +185,7 @@ export default function ProjectDetail() {
             </div>
           </div>
           <div className="space-y-8">
-            {project.gallery.slice(1).map((img, i) => (
+            {project.gallery?.slice(1).map((img, i) => img && (
               <img key={i} src={img} className="w-full object-cover rounded-sm" alt="Gallery" />
             ))}
           </div>
