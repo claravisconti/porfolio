@@ -82,13 +82,15 @@ export default function ProjectDetail() {
             </section>
           )}
 
-          {/* SECCIÓN 3: PALETA Y FOTOS DETALLE */}
+          {/* SECCIÓN 3: PALETA Y FOTO ÚNICA */}
           <section className="max-w-7xl mx-auto px-6 md:px-24 py-16 md:py-24 text-center md:text-left">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
+
+              {/* Columna Izquierda: Colores y Tipografía (4 columnas) */}
               <div className="md:col-span-4 space-y-12">
                 {project.colors?.length > 0 && (
                   <div className="flex flex-col items-center md:items-start">
-                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold italic">Colors</h4>
+                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold italic">Colores</h4>
                     <div className="flex gap-4">
                       {project.colors.map((c, i) => (
                         <div key={i} className="w-10 h-10 rounded-full border border-gray-100" style={{ backgroundColor: c }} />
@@ -98,14 +100,21 @@ export default function ProjectDetail() {
                 )}
                 {project.fonts && (
                   <div className="flex flex-col items-center md:items-start">
-                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold italic">Typography</h4>
+                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold italic">Tipografía</h4>
                     <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">{project.fonts}</h3>
                   </div>
                 )}
               </div>
-              <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-                {project.gallery?.[1] && <img src={project.gallery[1]} className="w-full aspect-[3/4] object-cover" alt="Detail 1" />}
-                {project.gallery?.[2] && <img src={project.gallery[2]} className="w-full aspect-[3/4] object-cover" alt="Detail 2" />}
+
+              {/* Columna Derecha: Foto única (8 columnas) */}
+              <div className="md:col-span-8">
+                {project.gallery?.[1] && (
+                  <img
+                    src={project.gallery[1]}
+                    className="w-full aspect-video md:aspect-[16/10] object-cover rounded-sm shadow-sm"
+                    alt="Project Detail"
+                  />
+                )}
               </div>
             </div>
           </section>
@@ -142,7 +151,7 @@ export default function ProjectDetail() {
             <section className="max-w-7xl mx-auto px-6 md:px-24 py-20 md:py-32">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
                 <h2 className="text-4xl md:text-5xl font-black uppercase leading-none tracking-tighter">
-                  Project<br />Impact
+                  Métricas <br/>finales
                 </h2>
                 <div className="flex flex-col md:flex-row gap-12 md:gap-16 w-full lg:w-auto items-center">
                   {project.impact.map((imp, i) => (
@@ -161,11 +170,11 @@ export default function ProjectDetail() {
           )}
 
           {/* SECCIÓN 7: FOTO CIERRE */}
-          {project.gallery?.[4] && (
+          {project.gallery?.[2] && (
             <section className="hidden md:block max-w-7xl mx-auto md:px-24 pb-24 md:pb-32">
               <div className="w-full aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
                 <img
-                  src={project.gallery[4]}
+                  src={project.gallery[2]}
                   alt="Final"
                   className="w-full h-full object-cover"
                 />

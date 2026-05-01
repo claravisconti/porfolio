@@ -58,6 +58,10 @@ import WID1 from '../assets/images/Campañas/Galeria/WID1.webp';
 import STC1 from '../assets/images/Campañas/Galeria/STC1.webp';
 import HCIC1 from '../assets/images/Campañas/Galeria/HCIC1.webp';
 
+// Links Foto 4
+import DigitalVector2 from '../assets/images/Web/Galeria/DigitalVector2.webp';
+import DigitalVector3 from '../assets/images/Web/Galeria/DigitalVector3.webp';
+
 export const projects = [
   // --- WEB ---
 // Actualización del objeto Digital Vector en projects.js
@@ -73,8 +77,8 @@ export const projects = [
   problem: "La marca carecía de una presencia digital que reflejara su estatus tecnológico real, resultando en una baja retención de usuarios corporativos.",
   objective: "Crear un ecosistema digital escalable y de alto rendimiento bajo una estética 'tech-luxury' que facilite la conversión B2B.",
   challenge: "Balancear una arquitectura de información técnica densa con una navegación minimalista y micro-interacciones fluidas.",
-  colors: ["#121212", "#6db4b6", "#E5E5E5"], 
-  fonts: "Neue Haas Grotesk",
+  colors: ["#121212", "#90189c", "#E5E5E5"], 
+  fonts: "Inter",
   metrics: [
     { name: "Optimización UX", percentage: 95 },
     { name: "Rendimiento Mobile", percentage: 90 },
@@ -83,11 +87,11 @@ export const projects = [
   ],
   impact: [
     { label: "User Attention", value: "+40%" },
-    { label: "Data Retention", value: "+40%" },
+    { label: "Data Retention", value: "+20%" },
     { label: "Load Speed", value: "0.8s" },
   ],
   solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa. Implementamos una arquitectura modular que permite escalar el contenido sin comprometer la velocidad, utilizando micro-interacciones sutiles para guiar el ojo hacia la conversión.",
-  gallery: [DigitalVector1, DigitalVector1, DigitalVector1, DigitalVector1,DigitalVector1] // Asegúrate de tener al menos 4 imágenes
+  gallery: [DigitalVector1, DigitalVector2, DigitalVector3] // Asegúrate de tener al menos 4 imágenes
 },
   {
     id: 2,
