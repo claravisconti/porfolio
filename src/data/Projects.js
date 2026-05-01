@@ -64,33 +64,33 @@ import DigitalVector3 from '../assets/images/Web/Galeria/DigitalVector3.webp';
 
 export const projects = [
   // --- WEB ---
-{
-  id: 1,
-  title: "Digital Vector",
-  category: "Web",
-  image: Portada_DigitalVector,
-  slug: "digitalVector",
-  year: "2026",
-  services: "UI/UX Design / Development",
-  problem: "La marca carecía de una presencia digital que reflejara su estatus tecnológico real, resultando en una baja retención de usuarios corporativos.",
-  objective: "Crear un ecosistema digital escalable y de alto rendimiento bajo una estética 'tech-luxury' que facilite la conversión B2B.",
-  challenge: "Balancear una arquitectura de información técnica densa con una navegación minimalista y micro-interacciones fluidas.",
-  colors: ["#121212", "#90189c", "#E5E5E5"], 
-  fonts: "Inter",
-  metrics: [
-    { name: "Optimización UX", percentage: 95 },
-    { name: "Rendimiento Mobile", percentage: 90 },
-    { name: "Accesibilidad", percentage: 88 },
-    { name: "Retención de Usuario", percentage: 92 },
-  ],
-  impact: [
-    { label: "User Attention", value: "+40%" },
-    { label: "Data Retention", value: "+20%" },
-    { label: "Load Speed", value: "0.8s" },
-  ],
-  solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa. Implementamos una arquitectura modular que permite escalar el contenido sin comprometer la velocidad, utilizando micro-interacciones sutiles para guiar el ojo hacia la conversión.",
-  gallery: [DigitalVector1, DigitalVector2, DigitalVector3] 
-},
+  {
+    id: 1,
+    title: "Digital Vector",
+    category: "Web",
+    image: Portada_DigitalVector,
+    slug: "digitalVector",
+    year: "2026",
+    services: "UI/UX Design / Development",
+    problem: "La marca presentaba una desconexión entre su capacidad tecnológica y su presencia digital, lo que generaba una percepción de bajo valor y una reducida retención de clientes corporativos.",
+    objective: "Desarrollar un ecosistema digital de alto rendimiento bajo una estética 'Tech-Luxury' que proyecte autoridad técnica y optimice el embudo de conversión B2B.",
+    challenge: "Lograr el equilibrio entre una arquitectura de información técnica compleja y una experiencia de navegación minimalista impulsada por micro-interacciones de alta precisión.",
+    colors: ["#121212", "#90189c", "#E5E5E5"],
+    fonts: "Inter",
+    metrics: [
+      { name: "Optimización UX", percentage: 95 },
+      { name: "Rendimiento Mobile", percentage: 90 },
+      { name: "Accesibilidad (WCAG)", percentage: 88 },
+      { name: "Retención de Usuario", percentage: 92 },
+    ],
+    impact: [
+      { label: "User Attention", value: "+40%" },
+      { label: "Lead Capture", value: "+20%" },
+      { label: "Load Speed", value: "0.8s" },
+    ],
+    solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa y un sistema modular que garantiza escalabilidad. La navegación se simplificó mediante micro-interacciones sutiles que reducen la carga cognitiva y dirigen orgánicamente al usuario hacia los puntos de conversión.",
+    gallery: [DigitalVector1, DigitalVector2, DigitalVector3]
+  },
   {
     id: 2,
     title: "Bloom Indumentaria",
@@ -98,9 +98,25 @@ export const projects = [
     image: Portada_Bloom,
     slug: "bloom",
     year: "2024",
-    services: "Estrategia Visual / eCommerce",
-    description: "La marca de autor Bloom enfrentaba una baja tasa de conversión debido a que su sitio anterior no reflejaba la exclusividad de sus prendas. El reto era crear una experiencia de compra premium que funcionara como una extensión física del taller de diseño.",
-    gallery: [Bloom1]
+    services: "UI/UX Design / Strategy / Development",
+    problem: "La marca de autor Bloom presentaba una desconexión visual en su plataforma digital. El sitio anterior no lograba transmitir la exclusividad de sus piezas, resultando en una experiencia de usuario genérica que no justificaba el valor premium de sus productos.",
+    objective: "Rediseñar la experiencia de compra bajo un enfoque 'Mobile-First' que funcione como una extensión digital del taller de diseño, priorizando la elegancia visual y la simplicidad operativa.",
+    challenge: "Equilibrar la estética minimalista 'soft-luxury' con las funcionalidades críticas de conversión de un eCommerce, garantizando que la jerarquía visual no compita con el protagonismo de las prendas.",
+    colors: ["#F9F1F1", "#CB9991", "#111111", "#9D9D9C"],
+    fonts: "Playfair Display / Lato",
+    metrics: [
+      { name: "Optimización Mobile", percentage: 98 },
+      { name: "Tasa de Conversión", percentage: 85 },
+      { name: "Usabilidad del Checkout", percentage: 90 },
+      { name: "Velocidad de Carga", percentage: 94 },
+    ],
+    impact: [
+      { label: "Mobile Sales", value: "+35%" },
+      { label: "User Engagement", value: "+50%" },
+      { label: "Check-out Speed", value: "1.2s" },
+    ],
+    solution: "Se implementó un diseño basado en espacios en blanco generosos y una paleta cromática neutra para resaltar el producto. Optimizamos el flujo de compra mediante una navegación táctil intuitiva, selectores de color dinámicos y un catálogo modular que permite una visualización clara y rápida de las colecciones.",
+    gallery: [Bloom1, Bloom1, Bloom1]
   },
   {
     id: 3,
