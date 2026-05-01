@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// Importas ambos formatos para asegurar compatibilidad total
+// Importación de archivos
 import heroVideo from '../assets/videos/Hero.webm';
 import heroVideoMp4 from '../assets/videos/Hero.mp4';
 import heroVideoMobile from '../assets/videos/HeroMobile.webm';
@@ -9,29 +9,44 @@ import heroVideoMobileMp4 from '../assets/videos/HeroMobile.mp4';
 
 export default function Hero() {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    // 1. Lógica para el scroll
     const handleScroll = () => {
       if (window.scrollY > 10) setHasScrolled(true);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
-  // Detectamos si es mobile para renderizar el grupo de fuentes correcto
-  const isMobile = window.innerWidth < 768;
+    // 2. Lógica para detectar cambio de pantalla (Resize)
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <section className="relative w-full h-[100svh] bg-black overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/30 z-10"></div>
         
+        {/* 
+          IMPORTANTE: La "key" basada en isMobile obliga a React a 
+          destruir y recrear el elemento video cuando pasas de PC a Mobile,
+          asegurando que cargue el archivo correcto.
+        */}
         <video
+          key={isMobile ? 'video-mobile' : 'video-desktop'}
           autoPlay
           loop
           muted
           playsInline
-          key={isMobile ? 'mobile' : 'desktop'}
           className="w-full h-full object-cover"
         >
           {isMobile ? (
@@ -45,7 +60,6 @@ export default function Hero() {
               <source src={heroVideoMp4} type="video/mp4" />
             </>
           )}
-          {/* Si nada de lo anterior funciona, mostrará este texto o una imagen de fondo */}
           Tu navegador no soporta videos.
         </video>
       </div>
