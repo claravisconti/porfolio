@@ -60,18 +60,35 @@ import HCIC1 from '../assets/images/Campañas/Galeria/HCIC1.webp';
 
 export const projects = [
   // --- WEB ---
-  {
-    id: 1,
-    title: "Digital Vector",
-    category: "Web",
-    image: Portada_DigitalVector,
-    slug: "digitalVector",
-    year: "2026",
-    services: "UI/UX Design / Development",
-    description: "Digital Vector necesitaba una plataforma que comunicara su capacidad tecnológica sin caer en clichés de la industria. El desafío principal fue balancear la densidad de información técnica con una navegación fluida y minimalista que retuviera al usuario de perfil corporativo.",
-    solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa y tipografías neo-grotescas. Implementamos una arquitectura de información modular que permite escalar el contenido sin comprometer la velocidad de carga, utilizando micro-interacciones sutiles para guiar el ojo hacia los puntos de conversión.",
-    gallery: [DigitalVector1]
-  },
+// Actualización del objeto Digital Vector en projects.js
+{
+  id: 1,
+  title: "Digital Vector",
+  category: "Web",
+  image: Portada_DigitalVector,
+  slug: "digitalVector",
+  year: "2026",
+  services: "UI/UX Design / Development",
+  // Nueva información enriquecida según Frame 2.jpg
+  problem: "La marca carecía de una presencia digital que reflejara su estatus tecnológico real, resultando en una baja retención de usuarios corporativos.",
+  objective: "Crear un ecosistema digital escalable y de alto rendimiento bajo una estética 'tech-luxury' que facilite la conversión B2B.",
+  challenge: "Balancear una arquitectura de información técnica densa con una navegación minimalista y micro-interacciones fluidas.",
+  colors: ["#121212", "#6db4b6", "#E5E5E5"], 
+  fonts: "Neue Haas Grotesk",
+  metrics: [
+    { name: "Optimización UX", percentage: 95 },
+    { name: "Rendimiento Mobile", percentage: 90 },
+    { name: "Accesibilidad", percentage: 88 },
+    { name: "Retención de Usuario", percentage: 92 },
+  ],
+  impact: [
+    { label: "User Attention", value: "+40%" },
+    { label: "Data Retention", value: "+40%" },
+    { label: "Load Speed", value: "0.8s" },
+  ],
+  solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa. Implementamos una arquitectura modular que permite escalar el contenido sin comprometer la velocidad, utilizando micro-interacciones sutiles para guiar el ojo hacia la conversión.",
+  gallery: [DigitalVector1, DigitalVector1, DigitalVector1, DigitalVector1,DigitalVector1] // Asegúrate de tener al menos 4 imágenes
+},
   {
     id: 2,
     title: "Bloom Indumentaria",
