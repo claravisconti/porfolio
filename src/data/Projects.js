@@ -64,7 +64,6 @@ import DigitalVector3 from '../assets/images/Web/Galeria/DigitalVector3.webp';
 
 export const projects = [
   // --- WEB ---
-// Actualización del objeto Digital Vector en projects.js
 {
   id: 1,
   title: "Digital Vector",
@@ -73,7 +72,6 @@ export const projects = [
   slug: "digitalVector",
   year: "2026",
   services: "UI/UX Design / Development",
-  // Nueva información enriquecida según Frame 2.jpg
   problem: "La marca carecía de una presencia digital que reflejara su estatus tecnológico real, resultando en una baja retención de usuarios corporativos.",
   objective: "Crear un ecosistema digital escalable y de alto rendimiento bajo una estética 'tech-luxury' que facilite la conversión B2B.",
   challenge: "Balancear una arquitectura de información técnica densa con una navegación minimalista y micro-interacciones fluidas.",
@@ -91,7 +89,7 @@ export const projects = [
     { label: "Load Speed", value: "0.8s" },
   ],
   solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa. Implementamos una arquitectura modular que permite escalar el contenido sin comprometer la velocidad, utilizando micro-interacciones sutiles para guiar el ojo hacia la conversión.",
-  gallery: [DigitalVector1, DigitalVector2, DigitalVector3] // Asegúrate de tener al menos 4 imágenes
+  gallery: [DigitalVector1, DigitalVector2, DigitalVector3] 
 },
   {
     id: 2,
@@ -102,8 +100,6 @@ export const projects = [
     year: "2024",
     services: "Estrategia Visual / eCommerce",
     description: "La marca de autor Bloom enfrentaba una baja tasa de conversión debido a que su sitio anterior no reflejaba la exclusividad de sus prendas. El reto era crear una experiencia de compra premium que funcionara como una extensión física del taller de diseño.",
-    solution: "La solución fue un enfoque fotocéntrico con un layout editorial. Optimizamos el flujo de compra reduciendo los pasos de checkout en un 40% e introdujimos un sistema de zoom de alta definición para apreciar las texturas, elevando la percepción de valor del producto.",
-    gallery: [Bloom1]
   },
   {
     id: 3,
@@ -114,7 +110,6 @@ export const projects = [
     year: "2025",
     services: "Product Design / UI Design",
     description: "El desafío consistía en diseñar una aplicación de lectura para una comunidad masiva donde la legibilidad era la prioridad absoluta. Los usuarios pasaban horas frente a la pantalla, por lo que la fatiga visual era el mayor obstáculo a resolver.",
-    solution: "Implementamos un motor de renderizado de texto personalizable, permitiendo a los usuarios ajustar el kerning, interlineado y el contraste de fondo. Diseñamos un 'Modo Inmersivo' que oculta la interfaz de navegación al detectar el scroll de lectura continuo, mejorando la concentración.",
     gallery: [Fanfiction1]
   },
   {
@@ -126,7 +121,6 @@ export const projects = [
     year: "2023",
     services: "SaaS Design / HR Tech",
     description: "Payslip requería simplificar la visualización de datos contables complejos para empleados de diversos sectores. El desafío era transformar documentos legales áridos en interfaces claras, seguras y fáciles de interpretar en dispositivos móviles.",
-    solution: "Desarrollamos un dashboard basado en tarjetas informativas con una jerarquía visual clara. Utilizamos visualización de datos dinámica para mostrar desgloses de ingresos y deducciones, permitiendo la descarga de documentos mediante un solo gesto de deslizamiento.",
     gallery: [Payslip1]
   },
   {
@@ -138,7 +132,6 @@ export const projects = [
     year: "2024",
     services: "Web Design / Branding",
     description: "Una pastelería boutique buscaba digitalizar sus pedidos personalizados. El desafío era transmitir la calidez y el detalle artesanal del local físico a través de una pantalla fría, sin perder la eficiencia operativa.",
-    solution: "Creamos un configurador visual de pedidos donde el cliente puede armar su pastel en tiempo real. La interfaz utiliza una paleta cromática pastel equilibrada con una tipografía Serif elegante que refuerza la identidad artesanal de la marca.",
     gallery: [SweetBlossom1]
   },
   {
@@ -150,7 +143,6 @@ export const projects = [
     year: "2025",
     services: "Mobile Product Design",
     description: "En un mercado de delivery saturado, Foodie necesitaba diferenciarse. El reto era crear una interfaz de usuario que no solo fuera funcional, sino visualmente apetecible, priorizando el descubrimiento de nuevos sabores sobre la búsqueda transaccional.",
-    solution: "Implementamos un feed infinito basado en imágenes de alta resolución y videos cortos. La navegación se centró en gestos naturales, permitiendo agregar ingredientes extra con un sistema de 'drag-and-drop' que hace el proceso de pedido más lúdico y rápido.",
     gallery: [Foodie1]
   },
   {
@@ -162,7 +154,6 @@ export const projects = [
     year: "2023",
     services: "Digital Identity / UX Design",
     description: "La Ópera Orpheus buscaba atraer a una audiencia más joven. El desafío era romper con la percepción elitista del género mediante una web moderna, interactiva y accesible, manteniendo el respeto por la tradición clásica.",
-    solution: "Desarrollamos un sitio oscuro con contrastes en oro y blanco. La pieza central fue un sistema de reserva de asientos en 3D que permite al usuario ver la perspectiva real desde su butaca antes de comprar, eliminando la incertidumbre del espectador.",
     gallery: [Orpheus1]
   },
   {
@@ -174,7 +165,6 @@ export const projects = [
     year: "2026",
     services: "Interaction Design / Event Web",
     description: "Para un festival de música electrónica industrial, el desafío era crear una landing page que generara expectativa (hype). La web debía sentirse como una extensión de la pista de baile: rítmica, oscura y cargada de energía.",
-    solution: "Utilizamos animaciones basadas en WebGL que reaccionan al movimiento del cursor del usuario. El diseño utiliza una estética de 'brutalismo digital' con tipografías expandidas y efectos de glitch, capturando perfectamente el espíritu underground del evento.",
     gallery: [Electrohaus1]
   },
   {
@@ -186,7 +176,6 @@ export const projects = [
     year: "2022",
     services: "Game Web Design / UI",
     description: "El lanzamiento de este juego indie necesitaba una landing que sumergiera al jugador en su lore. El reto era presentar mecánicas de juego complejas de una forma visualmente simple y lúdica para incentivar el pre-registro.",
-    solution: "Diseñamos una experiencia de scroll-paralax donde el usuario viaja a través de los diferentes mundos del juego. La interfaz integra elementos de la UI del juego, permitiendo al usuario 'probar' algunas interacciones básicas directamente en el navegador.",
     gallery: [MagicTravel1]
   },
   {
@@ -198,7 +187,6 @@ export const projects = [
     year: "2019",
     services: "Luxury Web Design",
     description: "El Hotel Hermes requería una web que justificara su posicionamiento boutique de lujo. El desafío era lograr un diseño que fuera visualmente imponente pero extremadamente rápido, optimizado para el viajero internacional que reserva desde su móvil.",
-    solution: "Implementamos un diseño minimalista donde el espacio en blanco es el protagonista. Utilizamos fotografía de alta gama y transiciones suaves entre páginas. La optimización técnica permitió que, a pesar de las imágenes pesadas, el sitio cargue en menos de 1.5 segundos.",
     gallery: [Hermes1]
   },
   {
@@ -210,7 +198,6 @@ export const projects = [
     year: "2021",
     services: "Event UI / Web Design",
     description: "Una serie de eventos de cata de vinos premium necesitaba un portal central. El desafío era crear un sistema que gestionara la exclusividad de los cupos y presentara la historia de cada bodega de forma elegante.",
-    solution: "Se diseñó una interfaz con tonos burdeos y texturas de papel. Incluimos un sistema de reserva por membresía y una galería interactiva de botellas que permite explorar notas de cata antes de asistir al evento físico.",
     gallery: [WineNight1]
   },
 
