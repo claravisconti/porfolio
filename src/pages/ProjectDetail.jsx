@@ -18,9 +18,10 @@ export default function ProjectDetail() {
 
   return (
     <div className="bg-white min-h-screen text-black">
-      {/* SECCIÓN 1: HERO */}
+      {/* SECCIÓN 1: HERO - Ajustada para que Año y Servicios se apilen en mobile */}
       <section className="max-w-7xl mx-auto px-6 md:px-24 pt-32 md:pt-40 pb-12 md:pb-20">
         <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center md:items-start text-center md:text-left">
+
           <div className="lg:w-2/3">
             <p className="text-[10px] md:text-[11px] uppercase tracking-[0.5em] text-[#6db4b6] font-bold mb-4 md:mb-6 italic">
               {project.category}
@@ -29,14 +30,23 @@ export default function ProjectDetail() {
               {project.title}
             </h1>
           </div>
-          <div className="lg:w-1/3 flex flex-row lg:flex-col justify-center lg:justify-end gap-10 md:gap-8 pb-2 lg:border-l border-gray-100 lg:pl-8">
+
+          {/* FICHA TÉCNICA: flex-col para mobile, lg:flex-col para mantener vertical en desktop si prefieres, 
+        o md:flex-row si quieres que en tablet se pongan de costado */}
+          <div className="lg:w-1/3 flex flex-col sm:flex-row lg:flex-col justify-center lg:justify-end gap-8 md:gap-8 pt-6 pb-1 lg:border-l border-gray-100 lg:pl-8 w-full">
             <div className="text-center lg:text-left">
               <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Año</h4>
               <p className="text-[10px] md:text-xs font-bold uppercase">{project.year}</p>
             </div>
+            {/* Línea divisoria opcional para mobile */}
+            {/* <div className="h-[1px] w-10 bg-gray-100 mx-auto lg:mx-0 md:hidden"></div> */}
             <div className="text-center lg:text-left">
               <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Servicios</h4>
               <p className="text-[10px] md:text-xs font-bold uppercase">{project.services}</p>
+            </div>
+            <div className="text-center lg:text-left">
+              <h4 className="text-[9px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Autor</h4>
+              <p className="text-[10px] md:text-xs font-bold uppercase">María Clara Visconti</p>
             </div>
           </div>
         </div>
@@ -56,13 +66,13 @@ export default function ProjectDetail() {
           <section className="max-w-7xl mx-auto px-6 md:px-24 py-12 md:py-20 border-b border-gray-50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
               {[
-                { title: "Problema", desc: project.problem, icon: <Monitor size={28} /> },
-                { title: "Objetivo", desc: project.objective, icon: <Target size={28} /> },
-                { title: "Desafío", desc: project.challenge, icon: <Zap size={28} /> },
+                { title: "Problema", desc: project.problem, icon: <Monitor size={48} strokeWidth={1} /> },
+                { title: "Objetivo", desc: project.objective, icon: <Target size={48} strokeWidth={1} /> },
+                { title: "Desafío", desc: project.challenge, icon: <Zap size={48} strokeWidth={1} /> },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6">
                   <div className="text-black/80">{item.icon}</div>
-                  <h3 className="text-base md:text-lg font-bold uppercase tracking-tight">{item.title}</h3>
+                  <h3 className="text-xl md:text-lg font-bold uppercase tracking-tight">{item.title}</h3>
                   <div className="w-6 h-[1px] bg-black/20"></div>
                   <p className="text-gray-500 text-sm leading-relaxed font-light">{item.desc}</p>
                 </div>
@@ -118,10 +128,10 @@ export default function ProjectDetail() {
           </section>
 
           {/* SECCIÓN 6: IMPACTO */}
-          <section className="max-w-7xl mx-auto px-6 md:px-24 py-20 md:py-32 border-t border-gray-100">
+          <section className="max-w-7xl mx-auto px-6 md:px-24 py-20 md:py-32">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
               <h2 className="text-4xl md:text-5xl font-black uppercase leading-none tracking-tighter">
-                Project<br/>Impact
+                Project<br />Impact
               </h2>
               <div className="flex flex-col md:flex-row gap-12 md:gap-16 w-full lg:w-auto items-center">
                 {project.impact?.map((imp, i) => (
@@ -141,10 +151,10 @@ export default function ProjectDetail() {
           {/* SECCIÓN 7: FOTO CIERRE - OCULTA EN MOBILE (hidden) */}
           <section className="hidden md:block max-w-7xl mx-auto md:px-24 pb-24 md:pb-32">
             <div className="w-full aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
-              <img 
-                src={project.gallery[4] || project.gallery[0]} 
-                alt="Final" 
-                className="w-full h-full object-cover" 
+              <img
+                src={project.gallery[4] || project.gallery[0]}
+                alt="Final"
+                className="w-full h-full object-cover"
               />
             </div>
           </section>
@@ -161,9 +171,9 @@ export default function ProjectDetail() {
             </div>
           </div>
           <div className="space-y-8">
-             {project.gallery.slice(1).map((img, i) => (
-               <img key={i} src={img} className="w-full object-cover rounded-sm" alt="Gallery" />
-             ))}
+            {project.gallery.slice(1).map((img, i) => (
+              <img key={i} src={img} className="w-full object-cover rounded-sm" alt="Gallery" />
+            ))}
           </div>
         </section>
       )}
