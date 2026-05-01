@@ -100,6 +100,7 @@ export const projects = [
     year: "2024",
     services: "Estrategia Visual / eCommerce",
     description: "La marca de autor Bloom enfrentaba una baja tasa de conversión debido a que su sitio anterior no reflejaba la exclusividad de sus prendas. El reto era crear una experiencia de compra premium que funcionara como una extensión física del taller de diseño.",
+    gallery: [Bloom1]
   },
   {
     id: 3,
