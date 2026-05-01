@@ -5,7 +5,7 @@ export default function Socials() {
     return (
         <div className="flex gap-8 text-2xl items-center">
             <a
-                href="https://wa.me/5491100000000?text=Hola%20Clara!%20Me%20gustaría%20consultarte%20por%20un%20proyecto."
+                href="https://wa.me/5491124851989?text=Hola%20Clara!%20Me%20gustaría%20consultarte%20por%20un%20proyecto."
                 className="hover:text-[#000000] transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
