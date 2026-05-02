@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from '../data/projects';
 import ProjectNavigation from '../components/ProjectNavigation';
-import Banner from '../components/Banner'; // Importamos el componente Banner
-import Hero from '../assets/images/Hero/Hero1.webp'; // Asegúrate de que esta ruta sea la correcta para tu imagen de fondo
+import Banner from '../components/Banner'; 
+import Hero from '../assets/images/Hero/Hero1.webp'; 
 import { Monitor, Target, Zap } from 'lucide-react';
 
 export default function ProjectDetail() {
@@ -16,14 +16,13 @@ export default function ProjectDetail() {
 
   if (!project) return null;
 
-  // Lógica para detectar si el proyecto tiene la información extendida
-  const isDetailed = project.metrics && project.metrics.length > 0;
+  // Se activa la vista detallada si existen métricas o si se definieron los campos estratégicos
+  const isDetailed = (project.metrics && project.metrics.length > 0) || project.problem;
 
   return (
     <div className="bg-white min-h-screen text-black">
       {/* BANNER SUPERIOR */}
       <Banner 
-      // title={project.title} 
         title={project.category} 
         image={Hero} 
       />
@@ -57,7 +56,7 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {/* SECCIÓN FOTO 1 */}
+      {/* SECCIÓN FOTO 1 (Portada) */}
       {project.gallery?.[0] && (
         <section className="max-w-7xl mx-auto md:px-16 mb-16 md:mb-24">
           <div className="w-full aspect-[4/5] md:aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
@@ -68,7 +67,7 @@ export default function ProjectDetail() {
 
       {isDetailed ? (
         <>
-          {/* SECCIÓN 2: ESTRATEGIA */}
+          {/* SECCIÓN 2: ESTRATEGIA (Iconos) */}
           <section className="max-w-7xl mx-auto px-6 md:px-16 py-12 md:py-8 border-b border-gray-50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
               {[
@@ -86,10 +85,10 @@ export default function ProjectDetail() {
             </div>
           </section>
 
-          {/* SECCIÓN 3: PALETA Y FOTO */}
+          {/* SECCIÓN 3: PALETA Y TIPOGRAFÍA (Y FOTO 2 SI EXISTE) */}
           <section className="max-w-7xl mx-auto px-6 md:px-16 py-16 md:py-24 text-center md:text-left">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
-              <div className="md:col-span-4 space-y-12">
+            <div className={`grid grid-cols-1 ${project.gallery?.[1] ? 'md:grid-cols-12' : 'md:grid-cols-1'} gap-12 md:gap-16 items-start`}>
+              <div className={project.gallery?.[1] ? "md:col-span-4 space-y-12" : "flex flex-col md:flex-row justify-between items-center w-full"}>
                 {project.colors?.length > 0 && (
                   <div className="flex flex-col items-center md:items-start">
                     <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold italic">Colores</h4>
@@ -107,40 +106,43 @@ export default function ProjectDetail() {
                   </div>
                 )}
               </div>
-              <div className="md:col-span-8">
-                {project.gallery?.[1] && (
+              
+              {project.gallery?.[1] && (
+                <div className="md:col-span-8">
                   <img src={project.gallery[1]} className="w-full aspect-video md:aspect-[16/10] object-cover rounded-sm shadow-sm" alt="Detail" />
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </section>
 
           {/* SECCIÓN 5: LA SOLUCIÓN Y MÉTRICAS */}
           <section className="max-w-7xl mx-auto px-6 md:px-16 py-12 md:py-12">
-            <div className="bg-[#fafafa] p-8 md:p-16 rounded-sm grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className={`bg-[#fafafa] p-8 md:p-16 rounded-sm grid grid-cols-1 ${project.metrics?.length > 0 ? 'lg:grid-cols-2' : 'lg:grid-cols-1'} gap-16 items-start`}>
               {project.solution && (
                 <div className="flex flex-col items-center md:items-start space-y-6 text-center md:text-left">
                   <h3 className="text-[11px] uppercase tracking-[0.4em] font-bold border-b border-black pb-2 inline-block">La Solución</h3>
                   <p className="text-gray-500 text-md leading-relaxed font-light">{project.solution}</p>
                 </div>
               )}
-              <div className="space-y-8 md:space-y-10">
-                {project.metrics?.map((m, i) => (
-                  <div key={i} className="group">
-                    <div className="flex justify-between mb-2 font-bold uppercase">
-                      <span className="text-[14px] tracking-widest">{m.name}</span>
-                      <span className="text-md">{m.percentage}%</span>
+              {project.metrics?.length > 0 && (
+                <div className="space-y-8 md:space-y-10">
+                  {project.metrics.map((m, i) => (
+                    <div key={i} className="group">
+                      <div className="flex justify-between mb-2 font-bold uppercase">
+                        <span className="text-[14px] tracking-widest">{m.name}</span>
+                        <span className="text-md">{m.percentage}%</span>
+                      </div>
+                      <div className="h-[1px] bg-gray-200 relative">
+                        <div className="absolute h-full bg-black" style={{ width: `${m.percentage}%` }} />
+                      </div>
                     </div>
-                    <div className="h-[1px] bg-gray-200 relative">
-                      <div className="absolute h-full bg-black" style={{ width: `${m.percentage}%` }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
           </section>
 
-          {/* SECCIÓN 6: IMPACTO */}
+          {/* SECCIÓN 6: IMPACTO (Métricas finales) */}
           {project.impact?.length > 0 && (
             <section className="max-w-7xl mx-auto px-6 md:px-16 py-20 md:py-16">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
@@ -163,7 +165,7 @@ export default function ProjectDetail() {
             </section>
           )}
 
-          {/* SECCIÓN 7: FOTO CIERRE */}
+          {/* SECCIÓN 7: FOTO CIERRE (Solo si existe Foto 3) */}
           {project.gallery?.[2] && (
             <section className="hidden md:block max-w-7xl mx-auto pt-24 md:pt-20 md:px-16 pb-24 md:pb-8">
               <div className="w-full aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
@@ -173,7 +175,7 @@ export default function ProjectDetail() {
           )}
         </>
       ) : (
-        /* VISTA SIMPLE PARA OTROS PROYECTOS */
+        /* VISTA SIMPLE (Fallback por si acaso) */
         <section className="max-w-7xl mx-auto px-6 md:px-16 pb-24 text-center md:text-left">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
             <div className="md:col-span-4">
