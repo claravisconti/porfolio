@@ -91,9 +91,9 @@ export const projects = [
       { name: "Retención de Usuario", percentage: 92 },
     ],
     impact: [
-      { label: "User Attention", value: "+40%" },
-      { label: "Lead Capture", value: "+20%" },
-      { label: "Load Speed", value: "0.8s" },
+      { label: "Atención de Usuarios", value: "+40%" },
+      { label: "Captación de Leads", value: "+20%" },
+      { label: "Velocidad de carga", value: "0.8s" },
     ],
     solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa y un sistema modular que garantiza escalabilidad. La navegación se simplificó mediante micro-interacciones sutiles que reducen la carga cognitiva y dirigen orgánicamente al usuario hacia los puntos de conversión.",
     gallery: [DigitalVector1, DigitalVector2, DigitalVector3]
@@ -118,9 +118,9 @@ export const projects = [
       { name: "Velocidad de Carga", percentage: 94 },
     ],
     impact: [
-      { label: "Mobile Sales", value: "+35%" },
-      { label: "User Engagement", value: "+50%" },
-      { label: "Check-out Speed", value: "1.2s" },
+      { label: "Ventas por App", value: "+35%" },
+      { label: "Capatación de usuarios", value: "+50%" },
+      { label: "Velocidad de navegación", value: "1.2s" },
     ],
     solution: "Se implementó un diseño basado en espacios en blanco generosos y una paleta cromática neutra para resaltar el producto. Optimizamos el flujo de compra mediante una navegación táctil intuitiva, selectores de color dinámicos y un catálogo modular que permite una visualización clara y rápida de las colecciones.",
     gallery: [Bloom1, Bloom2, Bloom3]
@@ -145,9 +145,9 @@ export const projects = [
       { name: "Performance de Carga", percentage: 95 },
     ],
     impact: [
-      { label: "Daily Readers", value: "+45%" },
-      { label: "Review Rate", value: "4.3/5" },
-      { label: "Favorites", value: "1M+" },
+      { label: "Fidelidad de Usuarios", value: "+45%" },
+      { label: "Tasa de Incremento", value: "4.3/5" },
+      { label: "Favoritos", value: "1M+" },
     ],
     solution: "Se diseñó una arquitectura de información centrada en el contenido, utilizando un esquema de color de alto contraste pero baja fatiga visual (fondos negros puros para pantallas OLED). Implementamos un sistema de reseñas y estadísticas en tiempo real que permite a los usuarios validar la calidad de los fanfics antes de iniciar la lectura.",
     gallery: [Fanfiction1, Fanfiction2]
@@ -172,9 +172,9 @@ export const projects = [
       { name: "Seguridad Percibida", percentage: 98 },
     ],
     impact: [
-      { label: "Document Cycle", value: "-70%" },
-      { label: "Paper Saving", value: "100%" },
-      { label: "Avg. Signing", value: "45s" },
+      { label: "Ciclo de Documentación", value: "+70%" },
+      { label: "Reciclaje de Documentos", value: "100%" },
+      { label: "Velocidad de sesión", value: "45s" },
     ],
     solution: "Implementamos un ecosistema multiplataforma con un dashboard centralizado. Para el empleado, priorizamos la accesibilidad móvil y la claridad del estatus del documento; para el empleador, desarrollamos herramientas de filtrado avanzado y gráficos de cumplimiento (donuts charts) que permiten monitorear la gestión de nómina en tiempo real.",
     gallery: [Payslip1, Payslip2, Payslip3]
