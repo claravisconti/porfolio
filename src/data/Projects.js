@@ -1,5 +1,4 @@
-// Links Portadas
-
+//Cover Images
 import Portada_DigitalVector from '../assets/images/Web/Portada_DigitalVector.webp';
 import Portada_Bloom from '../assets/images/Web/Portada_Bloom.webp';
 import Portada_Fanfiction from '../assets/images/Web/Portada_Fanfiction.jpg';
@@ -29,7 +28,7 @@ import Portada_IWD from '../assets/images/Campañas/Portada_IWD.webp';
 import Portada_STC from '../assets/images/Campañas/Portada_STC.webp';
 import Portada_HCIC from '../assets/images/Campañas/Portada_HCIC.webp';
 
-// Links Foto 1
+// Web Gallery
 import DigitalVector1 from '../assets/images/Web/Galeria/DigitalVector1.webp';
 import DigitalVector2 from '../assets/images/Web/Galeria/DigitalVector2.webp';
 import DigitalVector3 from '../assets/images/Web/Galeria/DigitalVector3.webp';
@@ -46,12 +45,23 @@ import Payslip2 from '../assets/images/Web/Galeria/Payslip2.webp';
 import Payslip3 from '../assets/images/Web/Galeria/Payslip3.webp';
 
 import SweetBlossom1 from '../assets/images/Web/Galeria/SweetBlossom1.webp';
-import Foodie1 from '../assets/images/Web/Galeria/Foodie1.webp';
+import SweetBlossom2 from '../assets/images/Web/Galeria/SweetBlossom2.webp';
+import SweetBlossom3 from '../assets/images/Web/Galeria/SweetBlossom3.webp';
+
+import Food1 from '../assets/images/Web/Galeria/Food1.webp';
+import Food2 from '../assets/images/Web/Galeria/Food2.webp';
+
 import Orpheus1 from '../assets/images/Web/Galeria/Orpheus1.webp';
+
 import Electrohaus1 from '../assets/images/Web/Galeria/Electrohaus1.webp';
+
 import MagicTravel1 from '../assets/images/Web/Galeria/MagicTravel1.webp';
+
 import Hermes1 from '../assets/images/Web/Galeria/Hermes1.webp';
+
 import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
+
+// Packaging & Editorial Gallery
 import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
 import Fruits1 from '../assets/images/Packaging/Galeria/Fruits1.webp';
 import Crown1 from '../assets/images/Packaging/Galeria/Crown1.webp';
@@ -181,25 +191,57 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Sweet Blossom",
+    title: "Sugar Blossom",
     category: "Web",
     image: Portada_SweetBlossom,
     slug: "blossom",
     year: "2024",
-    services: "Web Design / Branding",
-    description: "Una pastelería boutique buscaba digitalizar sus pedidos personalizados. El desafío era transmitir la calidez y el detalle artesanal del local físico a través de una pantalla fría, sin perder la eficiencia operativa.",
-    gallery: [SweetBlossom1]
+    services: "Web Design / Branding / E-commerce",
+    problem: "Una pastelería boutique con una estética muy definida buscaba digitalizar su catálogo y sistema de pedidos. El reto principal era evitar que la interfaz se sintiera 'fría' o genérica, logrando que el usuario percibiera la misma calidez y aroma artesanal que al entrar al local físico.",
+    objective: "Diseñar una plataforma visualmente rica y sensorial que funcione como un escaparate digital, facilitando la reserva para eventos y la compra de productos premium mediante una navegación romántica y fluida.",
+    challenge: "Equilibrar la ornamentación visual (ilustraciones botánicas y tipografías script) con la usabilidad. Era crítico que los elementos decorativos no distrajeran al usuario del proceso de compra, manteniendo un rendimiento de carga óptimo a pesar del uso de imágenes de alta resolución.",
+    colors: ["#D9ADAD", "#E8C3C3", "#6DB4B6", "#FFFFFF"], // Rosa viejo, rosa pastel, el verde menta de las banquetas y blanco
+    fonts: "Great Vibes / Montserrat", // La cursiva elegante de tus títulos y una sans-serif limpia
+    metrics: [
+      { name: "Estética Visual", percentage: 98 },
+      { name: "Conversión de Pedidos", percentage: 82 },
+      { name: "Retención de Usuario", percentage: 89 },
+      { name: "Velocidad de Carga", percentage: 91 },
+    ],
+    impact: [
+      { label: "Online Sales", value: "+40%" },
+      { label: "Event Inquiries", value: "+65%" },
+      { label: "User Satisfaction", value: "4.9/5" },
+    ],
+    solution: "Se desarrolló una interfaz basada en el concepto 'digital patisserie', utilizando una paleta cromática suave y micro-interacciones delicadas. Implementamos secciones dedicadas para 'Tea Time' y 'Events' con formularios simplificados, integrando fotografías de producto en gran formato que actúan como el centro de la experiencia UX.",
+    gallery: [SweetBlossom1, SweetBlossom2, SweetBlossom3]
   },
-  {
+ {
     id: 6,
     title: "Foodie App",
     category: "Web",
     image: Portada_Foodie,
-    slug: "foodie",
+    slug: "food",
     year: "2025",
-    services: "Mobile Product Design",
-    description: "En un mercado de delivery saturado, Foodie necesitaba diferenciarse. El reto era crear una interfaz de usuario que no solo fuera funcional, sino visualmente apetecible, priorizando el descubrimiento de nuevos sabores sobre la búsqueda transaccional.",
-    gallery: [Foodie1]
+    services: "Mobile Product Design / UI UX Design",
+    problem: "En un mercado de delivery saturado, las aplicaciones suelen centrarse únicamente en la transacción, descuidando la experiencia sensorial del usuario. Foodie necesitaba una interfaz que transformara la tarea de pedir comida en un proceso visualmente apetecible y sin fricciones.",
+    objective: "Diseñar una experiencia móvil integral que optimice el flujo de conversión desde el login hasta el checkout, utilizando una jerarquía visual clara, fotografía de alta calidad y un sistema de navegación intuitivo basado en categorías y recomendaciones personalizadas.",
+    challenge: "Lograr un equilibrio entre la densidad de información (precios, tiempos de entrega, ratings, menús) y un diseño limpio que no abrume al usuario. El mayor reto fue unificar el flujo de 'Deals' y 'Recommended' manteniendo la coherencia visual en cada etapa del proceso de compra.",
+    colors: ["#FBBF24", "#FFFFFF", "#EF4444", "#111827"], // Amarillo vibrante, Blanco, Rojo para alertas/logos y Negro para texto
+    fonts: "Inter / Montserrat",
+    metrics: [
+      { name: "Velocidad de Pedido", percentage: 94 },
+      { name: "Retención de Usuario", percentage: 86 },
+      { name: "Usabilidad Checkout", percentage: 92 },
+      { name: "Engagement Visual", percentage: 98 },
+    ],
+    impact: [
+      { label: "Conversion Rate", value: "+38%" },
+      { label: "Avg. Order Time", value: "2.5m" },
+      { label: "User Satisfaction", value: "4.8/5" },
+    ],
+    solution: "Se implementó un sistema de diseño 'Image-First' para despertar el apetito del usuario. Optimizamos el flujo de pago con un resumen de cuenta transparente y un sistema de login social (Facebook/Google) para reducir el abandono. El uso del color amarillo estratégico no solo refuerza la identidad de marca, sino que estimula la rapidez y felicidad en la toma de decisiones.",
+    gallery: [Food1,Food2]
   },
   {
     id: 7,
