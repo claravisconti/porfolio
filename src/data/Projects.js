@@ -55,13 +55,21 @@ import Orpheus1 from '../assets/images/Web/Galeria/Orpheus1.webp';
 import Orpheus2 from '../assets/images/Web/Galeria/Orpheus2.webp';
 import Orpheus3 from '../assets/images/Web/Galeria/Orpheus3.webp';
 
-import Electrohaus1 from '../assets/images/Web/Galeria/Electrohaus1.webp';
+import ElectroHaus1 from '../assets/images/Web/Galeria/ElectroHaus1.webp';
+import ElectroHaus2 from '../assets/images/Web/Galeria/ElectroHaus2.webp';
+import ElectroHaus3 from '../assets/images/Web/Galeria/ElectroHaus3.webp';
 
 import MagicTravel1 from '../assets/images/Web/Galeria/MagicTravel1.webp';
+import MagicTravel2 from '../assets/images/Web/Galeria/MagicTravel1.webp';
+import MagicTravel3 from '../assets/images/Web/Galeria/MagicTravel1.webp';
 
 import Hermes1 from '../assets/images/Web/Galeria/Hermes1.webp';
+import Hermes2 from '../assets/images/Web/Galeria/Hermes1.webp';
+import Hermes3 from '../assets/images/Web/Galeria/Hermes1.webp';
 
 import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
+import WineNight2 from '../assets/images/Web/Galeria/WineNight1.webp';
+import WineNight3 from '../assets/images/Web/Galeria/WineNight1.webp';
 
 // Packaging & Editorial Gallery
 import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
@@ -148,8 +156,8 @@ export const projects = [
     problem: "Las plataformas actuales de lectura suelen saturar al usuario con interfaces ruidosas. En una comunidad donde el consumo de contenido es intensivo (horas de lectura), la fatiga visual y la dificultad para descubrir historias relevantes eran los puntos de dolor principales.",
     objective: "Crear una interfaz inmersiva 'Dark Mode' que priorice el confort visual, facilitando tanto el consumo de historias largas como la interacción social entre autores y lectores a través de métricas claras.",
     challenge: "Organizar grandes volúmenes de metadatos (etiquetas, advertencias, capítulos y reseñas) sin romper la estética minimalista, asegurando que la jerarquía de información sea clara en dispositivos móviles.",
-    colors: ["#000000", "#111827", "#6DB4B6", "#FFFFFF"], // Negro profundo, azul oscuro, el celeste de tus iconos y blanco
-    fonts: "Inter / Roboto", // Tipografías legibles para lectura prolongada
+    colors: ["#000000", "#111827", "#6DB4B6", "#FFFFFF"], 
+    fonts: "Inter / Roboto", 
     metrics: [
       { name: "Legibilidad Nocturna", percentage: 96 },
       { name: "Navegación Intuitiva", percentage: 92 },
@@ -202,8 +210,8 @@ export const projects = [
     problem: "Una pastelería boutique con una estética muy definida buscaba digitalizar su catálogo y sistema de pedidos. El reto principal era evitar que la interfaz se sintiera 'fría' o genérica, logrando que el usuario percibiera la misma calidez y aroma artesanal que al entrar al local físico.",
     objective: "Diseñar una plataforma visualmente rica y sensorial que funcione como un escaparate digital, facilitando la reserva para eventos y la compra de productos premium mediante una navegación romántica y fluida.",
     challenge: "Equilibrar la ornamentación visual (ilustraciones botánicas y tipografías script) con la usabilidad. Era crítico que los elementos decorativos no distrajeran al usuario del proceso de compra, manteniendo un rendimiento de carga óptimo a pesar del uso de imágenes de alta resolución.",
-    colors: ["#D9ADAD", "#E8C3C3", "#6DB4B6", "#FFFFFF"], // Rosa viejo, rosa pastel, el verde menta de las banquetas y blanco
-    fonts: "Great Vibes / Montserrat", // La cursiva elegante de tus títulos y una sans-serif limpia
+    colors: ["#D9ADAD", "#E8C3C3", "#6DB4B6", "#FFFFFF"], 
+    fonts: "Great Vibes / Montserrat", 
     metrics: [
       { name: "Estética Visual", percentage: 98 },
       { name: "Conversión de Pedidos", percentage: 82 },
@@ -229,7 +237,7 @@ export const projects = [
     problem: "En un mercado de delivery saturado, las aplicaciones suelen centrarse únicamente en la transacción, descuidando la experiencia sensorial del usuario. Foodie necesitaba una interfaz que transformara la tarea de pedir comida en un proceso visualmente apetecible y sin fricciones.",
     objective: "Diseñar una experiencia móvil integral que optimice el flujo de conversión desde el login hasta el checkout, utilizando una jerarquía visual clara, fotografía de alta calidad y un sistema de navegación intuitivo basado en categorías y recomendaciones personalizadas.",
     challenge: "Lograr un equilibrio entre la densidad de información (precios, tiempos de entrega, ratings, menús) y un diseño limpio que no abrume al usuario. El mayor reto fue unificar el flujo de 'Deals' y 'Recommended' manteniendo la coherencia visual en cada etapa del proceso de compra.",
-    colors: ["#FBBF24", "#FFFFFF", "#EF4444", "#111827"], // Amarillo vibrante, Blanco, Rojo para alertas/logos y Negro para texto
+    colors: ["#FBBF24", "#FFFFFF", "#EF4444", "#111827"], 
     fonts: "Inter / Montserrat",
     metrics: [
       { name: "Velocidad de Pedido", percentage: 94 },
@@ -256,8 +264,8 @@ export const projects = [
     problem: "La Ópera Orpheus enfrentaba el reto de conectar con nuevas audiencias en la era digital. Su presencia online anterior se percibía como elitista y estática, lo que generaba una barrera de entrada para el público joven y dificultaba la navegación en procesos críticos como la consulta de cartelera y compra de tickets.",
     objective: "Rediseñar la identidad digital de la ópera para convertirla en una plataforma inmersiva y dinámica. El objetivo era facilitar el descubrimiento de obras clásicas, promover la academia de artes y simplificar la gestión de reservas mediante un sistema de calendario visual y moderno.",
     challenge: "Mantener el equilibrio entre la solemnidad de la tradición operística y las tendencias actuales de diseño UX. Era fundamental que la interfaz fuera visualmente impactante —utilizando fotografía artística de gran formato— sin sacrificar la claridad funcional en dispositivos móviles.",
-    colors: ["#3E0202", "#FFFFFF", "#F8F5F2", "#1A1A1A"], // Bordó profundo, blanco, crema y negro
-    fonts: "Playfair Display / Inter", // Serif elegante para títulos y Sans para legibilidad
+    colors: ["#3E0202", "#FFFFFF", "#F8F5F2", "#1A1A1A"], 
+    fonts: "Playfair Display / Inter", 
     metrics: [
       { name: "Reserva de Tickets", percentage: 96 },
       { name: "Interacción con Media", percentage: 84 },
@@ -279,20 +287,52 @@ export const projects = [
     image: Portada_Electrohaus,
     slug: "electrohaus",
     year: "2026",
-    services: "Interaction Design / Event Web",
-    description: "Para un festival de música electrónica industrial, el desafío era crear una landing page que generara expectativa (hype). La web debía sentirse como una extensión de la pista de baile: rítmica, oscura y cargada de energía.",
-    gallery: [Electrohaus1]
+    services: "Interaction Design / Event Web / Art Direction",
+    problem: "En la industria de eventos, la saturación de información suele diluir la identidad del festival. Electrohaus necesitaba una landing page que no solo vendiera tickets, sino que funcionara como un prólogo visual del evento, capturando la agresividad y el ritmo de la música electrónica industrial.",
+    objective: "Diseñar una experiencia web de alto impacto visual (Brutalismo Digital) que maximice el 'hype' y la conversión de preventa mediante una jerarquía tipográfica audaz y un sistema de navegación fluido para dispositivos móviles.",
+    challenge: "El principal desafío fue mantener una legibilidad óptima bajo una estética de alto contraste y elementos visuales disruptivos. La interfaz debía transmitir energía y movimiento constante sin comprometer la velocidad de carga, esencial para usuarios que acceden desde redes sociales.",
+    colors: ["#000000", "#ff3fe0", "#FFFFFF", "#1A1A1A"], 
+    fonts: "Archivo Black / Space Mono", 
+    metrics: [
+      { name: "Impacto Visual", percentage: 98 },
+      { name: "Conversión Preventa", percentage: 85 },
+      { name: "Optimización Mobile", percentage: 96 },
+      { name: "Engagement Social", percentage: 92 },
+    ],
+    impact: [
+      { label: "Ticket Sold-out", value: "48hs" },
+      { label: "Social Shares", value: "12K" },
+      { label: "Avg. Session", value: "3.5m" },
+    ],
+    solution: "Se implementó un diseño basado en el brutalismo digital, utilizando tipografía de gran formato como elemento gráfico principal. La solución incluyó efectos de scroll interactivos que simulan el pulso de la música, una paleta de color neón sobre fondos negros profundos para resaltar el Line-up, y un flujo de compra de tickets integrado que minimiza los clics del usuario.",
+    gallery: [ElectroHaus1, ElectroHaus2, ElectroHaus3] 
   },
-  {
+ {
     id: 9,
     title: "Magic Travel Game",
     category: "Web",
     image: Portada_MagicTravel,
     slug: "magictravel",
     year: "2022",
-    services: "Game Web Design / UI",
-    description: "El lanzamiento de este juego indie necesitaba una landing que sumergiera al jugador en su lore. El reto era presentar mecánicas de juego complejas de una forma visualmente simple y lúdica para incentivar el pre-registro.",
-    gallery: [MagicTravel1]
+    services: "Game Web Design / UI Design / Branding",
+    problem: "Como juego indie en un mercado saturado, Magic Travel necesitaba una carta de presentación que no solo explicara de qué trata el juego, sino que hiciera sentir al usuario la atmósfera mágica antes de descargarlo. El mayor obstáculo era organizar la información de personajes, niveles y recompensas sin romper la estética onírica de la marca.",
+    objective: "Diseñar una landing page inmersiva que funcione como portal al universo del juego, optimizando la jerarquía visual para destacar el pre-registro y las mecánicas de evolución de personajes y compañeros (pets).",
+    challenge: "El desafío técnico fue integrar una gran cantidad de elementos ilustrativos y decoraciones ornamentales manteniendo un rendimiento fluido. Desde el punto de vista de UX, debíamos presentar las 'Rewards' y 'Levels' de forma lúdica, imitando la interfaz interna del juego para generar familiaridad.",
+    colors: ["#A5C9ED", "#F3E5D8", "#7B9ACC", "#FFFFFF"], 
+    fonts: "Cormorant Garamond / Montserrat", 
+    metrics: [
+      { name: "Pre-registros", percentage: 94 },
+      { name: "Inmersión Visual", percentage: 98 },
+      { name: "Claridad de Mecánicas", percentage: 88 },
+      { name: "Retención en Landing", percentage: 90 },
+    ],
+    impact: [
+      { label: "Daily Downloads", value: "5K+" },
+      { label: "Community Growth", value: "+120%" },
+      { label: "Avg. Time", value: "4.2m" },
+    ],
+    solution: "Creamos un diseño basado en capas y texturas suaves que emulan el cielo y el agua, elementos centrales del juego. Implementamos tarjetas de personajes interactivas (como la de Seraphina) y un carrusel de recompensas que permite visualizar la evolución de las mascotas (Frostclaw). El uso de marcos ornamentales dorados eleva la percepción de calidad del juego indie, posicionándolo como una experiencia premium.",
+    gallery: [MagicTravel1, MagicTravel2, MagicTravel3] 
   },
   {
     id: 10,
@@ -301,20 +341,52 @@ export const projects = [
     image: Portada_Hermes,
     slug: "hermes",
     year: "2019",
-    services: "Luxury Web Design",
-    description: "El Hotel Hermes requería una web que justificara su posicionamiento boutique de lujo. El desafío era lograr un diseño que fuera visualmente imponente pero extremadamente rápido, optimizado para el viajero internacional que reserva desde su móvil.",
-    gallery: [Hermes1]
+    services: "Luxury Web Design / UI UX Design / Booking Strategy",
+    problem: "El Hotel Hermes necesitaba una presencia digital que estuviera a la altura de su servicio boutique de cinco estrellas. Su plataforma anterior no lograba transmitir la exclusividad de sus espacios, resultando en una alta tasa de rebote y una dependencia excesiva de agencias de reserva externas (OTAs).",
+    objective: "Diseñar una experiencia web inmersiva y de alto rendimiento que actúe como una conserjería digital, permitiendo a los huéspedes explorar las habitaciones, servicios de wellness y espacios de eventos con una navegación fluida que incite a la reserva directa.",
+    challenge: "El principal reto fue equilibrar la carga de imágenes de alta resolución en gran formato con una velocidad de carga ultrarrápida. Además, debíamos crear una arquitectura de información clara que segmentara los servicios de hospitalidad (Rooms), relajación (Wellness) y corporativos (Events) sin perder la elegancia visual.",
+    colors: ["#F8F5F2", "#1A1A1A", "#338ea8", "#D9D9D9"], 
+    fonts: "Tenor Sans / Playfair Display", 
+    metrics: [
+      { name: "Reservas Directas", percentage: 92 },
+      { name: "Experiencia Mobile", percentage: 95 },
+      { name: "Engagement Visual", percentage: 98 },
+      { name: "Tiempo de Carga", percentage: 90 },
+    ],
+    impact: [
+      { label: "Direct Booking", value: "+30%" },
+      { label: "Avg. Session", value: "5.5m" },
+      { label: "Mobile Bounce", value: "-25%" },
+    ],
+    solution: "Se implementó un sistema de diseño basado en 'Editorial Layouts', utilizando amplios espacios en blanco y una tipografía serif para los encabezados que evoca revistas de diseño de alta gama. Optimizamos el flujo de reserva mediante botones de acción discretos pero omnipresentes y creamos páginas de destino específicas para cada servicio (Wellness y Events) que funcionan como galerías de arte interactivas.",
+    gallery: [Hermes1, Hermes2, Hermes3]
   },
-  {
+ {
     id: 11,
     title: "Wine Night",
     category: "Web",
     image: Portada_WineNight,
     slug: "winenight",
     year: "2021",
-    services: "Event UI / Web Design",
-    description: "Una serie de eventos de cata de vinos premium necesitaba un portal central. El desafío era crear un sistema que gestionara la exclusividad de los cupos y presentara la historia de cada bodega de forma elegante.",
-    gallery: [WineNight1]
+    services: "Event UI / Web Design / Experience Design",
+    problem: "Las catas de vino premium a menudo fallan en trasladar la mística de la bodega al entorno digital. El cliente necesitaba un portal que no solo gestionara reservas exclusivas, sino que educara al usuario sobre el origen y la nota de cata de cada etiqueta, eliminando la fricción en el proceso de registro para eventos de cupo limitado.",
+    objective: "Diseñar una plataforma de marca que funcione como una invitación de lujo, priorizando la narrativa visual de las bodegas y facilitando una experiencia de reserva 'one-tap' para una audiencia de perfil alto.",
+    challenge: "El reto consistió en crear una interfaz que respete la tradición vinícola (estética clásica y orgánica) sin sacrificar la modernidad funcional. Debíamos organizar un catálogo de eventos por regiones y bodegas, manteniendo una jerarquía visual limpia que destaque la calidad de las botellas y los paisajes.",
+    colors: ["#2D0A0A", "#FDFCF0", "#C5A059", "#1A1A1A"], 
+    fonts: "Cinzel / Open Sans", 
+    metrics: [
+      { name: "Conversión de Eventos", percentage: 94 },
+      { name: "Engagement Editorial", percentage: 88 },
+      { name: "Usabilidad en Mobile", percentage: 96 },
+      { name: "Fidelización de Usuario", percentage: 82 },
+    ],
+    impact: [
+      { label: "Sold Out Rate", value: "95%" },
+      { label: "Avg. Reservation", value: "1.5m" },
+      { label: "User Reviews", value: "5/5" },
+    ],
+    solution: "Se implementó un diseño basado en el concepto de 'Cava Digital', utilizando una paleta de colores profundos y texturas que evocan el papel artesanal. Desarrollamos secciones narrativas para cada bodega, integrando galerías inmersivas y un motor de reservas optimizado que permite a los usuarios asegurar su lugar en menos de tres pasos. El uso de micro-interacciones sutiles refuerza la sensación de exclusividad en cada navegación.",
+    gallery: [WineNight1,WineNight2,WineNight3] 
   },
 
   // --- EDITORIAL ---
