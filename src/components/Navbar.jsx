@@ -143,7 +143,7 @@ export default function Navbar() {
                 <Link
                   key={sub.name}
                   to={sub.href}
-                  className="text-gray-500 text-sm font-bold uppercase tracking-[0.2em] hover:text-white transition-colors"
+                  className="text-gray-500 text-sm font-bold uppercase tracking-[0.2em] hover:text-black transition-colors"
                 >
                   {sub.name}
                 </Link>
@@ -151,11 +151,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link to="/about" className="text-white text-3xl font-bold uppercase tracking-[0.3em] hover:text-[#00adb5]">
+          <Link to="/about" className="text-white text-3xl font-bold uppercase tracking-[0.3em] hover:text-[#000000]">
             Sobre mí
           </Link>
 
-          <Link to="/contact" className="text-white text-3xl font-bold uppercase tracking-[0.3em] hover:text-[#00adb5]">
+          <Link to="/contact" className="text-white text-3xl font-bold uppercase tracking-[0.3em] hover:text-[#000000]">
             Contacto
           </Link>
         </div>
