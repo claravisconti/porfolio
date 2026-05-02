@@ -83,10 +83,10 @@ import Crown2 from '../assets/images/Packaging/Galeria/Crown2.webp';
 
 // Editorial Gallery
 import Maison1 from '../assets/images/Editorial/Galeria/Maison1.webp';
-import Maison2 from '../assets/images/Editorial/Galeria/Maison1.webp';
+import Maison2 from '../assets/images/Editorial/Galeria/Maison2.webp';
 
 import Manifiesto1 from '../assets/images/Editorial/Galeria/Manifiesto1.webp';
-import Manifiesto2 from '../assets/images/Editorial/Galeria/Manifiesto1.webp';
+import Manifiesto2 from '../assets/images/Editorial/Galeria/Manifiesto2.webp';
 
 // Campaigns Gallery
 import Fidelity1 from '../assets/images/Campañas/Galeria/Fidelity1.webp';
