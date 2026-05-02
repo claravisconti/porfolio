@@ -31,7 +31,13 @@ import Portada_HCIC from '../assets/images/Campañas/Portada_HCIC.webp';
 
 // Links Foto 1
 import DigitalVector1 from '../assets/images/Web/Galeria/DigitalVector1.webp';
+import DigitalVector2 from '../assets/images/Web/Galeria/DigitalVector2.webp';
+import DigitalVector3 from '../assets/images/Web/Galeria/DigitalVector3.webp';
+
 import Bloom1 from '../assets/images/Web/Galeria/Bloom1.webp';
+import Bloom2 from '../assets/images/Web/Galeria/Bloom2.jpeg';
+import Bloom3 from '../assets/images/Web/Galeria/Bloom3.webp';
+
 import Fanfiction1 from '../assets/images/Web/Galeria/Fanfiction1.webp';
 import Payslip1 from '../assets/images/Web/Galeria/Payslip1.webp';
 import SweetBlossom1 from '../assets/images/Web/Galeria/SweetBlossom1.webp';
@@ -57,10 +63,6 @@ import DrupalCon1 from '../assets/images/Campañas/Galeria/DrupalCon1.webp';
 import WID1 from '../assets/images/Campañas/Galeria/WID1.webp';
 import STC1 from '../assets/images/Campañas/Galeria/STC1.webp';
 import HCIC1 from '../assets/images/Campañas/Galeria/HCIC1.webp';
-
-// Links Foto 4
-import DigitalVector2 from '../assets/images/Web/Galeria/DigitalVector2.webp';
-import DigitalVector3 from '../assets/images/Web/Galeria/DigitalVector3.webp';
 
 export const projects = [
   // --- WEB ---
@@ -116,7 +118,7 @@ export const projects = [
       { label: "Check-out Speed", value: "1.2s" },
     ],
     solution: "Se implementó un diseño basado en espacios en blanco generosos y una paleta cromática neutra para resaltar el producto. Optimizamos el flujo de compra mediante una navegación táctil intuitiva, selectores de color dinámicos y un catálogo modular que permite una visualización clara y rápida de las colecciones.",
-    gallery: [Bloom1, Bloom1, Bloom1]
+    gallery: [Bloom1, Bloom2, Bloom3]
   },
   {
     id: 3,
