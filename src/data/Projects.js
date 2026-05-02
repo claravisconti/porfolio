@@ -145,7 +145,7 @@ export const projects = [
     solution: "Se implementó un diseño basado en espacios en blanco generosos y una paleta cromática neutra para resaltar el producto. Optimizamos el flujo de compra mediante una navegación táctil intuitiva, selectores de color dinámicos y un catálogo modular que permite una visualización clara y rápida de las colecciones.",
     gallery: [Bloom1, Bloom2, Bloom3]
   },
-{
+  {
     id: 3,
     title: "Fanfiction App",
     category: "Web",
@@ -156,8 +156,8 @@ export const projects = [
     problem: "Las plataformas actuales de lectura suelen saturar al usuario con interfaces ruidosas. En una comunidad donde el consumo de contenido es intensivo (horas de lectura), la fatiga visual y la dificultad para descubrir historias relevantes eran los puntos de dolor principales.",
     objective: "Crear una interfaz inmersiva 'Dark Mode' que priorice el confort visual, facilitando tanto el consumo de historias largas como la interacción social entre autores y lectores a través de métricas claras.",
     challenge: "Organizar grandes volúmenes de metadatos (etiquetas, advertencias, capítulos y reseñas) sin romper la estética minimalista, asegurando que la jerarquía de información sea clara en dispositivos móviles.",
-    colors: ["#000000", "#111827", "#6DB4B6", "#FFFFFF"], 
-    fonts: "Inter / Roboto", 
+    colors: ["#000000", "#111827", "#6DB4B6", "#FFFFFF"],
+    fonts: "Inter / Roboto",
     metrics: [
       { name: "Legibilidad Nocturna", percentage: 96 },
       { name: "Navegación Intuitiva", percentage: 92 },
@@ -183,7 +183,7 @@ export const projects = [
     problem: "La gestión tradicional de recibos de sueldo suele ser burocrática y fragmentada. Tanto empresas como empleados lidiaban con procesos de firma lentos, falta de trazabilidad en los estados del documento y una visualización de datos contables compleja para el usuario promedio.",
     objective: "Diseñar una plataforma SaaS integral que digitalice el ciclo de vida del recibo de sueldo (carga, visualización y firma), transformando documentos legales áridos en una experiencia intuitiva, segura y transparente en cualquier dispositivo.",
     challenge: "Equilibrar la rigidez de los datos financieros con una interfaz amigable. El mayor reto fue diseñar un sistema de estados (Pending/Signed/Rejected) visualmente jerarquizado y dashboards analíticos que permitieran un control rápido de la documentación pendiente.",
-    colors: ["#000000", "#7C3AED", "#10B981", "#EF4444"], 
+    colors: ["#000000", "#7C3AED", "#10B981", "#EF4444"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
       { name: "Eficiencia de Firma", percentage: 95 },
@@ -210,8 +210,8 @@ export const projects = [
     problem: "Una pastelería boutique con una estética muy definida buscaba digitalizar su catálogo y sistema de pedidos. El reto principal era evitar que la interfaz se sintiera 'fría' o genérica, logrando que el usuario percibiera la misma calidez y aroma artesanal que al entrar al local físico.",
     objective: "Diseñar una plataforma visualmente rica y sensorial que funcione como un escaparate digital, facilitando la reserva para eventos y la compra de productos premium mediante una navegación romántica y fluida.",
     challenge: "Equilibrar la ornamentación visual (ilustraciones botánicas y tipografías script) con la usabilidad. Era crítico que los elementos decorativos no distrajeran al usuario del proceso de compra, manteniendo un rendimiento de carga óptimo a pesar del uso de imágenes de alta resolución.",
-    colors: ["#D9ADAD", "#E8C3C3", "#6DB4B6", "#FFFFFF"], 
-    fonts: "Great Vibes / Montserrat", 
+    colors: ["#D9ADAD", "#E8C3C3", "#6DB4B6", "#FFFFFF"],
+    fonts: "Great Vibes / Montserrat",
     metrics: [
       { name: "Estética Visual", percentage: 98 },
       { name: "Conversión de Pedidos", percentage: 82 },
@@ -226,7 +226,7 @@ export const projects = [
     solution: "Se desarrolló una interfaz basada en el concepto 'digital patisserie', utilizando una paleta cromática suave y micro-interacciones delicadas. Implementamos secciones dedicadas para 'Tea Time' y 'Events' con formularios simplificados, integrando fotografías de producto en gran formato que actúan como el centro de la experiencia UX.",
     gallery: [SweetBlossom1, SweetBlossom2, SweetBlossom3]
   },
- {
+  {
     id: 6,
     title: "Foodie App",
     category: "Web",
@@ -237,7 +237,7 @@ export const projects = [
     problem: "En un mercado de delivery saturado, las aplicaciones suelen centrarse únicamente en la transacción, descuidando la experiencia sensorial del usuario. Foodie necesitaba una interfaz que transformara la tarea de pedir comida en un proceso visualmente apetecible y sin fricciones.",
     objective: "Diseñar una experiencia móvil integral que optimice el flujo de conversión desde el login hasta el checkout, utilizando una jerarquía visual clara, fotografía de alta calidad y un sistema de navegación intuitivo basado en categorías y recomendaciones personalizadas.",
     challenge: "Lograr un equilibrio entre la densidad de información (precios, tiempos de entrega, ratings, menús) y un diseño limpio que no abrume al usuario. El mayor reto fue unificar el flujo de 'Deals' y 'Recommended' manteniendo la coherencia visual en cada etapa del proceso de compra.",
-    colors: ["#FBBF24", "#FFFFFF", "#EF4444", "#111827"], 
+    colors: ["#FBBF24", "#FFFFFF", "#EF4444", "#111827"],
     fonts: "Inter / Montserrat",
     metrics: [
       { name: "Velocidad de Pedido", percentage: 94 },
@@ -251,7 +251,7 @@ export const projects = [
       { label: "User Satisfaction", value: "4.8/5" },
     ],
     solution: "Se implementó un sistema de diseño 'Image-First' para despertar el apetito del usuario. Optimizamos el flujo de pago con un resumen de cuenta transparente y un sistema de login social (Facebook/Google) para reducir el abandono. El uso del color amarillo estratégico no solo refuerza la identidad de marca, sino que estimula la rapidez y felicidad en la toma de decisiones.",
-    gallery: [Food1,Food2]
+    gallery: [Food1, Food2]
   },
   {
     id: 7,
@@ -264,8 +264,8 @@ export const projects = [
     problem: "La Ópera Orpheus enfrentaba el reto de conectar con nuevas audiencias en la era digital. Su presencia online anterior se percibía como elitista y estática, lo que generaba una barrera de entrada para el público joven y dificultaba la navegación en procesos críticos como la consulta de cartelera y compra de tickets.",
     objective: "Rediseñar la identidad digital de la ópera para convertirla en una plataforma inmersiva y dinámica. El objetivo era facilitar el descubrimiento de obras clásicas, promover la academia de artes y simplificar la gestión de reservas mediante un sistema de calendario visual y moderno.",
     challenge: "Mantener el equilibrio entre la solemnidad de la tradición operística y las tendencias actuales de diseño UX. Era fundamental que la interfaz fuera visualmente impactante —utilizando fotografía artística de gran formato— sin sacrificar la claridad funcional en dispositivos móviles.",
-    colors: ["#3E0202", "#FFFFFF", "#F8F5F2", "#1A1A1A"], 
-    fonts: "Playfair Display / Inter", 
+    colors: ["#3E0202", "#FFFFFF", "#F8F5F2", "#1A1A1A"],
+    fonts: "Playfair Display / Inter",
     metrics: [
       { name: "Reserva de Tickets", percentage: 96 },
       { name: "Interacción con Media", percentage: 84 },
@@ -291,8 +291,8 @@ export const projects = [
     problem: "En la industria de eventos, la saturación de información suele diluir la identidad del festival. Electrohaus necesitaba una landing page que no solo vendiera tickets, sino que funcionara como un prólogo visual del evento, capturando la agresividad y el ritmo de la música electrónica industrial.",
     objective: "Diseñar una experiencia web de alto impacto visual (Brutalismo Digital) que maximice el 'hype' y la conversión de preventa mediante una jerarquía tipográfica audaz y un sistema de navegación fluido para dispositivos móviles.",
     challenge: "El principal desafío fue mantener una legibilidad óptima bajo una estética de alto contraste y elementos visuales disruptivos. La interfaz debía transmitir energía y movimiento constante sin comprometer la velocidad de carga, esencial para usuarios que acceden desde redes sociales.",
-    colors: ["#000000", "#ff3fe0", "#FFFFFF", "#1A1A1A"], 
-    fonts: "Archivo Black / Space Mono", 
+    colors: ["#000000", "#ff3fe0", "#FFFFFF", "#1A1A1A"],
+    fonts: "Archivo Black / Space Mono",
     metrics: [
       { name: "Impacto Visual", percentage: 98 },
       { name: "Conversión Preventa", percentage: 85 },
@@ -305,9 +305,9 @@ export const projects = [
       { label: "Avg. Session", value: "3.5m" },
     ],
     solution: "Se implementó un diseño basado en el brutalismo digital, utilizando tipografía de gran formato como elemento gráfico principal. La solución incluyó efectos de scroll interactivos que simulan el pulso de la música, una paleta de color neón sobre fondos negros profundos para resaltar el Line-up, y un flujo de compra de tickets integrado que minimiza los clics del usuario.",
-    gallery: [ElectroHaus1, ElectroHaus2, ElectroHaus3] 
+    gallery: [ElectroHaus1, ElectroHaus2, ElectroHaus3]
   },
- {
+  {
     id: 9,
     title: "Magic Travel Game",
     category: "Web",
@@ -318,8 +318,8 @@ export const projects = [
     problem: "Como juego indie en un mercado saturado, Magic Travel necesitaba una carta de presentación que no solo explicara de qué trata el juego, sino que hiciera sentir al usuario la atmósfera mágica antes de descargarlo. El mayor obstáculo era organizar la información de personajes, niveles y recompensas sin romper la estética onírica de la marca.",
     objective: "Diseñar una landing page inmersiva que funcione como portal al universo del juego, optimizando la jerarquía visual para destacar el pre-registro y las mecánicas de evolución de personajes y compañeros (pets).",
     challenge: "El desafío técnico fue integrar una gran cantidad de elementos ilustrativos y decoraciones ornamentales manteniendo un rendimiento fluido. Desde el punto de vista de UX, debíamos presentar las 'Rewards' y 'Levels' de forma lúdica, imitando la interfaz interna del juego para generar familiaridad.",
-    colors: ["#A5C9ED", "#F3E5D8", "#7B9ACC", "#FFFFFF"], 
-    fonts: "Cormorant Garamond / Montserrat", 
+    colors: ["#A5C9ED", "#F3E5D8", "#7B9ACC", "#FFFFFF"],
+    fonts: "Cormorant Garamond / Montserrat",
     metrics: [
       { name: "Pre-registros", percentage: 94 },
       { name: "Inmersión Visual", percentage: 98 },
@@ -332,7 +332,7 @@ export const projects = [
       { label: "Avg. Time", value: "4.2m" },
     ],
     solution: "Creamos un diseño basado en capas y texturas suaves que emulan el cielo y el agua, elementos centrales del juego. Implementamos tarjetas de personajes interactivas (como la de Seraphina) y un carrusel de recompensas que permite visualizar la evolución de las mascotas (Frostclaw). El uso de marcos ornamentales dorados eleva la percepción de calidad del juego indie, posicionándolo como una experiencia premium.",
-    gallery: [MagicTravel1, MagicTravel2, MagicTravel3] 
+    gallery: [MagicTravel1, MagicTravel2, MagicTravel3]
   },
   {
     id: 10,
@@ -345,8 +345,8 @@ export const projects = [
     problem: "El Hotel Hermes necesitaba una presencia digital que estuviera a la altura de su servicio boutique de cinco estrellas. Su plataforma anterior no lograba transmitir la exclusividad de sus espacios, resultando en una alta tasa de rebote y una dependencia excesiva de agencias de reserva externas (OTAs).",
     objective: "Diseñar una experiencia web inmersiva y de alto rendimiento que actúe como una conserjería digital, permitiendo a los huéspedes explorar las habitaciones, servicios de wellness y espacios de eventos con una navegación fluida que incite a la reserva directa.",
     challenge: "El principal reto fue equilibrar la carga de imágenes de alta resolución en gran formato con una velocidad de carga ultrarrápida. Además, debíamos crear una arquitectura de información clara que segmentara los servicios de hospitalidad (Rooms), relajación (Wellness) y corporativos (Events) sin perder la elegancia visual.",
-    colors: ["#F8F5F2", "#1A1A1A", "#338ea8", "#D9D9D9"], 
-    fonts: "Tenor Sans / Playfair Display", 
+    colors: ["#F8F5F2", "#1A1A1A", "#338ea8", "#D9D9D9"],
+    fonts: "Tenor Sans / Playfair Display",
     metrics: [
       { name: "Reservas Directas", percentage: 92 },
       { name: "Experiencia Mobile", percentage: 95 },
@@ -361,7 +361,7 @@ export const projects = [
     solution: "Se implementó un sistema de diseño basado en 'Editorial Layouts', utilizando amplios espacios en blanco y una tipografía serif para los encabezados que evoca revistas de diseño de alta gama. Optimizamos el flujo de reserva mediante botones de acción discretos pero omnipresentes y creamos páginas de destino específicas para cada servicio (Wellness y Events) que funcionan como galerías de arte interactivas.",
     gallery: [Hermes1, Hermes2, Hermes3]
   },
- {
+  {
     id: 11,
     title: "Wine Night",
     category: "Web",
@@ -372,8 +372,8 @@ export const projects = [
     problem: "Las catas de vino premium a menudo fallan en trasladar la mística de la bodega al entorno digital. El cliente necesitaba un portal que no solo gestionara reservas exclusivas, sino que educara al usuario sobre el origen y la nota de cata de cada etiqueta, eliminando la fricción en el proceso de registro para eventos de cupo limitado.",
     objective: "Diseñar una plataforma de marca que funcione como una invitación de lujo, priorizando la narrativa visual de las bodegas y facilitando una experiencia de reserva 'one-tap' para una audiencia de perfil alto.",
     challenge: "El reto consistió en crear una interfaz que respete la tradición vinícola (estética clásica y orgánica) sin sacrificar la modernidad funcional. Debíamos organizar un catálogo de eventos por regiones y bodegas, manteniendo una jerarquía visual limpia que destaque la calidad de las botellas y los paisajes.",
-    colors: ["#2D0A0A", "#FDFCF0", "#C5A059", "#1A1A1A"], 
-    fonts: "Cinzel / Open Sans", 
+    colors: ["#2D0A0A", "#FDFCF0", "#C5A059", "#1A1A1A"],
+    fonts: "Cinzel / Open Sans",
     metrics: [
       { name: "Conversión de Eventos", percentage: 94 },
       { name: "Engagement Editorial", percentage: 88 },
@@ -386,7 +386,7 @@ export const projects = [
       { label: "User Reviews", value: "5/5" },
     ],
     solution: "Se implementó un diseño basado en el concepto de 'Cava Digital', utilizando una paleta de colores profundos y texturas que evocan el papel artesanal. Desarrollamos secciones narrativas para cada bodega, integrando galerías inmersivas y un motor de reservas optimizado que permite a los usuarios asegurar su lugar en menos de tres pasos. El uso de micro-interacciones sutiles refuerza la sensación de exclusividad en cada navegación.",
-    gallery: [WineNight1,WineNight2,WineNight3] 
+    gallery: [WineNight1, WineNight2, WineNight3]
   },
 
   // --- EDITORIAL ---
@@ -397,24 +397,52 @@ export const projects = [
     image: Portada_Maison,
     slug: "maison",
     year: "2022",
-    services: "Editorial Design / Layout",
-    description: "Maison es una revista de arquitectura que buscaba una renovación total. El desafío era crear una retícula flexible que permitiera alojar desde ensayos extensos hasta layouts fotográficos de gran formato sin perder la consistencia visual.",
-    solution: "Establecimos un sistema de 12 columnas que permite variaciones asimétricas. La elección tipográfica mezcla una Serif humanista con una Sans-Serif técnica, reforzando el equilibrio entre el arte y la precisión arquitectónica de la publicación.",
-    gallery: [Maison1]
+    services: "Editorial Design / Layout / Art Direction",
+    problem: "Maison presentaba una estética saturada que competía visualmente con las fotografías de arquitectura, dificultando la lectura de ensayos extensos.",
+    objective: "Rediseñar la identidad editorial mediante un sistema de retículas flexible que priorice el aire, la jerarquía tipográfica y el protagonismo visual de las obras.",
+    challenge: "Crear una grilla que permitiera alojar desde despieces técnicos de planos hasta artículos de opinión, manteniendo una coherencia visual premium y minimalista.",
+    colors: ["#1A1A1A", "#FFFFFF", "#F2F2F2"],
+    fonts: "Editor’s Note / Helvetica Now",
+    metrics: [
+      { name: "Jerarquía de Lectura", percentage: 95 },
+      { name: "Equilibrio Visual", percentage: 92 },
+      { name: "Escalabilidad de Layouts", percentage: 90 },
+      { name: "Consistencia de Marca", percentage: 98 },
+    ],
+    impact: [
+      { label: "Páginas Diseñadas", value: "120+" },
+      { label: "Lectores Estimados", value: "15K" },
+      { label: "Frecuencia", value: "Trimestral" },
+    ],
+    solution: "Se estableció una retícula de 12 columnas que permite variaciones asimétricas. La mezcla de una tipografía Serif humanista con una Sans-Serif técnica reforzó el equilibrio entre el arte y la precisión arquitectónica.",
+    gallery: [Maison1, Maison1]
   },
   {
     id: 13,
-    title: "Wine Manifiesto",
+    title: "Revista Manifiesto",
     category: "Editorial",
     image: Portada_Manifiesto,
     slug: "manifiesto",
     year: "2021",
-    services: "Print Design / Art Direction",
-    description: "Este libro objeto recopila las filosofías de los enólogos más disruptivos. El reto era diseñar un objeto físico que fuera tan sensorial como el vino mismo, utilizando el diseño editorial para contar historias de terroir.",
-    solution: "La solución incluyó el uso de papeles texturizados y acabados en bajorrelieve. El diseño interior utiliza un flujo narrativo orgánico, con ilustraciones botánicas que conviven con una tipografía audaz y moderna, alejándose de los libros de vino tradicionales.",
-    gallery: [Manifiesto1]
+    services: "Editorial Design / Art Direction",
+    problem: "La necesidad de crear una publicación que unifique disciplinas tan diversas como el arte digital, la arquitectura y la moda bajo una misma estética disruptiva.",
+    objective: "Diseñar un sistema de grillas flexible que permita a cada sección tener su propia identidad visual sin perder la coherencia de la marca Manifiesto.",
+    challenge: "Experimentar con la tipografía audaz y el uso de espacios en blanco para guiar al lector a través de artículos de alta densidad visual.",
+    colors: ["#7c569b", "#e3b90d", "#d14b8f"], // Púrpura, Amarillo, Rosa (vistos en las fotos)
+    fonts: "Helvetica Neue / Bold Display",
+    metrics: [
+      { name: "Jerarquía Visual", percentage: 100 },
+      { name: "Diseño de Grilla", percentage: 95 },
+      { name: "Curaduría Fotográfica", percentage: 90 }
+    ],
+    impact: [
+      { label: "Secciones Curadas", value: "3" },
+      { label: "Estilos Visuales", value: "Híbrido" },
+      { label: "Edición Limitada", value: "2021" },
+    ],
+    solution: "Se implementó una arquitectura de información basada en contrastes: tipografías de gran escala para titulares y una estructura limpia para el cuerpo de texto. Se utilizaron separadores cromáticos para diferenciar las secciones de Arquitectura, Moda y Arte.",
+    gallery: [Manifiesto1, Manifiesto1]
   },
-
   // --- PACKAGING ---
   {
     id: 14,
@@ -423,36 +451,78 @@ export const projects = [
     image: Portada_Silkylatte,
     slug: "silkylatte",
     year: "2024",
-    services: "Structural & Label Design",
-    description: "Silkylatte necesitaba irrumpir en el mercado de leches vegetales orgánicas. El desafío era diferenciarse en una góndola llena de colores brillantes mediante una propuesta que gritara naturalidad y honestidad de marca.",
-    solution: "Diseñamos un packaging con colores tierra y una textura de papel sin tratar. Las ilustraciones son grabados clásicos que comunican la tradición del origen orgánico. El resultado fue un incremento del 20% en la visibilidad del producto frente a la competencia directa.",
-    gallery: [Silkylatte1]
+    services: "Structural & Label Design / Branding",
+    problem: "La marca no lograba diferenciarse en una góndola saturada de colores vibrantes y plásticos brillantes, lo que diluía su mensaje de producto 100% orgánico.",
+    objective: "Diseñar un sistema de empaque táctil y honesto que comunique naturalidad inmediata a través de la materialidad y una estética 'Raw Luxury'.",
+    challenge: "Lograr un diseño de etiqueta que sea funcional para la cadena de frío pero que mantenga la textura visual de un papel artesanal sin tratar.",
+    colors: ["#D2B48C", "#4B3621", "#F5F5DC"],
+    fonts: "Cormorant Garamond / Montserrat",
+    metrics: [
+      { name: "Diferenciación en Góndola", percentage: 96 },
+      { name: "Sustentabilidad (PCR)", percentage: 100 },
+      { name: "Reconocimiento de Marca", percentage: 89 },
+      { name: "Ergonomía de Envase", percentage: 92 },
+    ],
+    impact: [
+      { label: "Visibilidad Retail", value: "+20%" },
+      { label: "Material Reciclado", value: "100%" },
+      { label: "Intención de Compra", value: "+35%" },
+    ],
+    solution: "Diseñamos un packaging con colores tierra y texturas que emulan papel sin procesar. Las ilustraciones de grabados clásicos comunican tradición, logrando que el producto destaque por su sobriedad y elegancia.",
+    gallery: [Silkylatte1, Silkylatte1]
   },
   {
     id: 15,
-    title: "Fruits Jugo",
+    title: "Fruits Naturals",
     category: "Packaging",
     image: Portada_Fruits,
     slug: "fruits",
     year: "2018",
-    services: "Brand Identity / Packaging",
-    description: "Fruits buscaba renovar su imagen para un público más consciente de la salud. El desafío era comunicar '100% fruta' sin utilizar las imágenes hiper-realistas y saturadas que inundan el mercado masivo.",
-    solution: "Utilizamos un lenguaje visual basado en formas geométricas y colores planos que representan la fruta de manera abstracta pero reconocible. La transparencia estratégica del envase permite que el color real del jugo complete el diseño de la etiqueta.",
-    gallery: [Fruits1]
+    services: "Brand Identity / Packaging Design",
+    problem: "Refrescar una línea de jugos frutales para destacar en góndola frente a competidores genéricos, enfatizando el aporte vitamínico.",
+    objective: "Crear una identidad visual luminosa y natural que transmita frescura inmediata y claridad nutricional.",
+    challenge: "Equilibrar la información técnica (tabla nutricional y beneficios) con un diseño aspiracional basado en paisajes naturales.",
+    colors: ["#3E3274", "#F4A01C", "#B5C330"],
+    fonts: "Rounded Sans / Script Organic",
+    metrics: [
+      { name: "Impacto Visual en Góndola", percentage: 95 },
+      { name: "Jerarquía de Información", percentage: 100 },
+      { name: "Coherencia de Línea", percentage: 90 }
+    ],
+    impact: [
+      { label: "Sabor y Variedad", value: "3" },
+      { label: "Aporte Vitamínico", value: "100%" },
+      { label: "Presencia Mercado", value: "Nacional" },
+    ],
+    solution: "Se diseñó un sistema de packaging con una arquitectura visual dividida: un tercio superior celeste que evoca naturalidad y pureza, y una base de color sólida según el sabor (Maracuyá, Naranja, Manzana). Se incorporó un sello circular distintivo para la Vitamina C.",
+    gallery: [Fruits1, Fruits1]
   },
   {
     id: 16,
-    title: "Crown Shampoo",
+    title: "Crown Fragancias",
     category: "Packaging",
     image: Portada_Crown,
     slug: "crown",
     year: "2020",
-    services: "Sustainable Packaging",
-    description: "Crown requería un packaging sustentable para su línea premium de cuidado capilar. El reto era usar materiales reciclados (PCR) sin que el producto perdiera su percepción de alta calidad y lujo.",
-    solution: "Desarrollamos una forma ergonómica única inspirada en piedras de río. El acabado mate del plástico reciclado se integró como una decisión de diseño, sumado a tipografías en bajorrelieve que reducen la necesidad de tintas contaminantes.",
-    gallery: [Crown1]
+    services: "Sustainable Packaging / Art Direction",
+    problem: "Lograr que un packaging fabricado con materiales sustentables mantenga una estética premium y femenina para el mercado de cuidado capilar.",
+    objective: "Diseñar una identidad visual suave y sofisticada basada en fragancias florales, comunicando delicadeza y ecología en un mismo concepto.",
+    challenge: "Utilizar una paleta cromática minimalista que destaque los componentes botánicos sin sobrecargar visualmente el envase ergonómico.",
+    colors: ["#D4A5A5", "#FDEFF4", "#9DB196"],
+    fonts: "Helvetica Neue / Playfair Display",
+    metrics: [
+      { name: "Sustentabilidad de Materiales", percentage: 100 },
+      { name: "Aceptación Visual Premium", percentage: 95 },
+      { name: "Reducción de Tintas", percentage: 85 }
+    ],
+    impact: [
+      { label: "Plástico Reciclado", value: "PCR" },
+      { label: "Línea de Cuidado", value: "Premium" },
+      { label: "Fórmula Vegana", value: "100%" },
+    ],
+    solution: "Se desarrolló una línea gráfica centrada en ilustraciones florales de estilo cerezo japonés, utilizando una paleta de rosas 'dusty' y blancos rotos. La arquitectura del envase prioriza la ergonomía y la reducción de materiales.",
+    gallery: [Crown1, Crown1]
   },
-
   // --- CAMPAÑAS ---
   {
     id: 17,
