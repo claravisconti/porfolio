@@ -42,6 +42,9 @@ import Fanfiction1 from '../assets/images/Web/Galeria/Fanfiction1.webp';
 import Fanfiction2 from '../assets/images/Web/Galeria/Fanfiction2.webp';
 
 import Payslip1 from '../assets/images/Web/Galeria/Payslip1.webp';
+import Payslip2 from '../assets/images/Web/Galeria/Payslip2.webp';
+import Payslip3 from '../assets/images/Web/Galeria/Payslip3.webp';
+
 import SweetBlossom1 from '../assets/images/Web/Galeria/SweetBlossom1.webp';
 import Foodie1 from '../assets/images/Web/Galeria/Foodie1.webp';
 import Orpheus1 from '../assets/images/Web/Galeria/Orpheus1.webp';
@@ -156,9 +159,25 @@ export const projects = [
     image: Portada_Payslip,
     slug: "payslip",
     year: "2023",
-    services: "SaaS Design / HR Tech",
-    description: "Payslip requería simplificar la visualización de datos contables complejos para empleados de diversos sectores. El desafío era transformar documentos legales áridos en interfaces claras, seguras y fáciles de interpretar en dispositivos móviles.",
-    gallery: [Payslip1]
+    services: "SaaS Design / HR Tech / Product Strategy",
+    problem: "La gestión tradicional de recibos de sueldo suele ser burocrática y fragmentada. Tanto empresas como empleados lidiaban con procesos de firma lentos, falta de trazabilidad en los estados del documento y una visualización de datos contables compleja para el usuario promedio.",
+    objective: "Diseñar una plataforma SaaS integral que digitalice el ciclo de vida del recibo de sueldo (carga, visualización y firma), transformando documentos legales áridos en una experiencia intuitiva, segura y transparente en cualquier dispositivo.",
+    challenge: "Equilibrar la rigidez de los datos financieros con una interfaz amigable. El mayor reto fue diseñar un sistema de estados (Pending/Signed/Rejected) visualmente jerarquizado y dashboards analíticos que permitieran un control rápido de la documentación pendiente.",
+    colors: ["#000000", "#7C3AED", "#10B981", "#EF4444"], 
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Eficiencia de Firma", percentage: 95 },
+      { name: "Claridad de Datos", percentage: 90 },
+      { name: "Tasa de Adopción", percentage: 88 },
+      { name: "Seguridad Percibida", percentage: 98 },
+    ],
+    impact: [
+      { label: "Document Cycle", value: "-70%" },
+      { label: "Paper Saving", value: "100%" },
+      { label: "Avg. Signing", value: "45s" },
+    ],
+    solution: "Implementamos un ecosistema multiplataforma con un dashboard centralizado. Para el empleado, priorizamos la accesibilidad móvil y la claridad del estatus del documento; para el empleador, desarrollamos herramientas de filtrado avanzado y gráficos de cumplimiento (donuts charts) que permiten monitorear la gestión de nómina en tiempo real.",
+    gallery: [Payslip1, Payslip2, Payslip3]
   },
   {
     id: 5,
