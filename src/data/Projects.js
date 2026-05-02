@@ -35,10 +35,12 @@ import DigitalVector2 from '../assets/images/Web/Galeria/DigitalVector2.webp';
 import DigitalVector3 from '../assets/images/Web/Galeria/DigitalVector3.webp';
 
 import Bloom1 from '../assets/images/Web/Galeria/Bloom1.webp';
-import Bloom2 from '../assets/images/Web/Galeria/Bloom2.jpeg';
+import Bloom2 from '../assets/images/Web/Galeria/Bloom2.webp';
 import Bloom3 from '../assets/images/Web/Galeria/Bloom3.webp';
 
 import Fanfiction1 from '../assets/images/Web/Galeria/Fanfiction1.webp';
+import Fanfiction2 from '../assets/images/Web/Galeria/Fanfiction2.webp';
+
 import Payslip1 from '../assets/images/Web/Galeria/Payslip1.webp';
 import SweetBlossom1 from '../assets/images/Web/Galeria/SweetBlossom1.webp';
 import Foodie1 from '../assets/images/Web/Galeria/Foodie1.webp';
@@ -120,16 +122,32 @@ export const projects = [
     solution: "Se implementó un diseño basado en espacios en blanco generosos y una paleta cromática neutra para resaltar el producto. Optimizamos el flujo de compra mediante una navegación táctil intuitiva, selectores de color dinámicos y un catálogo modular que permite una visualización clara y rápida de las colecciones.",
     gallery: [Bloom1, Bloom2, Bloom3]
   },
-  {
+{
     id: 3,
     title: "Fanfiction App",
     category: "Web",
     image: Portada_Fanfiction,
     slug: "fanfiction",
     year: "2025",
-    services: "Product Design / UI Design",
-    description: "El desafío consistía en diseñar una aplicación de lectura para una comunidad masiva donde la legibilidad era la prioridad absoluta. Los usuarios pasaban horas frente a la pantalla, por lo que la fatiga visual era el mayor obstáculo a resolver.",
-    gallery: [Fanfiction1]
+    services: "UI/UX Design / Product Strategy",
+    problem: "Las plataformas actuales de lectura suelen saturar al usuario con interfaces ruidosas. En una comunidad donde el consumo de contenido es intensivo (horas de lectura), la fatiga visual y la dificultad para descubrir historias relevantes eran los puntos de dolor principales.",
+    objective: "Crear una interfaz inmersiva 'Dark Mode' que priorice el confort visual, facilitando tanto el consumo de historias largas como la interacción social entre autores y lectores a través de métricas claras.",
+    challenge: "Organizar grandes volúmenes de metadatos (etiquetas, advertencias, capítulos y reseñas) sin romper la estética minimalista, asegurando que la jerarquía de información sea clara en dispositivos móviles.",
+    colors: ["#000000", "#111827", "#6DB4B6", "#FFFFFF"], // Negro profundo, azul oscuro, el celeste de tus iconos y blanco
+    fonts: "Inter / Roboto", // Tipografías legibles para lectura prolongada
+    metrics: [
+      { name: "Legibilidad Nocturna", percentage: 96 },
+      { name: "Navegación Intuitiva", percentage: 92 },
+      { name: "Engagement de Comunidad", percentage: 88 },
+      { name: "Performance de Carga", percentage: 95 },
+    ],
+    impact: [
+      { label: "Daily Readers", value: "+45%" },
+      { label: "Review Rate", value: "4.3/5" },
+      { label: "Favorites", value: "1M+" },
+    ],
+    solution: "Se diseñó una arquitectura de información centrada en el contenido, utilizando un esquema de color de alto contraste pero baja fatiga visual (fondos negros puros para pantallas OLED). Implementamos un sistema de reseñas y estadísticas en tiempo real que permite a los usuarios validar la calidad de los fanfics antes de iniciar la lectura.",
+    gallery: [Fanfiction1, Fanfiction2]
   },
   {
     id: 4,
