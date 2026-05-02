@@ -71,12 +71,24 @@ import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
 import WineNight2 from '../assets/images/Web/Galeria/WineNight2.webp';
 import WineNight3 from '../assets/images/Web/Galeria/WineNight3.webp';
 
-// Packaging & Editorial Gallery
+// Packaging Gallery
 import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
+import Silkylatte2 from '../assets/images/Packaging/Galeria/Silkylatte2.webp';
+
 import Fruits1 from '../assets/images/Packaging/Galeria/Fruits1.webp';
+import Fruits2 from '../assets/images/Packaging/Galeria/Fruits2.webp';
+
 import Crown1 from '../assets/images/Packaging/Galeria/Crown1.webp';
+import Crown2 from '../assets/images/Packaging/Galeria/Crown2.webp';
+
+// Editorial Gallery
 import Maison1 from '../assets/images/Editorial/Galeria/Maison1.webp';
+import Maison2 from '../assets/images/Editorial/Galeria/Maison1.webp';
+
 import Manifiesto1 from '../assets/images/Editorial/Galeria/Manifiesto1.webp';
+import Manifiesto2 from '../assets/images/Editorial/Galeria/Manifiesto1.webp';
+
+// Campaigns Gallery
 import Fidelity1 from '../assets/images/Campañas/Galeria/Fidelity1.webp';
 import ConsumerPulse1 from '../assets/images/Campañas/Galeria/ConsumerPulse1.webp';
 import Consumer1 from '../assets/images/Campañas/Galeria/Consumer1.webp';
@@ -415,7 +427,7 @@ export const projects = [
       { label: "Frecuencia", value: "Trimestral" },
     ],
     solution: "Se estableció una retícula de 12 columnas que permite variaciones asimétricas. La mezcla de una tipografía Serif humanista con una Sans-Serif técnica reforzó el equilibrio entre el arte y la precisión arquitectónica.",
-    gallery: [Maison1, Maison1]
+    gallery: [Maison1, Maison2]
   },
   {
     id: 13,
@@ -441,7 +453,7 @@ export const projects = [
       { label: "Edición Limitada", value: "2021" },
     ],
     solution: "Se implementó una arquitectura de información basada en contrastes: tipografías de gran escala para titulares y una estructura limpia para el cuerpo de texto. Se utilizaron separadores cromáticos para diferenciar las secciones de Arquitectura, Moda y Arte.",
-    gallery: [Manifiesto1, Manifiesto1]
+    gallery: [Manifiesto1, Manifiesto2]
   },
   // --- PACKAGING ---
   {
@@ -469,7 +481,7 @@ export const projects = [
       { label: "Intención de Compra", value: "+35%" },
     ],
     solution: "Diseñamos un packaging con colores tierra y texturas que emulan papel sin procesar. Las ilustraciones de grabados clásicos comunican tradición, logrando que el producto destaque por su sobriedad y elegancia.",
-    gallery: [Silkylatte1, Silkylatte1]
+    gallery: [Silkylatte1, Silkylatte2]
   },
   {
     id: 15,
@@ -495,7 +507,7 @@ export const projects = [
       { label: "Presencia Mercado", value: "Nacional" },
     ],
     solution: "Se diseñó un sistema de packaging con una arquitectura visual dividida: un tercio superior celeste que evoca naturalidad y pureza, y una base de color sólida según el sabor (Maracuyá, Naranja, Manzana). Se incorporó un sello circular distintivo para la Vitamina C.",
-    gallery: [Fruits1, Fruits1]
+    gallery: [Fruits1, Fruits2]
   },
   {
     id: 16,
@@ -521,7 +533,7 @@ export const projects = [
       { label: "Fórmula Vegana", value: "100%" },
     ],
     solution: "Se desarrolló una línea gráfica centrada en ilustraciones florales de estilo cerezo japonés, utilizando una paleta de rosas 'dusty' y blancos rotos. La arquitectura del envase prioriza la ergonomía y la reducción de materiales.",
-    gallery: [Crown1, Crown1]
+    gallery: [Crown1, Crown2]
   },
   // --- CAMPAÑAS ---
   {
