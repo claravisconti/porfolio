@@ -60,16 +60,16 @@ import ElectroHaus2 from '../assets/images/Web/Galeria/ElectroHaus2.webp';
 import ElectroHaus3 from '../assets/images/Web/Galeria/ElectroHaus3.webp';
 
 import MagicTravel1 from '../assets/images/Web/Galeria/MagicTravel1.webp';
-import MagicTravel2 from '../assets/images/Web/Galeria/MagicTravel1.webp';
-import MagicTravel3 from '../assets/images/Web/Galeria/MagicTravel1.webp';
+import MagicTravel2 from '../assets/images/Web/Galeria/MagicTravel2.webp';
+import MagicTravel3 from '../assets/images/Web/Galeria/MagicTravel3.webp';
 
 import Hermes1 from '../assets/images/Web/Galeria/Hermes1.webp';
-import Hermes2 from '../assets/images/Web/Galeria/Hermes1.webp';
-import Hermes3 from '../assets/images/Web/Galeria/Hermes1.webp';
+import Hermes2 from '../assets/images/Web/Galeria/Hermes2.webp';
+import Hermes3 from '../assets/images/Web/Galeria/Hermes3.webp';
 
 import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
-import WineNight2 from '../assets/images/Web/Galeria/WineNight1.webp';
-import WineNight3 from '../assets/images/Web/Galeria/WineNight1.webp';
+import WineNight2 from '../assets/images/Web/Galeria/WineNight2.webp';
+import WineNight3 from '../assets/images/Web/Galeria/WineNight3.webp';
 
 // Packaging & Editorial Gallery
 import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
