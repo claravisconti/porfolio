@@ -52,6 +52,8 @@ import Food1 from '../assets/images/Web/Galeria/Food1.webp';
 import Food2 from '../assets/images/Web/Galeria/Food2.webp';
 
 import Orpheus1 from '../assets/images/Web/Galeria/Orpheus1.webp';
+import Orpheus2 from '../assets/images/Web/Galeria/Orpheus2.webp';
+import Orpheus3 from '../assets/images/Web/Galeria/Orpheus3.webp';
 
 import Electrohaus1 from '../assets/images/Web/Galeria/Electrohaus1.webp';
 
@@ -250,9 +252,25 @@ export const projects = [
     image: Portada_Orpheus,
     slug: "orpheus",
     year: "2023",
-    services: "Digital Identity / UX Design",
-    description: "La Ópera Orpheus buscaba atraer a una audiencia más joven. El desafío era romper con la percepción elitista del género mediante una web moderna, interactiva y accesible, manteniendo el respeto por la tradición clásica.",
-    gallery: [Orpheus1]
+    services: "Digital Identity / UX Design / Ticketing System",
+    problem: "La Ópera Orpheus enfrentaba el reto de conectar con nuevas audiencias en la era digital. Su presencia online anterior se percibía como elitista y estática, lo que generaba una barrera de entrada para el público joven y dificultaba la navegación en procesos críticos como la consulta de cartelera y compra de tickets.",
+    objective: "Rediseñar la identidad digital de la ópera para convertirla en una plataforma inmersiva y dinámica. El objetivo era facilitar el descubrimiento de obras clásicas, promover la academia de artes y simplificar la gestión de reservas mediante un sistema de calendario visual y moderno.",
+    challenge: "Mantener el equilibrio entre la solemnidad de la tradición operística y las tendencias actuales de diseño UX. Era fundamental que la interfaz fuera visualmente impactante —utilizando fotografía artística de gran formato— sin sacrificar la claridad funcional en dispositivos móviles.",
+    colors: ["#3E0202", "#FFFFFF", "#F8F5F2", "#1A1A1A"], // Bordó profundo, blanco, crema y negro
+    fonts: "Playfair Display / Inter", // Serif elegante para títulos y Sans para legibilidad
+    metrics: [
+      { name: "Reserva de Tickets", percentage: 96 },
+      { name: "Interacción con Media", percentage: 84 },
+      { name: "Retención de Usuario", percentage: 91 },
+      { name: "Accesibilidad", percentage: 95 },
+    ],
+    impact: [
+      { label: "New Subscribers", value: "+55%" },
+      { label: "Mobile Bookings", value: "+42%" },
+      { label: "Avg. Session", value: "4.8m" },
+    ],
+    solution: "Se desarrolló una experiencia 'Dark Mode' sofisticada que utiliza el color bordó como hilo conductor emocional. Implementamos un sistema de filtrado por calendario ('Upcoming Shows') intuitivo, perfiles detallados del elenco con galerías multimedia y secciones dedicadas a la academia (Ballet, Tango, Piano). La arquitectura de información se centró en la conversión, integrando botones de 'Book' estratégicos que reducen el flujo de compra a pocos pasos.",
+    gallery: [Orpheus1, Orpheus2, Orpheus3]
   },
   {
     id: 8,
