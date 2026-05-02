@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from '../data/projects';
 import ProjectNavigation from '../components/ProjectNavigation';
+import Banner from '../components/Banner'; // Importamos el componente Banner
+import Hero from '../assets/images/Hero/Hero1.webp'; // Asegúrate de que esta ruta sea la correcta para tu imagen de fondo
 import { Monitor, Target, Zap } from 'lucide-react';
 
 export default function ProjectDetail() {
@@ -19,8 +21,15 @@ export default function ProjectDetail() {
 
   return (
     <div className="bg-white min-h-screen text-black">
-      {/* SECCIÓN 1: HERO (Tu estilo original) */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 pt-32 md:pt-40 pb-12 md:pb-20">
+      {/* BANNER SUPERIOR */}
+      <Banner 
+      // title={project.title} 
+        title={project.category} 
+        image={Hero} 
+      />
+
+      {/* SECCIÓN 1: HERO (Información del Proyecto) */}
+      <section className="max-w-7xl mx-auto px-6 md:px-16 pt-16 md:pt-24 pb-12 md:pb-20">
         <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center md:items-start text-center md:text-left">
           <div className="lg:w-2/3">
             <p className="text-[10px] md:text-[11px] uppercase tracking-[0.5em] text-[#6db4b6] font-bold mb-4 md:mb-6 italic">
@@ -59,7 +68,7 @@ export default function ProjectDetail() {
 
       {isDetailed ? (
         <>
-          {/* SECCIÓN 2: ESTRATEGIA (Tu estilo original) */}
+          {/* SECCIÓN 2: ESTRATEGIA */}
           <section className="max-w-7xl mx-auto px-6 md:px-16 py-12 md:py-8 border-b border-gray-50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
               {[
@@ -106,7 +115,7 @@ export default function ProjectDetail() {
             </div>
           </section>
 
-          {/* SECCIÓN 5: LA SOLUCIÓN Y MÉTRICAS CON RECUADRO GRIS */}
+          {/* SECCIÓN 5: LA SOLUCIÓN Y MÉTRICAS */}
           <section className="max-w-7xl mx-auto px-6 md:px-16 py-12 md:py-12">
             <div className="bg-[#fafafa] p-8 md:p-16 rounded-sm grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               {project.solution && (
@@ -131,7 +140,7 @@ export default function ProjectDetail() {
             </div>
           </section>
 
-          {/* SECCIÓN 6: IMPACTO (Estilo original 8xl) */}
+          {/* SECCIÓN 6: IMPACTO */}
           {project.impact?.length > 0 && (
             <section className="max-w-7xl mx-auto px-6 md:px-16 py-20 md:py-16">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
@@ -164,7 +173,7 @@ export default function ProjectDetail() {
           )}
         </>
       ) : (
-        /* VISTA SIMPLE PARA OTROS */
+        /* VISTA SIMPLE PARA OTROS PROYECTOS */
         <section className="max-w-7xl mx-auto px-6 md:px-16 pb-24 text-center md:text-left">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
             <div className="md:col-span-4">
