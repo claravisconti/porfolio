@@ -110,7 +110,7 @@ export const projects = [
     image: Portada_DigitalVector,
     slug: "digitalVector",
     year: "2026",
-    services: "UI/UX Design / Development",
+    services: "Diseño UI/UX / Desarrollo Web",
     problem: "La marca presentaba una desconexión entre su capacidad tecnológica y su presencia digital, lo que generaba una percepción de bajo valor y una reducida retención de clientes corporativos.",
     objective: "Desarrollar un ecosistema digital de alto rendimiento bajo una estética 'Tech-Luxury' que proyecte autoridad técnica y optimice el embudo de conversión B2B.",
     challenge: "Lograr el equilibrio entre una arquitectura de información técnica compleja y una experiencia de navegación minimalista impulsada por micro-interacciones de alta precisión.",
@@ -137,7 +137,7 @@ export const projects = [
     image: Portada_Bloom,
     slug: "bloom",
     year: "2024",
-    services: "UI/UX Design / Strategy / Development",
+    services: "Diseño UI/UX / Desarrollo Web",
     problem: "La marca de autor Bloom presentaba una desconexión visual en su plataforma digital. El sitio anterior no lograba transmitir la exclusividad de sus piezas, resultando en una experiencia de usuario genérica que no justificaba el valor premium de sus productos.",
     objective: "Rediseñar la experiencia de compra bajo un enfoque 'Mobile-First' que funcione como una extensión digital del taller de diseño, priorizando la elegancia visual y la simplicidad operativa.",
     challenge: "Equilibrar la estética minimalista 'soft-luxury' con las funcionalidades críticas de conversión de un eCommerce, garantizando que la jerarquía visual no compita con el protagonismo de las prendas.",
@@ -151,7 +151,7 @@ export const projects = [
     ],
     impact: [
       { label: "Ventas por App", value: "+35%" },
-      { label: "Capatación de usuarios", value: "+50%" },
+      { label: "Captación de usuarios", value: "+50%" },
       { label: "Velocidad de navegación", value: "1.2s" },
     ],
     solution: "Se implementó un diseño basado en espacios en blanco generosos y una paleta cromática neutra para resaltar el producto. Optimizamos el flujo de compra mediante una navegación táctil intuitiva, selectores de color dinámicos y un catálogo modular que permite una visualización clara y rápida de las colecciones.",
@@ -164,7 +164,7 @@ export const projects = [
     image: Portada_Fanfiction,
     slug: "fanfiction",
     year: "2025",
-    services: "UI/UX Design / Product Strategy",
+    services: "Diseño UI/UX / Estrategia de Producto",
     problem: "Las plataformas actuales de lectura suelen saturar al usuario con interfaces ruidosas. En una comunidad donde el consumo de contenido es intensivo (horas de lectura), la fatiga visual y la dificultad para descubrir historias relevantes eran los puntos de dolor principales.",
     objective: "Crear una interfaz inmersiva 'Dark Mode' que priorice el confort visual, facilitando tanto el consumo de historias largas como la interacción social entre autores y lectores a través de métricas claras.",
     challenge: "Organizar grandes volúmenes de metadatos (etiquetas, advertencias, capítulos y reseñas) sin romper la estética minimalista, asegurando que la jerarquía de información sea clara en dispositivos móviles.",
@@ -191,10 +191,10 @@ export const projects = [
     image: Portada_Payslip,
     slug: "payslip",
     year: "2023",
-    services: "SaaS Design / HR Tech / Product Strategy",
+    services: "Diseño SaaS / Tecnología de RR.HH. / Estrategia de Producto",
     problem: "La gestión tradicional de recibos de sueldo suele ser burocrática y fragmentada. Tanto empresas como empleados lidiaban con procesos de firma lentos, falta de trazabilidad en los estados del documento y una visualización de datos contables compleja para el usuario promedio.",
     objective: "Diseñar una plataforma SaaS integral que digitalice el ciclo de vida del recibo de sueldo (carga, visualización y firma), transformando documentos legales áridos en una experiencia intuitiva, segura y transparente en cualquier dispositivo.",
-    challenge: "Equilibrar la rigidez de los datos financieros con una interfaz amigable. El mayor reto fue diseñar un sistema de estados (Pending/Signed/Rejected) visualmente jerarquizado y dashboards analíticos que permitieran un control rápido de la documentación pendiente.",
+    challenge: "Equilibrar la rigidez de los datos financieros con una interfaz amigable. El mayor reto fue diseñar un sistema de estados (Pendiente/Firmado/Rechazado) visualmente jerarquizado y dashboards analíticos que permitieran un control rápido de la documentación pendiente.",
     colors: ["#000000", "#7C3AED", "#10B981", "#EF4444"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -208,7 +208,7 @@ export const projects = [
       { label: "Reciclaje de Documentos", value: "100%" },
       { label: "Velocidad de sesión", value: "45s" },
     ],
-    solution: "Implementamos un ecosistema multiplataforma con un dashboard centralizado. Para el empleado, priorizamos la accesibilidad móvil y la claridad del estatus del documento; para el empleador, desarrollamos herramientas de filtrado avanzado y gráficos de cumplimiento (donuts charts) que permiten monitorear la gestión de nómina en tiempo real.",
+    solution: "Implementamos un ecosistema multiplataforma con un dashboard centralizado. Para el empleado, priorizamos la accesibilidad móvil y la claridad del estatus del documento; para el empleador, desarrollamos herramientas de filtrado avanzado y gráficos de cumplimiento que permiten monitorear la gestión de nómina en tiempo real.",
     gallery: [Payslip1, Payslip2, Payslip3]
   },
   {
@@ -218,7 +218,7 @@ export const projects = [
     image: Portada_SweetBlossom,
     slug: "blossom",
     year: "2024",
-    services: "Web Design / Branding / E-commerce",
+    services: "Diseño Web / Branding / E-commerce",
     problem: "Una pastelería boutique con una estética muy definida buscaba digitalizar su catálogo y sistema de pedidos. El reto principal era evitar que la interfaz se sintiera 'fría' o genérica, logrando que el usuario percibiera la misma calidez y aroma artesanal que al entrar al local físico.",
     objective: "Diseñar una plataforma visualmente rica y sensorial que funcione como un escaparate digital, facilitando la reserva para eventos y la compra de productos premium mediante una navegación romántica y fluida.",
     challenge: "Equilibrar la ornamentación visual (ilustraciones botánicas y tipografías script) con la usabilidad. Era crítico que los elementos decorativos no distrajeran al usuario del proceso de compra, manteniendo un rendimiento de carga óptimo a pesar del uso de imágenes de alta resolución.",
@@ -231,11 +231,11 @@ export const projects = [
       { name: "Velocidad de Carga", percentage: 91 },
     ],
     impact: [
-      { label: "Online Sales", value: "+40%" },
-      { label: "Event Inquiries", value: "+65%" },
-      { label: "User Satisfaction", value: "4.9/5" },
+      { label: "Ventas Online", value: "+40%" },
+      { label: "Consultas para Eventos", value: "+65%" },
+      { label: "Satisfacción del Usuario", value: "4.9/5" },
     ],
-    solution: "Se desarrolló una interfaz basada en el concepto 'digital patisserie', utilizando una paleta cromática suave y micro-interacciones delicadas. Implementamos secciones dedicadas para 'Tea Time' y 'Events' con formularios simplificados, integrando fotografías de producto en gran formato que actúan como el centro de la experiencia UX.",
+    solution: "Se desarrolló una interfaz basada en el concepto 'pastelería digital', utilizando una paleta cromática suave y micro-interacciones delicadas. Implementamos secciones dedicadas para 'Tea Time' y 'Eventos' con formularios simplificados, integrando fotografías de producto en gran formato que actúan como el centro de la experiencia UX.",
     gallery: [SweetBlossom1, SweetBlossom2, SweetBlossom3]
   },
   {
@@ -245,10 +245,10 @@ export const projects = [
     image: Portada_Foodie,
     slug: "food",
     year: "2025",
-    services: "Mobile Product Design / UI UX Design",
+    services: "Diseño de Producto Móvil / Diseño UI/UX",
     problem: "En un mercado de delivery saturado, las aplicaciones suelen centrarse únicamente en la transacción, descuidando la experiencia sensorial del usuario. Foodie necesitaba una interfaz que transformara la tarea de pedir comida en un proceso visualmente apetecible y sin fricciones.",
     objective: "Diseñar una experiencia móvil integral que optimice el flujo de conversión desde el login hasta el checkout, utilizando una jerarquía visual clara, fotografía de alta calidad y un sistema de navegación intuitivo basado en categorías y recomendaciones personalizadas.",
-    challenge: "Lograr un equilibrio entre la densidad de información (precios, tiempos de entrega, ratings, menús) y un diseño limpio que no abrume al usuario. El mayor reto fue unificar el flujo de 'Deals' y 'Recommended' manteniendo la coherencia visual en cada etapa del proceso de compra.",
+    challenge: "Lograr un equilibrio entre la densidad de información (precios, tiempos de entrega, valoraciones, menús) y un diseño limpio que no abrume al usuario. El mayor reto fue unificar el flujo de 'Ofertas' y 'Recomendados' manteniendo la coherencia visual en cada etapa del proceso de compra.",
     colors: ["#FBBF24", "#FFFFFF", "#EF4444", "#111827"],
     fonts: "Inter / Montserrat",
     metrics: [
@@ -258,11 +258,11 @@ export const projects = [
       { name: "Engagement Visual", percentage: 98 },
     ],
     impact: [
-      { label: "Conversion Rate", value: "+38%" },
-      { label: "Avg. Order Time", value: "2.5m" },
-      { label: "User Satisfaction", value: "4.8/5" },
+      { label: "Tasa de Conversión", value: "+38%" },
+      { label: "Tiempo promedio de pedido", value: "2.5m" },
+      { label: "Satisfacción del Usuario", value: "4.8/5" },
     ],
-    solution: "Se implementó un sistema de diseño 'Image-First' para despertar el apetito del usuario. Optimizamos el flujo de pago con un resumen de cuenta transparente y un sistema de login social (Facebook/Google) para reducir el abandono. El uso del color amarillo estratégico no solo refuerza la identidad de marca, sino que estimula la rapidez y felicidad en la toma de decisiones.",
+    solution: "Se implementó un sistema de diseño 'Image-First' para despertar el apetito del usuario. Optimizamos el flujo de pago con un resumen de cuenta transparente y un sistema de inicio de sesión social para reducir el abandono. El uso estratégico del color amarillo no solo refuerza la identidad de marca, sino que estimula la rapidez y felicidad en la toma de decisiones.",
     gallery: [Food1, Food2]
   },
   {
@@ -272,7 +272,7 @@ export const projects = [
     image: Portada_Orpheus,
     slug: "orpheus",
     year: "2023",
-    services: "Digital Identity / UX Design / Ticketing System",
+    services: "Identidad Digital / Diseño UX / Sistema de Reservas",
     problem: "La Ópera Orpheus enfrentaba el reto de conectar con nuevas audiencias en la era digital. Su presencia online anterior se percibía como elitista y estática, lo que generaba una barrera de entrada para el público joven y dificultaba la navegación en procesos críticos como la consulta de cartelera y compra de tickets.",
     objective: "Rediseñar la identidad digital de la ópera para convertirla en una plataforma inmersiva y dinámica. El objetivo era facilitar el descubrimiento de obras clásicas, promover la academia de artes y simplificar la gestión de reservas mediante un sistema de calendario visual y moderno.",
     challenge: "Mantener el equilibrio entre la solemnidad de la tradición operística y las tendencias actuales de diseño UX. Era fundamental que la interfaz fuera visualmente impactante —utilizando fotografía artística de gran formato— sin sacrificar la claridad funcional en dispositivos móviles.",
@@ -285,11 +285,11 @@ export const projects = [
       { name: "Accesibilidad", percentage: 95 },
     ],
     impact: [
-      { label: "New Subscribers", value: "+55%" },
-      { label: "Mobile Bookings", value: "+42%" },
-      { label: "Avg. Session", value: "4.8m" },
+      { label: "Nuevos Suscriptores", value: "+55%" },
+      { label: "Reservas Mobile", value: "+42%" },
+      { label: "Sesión Promedio", value: "4.8m" },
     ],
-    solution: "Se desarrolló una experiencia 'Dark Mode' sofisticada que utiliza el color bordó como hilo conductor emocional. Implementamos un sistema de filtrado por calendario ('Upcoming Shows') intuitivo, perfiles detallados del elenco con galerías multimedia y secciones dedicadas a la academia (Ballet, Tango, Piano). La arquitectura de información se centró en la conversión, integrando botones de 'Book' estratégicos que reducen el flujo de compra a pocos pasos.",
+    solution: "Se desarrolló una experiencia 'Dark Mode' sofisticada que utiliza el color bordó como hilo conductor emocional. Implementamos un sistema de filtrado por calendario intuitivo, perfiles detallados del elenco con galerías multimedia y secciones dedicadas a la academia. La arquitectura de información se centró en la conversión, integrando botones de reserva estratégicos que reducen el flujo de compra a pocos pasos.",
     gallery: [Orpheus1, Orpheus2, Orpheus3]
   },
   {
@@ -299,9 +299,9 @@ export const projects = [
     image: Portada_Electrohaus,
     slug: "electrohaus",
     year: "2026",
-    services: "Interaction Design / Event Web / Art Direction",
+    services: "Diseño de Interacción / Web de Eventos / Dirección Artística",
     problem: "En la industria de eventos, la saturación de información suele diluir la identidad del festival. Electrohaus necesitaba una landing page que no solo vendiera tickets, sino que funcionara como un prólogo visual del evento, capturando la agresividad y el ritmo de la música electrónica industrial.",
-    objective: "Diseñar una experiencia web de alto impacto visual (Brutalismo Digital) que maximice el 'hype' y la conversión de preventa mediante una jerarquía tipográfica audaz y un sistema de navegación fluido para dispositivos móviles.",
+    objective: "Diseñar una experiencia web de alto impacto visual (Brutalismo Digital) que maximice la expectativa y la conversión de preventa mediante una jerarquía tipográfica audaz y un sistema de navegación fluido para dispositivos móviles.",
     challenge: "El principal desafío fue mantener una legibilidad óptima bajo una estética de alto contraste y elementos visuales disruptivos. La interfaz debía transmitir energía y movimiento constante sin comprometer la velocidad de carga, esencial para usuarios que acceden desde redes sociales.",
     colors: ["#000000", "#ff3fe0", "#FFFFFF", "#1A1A1A"],
     fonts: "Archivo Black / Space Mono",
@@ -312,9 +312,9 @@ export const projects = [
       { name: "Engagement Social", percentage: 92 },
     ],
     impact: [
-      { label: "Ticket Sold-out", value: "48hs" },
-      { label: "Social Shares", value: "12K" },
-      { label: "Avg. Session", value: "3.5m" },
+      { label: "Tickets agotados", value: "48hs" },
+      { label: "Compartidos en redes", value: "12K" },
+      { label: "Sesión Promedio", value: "3.5m" },
     ],
     solution: "Se implementó un diseño basado en el brutalismo digital, utilizando tipografía de gran formato como elemento gráfico principal. La solución incluyó efectos de scroll interactivos que simulan el pulso de la música, una paleta de color neón sobre fondos negros profundos para resaltar el Line-up, y un flujo de compra de tickets integrado que minimiza los clics del usuario.",
     gallery: [ElectroHaus1, ElectroHaus2, ElectroHaus3]
@@ -326,10 +326,10 @@ export const projects = [
     image: Portada_MagicTravel,
     slug: "magictravel",
     year: "2022",
-    services: "Game Web Design / UI Design / Branding",
+    services: "Diseño Web de Juegos / Diseño UI / Branding",
     problem: "Como juego indie en un mercado saturado, Magic Travel necesitaba una carta de presentación que no solo explicara de qué trata el juego, sino que hiciera sentir al usuario la atmósfera mágica antes de descargarlo. El mayor obstáculo era organizar la información de personajes, niveles y recompensas sin romper la estética onírica de la marca.",
-    objective: "Diseñar una landing page inmersiva que funcione como portal al universo del juego, optimizando la jerarquía visual para destacar el pre-registro y las mecánicas de evolución de personajes y compañeros (pets).",
-    challenge: "El desafío técnico fue integrar una gran cantidad de elementos ilustrativos y decoraciones ornamentales manteniendo un rendimiento fluido. Desde el punto de vista de UX, debíamos presentar las 'Rewards' y 'Levels' de forma lúdica, imitando la interfaz interna del juego para generar familiaridad.",
+    objective: "Diseñar una landing page inmersiva que funcione como portal al universo del juego, optimizando la jerarquía visual para destacar el pre-registro y las mecánicas de evolución de personajes y compañeros.",
+    challenge: "El desafío técnico fue integrar una gran cantidad de elementos ilustrativos y decoraciones ornamentales manteniendo un rendimiento fluido. Desde el punto de vista de UX, debíamos presentar las recompensas y niveles de forma lúdica, imitando la interfaz interna del juego.",
     colors: ["#A5C9ED", "#F3E5D8", "#7B9ACC", "#FFFFFF"],
     fonts: "Cormorant Garamond / Montserrat",
     metrics: [
@@ -339,11 +339,11 @@ export const projects = [
       { name: "Retención en Landing", percentage: 90 },
     ],
     impact: [
-      { label: "Daily Downloads", value: "5K+" },
-      { label: "Community Growth", value: "+120%" },
-      { label: "Avg. Time", value: "4.2m" },
+      { label: "Descargas diarias", value: "5K+" },
+      { label: "Crecimiento comunidad", value: "+120%" },
+      { label: "Tiempo promedio", value: "4.2m" },
     ],
-    solution: "Creamos un diseño basado en capas y texturas suaves que emulan el cielo y el agua, elementos centrales del juego. Implementamos tarjetas de personajes interactivas (como la de Seraphina) y un carrusel de recompensas que permite visualizar la evolución de las mascotas (Frostclaw). El uso de marcos ornamentales dorados eleva la percepción de calidad del juego indie, posicionándolo como una experiencia premium.",
+    solution: "Creamos un diseño basado en capas y texturas suaves que emulan el cielo y el agua. Implementamos tarjetas de personajes interactivas y un carrusel de recompensas que permite visualizar la evolución de las mascotas. El uso de marcos ornamentales dorados eleva la percepción de calidad del juego, posicionándolo como una experiencia premium.",
     gallery: [MagicTravel1, MagicTravel2, MagicTravel3]
   },
   {
@@ -353,10 +353,10 @@ export const projects = [
     image: Portada_Hermes,
     slug: "hermes",
     year: "2019",
-    services: "Luxury Web Design / UI UX Design / Booking Strategy",
-    problem: "El Hotel Hermes necesitaba una presencia digital que estuviera a la altura de su servicio boutique de cinco estrellas. Su plataforma anterior no lograba transmitir la exclusividad de sus espacios, resultando en una alta tasa de rebote y una dependencia excesiva de agencias de reserva externas (OTAs).",
+    services: "Diseño Web de Lujo / Diseño UI/UX / Estrategia de Reservas",
+    problem: "El Hotel Hermes necesitaba una presencia digital que estuviera a la altura de su servicio boutique de cinco estrellas. Su plataforma anterior no lograba transmitir la exclusividad de sus espacios, resultando en una alta tasa de rebote y una dependencia excesiva de agencias de reserva externas.",
     objective: "Diseñar una experiencia web inmersiva y de alto rendimiento que actúe como una conserjería digital, permitiendo a los huéspedes explorar las habitaciones, servicios de wellness y espacios de eventos con una navegación fluida que incite a la reserva directa.",
-    challenge: "El principal reto fue equilibrar la carga de imágenes de alta resolución en gran formato con una velocidad de carga ultrarrápida. Además, debíamos crear una arquitectura de información clara que segmentara los servicios de hospitalidad (Rooms), relajación (Wellness) y corporativos (Events) sin perder la elegancia visual.",
+    challenge: "El principal reto fue equilibrar la carga de imágenes de alta resolución en gran formato con una velocidad de carga ultrarrápida. Además, debíamos crear una arquitectura de información clara que segmentara los servicios de hospitalidad, relajación y corporativos sin perder la elegancia visual.",
     colors: ["#F8F5F2", "#1A1A1A", "#338ea8", "#D9D9D9"],
     fonts: "Tenor Sans / Playfair Display",
     metrics: [
@@ -366,11 +366,11 @@ export const projects = [
       { name: "Tiempo de Carga", percentage: 90 },
     ],
     impact: [
-      { label: "Direct Booking", value: "+30%" },
-      { label: "Avg. Session", value: "5.5m" },
-      { label: "Mobile Bounce", value: "-25%" },
+      { label: "Reservas Directas", value: "+30%" },
+      { label: "Sesión Promedio", value: "5.5m" },
+      { label: "Rebote Mobile", value: "-25%" },
     ],
-    solution: "Se implementó un sistema de diseño basado en 'Editorial Layouts', utilizando amplios espacios en blanco y una tipografía serif para los encabezados que evoca revistas de diseño de alta gama. Optimizamos el flujo de reserva mediante botones de acción discretos pero omnipresentes y creamos páginas de destino específicas para cada servicio (Wellness y Events) que funcionan como galerías de arte interactivas.",
+    solution: "Se implementó un sistema de diseño basado en 'Layouts Editoriales', utilizando amplios espacios en blanco y una tipografía serif para los encabezados que evoca revistas de diseño de alta gama. Optimizamos el flujo de reserva mediante botones de acción discretos pero omnipresentes y creamos páginas específicas para cada servicio que funcionan como galerías de arte interactivas.",
     gallery: [Hermes1, Hermes2, Hermes3]
   },
   {
@@ -380,10 +380,10 @@ export const projects = [
     image: Portada_WineNight,
     slug: "winenight",
     year: "2021",
-    services: "Event UI / Web Design / Experience Design",
+    services: "Diseño UI/UX / Desarrollo Web",
     problem: "Las catas de vino premium a menudo fallan en trasladar la mística de la bodega al entorno digital. El cliente necesitaba un portal que no solo gestionara reservas exclusivas, sino que educara al usuario sobre el origen y la nota de cata de cada etiqueta, eliminando la fricción en el proceso de registro para eventos de cupo limitado.",
-    objective: "Diseñar una plataforma de marca que funcione como una invitación de lujo, priorizando la narrativa visual de las bodegas y facilitando una experiencia de reserva 'one-tap' para una audiencia de perfil alto.",
-    challenge: "El reto consistió en crear una interfaz que respete la tradición vinícola (estética clásica y orgánica) sin sacrificar la modernidad funcional. Debíamos organizar un catálogo de eventos por regiones y bodegas, manteniendo una jerarquía visual limpia que destaque la calidad de las botellas y los paisajes.",
+    objective: "Diseñar una plataforma de marca que funcione como una invitación de lujo, priorizando la narrativa visual de las bodegas y facilitando una experiencia de reserva instantánea para una audiencia de perfil alto.",
+    challenge: "El reto consistió en crear una interfaz que respete la tradición vinícola (estética clásica y orgánica) sin sacrificar la modernidad funcional. Debíamos organizar un catálogo de eventos por regiones y bodegas, manteniendo una jerarquía visual limpia que destaque la calidad de las botellas.",
     colors: ["#2D0A0A", "#FDFCF0", "#C5A059", "#1A1A1A"],
     fonts: "Cinzel / Open Sans",
     metrics: [
@@ -393,11 +393,11 @@ export const projects = [
       { name: "Fidelización de Usuario", percentage: 82 },
     ],
     impact: [
-      { label: "Sold Out Rate", value: "95%" },
-      { label: "Avg. Reservation", value: "1.5m" },
-      { label: "User Reviews", value: "5/5" },
+      { label: "Tasa de Agotado", value: "95%" },
+      { label: "Reserva Promedio", value: "1.5m" },
+      { label: "Reseñas de Usuario", value: "5/5" },
     ],
-    solution: "Se implementó un diseño basado en el concepto de 'Cava Digital', utilizando una paleta de colores profundos y texturas que evocan el papel artesanal. Desarrollamos secciones narrativas para cada bodega, integrando galerías inmersivas y un motor de reservas optimizado que permite a los usuarios asegurar su lugar en menos de tres pasos. El uso de micro-interacciones sutiles refuerza la sensación de exclusividad en cada navegación.",
+    solution: "Se implementó un diseño basado en el concepto de 'Cava Digital', utilizando una paleta de colores profundos y texturas que evocan el papel artesanal. Desarrollamos secciones narrativas para cada bodega, integrando galerías inmersivas y un motor de reservas optimizado. El uso de micro-interacciones sutiles refuerza la sensación de exclusividad en cada navegación.",
     gallery: [WineNight1, WineNight2, WineNight3]
   },
 
@@ -409,7 +409,7 @@ export const projects = [
     image: Portada_Maison,
     slug: "maison",
     year: "2022",
-    services: "Editorial Design / Layout / Art Direction",
+    services: "Diseño Editorial / Layout / Dirección Artística",
     problem: "Maison presentaba una estética saturada que competía visualmente con las fotografías de arquitectura, dificultando la lectura de ensayos extensos.",
     objective: "Rediseñar la identidad editorial mediante un sistema de retículas flexible que priorice el aire, la jerarquía tipográfica y el protagonismo visual de las obras.",
     challenge: "Crear una grilla que permitiera alojar desde despieces técnicos de planos hasta artículos de opinión, manteniendo una coherencia visual premium y minimalista.",
@@ -436,11 +436,11 @@ export const projects = [
     image: Portada_Manifiesto,
     slug: "manifiesto",
     year: "2021",
-    services: "Editorial Design / Art Direction",
+    services: "Diseño Editorial / Dirección Artística",
     problem: "La necesidad de crear una publicación que unifique disciplinas tan diversas como el arte digital, la arquitectura y la moda bajo una misma estética disruptiva.",
     objective: "Diseñar un sistema de grillas flexible que permita a cada sección tener su propia identidad visual sin perder la coherencia de la marca Manifiesto.",
     challenge: "Experimentar con la tipografía audaz y el uso de espacios en blanco para guiar al lector a través de artículos de alta densidad visual.",
-    colors: ["#7c569b", "#e3b90d", "#d14b8f"], // Púrpura, Amarillo, Rosa (vistos en las fotos)
+    colors: ["#7c569b", "#e3b90d", "#d14b8f"],
     fonts: "Helvetica Neue / Bold Display",
     metrics: [
       { name: "Jerarquía Visual", percentage: 100 },
@@ -463,9 +463,9 @@ export const projects = [
     image: Portada_Silkylatte,
     slug: "silkylatte",
     year: "2024",
-    services: "Structural & Label Design / Branding",
+    services: "Diseño Estructural y de Etiqueta / Branding",
     problem: "La marca no lograba diferenciarse en una góndola saturada de colores vibrantes y plásticos brillantes, lo que diluía su mensaje de producto 100% orgánico.",
-    objective: "Diseñar un sistema de empaque táctil y honesto que comunique naturalidad inmediata a través de la materialidad y una estética 'Raw Luxury'.",
+    objective: "Diseñar un sistema de empaque táctil y honesto que comunique naturalidad inmediata a través de la materialidad y una estética de lujo crudo.",
     challenge: "Lograr un diseño de etiqueta que sea funcional para la cadena de frío pero que mantenga la textura visual de un papel artesanal sin tratar.",
     colors: ["#D2B48C", "#4B3621", "#F5F5DC"],
     fonts: "Cormorant Garamond / Montserrat",
@@ -490,7 +490,7 @@ export const projects = [
     image: Portada_Fruits,
     slug: "fruits",
     year: "2018",
-    services: "Brand Identity / Packaging Design",
+    services: "Identidad de Marca / Diseño de Packaging",
     problem: "Refrescar una línea de jugos frutales para destacar en góndola frente a competidores genéricos, enfatizando el aporte vitamínico.",
     objective: "Crear una identidad visual luminosa y natural que transmita frescura inmediata y claridad nutricional.",
     challenge: "Equilibrar la información técnica (tabla nutricional y beneficios) con un diseño aspiracional basado en paisajes naturales.",
@@ -506,7 +506,7 @@ export const projects = [
       { label: "Aporte Vitamínico", value: "100%" },
       { label: "Presencia Mercado", value: "Nacional" },
     ],
-    solution: "Se diseñó un sistema de packaging con una arquitectura visual dividida: un tercio superior celeste que evoca naturalidad y pureza, y una base de color sólida según el sabor (Maracuyá, Naranja, Manzana). Se incorporó un sello circular distintivo para la Vitamina C.",
+    solution: "Se diseñó un sistema de packaging con una arquitectura visual dividida: un tercio superior celeste que evoca naturalidad y pureza, y una base de color sólida según el sabor. Se incorporó un sello circular distintivo para la Vitamina C.",
     gallery: [Fruits1, Fruits2]
   },
   {
@@ -516,7 +516,7 @@ export const projects = [
     image: Portada_Crown,
     slug: "crown",
     year: "2020",
-    services: "Sustainable Packaging / Art Direction",
+    services: "Packaging Sustentable / Dirección Artística",
     problem: "Lograr que un packaging fabricado con materiales sustentables mantenga una estética premium y femenina para el mercado de cuidado capilar.",
     objective: "Diseñar una identidad visual suave y sofisticada basada en fragancias florales, comunicando delicadeza y ecología en un mismo concepto.",
     challenge: "Utilizar una paleta cromática minimalista que destaque los componentes botánicos sin sobrecargar visualmente el envase ergonómico.",
@@ -532,7 +532,7 @@ export const projects = [
       { label: "Línea de Cuidado", value: "Premium" },
       { label: "Fórmula Vegana", value: "100%" },
     ],
-    solution: "Se desarrolló una línea gráfica centrada en ilustraciones florales de estilo cerezo japonés, utilizando una paleta de rosas 'dusty' y blancos rotos. La arquitectura del envase prioriza la ergonomía y la reducción de materiales.",
+    solution: "Se desarrolló una línea gráfica centrada en ilustraciones florales de estilo cerezo japonés, utilizando una paleta de rosas suaves y blancos rotos. La arquitectura del envase prioriza la ergonomía y la reducción de materiales.",
     gallery: [Crown1, Crown2]
   },
   // --- CAMPAÑAS ---
@@ -543,9 +543,9 @@ export const projects = [
     image: Portada_Fidelity,
     slug: "fidelity",
     year: "2023",
-    services: "Social Media Strategy",
-    description: "Fidelity buscaba humanizar los servicios financieros para la Generación Z. El desafío era crear una campaña de redes sociales que fuera informativa pero que hablara el lenguaje visual rápido y dinámico de TikTok e Instagram.",
-    solution: "Creamos un sistema de ilustración vibrante y animaciones fluidas que simplifican conceptos de inversión. La campaña logró un 40% más de engagement orgánico gracias a que el contenido se centraba en resolver dudas reales del usuario de forma visual.",
+    services: "Estrategia en Redes Sociales",
+    description: "Fidelity buscaba humanizar los servicios financieros para la Generación Z. El desafío era crear una campaña que fuera informativa pero que hablara el lenguaje visual rápido y dinámico de TikTok e Instagram.",
+    solution: "Creamos un sistema de ilustración vibrante y animaciones fluidas que simplifican conceptos de inversión. La campaña logró un 40% más de interacción orgánica gracias a contenido centrado en resolver dudas reales del usuario de forma visual.",
     gallery: [Fidelity1]
   },
   {
@@ -555,9 +555,9 @@ export const projects = [
     image: Portada_ConsumerPulse,
     slug: "consumerPulse",
     year: "2025",
-    services: "Data Visualization / Campaign",
-    description: "Para un informe global de consumo, el reto era hacer que los datos densos fueran compartibles en LinkedIn. Debía servir como herramienta de venta B2B y como contenido de valor para la industria.",
-    solution: "Transformamos 200 páginas de datos en una serie de infografías cinéticas. Diseñamos un sistema de iconos personalizados que permiten entender tendencias de mercado globales con un solo vistazo, posicionando a la marca como líder de opinión.",
+    services: "Visualización de Datos / Campaña",
+    description: "Para un informe global de consumo, el reto era hacer que los datos densos fueran fáciles de compartir en LinkedIn. Debía servir como herramienta de venta B2B y como contenido de valor para la industria.",
+    solution: "Transformamos 200 páginas de datos en una serie de infografías cinéticas. Diseñamos iconos personalizados que permiten entender tendencias de mercado globales con un solo vistazo, posicionando a la marca como líder de opinión.",
     gallery: [ConsumerPulse1]
   },
   {
@@ -567,9 +567,9 @@ export const projects = [
     image: Portada_Consumer,
     slug: "consumer",
     year: "2022",
-    services: "Social Design Strategy",
-    description: "El desafío era estandarizar la comunicación visual de una marca de consumo masivo para sus equipos regionales. Se necesitaba un sistema flexible que mantuviera la coherencia sin importar el país de publicación.",
-    solution: "Se creó un manual de diseño digital 'viviendo' en Figma, con componentes dinámicos que se ajustan automáticamente a diferentes formatos. Esto redujo los tiempos de producción gráfica de la marca en un 50% a nivel global.",
+    services: "Estrategia de Diseño Social",
+    description: "El desafío era estandarizar la comunicación visual de una marca de consumo masivo para sus equipos regionales. Se necesitaba un sistema flexible que mantuviera la coherencia sin importar el país.",
+    solution: "Se creó un manual de diseño digital en Figma, con componentes dinámicos que se ajustan automáticamente a diferentes formatos. Esto redujo los tiempos de producción gráfica de la marca en un 50% a nivel global.",
     gallery: [Consumer1]
   },
   {
@@ -579,9 +579,9 @@ export const projects = [
     image: Portada_TrueLoyalty,
     slug: "trueLoyalty",
     year: "2017",
-    services: "Art Direction / Branding",
+    services: "Dirección Artística / Branding",
     description: "True Loyalty buscaba premiar la fidelidad de sus clientes de banca privada. El reto era diseñar una campaña que no se sintiera transaccional, sino como un reconocimiento genuino a la relación a largo plazo.",
-    solution: "Utilizamos una dirección de arte basada en retratos íntimos y monocromáticos. La narrativa se centró en historias de vida reales apoyadas por la marca, logrando una conexión emocional que aumentó el índice de recomendación (NPS) del banco.",
+    solution: "Utilizamos una dirección de arte basada en retratos íntimos y monocromáticos. La narrativa se centró en historias de vida reales apoyadas por la marca, logrando una conexión emocional que aumentó el índice de recomendación del banco.",
     gallery: [TrueLoyalty1]
   },
   {
@@ -591,9 +591,9 @@ export const projects = [
     image: Portada_BloombergScreentime,
     slug: "bloombergScreentime",
     year: "2024",
-    services: "Motion Graphics / Advertising",
+    services: "Motion Graphics / Publicidad",
     description: "Para el evento anual de medios de Bloomberg, el desafío era crear un sistema visual que representara la intersección entre el contenido y la tecnología de pantallas modernas.",
-    solution: "Desarrollamos una identidad basada en el concepto de 'fluidez digital'. El sistema visual utiliza gradientes dinámicos y tipografía en movimiento que se adapta a cualquier tamaño de pantalla, desde smartwatches hasta vallas monumentales en Times Square.",
+    solution: "Desarrollamos una identidad basada en el concepto de 'fluidez digital'. El sistema visual utiliza gradientes dinámicos y tipografía en movimiento que se adapta a cualquier tamaño de pantalla, desde relojes inteligentes hasta vallas gigantes.",
     gallery: [BloombergScreentime1]
   },
   {
@@ -603,9 +603,9 @@ export const projects = [
     image: Portada_Drupal,
     slug: "drupal",
     year: "2016",
-    services: "Community Branding",
-    description: "Drupal necesitaba revitalizar su comunicación para atraer a una nueva generación de desarrolladores. El reto era presentar a la comunidad técnica no solo como un software, sino como un ecosistema vivo de colaboración global.",
-    solution: "Se diseñó una serie de ilustraciones conceptuales que transforman el código en formas orgánicas. La campaña 'Build Anything' mostró la versatilidad de la herramienta a través de casos de uso visualmente disruptivos en redes sociales.",
+    services: "Branding de Comunidad",
+    description: "Drupal necesitaba revitalizar su comunicación para atraer a una nueva generación de desarrolladores. El reto era presentar a la comunidad técnica como un ecosistema vivo de colaboración global.",
+    solution: "Se diseñó una serie de ilustraciones conceptuales que transforman el código en formas orgánicas. La campaña 'Build Anything' mostró la versatilidad de la herramienta a través de casos de uso visualmente disruptivos.",
     gallery: [Drupal1]
   },
   {
@@ -615,9 +615,9 @@ export const projects = [
     image: Portada_AdvertisingWeek,
     slug: "advertisingWeek",
     year: "2023",
-    services: "Event Branding / Real-time Design",
-    description: "El reto era generar contenido visual atractivo en tiempo real durante una semana de conferencias masivas. Se necesitaba capturar la esencia de los ponentes más influyentes y distribuirla en redes sociales en cuestión de minutos.",
-    solution: "Creamos un estudio de diseño 'in-situ' con plantillas dinámicas que permitían producir quotes visuales y resúmenes gráficos apenas terminaban las charlas. La campaña dominó la conversación orgánica de la industria durante todo el evento.",
+    services: "Branding de Evento / Diseño en Tiempo Real",
+    description: "El reto era generar contenido visual atractivo en tiempo real durante una semana de conferencias masivas. Se necesitaba capturar la esencia de los ponentes y distribuirla en redes en minutos.",
+    solution: "Creamos un estudio de diseño in-situ con plantillas dinámicas que permitían producir citas visuales y resúmenes apenas terminaban las charlas. La campaña dominó la conversación orgánica de la industria.",
     gallery: [AdvertisingWeek1]
   },
   {
@@ -627,9 +627,9 @@ export const projects = [
     image: Portada_DrupalCon,
     slug: "drupalCon",
     year: "2021",
-    services: "Event Identity / Motion",
-    description: "En el primer evento post-pandemia, el desafío era generar una sensación de re-encuentro. La comunicación visual debía ser celebratoria, inclusiva y reflejar la madurez de la tecnología Drupal en el mercado enterprise.",
-    solution: "Diseñamos un sistema visual basado en conexiones geométricas que representan la red global de talento. La campaña incluyó piezas animadas que celebraban el re-encuentro físico, logrando un récord de asistencia y registros anticipados.",
+    services: "Identidad de Evento / Motion",
+    description: "En el primer evento presencial tras la pandemia, el desafío era generar una sensación de reencuentro. La comunicación visual debía ser celebratoria, inclusiva y reflejar la madurez de la tecnología.",
+    solution: "Diseñamos un sistema visual basado en conexiones geométricas que representan la red global de talento. La campaña incluyó piezas animadas que celebraban el reencuentro físico, logrando un récord de asistencia.",
     gallery: [DrupalCon1]
   },
   {
@@ -639,9 +639,9 @@ export const projects = [
     image: Portada_IWD,
     slug: "iwd",
     year: "2025",
-    services: "Social Impact Design",
-    description: "Para el Día Internacional de la Mujer, el reto era alejarse de los mensajes genéricos y corporativos. La campaña debía empoderar a las mujeres en tecnología de una forma visualmente única y no estereotipada.",
-    solution: "Desarrollamos una serie de retratos ilustrados de mujeres pioneras en la tecnología con un estilo vanguardista. La narrativa se centró en 'El futuro es diverso', logrando un nivel de compartición sin precedentes en la historia digital de la marca.",
+    services: "Diseño de Impacto Social",
+    description: "Para el Día Internacional de la Mujer, el reto era alejarse de los mensajes genéricos corporativos. La campaña debía empoderar a las mujeres en tecnología de una forma visualmente única y no estereotipada.",
+    solution: "Desarrollamos retratos ilustrados de mujeres pioneras con un estilo vanguardista. La narrativa centrada en 'El futuro es diverso' logró un nivel de compartición sin precedentes en la historia digital de la marca.",
     gallery: [WID1]
   },
   {
@@ -651,9 +651,9 @@ export const projects = [
     image: Portada_STC,
     slug: "stc",
     year: "2024",
-    services: "Non-Profit Strategy",
-    description: "El desafío era generar donaciones en una era de 'fatiga de información'. Necesitábamos una campaña visualmente poderosa que conectara al donante con la causa de una forma directa y sin filtros innecesarios.",
-    solution: "Utilizamos una dirección de arte minimalista centrada en el blanco y negro con acentos rojos institucionales. La tipografía de gran escala gritaba los datos de impacto, mientras que la fotografía documental humanizaba la estadística, logrando un pico histórico en donaciones digitales.",
+    services: "Estrategia para ONG",
+    description: "El desafío era generar donaciones en una era de fatiga informativa. Necesitábamos una campaña visualmente poderosa que conectara al donante con la causa de forma directa y sin filtros innecesarios.",
+    solution: "Utilizamos una dirección de arte minimalista en blanco y negro con acentos rojos institucionales. La tipografía de gran escala resaltaba los datos de impacto, mientras la fotografía documental humanizaba la estadística.",
     gallery: [STC1]
   },
   {
@@ -663,9 +663,9 @@ export const projects = [
     image: Portada_HCIC,
     slug: "hcic",
     year: "2026",
-    services: "Healthcare Branding / Event",
-    description: "Para la Healthcare Interactive Conference, el reto era diseñar una identidad que uniera la calidez humana de la medicina con la frialdad de la alta tecnología quirúrgica.",
-    solution: "Se creó un logo dinámico que imita el ritmo cardíaco fusionado con circuitos digitales. La paleta de colores utiliza un azul médico moderno combinado con un naranja vibrante, simbolizando la innovación activa en el campo de la salud.",
+    services: "Branding de Salud / Evento",
+    description: "Para la Healthcare Interactive Conference, el reto era diseñar una identidad que uniera la calidez humana de la medicina con la precisión de la alta tecnología quirúrgica.",
+    solution: "Se creó un logo dinámico que imita el ritmo cardíaco fusionado con circuitos digitales. La paleta de colores utiliza un azul médico moderno combinado con un naranja vibrante, simbolizando la innovación activa.",
     gallery: [HCIC1]
   }
 ];
