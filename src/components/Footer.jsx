@@ -41,10 +41,10 @@ export default function Footer() {
           <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/50">Explorar</h4>
           <nav className="flex flex-col gap-4">
             {/* Reemplazamos Link por botones que disparan handleNavigation */}
-            <button onClick={() => handleNavigation('/')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-white/60 transition-colors">Home</button>
-            <button onClick={() => handleNavigation('/portfolio')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-white/60 transition-colors">Portfolio</button>
-            <button onClick={() => handleNavigation('/about')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-white/60 transition-colors">Sobre Mí</button>
-            <button onClick={() => handleNavigation('/contact')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-white/60 transition-colors">Contacto</button>
+            <button onClick={() => handleNavigation('/')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">Home</button>
+            <button onClick={() => handleNavigation('/portfolio')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">Portfolio</button>
+            <button onClick={() => handleNavigation('/about')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">Sobre Mí</button>
+            <button onClick={() => handleNavigation('/contact')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">Contacto</button>
           </nav>
         </div>
 
