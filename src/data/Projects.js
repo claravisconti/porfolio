@@ -10,11 +10,14 @@ import Portada_Electrohaus from '../assets/images/Web/Portada_Electrohaus.webp';
 import Portada_MagicTravel from '../assets/images/Web/Portada_MagicTravel.webp';
 import Portada_Hermes from '../assets/images/Web/Portada_Hermes.webp';
 import Portada_WineNight from '../assets/images/Web/Portada_WineNight.webp';
+import Portada_Ylang from '../assets/images/Web/Portada_Ylang.webp';
+import Portada_TravelMax from '../assets/images/Web/Portada_TravelMax.webp';
 import Portada_Maison from '../assets/images/Editorial/Portada_Maison.webp';
 import Portada_Manifiesto from '../assets/images/Editorial/Portada_Manifiesto.webp';
 import Portada_Silkylatte from '../assets/images/Packaging/Portada_Silkylatte.webp';
 import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
 import Portada_Crown from '../assets/images/Packaging/Portada_Crown.webp';
+import Portada_Artistik from '../assets/images/Packaging/Portada_Artistik.webp';
 import Portada_Fidelity from '../assets/images/Campañas/Portada_Fidelity.webp';
 import Portada_ConsumerPulse from '../assets/images/Campañas/Portada_ConsumerPulse.webp';
 import Portada_TrueLoyalty from '../assets/images/Campañas/Portada_TrueLoyalty.webp';
@@ -27,8 +30,6 @@ import Portada_DrupalCon from '../assets/images/Campañas/Portada_DrupalCon.webp
 import Portada_IWD from '../assets/images/Campañas/Portada_IWD.webp';
 import Portada_STC from '../assets/images/Campañas/Portada_STC.webp';
 import Portada_HCIC from '../assets/images/Campañas/Portada_HCIC.webp';
-import Portada_Ylang from '../assets/images/Web/Portada_Ylang.webp';
-import Portada_TravelMax from '../assets/images/Web/Portada_TravelMax.webp';
 
 // Web Gallery
 import DigitalVector1 from '../assets/images/Web/Galeria/DigitalVector1.webp';
@@ -90,6 +91,9 @@ import Fruits2 from '../assets/images/Packaging/Galeria/Fruits2.webp';
 
 import Crown1 from '../assets/images/Packaging/Galeria/Crown1.webp';
 import Crown2 from '../assets/images/Packaging/Galeria/Crown2.webp';
+
+import Artistik1 from '../assets/images/Packaging/Galeria/Artistik1.webp';
+import Artistik2 from '../assets/images/Packaging/Galeria/Artistik2.webp';
 
 // Editorial Gallery
 import Maison1 from '../assets/images/Editorial/Galeria/Maison1.webp';
@@ -581,6 +585,33 @@ const rawProjects = [
     ],
     solution: "Se desarrolló una línea gráfica centrada en ilustraciones florales de estilo cerezo japonés, utilizando una paleta de rosas suaves y blancos rotos. La arquitectura del envase prioriza la ergonomía y la reducción de materiales.",
     gallery: [Crown1, Crown2]
+  },
+  {
+    id: 28,
+    title: "Artistik",
+    category: "Packaging",
+    image: Portada_Artistik,
+    slug: "artistik",
+    year: "2024",
+    services: "Diseño de Etiqueta / Branding de Producto",
+    problem: "El mercado del vino joven está saturado de etiquetas tradicionales o excesivamente geométricas, lo que dificulta atraer a un consumidor que busca una conexión más artística y conceptual con el producto.",
+    objective: "Crear una identidad visual que posicione al vino como una pieza de arte coleccionable, utilizando una narrativa surrealista que evoque las notas orgánicas y sensoriales de cada varietal.",
+    challenge: "Desarrollar un sistema de ilustración que mantenga una coherencia estilística entre vinos tintos y blancos, permitiendo que cada etiqueta tenga su propia personalidad pero pertenezca a la misma familia visual.",
+    colors: ["#D1D3D4", "#5C6731", "#E6A15C", "#F4C95D"],
+    fonts: "Inter / Playfair Display",
+    metrics: [
+      { name: "Impacto Visual", percentage: 94 },
+      { name: "Diferenciación de Cepa", percentage: 98 },
+      { name: "Afinidad de Target", percentage: 91 },
+      { name: "Consistencia de Marca", percentage: 95 },
+    ],
+    impact: [
+      { label: "Estilo", value: "Surrealismo Botánico" },
+      { label: "Varietales", value: "Malbec / Sauvignon Blanc" },
+      { label: "Concepto", value: "Vino de Autor" },
+    ],
+    solution: "Se diseñó un sistema de etiquetas envolventes sobre un fondo gris neutro que resalta ilustraciones pictóricas centrales[cite: 1]. Para el Malbec, se utilizaron tonos verdes y ocres con elementos de follaje sobre un rostro; para el Sauvignon Blanc, tonos amarillos cítricos y rosados suaves[cite: 1]. La tipografía sans-serif minimalista para el nombre 'Artistik' equilibra la carga visual del arte, logrando un acabado sofisticado y moderno[cite: 1].",
+    gallery: [Artistik1, Artistik2]
   },
   // --- CAMPAÑAS ---
   {
