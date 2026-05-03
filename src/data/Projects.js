@@ -606,9 +606,9 @@ const rawProjects = [
       { name: "Consistencia de Marca", percentage: 95 },
     ],
     impact: [
-      { label: "Estilo", value: "Surrealismo Botánico" },
-      { label: "Varietales", value: "Malbec / Sauvignon Blanc" },
-      { label: "Concepto", value: "Vino de Autor" },
+      { label: "Material", value: "Vidrio" },
+      { label: "Línea de Cuidado", value: "Moderno" },
+      { label: "Fórmula Vegana", value: "100%" },
     ],
     solution: "Se diseñó un sistema de etiquetas envolventes sobre un fondo gris neutro que resalta ilustraciones pictóricas centrales[cite: 1]. Para el Malbec, se utilizaron tonos verdes y ocres con elementos de follaje sobre un rostro; para el Sauvignon Blanc, tonos amarillos cítricos y rosados suaves[cite: 1]. La tipografía sans-serif minimalista para el nombre 'Artistik' equilibra la carga visual del arte, logrando un acabado sofisticado y moderno[cite: 1].",
     gallery: [Artistik1, Artistik2]
