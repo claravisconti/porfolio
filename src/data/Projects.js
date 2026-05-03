@@ -111,10 +111,9 @@ import WID1 from '../assets/images/Campañas/Galeria/WID1.webp';
 import STC1 from '../assets/images/Campañas/Galeria/STC1.webp';
 import HCIC1 from '../assets/images/Campañas/Galeria/HCIC1.webp';
 
-export const projects = [
+const rawProjects = [
   // --- WEB ---
   {
-    id: 1,
     title: "Digital Vector",
     category: "Web",
     image: Portada_DigitalVector,
@@ -141,7 +140,6 @@ export const projects = [
     gallery: [DigitalVector1, DigitalVector2, DigitalVector3]
   },
   {
-    id: 2,
     title: "Bloom Indumentaria",
     category: "Web",
     image: Portada_Bloom,
@@ -168,7 +166,6 @@ export const projects = [
     gallery: [Bloom1, Bloom2, Bloom3]
   },
   {
-    id: 3,
     title: "Fanfiction App",
     category: "Web",
     image: Portada_Fanfiction,
@@ -195,7 +192,6 @@ export const projects = [
     gallery: [Fanfiction1, Fanfiction2]
   },
   {
-    id: 4,
     title: "Payslip App",
     category: "Web",
     image: Portada_Payslip,
@@ -222,7 +218,6 @@ export const projects = [
     gallery: [Payslip1, Payslip2, Payslip3]
   },
   {
-    id: 5,
     title: "Sugar Blossom",
     category: "Web",
     image: Portada_SweetBlossom,
@@ -249,7 +244,6 @@ export const projects = [
     gallery: [SweetBlossom1, SweetBlossom2, SweetBlossom3]
   },
   {
-    id: 6,
     title: "Foodie App",
     category: "Web",
     image: Portada_Foodie,
@@ -276,7 +270,6 @@ export const projects = [
     gallery: [Food1, Food2]
   },
   {
-    id: 7,
     title: "Orpheus Opera",
     category: "Web",
     image: Portada_Orpheus,
@@ -303,7 +296,6 @@ export const projects = [
     gallery: [Orpheus1, Orpheus2, Orpheus3]
   },
   {
-    id: 8,
     title: "Electrohaus Landing",
     category: "Web",
     image: Portada_Electrohaus,
@@ -330,7 +322,6 @@ export const projects = [
     gallery: [ElectroHaus1, ElectroHaus2, ElectroHaus3]
   },
   {
-    id: 9,
     title: "Magic Travel Game",
     category: "Web",
     image: Portada_MagicTravel,
@@ -357,7 +348,6 @@ export const projects = [
     gallery: [MagicTravel1, MagicTravel2, MagicTravel3]
   },
   {
-    id: 10,
     title: "Hermes Hotel",
     category: "Web",
     image: Portada_Hermes,
@@ -384,7 +374,6 @@ export const projects = [
     gallery: [Hermes1, Hermes2, Hermes3]
   },
   {
-    id: 11,
     title: "Wine Night",
     category: "Web",
     image: Portada_WineNight,
@@ -411,7 +400,6 @@ export const projects = [
     gallery: [WineNight1, WineNight2, WineNight3]
   },
   {
-    id: 12,
     title: "Ylang Ylang",
     category: "Web",
     image: Portada_Ylang,
@@ -439,7 +427,6 @@ export const projects = [
     gallery: [Ylang1, Ylang2, Ylang3]
   },
   {
-    id: 13,
     title: "Travelmax",
     category: "Web",
     image: Portada_TravelMax,
@@ -468,7 +455,6 @@ export const projects = [
   },
   // --- EDITORIAL ---
   {
-    id: 14,
     title: "Revista Maison",
     category: "Editorial",
     image: Portada_Maison,
@@ -495,7 +481,6 @@ export const projects = [
     gallery: [Maison1, Maison2]
   },
   {
-    id: 15,
     title: "Revista Manifiesto",
     category: "Editorial",
     image: Portada_Manifiesto,
@@ -522,7 +507,6 @@ export const projects = [
   },
   // --- PACKAGING ---
   {
-    id: 16,
     title: "Silkylatte",
     category: "Packaging",
     image: Portada_Silkylatte,
@@ -549,7 +533,6 @@ export const projects = [
     gallery: [Silkylatte1, Silkylatte2]
   },
   {
-    id: 17,
     title: "Fruits Naturals",
     category: "Packaging",
     image: Portada_Fruits,
@@ -575,7 +558,6 @@ export const projects = [
     gallery: [Fruits1, Fruits2]
   },
   {
-    id: 18,
     title: "Crown",
     category: "Packaging",
     image: Portada_Crown,
@@ -602,7 +584,6 @@ export const projects = [
   },
   // --- CAMPAÑAS ---
   {
-    id: 19,
     title: "M+ Brand Fidelity",
     category: "Campañas",
     image: Portada_Fidelity,
@@ -629,7 +610,6 @@ export const projects = [
     gallery: [Fidelity1]
   },
   {
-    id: 20,
     title: "Consumer Pulse",
     category: "Campañas",
     image: Portada_ConsumerPulse,
@@ -656,7 +636,6 @@ export const projects = [
     gallery: [ConsumerPulse1]
   },
   {
-    id: 21,
     title: "Consumer's Report",
     category: "Campañas",
     image: Portada_Consumer,
@@ -683,7 +662,6 @@ export const projects = [
     gallery: [Consumer1]
   },
   {
-    id: 22,
     title: "True Loyalty",
     category: "Campañas",
     image: Portada_TrueLoyalty,
@@ -710,7 +688,6 @@ export const projects = [
     gallery: [TrueLoyalty1]
   },
   {
-    id: 23,
     title: "Bloomberg Screentime",
     category: "Campañas",
     image: Portada_BloombergScreentime,
@@ -737,7 +714,6 @@ export const projects = [
     gallery: [BloombergScreentime1]
   },
   {
-    id: 24,
     title: "Drupal Anniversary",
     category: "Campañas",
     image: Portada_Drupal,
@@ -764,7 +740,6 @@ export const projects = [
     gallery: [Drupal1]
   },
   {
-    id: 25,
     title: "Advertising Week",
     category: "Campañas",
     image: Portada_AdvertisingWeek,
@@ -791,7 +766,6 @@ export const projects = [
     gallery: [AdvertisingWeek1]
   },
   {
-    id: 26,
     title: "DrupalCon",
     category: "Campañas",
     image: Portada_DrupalCon,
@@ -818,7 +792,6 @@ export const projects = [
     gallery: [DrupalCon1]
   },
   {
-    id: 27,
     title: "Women's International Day 2026",
     category: "Campañas",
     image: Portada_IWD,
@@ -845,7 +818,6 @@ export const projects = [
     gallery: [WID1]
   },
   {
-    id: 28,
     title: "Save The Children",
     category: "Campañas",
     image: Portada_STC,
@@ -872,7 +844,6 @@ export const projects = [
     gallery: [STC1]
   },
   {
-    id: 29,
     title: "Healthcare Interactive Conference",
     category: "Campañas",
     image: Portada_HCIC,
@@ -899,3 +870,9 @@ export const projects = [
     gallery: [HCIC1]
   }
 ];
+
+// 2. Exportamos una constante que genera el ID según el orden
+export const projects = rawProjects.map((project, index) => ({
+  ...project,
+  id: index + 1 // El primer proyecto será ID: 1, el segundo ID: 2, etc.
+}));
