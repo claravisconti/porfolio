@@ -27,6 +27,8 @@ import Portada_DrupalCon from '../assets/images/Campañas/Portada_DrupalCon.webp
 import Portada_IWD from '../assets/images/Campañas/Portada_IWD.webp';
 import Portada_STC from '../assets/images/Campañas/Portada_STC.webp';
 import Portada_HCIC from '../assets/images/Campañas/Portada_HCIC.webp';
+import Portada_Ylang from '../assets/images/Web/Portada_Ylang.webp';
+import Portada_TravelMax from '../assets/images/Web/Portada_TravelMax.webp';
 
 // Web Gallery
 import DigitalVector1 from '../assets/images/Web/Galeria/DigitalVector1.webp';
@@ -70,6 +72,14 @@ import Hermes3 from '../assets/images/Web/Galeria/Hermes3.webp';
 import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
 import WineNight2 from '../assets/images/Web/Galeria/WineNight2.webp';
 import WineNight3 from '../assets/images/Web/Galeria/WineNight3.webp';
+
+import Ylang1 from '../assets/images/Web/Galeria/Ylang1.webp';
+import Ylang2 from '../assets/images/Web/Galeria/Ylang2.webp';
+import Ylang3 from '../assets/images/Web/Galeria/Ylang3.webp';
+
+import TravelMax1 from '../assets/images/Web/Galeria/TravelMax1.webp';
+import TravelMax2 from '../assets/images/Web/Galeria/TravelMax2.webp';
+import TravelMax3 from '../assets/images/Web/Galeria/TravelMax3.webp';
 
 // Packaging Gallery
 import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
@@ -400,10 +410,65 @@ export const projects = [
     solution: "Se implementó un diseño basado en el concepto de 'Cava Digital', utilizando una paleta de colores profundos y texturas que evocan el papel artesanal. Desarrollamos secciones narrativas para cada bodega, integrando galerías inmersivas y un motor de reservas optimizado. El uso de micro-interacciones sutiles refuerza la sensación de exclusividad en cada navegación.",
     gallery: [WineNight1, WineNight2, WineNight3]
   },
-
-  // --- EDITORIAL ---
   {
     id: 12,
+    title: "Ylang Ylang",
+    category: "Web",
+    image: Portada_Ylang,
+    slug: "ylang-ylang",
+    year: "2021",
+    services: "Diseño UI/UX / E-commerce de Bienestar",
+    problem: "El centro necesitaba digitalizar su oferta de servicios de lujo, permitiendo que los clientes no solo conocieran los tratamientos, sino que pudieran adquirirlos y reservarlos online, manteniendo una estética que reflejara serenidad y profesionalismo médico.",
+    objective: "Crear un oasis digital que funcione como una extensión del centro físico, facilitando la compra de tratamientos premium y la gestión de citas en un entorno visualmente relajante y sofisticado.",
+    challenge: "Equilibrar tres áreas distintas del negocio: los tratamientos faciales/corporales tradicionales, la medicina estética avanzada y la venta directa de productos en tienda, todo bajo una misma jerarquía visual limpia[cite: 1].",
+    solution: "Se diseñó una plataforma e-commerce minimalista con una paleta de tonos crema y tierra. Se implementó un catálogo de servicios dividido por categorías (Faciales, Corporales, Medicina Estética) con fichas detalladas que incluyen duración y precio, optimizando el flujo de 'Añadir al carrito' para una conversión inmediata[cite: 1].",
+    colors: ["#632E32", "#F9F6F1", "#333333", "#FFFFFF"],
+    fonts: "Cormorant Garamond / Montserrat",
+    metrics: [
+      { name: "Conversión de Tratamientos", percentage: 92 },
+      { name: "Claridad de Servicios", percentage: 98 },
+      { name: "Usabilidad Mobile", percentage: 95 },
+      { name: "Carga de Página", percentage: 89 },
+    ],
+    impact: [
+      { label: "Reservas Directas", value: "+30%" },
+      { label: "Sesión Promedio", value: "5.5m" },
+      { label: "Rebote Mobile", value: "-25%" },
+    ],
+    description: "Centro de Estética y Belleza en Córdoba con servicio de Medicina Estética incorporado. El portal combina la calidez del bienestar emocional con la efectividad de la aparatología de alta gama.",
+    gallery: [Ylang1, Ylang2, Ylang3]
+  },
+  {
+    id: 13,
+    title: "Travelmax",
+    category: "Web",
+    image: Portada_TravelMax,
+    slug: "travelmax",
+    year: "2026",
+    services: "Diseño UI/UX / Desarrollo Fullstack",
+    problem: "La necesidad de una plataforma que permita a los usuarios explorar y reservar viajes no convencionales (desde el Antiguo Egipto hasta ciudades futuristas) con una interfaz clara que gestione itinerarios complejos y pagos multidivisa.",
+    objective: "Diseñar un ecosistema digital de alta gama que combine la exploración visual de destinos con un motor de reservas eficiente, integrando servicios adicionales como traslados, seguros y guías personalizadas.",
+    challenge: "Organizar categorías de viaje radicalmente distintas (Historia, Ciencia, Educación) manteniendo una coherencia visual que transmita confianza, modernidad y facilidad de uso en el proceso de checkout.",
+    solution: "Se implementó una interfaz limpia y modular basada en 'cards' interactivas que destacan el puntaje de satisfacción y detalles técnicos del paquete[cite: 1]. El sistema incluye un flujo de pago en tres pasos (Medio de pago, Datos personales, Confirmación) optimizado para transacciones rápidas. Además, se diseñó un área de usuario para la gestión de itinerarios y visualización de destinos sugeridos[cite: 1].",
+    colors: ["#4C58A4", "#FFFFFF", "#F2F2F2", "#333333"],
+    fonts: "Montserrat / Inter",
+    metrics: [
+      { name: "Eficiencia de Checkout", percentage: 98 },
+      { name: "Retención de Usuario", percentage: 85 },
+      { name: "Satisfacción (CSAT)", percentage: 96 },
+      { name: "Conversión en Mobile", percentage: 91 },
+    ],
+    impact: [
+      { label: "Reservas Directas", value: "+20%" },
+      { label: "Sesión Promedio", value: "4.5m" },
+      { label: "Rebote Mobile", value: "-14%" },
+    ],
+    description: "Plataforma de viajes premium que permite experimentar otras culturas y épocas. Desde la construcción de la Gran Pirámide hasta el Tokio futurista, Travelmax redefine el turismo mediante tecnología avanzada y curaduría de destinos únicos.",
+    gallery: [TravelMax1, TravelMax2, TravelMax3]
+  },
+  // --- EDITORIAL ---
+  {
+    id: 14,
     title: "Revista Maison",
     category: "Editorial",
     image: Portada_Maison,
@@ -430,7 +495,7 @@ export const projects = [
     gallery: [Maison1, Maison2]
   },
   {
-    id: 13,
+    id: 15,
     title: "Revista Manifiesto",
     category: "Editorial",
     image: Portada_Manifiesto,
@@ -457,7 +522,7 @@ export const projects = [
   },
   // --- PACKAGING ---
   {
-    id: 14,
+    id: 16,
     title: "Silkylatte",
     category: "Packaging",
     image: Portada_Silkylatte,
@@ -484,7 +549,7 @@ export const projects = [
     gallery: [Silkylatte1, Silkylatte2]
   },
   {
-    id: 15,
+    id: 17,
     title: "Fruits Naturals",
     category: "Packaging",
     image: Portada_Fruits,
@@ -510,7 +575,7 @@ export const projects = [
     gallery: [Fruits1, Fruits2]
   },
   {
-    id: 16,
+    id: 18,
     title: "Crown",
     category: "Packaging",
     image: Portada_Crown,
@@ -537,7 +602,7 @@ export const projects = [
   },
   // --- CAMPAÑAS ---
   {
-    id: 17,
+    id: 19,
     title: "M+ Brand Fidelity",
     category: "Campañas",
     image: Portada_Fidelity,
@@ -564,7 +629,7 @@ export const projects = [
     gallery: [Fidelity1]
   },
   {
-    id: 18,
+    id: 20,
     title: "Consumer Pulse",
     category: "Campañas",
     image: Portada_ConsumerPulse,
@@ -591,7 +656,7 @@ export const projects = [
     gallery: [ConsumerPulse1]
   },
   {
-    id: 19,
+    id: 21,
     title: "Consumer's Report",
     category: "Campañas",
     image: Portada_Consumer,
@@ -618,7 +683,7 @@ export const projects = [
     gallery: [Consumer1]
   },
   {
-    id: 20,
+    id: 22,
     title: "True Loyalty",
     category: "Campañas",
     image: Portada_TrueLoyalty,
@@ -645,7 +710,7 @@ export const projects = [
     gallery: [TrueLoyalty1]
   },
   {
-    id: 21,
+    id: 23,
     title: "Bloomberg Screentime",
     category: "Campañas",
     image: Portada_BloombergScreentime,
@@ -672,7 +737,7 @@ export const projects = [
     gallery: [BloombergScreentime1]
   },
   {
-    id: 22,
+    id: 24,
     title: "Drupal Anniversary",
     category: "Campañas",
     image: Portada_Drupal,
@@ -699,7 +764,7 @@ export const projects = [
     gallery: [Drupal1]
   },
   {
-    id: 23,
+    id: 25,
     title: "Advertising Week",
     category: "Campañas",
     image: Portada_AdvertisingWeek,
@@ -726,7 +791,7 @@ export const projects = [
     gallery: [AdvertisingWeek1]
   },
   {
-    id: 24,
+    id: 26,
     title: "DrupalCon",
     category: "Campañas",
     image: Portada_DrupalCon,
@@ -753,7 +818,7 @@ export const projects = [
     gallery: [DrupalCon1]
   },
   {
-    id: 25,
+    id: 27,
     title: "Women's International Day 2026",
     category: "Campañas",
     image: Portada_IWD,
@@ -780,7 +845,7 @@ export const projects = [
     gallery: [WID1]
   },
   {
-    id: 26,
+    id: 28,
     title: "Save The Children",
     category: "Campañas",
     image: Portada_STC,
@@ -807,7 +872,7 @@ export const projects = [
     gallery: [STC1]
   },
   {
-    id: 27,
+    id: 29,
     title: "Healthcare Interactive Conference",
     category: "Campañas",
     image: Portada_HCIC,
