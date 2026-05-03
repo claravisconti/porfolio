@@ -18,6 +18,7 @@ import Portada_Silkylatte from '../assets/images/Packaging/Portada_Silkylatte.we
 import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
 import Portada_Crown from '../assets/images/Packaging/Portada_Crown.webp';
 import Portada_Artistik from '../assets/images/Packaging/Portada_Artistik.webp';
+import Portada_WhiteFields from '../assets/images/Packaging/Portada_WhiteFields.webp';
 import Portada_Fidelity from '../assets/images/Campañas/Portada_Fidelity.webp';
 import Portada_ConsumerPulse from '../assets/images/Campañas/Portada_ConsumerPulse.webp';
 import Portada_TrueLoyalty from '../assets/images/Campañas/Portada_TrueLoyalty.webp';
@@ -94,6 +95,9 @@ import Crown2 from '../assets/images/Packaging/Galeria/Crown2.webp';
 
 import Artistik1 from '../assets/images/Packaging/Galeria/Artistik1.webp';
 import Artistik2 from '../assets/images/Packaging/Galeria/Artistik2.webp';
+
+import WhiteFields1 from '../assets/images/Packaging/Galeria/WhiteFields1.webp';
+import WhiteFields2 from '../assets/images/Packaging/Galeria/WhiteFields2.webp';
 
 // Editorial Gallery
 import Maison1 from '../assets/images/Editorial/Galeria/Maison1.webp';
@@ -612,6 +616,33 @@ const rawProjects = [
     ],
     solution: "Se diseñó un sistema de etiquetas envolventes sobre un fondo gris neutro que resalta ilustraciones pictóricas centrales[cite: 1]. Para el Malbec, se utilizaron tonos verdes y ocres con elementos de follaje sobre un rostro; para el Sauvignon Blanc, tonos amarillos cítricos y rosados suaves[cite: 1]. La tipografía sans-serif minimalista para el nombre 'Artistik' equilibra la carga visual del arte, logrando un acabado sofisticado y moderno[cite: 1].",
     gallery: [Artistik1, Artistik2]
+  },
+  {
+    id: 29,
+    title: "White Fields",
+    category: "Packaging",
+    image: Portada_WhiteFields,
+    slug: "white-fields",
+    year: "2024",
+    services: "Diseño de Empaque / Branding Alimenticio",
+    problem: "La necesidad de irrumpir en la categoría de tés con una propuesta que comunique frescura inmediata y origen natural, diferenciando claramente los sabores cítricos en una góndola competitiva.",
+    objective: "Desarrollar un sistema de packaging dinámico que utilice el color y la ilustración como principales identificadores de sabor, manteniendo una estética limpia y artesanal.",
+    challenge: "Crear un patrón visual que sea atractivo tanto en el frente como en los laterales de la caja, asegurando que la jerarquía tipográfica de la marca White Fields sea legible sobre fondos ilustrados complejos.",
+    colors: ["#F9A825", "#FFD600", "#FFFFFF", "#4E342E"],
+    fonts: "Beautiful / Playfair Display",
+    metrics: [
+      { name: "Reconocimiento de Sabor", percentage: 98 },
+      { name: "Atractivo Visual", percentage: 95 },
+      { name: "Claridad de Marca", percentage: 92 },
+      { name: "Coherencia de Línea", percentage: 96 },
+    ],
+    impact: [
+      { label: "Componentes", value: "Orgánicos" },
+      { label: "Variedad", value: "Cítricos" },
+      { label: "Contenido", value: "50g" },
+    ],
+    solution: "Se implementó un diseño de 'super-gráfico' basado en rodajas de frutas (limón y naranja) que envuelven la totalidad del envase[cite: 1]. Se utilizó un panel central blanco con bordes ornamentales para enmarcar la marca, creando un contraste de 'aire' visual que equilibra la intensidad cromática del patrón cítrico[cite: 1]. La inclusión de un mockup lateral con una taza e ingredientes reales (jengibre y rodajas) refuerza la promesa de sabor natural[cite: 1].",
+    gallery: [WhiteFields1, WhiteFields2]
   },
   // --- CAMPAÑAS ---
   {
