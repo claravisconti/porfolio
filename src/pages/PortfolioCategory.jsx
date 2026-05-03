@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import PortfolioMenu from '../components/PortfolioMenu';
 import Banner from '../components/Banner';
@@ -9,18 +9,9 @@ export default function PortfolioCategory({ category }) {
   const [visibleCount, setVisibleCount] = useState(6);
   const [allFilteredProjects, setAllFilteredProjects] = useState([]);
   const [displayProjects, setDisplayProjects] = useState([]);
-
-  // Imagen por defecto (la que tenías en el Hero o Banner)
-  const defaultImg = Hero1; 
-
-  // Objeto preparado para el futuro. Por ahora todas usan defaultImg
-  const categoryImages = {
-    todos: defaultImg,
-    web: defaultImg,
-    redes: defaultImg,
-    packaging: defaultImg,
-    editorial: defaultImg
-  };
+  const [isLoading, setIsLoading] = useState(false); // Estado para controlar el retraso
+  
+  const loaderRef = useRef(null);
 
   useEffect(() => {
     setVisibleCount(6); 
@@ -33,24 +24,49 @@ export default function PortfolioCategory({ category }) {
     setDisplayProjects(allFilteredProjects.slice(0, visibleCount))
   }, [visibleCount, allFilteredProjects]);
 
-  // Seleccionamos la imagen (si no existe la categoría en el objeto, usa la de "todos")
-  const bannerImage = categoryImages[category.toLowerCase()] || categoryImages.todos;
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const target = entries[0];
+        // Si llegamos al final, no estamos cargando ya, y hay más para mostrar
+        if (target.isIntersecting && !isLoading && allFilteredProjects.length > visibleCount) {
+          setIsLoading(true); // Bloqueamos nuevas cargas y mostramos el indicador
+
+          // FORZAMOS EL RETRASO AQUÍ (800ms para que se note)
+          setTimeout(() => {
+            setVisibleCount((prev) => prev + 6);
+            setIsLoading(false); // Liberamos la carga
+          }, 500); 
+        }
+      },
+      { rootMargin: "0px 0px 50px 0px" } // Se activa justo al llegar o un poco antes
+    );
+
+    if (loaderRef.current) observer.observe(loaderRef.current);
+    
+    return () => {
+      if (loaderRef.current) observer.disconnect();
+    };
+  }, [allFilteredProjects.length, visibleCount, isLoading]); // Importante incluir isLoading aquí
 
   return (
     <div className="bg-white min-h-screen">
-      {/* BANNER CON TITULO GRANDE */}
-      <Banner title={category} image={bannerImage} />
+      <Banner title={category} image={Hero1} />
 
-      {/* TABS DE CATEGORÍAS */}
-      <div className="pt-12 pb-6">
-        <PortfolioMenu />
-      </div>
+      {/* CONTENEDOR BOXED */}
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="pt-12 pb-6">
+          <PortfolioMenu />
+        </div>
 
-      <div className="px-6 md:px-24">
         {/* GRILLA DE PROYECTOS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10">
-          {displayProjects.map((project) => (
-            <Link to={`/portfolio/project/${project.slug}`} key={project.id} className="group">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayProjects.map((project, index) => (
+            <Link 
+              to={`/portfolio/project/${project.slug}`} 
+              key={`${project.id}-${index}`} 
+              className="group animate-fadeIn"
+            >
               <div className="overflow-hidden bg-gray-100 aspect-square relative">
                 <img 
                   src={project.image} 
@@ -67,20 +83,27 @@ export default function PortfolioCategory({ category }) {
           ))}
         </div>
 
-        {/* BOTÓN CARGAR MÁS */}
-        {allFilteredProjects.length > visibleCount && (
-          <div className="flex justify-center items-center py-20">
-            <button onClick={() => setVisibleCount(prev => prev + 6)} className="group flex items-center gap-6 cursor-pointer">
-              <span className="text-[11px] font-bold uppercase tracking-[0.4em] group-hover:text-[#00adb5] transition-colors text-black">
-                Cargar más
-              </span>
-              <div className="w-12 h-12 rounded-full border border-black flex items-center justify-center group-hover:border-[#00adb5] transition-colors">
-                <div className="w-1.5 h-1.5 bg-black rounded-full group-hover:bg-[#00adb5]"></div>
-              </div>
-            </button>
-          </div>
-        )}
+        {/* CENTINELA CON EFECTO VISUAL DE CARGA */}
+        <div ref={loaderRef} className="h-40 flex items-center justify-center">
+          {isLoading && (
+            <div className="flex gap-2">
+              <div className="w-2 h-2 bg-[#00adb5] rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+              <div className="w-2 h-2 bg-[#00adb5] rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+              <div className="w-2 h-2 bg-[#00adb5] rounded-full animate-bounce"></div>
+            </div>
+          )}
+        </div>
       </div>
+
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.6s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 }
