@@ -19,6 +19,7 @@ import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
 import Portada_Crown from '../assets/images/Packaging/Portada_Crown.webp';
 import Portada_Artistik from '../assets/images/Packaging/Portada_Artistik.webp';
 import Portada_WhiteFields from '../assets/images/Packaging/Portada_WhiteFields.webp';
+import Portada_Hertz from '../assets/images/Packaging/Portada_Hertz.webp';
 import Portada_Fidelity from '../assets/images/Campañas/Portada_Fidelity.webp';
 import Portada_ConsumerPulse from '../assets/images/Campañas/Portada_ConsumerPulse.webp';
 import Portada_TrueLoyalty from '../assets/images/Campañas/Portada_TrueLoyalty.webp';
@@ -98,6 +99,9 @@ import Artistik2 from '../assets/images/Packaging/Galeria/Artistik2.webp';
 
 import WhiteFields1 from '../assets/images/Packaging/Galeria/WhiteFields1.webp';
 import WhiteFields2 from '../assets/images/Packaging/Galeria/WhiteFields2.webp';
+
+import Hertz1 from '../assets/images/Packaging/Galeria/Hertz1.webp';
+import Hertz2 from '../assets/images/Packaging/Galeria/Hertz2.webp';
 
 // Editorial Gallery
 import Maison1 from '../assets/images/Editorial/Galeria/Maison1.webp';
@@ -591,7 +595,6 @@ const rawProjects = [
     gallery: [Crown1, Crown2]
   },
   {
-    id: 28,
     title: "Artistik",
     category: "Packaging",
     image: Portada_Artistik,
@@ -618,7 +621,6 @@ const rawProjects = [
     gallery: [Artistik1, Artistik2]
   },
   {
-    id: 29,
     title: "White Fields",
     category: "Packaging",
     image: Portada_WhiteFields,
@@ -643,6 +645,32 @@ const rawProjects = [
     ],
     solution: "Se implementó un diseño de 'super-gráfico' basado en rodajas de frutas (limón y naranja) que envuelven la totalidad del envase[cite: 1]. Se utilizó un panel central blanco con bordes ornamentales para enmarcar la marca, creando un contraste de 'aire' visual que equilibra la intensidad cromática del patrón cítrico[cite: 1]. La inclusión de un mockup lateral con una taza e ingredientes reales (jengibre y rodajas) refuerza la promesa de sabor natural[cite: 1].",
     gallery: [WhiteFields1, WhiteFields2]
+  },
+  {
+    title: "Hertz",
+    category: "Packaging",
+    image: Portada_Hertz,
+    slug: "cerveza-hertz",
+    year: "2024",
+    services: "Branding / Diseño de Etiqueta / Estrategia de Producto",
+    problem: "La necesidad de crear una marca de cerveza artesanal que se distancie de los códigos visuales rústicos habituales, buscando una identidad que evoque elegancia, ritmo y tradición desde una perspectiva técnica y artística.",
+    objective: "Posicionar a Hertz como una cerveza de autor donde cada variedad representa una 'nota musical' distinta, utilizando la herencia histórica y la precisión del sonido como pilares de marca.",
+    challenge: "Integrar iconografía musical compleja (instrumentos como el saxofón y el arpa) en una etiqueta de estilo heráldico sin perder la legibilidad de la marca y manteniendo un equilibrio entre lo clásico y lo moderno.",
+    colors: ["#A31D24", "#C6A15B", "#E6E7E8", "#1A1A1B"],
+    fonts: "Bodoni / Montserrat",
+    metrics: [
+      { name: "Jerarquía Visual", percentage: 95 },
+      { name: "Diferenciación de Estilo", percentage: 97 },
+      { name: "Percepción Premium", percentage: 93 },
+      { name: "Coherencia Histórica", percentage: 90 },
+    ],
+    impact: [
+      { label: "Origen", value: "USA" },
+      { label: "Estilos", value: "Jazz" },
+      { label: "Concepto", value: "Hz" },
+    ],
+    solution: "Se desarrolló un sistema de etiquetas circulares con bandas rojas transversales que contienen la tipografía principal 'HERTZ' en un estilo serif robusto[cite: 1]. Para la variante 'Estadounidense', se utilizó la ilustración de un saxofón, evocando el Jazz; para la variante 'Alemana', se utilizó un arpa, simbolizando la música clásica europea[cite: 1]. El uso de acabados en oro y plata refuerza la categoría artesanal premium del producto[cite: 1].",
+    gallery: [Hertz1, Hertz2]
   },
   // --- CAMPAÑAS ---
   {
