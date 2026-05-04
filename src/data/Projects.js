@@ -14,6 +14,7 @@ import Portada_Ylang from '../assets/images/Web/Portada_Ylang.webp';
 import Portada_TravelMax from '../assets/images/Web/Portada_TravelMax.webp';
 import Portada_Maison from '../assets/images/Editorial/Portada_Maison.webp';
 import Portada_Manifiesto from '../assets/images/Editorial/Portada_Manifiesto.webp';
+import Portada_VanGogh from '../assets/images/Editorial/Portada_VanGogh.webp';
 import Portada_Silkylatte from '../assets/images/Packaging/Portada_Silkylatte.webp';
 import Portada_Fruits from '../assets/images/Packaging/Portada_Fruits.webp';
 import Portada_Crown from '../assets/images/Packaging/Portada_Crown.webp';
@@ -109,6 +110,9 @@ import Maison2 from '../assets/images/Editorial/Galeria/Maison2.webp';
 
 import Manifiesto1 from '../assets/images/Editorial/Galeria/Manifiesto1.webp';
 import Manifiesto2 from '../assets/images/Editorial/Galeria/Manifiesto2.webp';
+
+import VanGogh1 from '../assets/images/Editorial/Galeria/VanGogh1.webp';
+import VanGogh3 from '../assets/images/Editorial/Galeria/VanGogh3.webp';
 
 // Campaigns Gallery
 import Fidelity1 from '../assets/images/Campañas/Galeria/Fidelity1.webp';
@@ -516,6 +520,32 @@ const rawProjects = [
     ],
     solution: "Se implementó una arquitectura de información basada en contrastes: tipografías de gran escala para titulares y una estructura limpia para el cuerpo de texto. Se utilizaron separadores cromáticos para diferenciar las secciones de Arquitectura, Moda y Arte.",
     gallery: [Manifiesto1, Manifiesto2]
+  },
+  {
+    title: "Vincent van Gogh",
+    category: "Editorial",
+    image: Portada_VanGogh,
+    slug: "van-gogh-experience",
+    year: "2021",
+    services: "Diseño UI/UX / Storytelling Digital / Dirección de Arte",
+    problem: "La biografía de Van Gogh suele presentarse de forma estática, perdiendo la intensidad emocional y la vibración cromática que definen su legado.",
+    objective: "Diseñar una narrativa digital inmersiva que permita al usuario entender la psique del artista a través de sus propias palabras y obras.",
+    challenge: "Equilibrar la alta carga visual de las pinturas con una interfaz minimalista que no compita con el arte, integrando datos históricos de forma fluida.",
+    colors: ["#2B3441", "#E3B90D", "#F5F5F5", "#1A1A1A"],
+    fonts: "Playfair Display / Inter",
+    metrics: [
+      { name: "Inmersión Narrativa", percentage: 98 },
+      { name: "Fidelidad Cromática", percentage: 100 },
+      { name: "Retención de Usuario", percentage: 92 },
+      { name: "Impacto Emocional", percentage: 95 },
+    ],
+    impact: [
+      { label: "Secciones Curadas", value: "7" },
+      { label: "Estilos Visuales", value: "Digital" },
+      { label: "Edición Limitada", value: "2026" },
+    ],
+    solution: "Se implementó una arquitectura basada en el contraste: fondos oscuros para resaltar la luz de las obras y tipografía de gran escala para citas potentes. La navegación se divide en 'Estilo', 'Vida' y 'Obras', incluyendo una línea de tiempo interactiva que conecta hitos vitales con su producción artística.",
+    gallery: [VanGogh1, VanGogh3]
   },
   // --- PACKAGING ---
   {
