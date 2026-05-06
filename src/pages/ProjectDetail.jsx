@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
-import { projects } from '../data/projects';
+import { getProjects } from '../data/projects';
 import ProjectNavigation from '../components/ProjectNavigation';
 import Banner from '../components/Banner'; 
 import Hero from '../assets/images/Hero/Hero1.webp'; 
 import { Monitor, Target, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectDetail() {
   const { slug } = useParams();
+  const { i18n, t } = useTranslation();
+  const projects = useMemo(() => {return getProjects()}, [i18n.language])
   const project = projects.find(p => p.slug === slug);
 
   useEffect(() => {
@@ -41,15 +44,15 @@ export default function ProjectDetail() {
 
           <div className="lg:w-1/3 flex flex-col sm:flex-row lg:flex-col justify-center lg:justify-end gap-8 md:gap-8 pt-6 pb-1 lg:border-l border-gray-100 lg:pl-8 w-full">
             <div className="text-center lg:text-left">
-              <h4 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Año</h4>
+              <h4 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">{t('project.year')}</h4>
               <p className="text-[12px] md:text-sm font-bold uppercase">{project.year}</p>
             </div>
             <div className="text-center lg:text-left">
-              <h4 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Servicios</h4>
+              <h4 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">{t('project.services')}</h4>
               <p className="text-[12px] md:text-sm font-bold uppercase">{project.services}</p>
             </div>
             <div className="text-center lg:text-left">
-              <h4 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">Autor</h4>
+              <h4 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">{t('project.author')}</h4>
               <p className="text-[12px] md:text-sm font-bold uppercase">María Clara Visconti</p>
             </div>
           </div>
@@ -71,9 +74,9 @@ export default function ProjectDetail() {
           <section className="max-w-7xl mx-auto px-6 md:px-16 py-12 md:py-8 border-b border-gray-50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
               {[
-                { title: "Problema", desc: project.problem, icon: <Monitor size={48} strokeWidth={1} /> },
-                { title: "Objetivo", desc: project.objective, icon: <Target size={48} strokeWidth={1} /> },
-                { title: "Desafío", desc: project.challenge, icon: <Zap size={48} strokeWidth={1} /> },
+                { title: t('project.problem'), desc: project.problem, icon: <Monitor size={48} strokeWidth={1} /> },
+                { title: t('project.objective'), desc: project.objective, icon: <Target size={48} strokeWidth={1} /> },
+                { title: t('project.challenge'), desc: project.challenge, icon: <Zap size={48} strokeWidth={1} /> },
               ].map((item, i) => item.desc ? (
                 <div key={i} className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6">
                   <div className="text-black/80">{item.icon}</div>
@@ -91,7 +94,7 @@ export default function ProjectDetail() {
               <div className={project.gallery?.[1] ? "md:col-span-4 space-y-12" : "flex flex-col md:flex-row justify-between items-center w-full"}>
                 {project.colors?.length > 0 && (
                   <div className="flex flex-col items-center md:items-start">
-                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold italic">Colores</h4>
+                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold italic">{t('project.colors')}</h4>
                     <div className="flex gap-4">
                       {project.colors.map((c, i) => (
                         <div key={i} className="w-10 h-10 rounded-full border border-gray-100" style={{ backgroundColor: c }} />
@@ -101,7 +104,7 @@ export default function ProjectDetail() {
                 )}
                 {project.fonts && (
                   <div className="flex flex-col items-center md:items-start">
-                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold italic">Tipografía</h4>
+                    <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold italic">{t('project.typo')}</h4>
                     <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">{project.fonts}</h3>
                   </div>
                 )}
@@ -120,7 +123,7 @@ export default function ProjectDetail() {
             <div className={`bg-[#fafafa] p-8 md:p-16 rounded-sm grid grid-cols-1 ${project.metrics?.length > 0 ? 'lg:grid-cols-2' : 'lg:grid-cols-1'} gap-16 items-start`}>
               {project.solution && (
                 <div className="flex flex-col items-center md:items-start space-y-6 text-center md:text-left">
-                  <h3 className="text-[11px] uppercase tracking-[0.4em] font-bold border-b border-black pb-2 inline-block">La Solución</h3>
+                  <h3 className="text-[11px] uppercase tracking-[0.4em] font-bold border-b border-black pb-2 inline-block">{t('project.solution')}</h3>
                   <p className="text-gray-500 text-md leading-relaxed font-light">{project.solution}</p>
                 </div>
               )}
@@ -147,7 +150,7 @@ export default function ProjectDetail() {
             <section className="max-w-7xl mx-auto px-6 md:px-16 py-20 md:py-16">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
                 <h2 className="text-4xl md:text-7xl font-black uppercase leading-none tracking-tighter">
-                  Métricas <br />finales
+                  {t('project.metrics_1')} <br />{t('project.metrics_2')}
                 </h2>
                 <div className="flex flex-col md:flex-row gap-12 md:gap-16 w-full lg:w-auto items-center">
                   {project.impact.map((imp, i) => (
@@ -179,7 +182,7 @@ export default function ProjectDetail() {
         <section className="max-w-7xl mx-auto px-6 md:px-16 pb-24 text-center md:text-left">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
             <div className="md:col-span-4">
-              <h3 className="font-bold uppercase tracking-widest text-xs italic">El Proyecto</h3>
+              <h3 className="font-bold uppercase tracking-widest text-xs italic">{t('project.project')}</h3>
             </div>
             <div className="md:col-span-8">
               <p className="text-base text-gray-600 leading-relaxed font-light">{project.description}</p>

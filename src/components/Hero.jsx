@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // Importación de archivos
 import heroVideo from '../assets/videos/Hero.webm';
@@ -8,6 +9,7 @@ import heroVideoMobile from '../assets/videos/HeroMobile.webm';
 import heroVideoMobileMp4 from '../assets/videos/HeroMobile.mp4';
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -60,7 +62,7 @@ export default function Hero() {
               <source src={heroVideoMp4} type="video/mp4" />
             </>
           )}
-          Tu navegador no soporta videos.
+          {t('hero.error')}
         </video>
       </div>
 
@@ -71,10 +73,10 @@ export default function Hero() {
           }`}
         >
           <Link to="/portfolio" className="px-12 py-5 bg-white text-black text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all text-center min-w-[200px]">
-            Ver proyectos
+            {t('hero.see')}
           </Link>
           <Link to="/About" className="px-12 py-5 border border-white/40 text-white text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-white hover:text-black transition-all text-center min-w-[200px]">
-            Sobre mí
+            {t('hero.about')}
           </Link>
         </div>
       </div>

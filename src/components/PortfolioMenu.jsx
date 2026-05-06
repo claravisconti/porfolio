@@ -1,12 +1,14 @@
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function PortfolioMenu() {
+  const { t } = useTranslation();
   const categories = [
-    { name: 'Todos', href: '/portfolio' },
-    { name: 'Web', href: '/portfolio/web' },
-    { name: 'Campañas', href: '/portfolio/redes' },
-    { name: 'Packaging', href: '/portfolio/packaging' },
-    { name: 'Editorial', href: '/portfolio/editorial' }
+    { name: t('portfolio.all'), href: '/portfolio' },
+    { name: t('portfolio.web'), href: '/portfolio/web' },
+    { name: t('portfolio.campaigns'), href: t('portfolio.campaigns_route') },
+    { name: t('portfolio.packaging'), href: '/portfolio/packaging' },
+    { name: t('portfolio.editorial'), href: '/portfolio/editorial' }
   ];
 
   return (

@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Socials from "../components/Socials.jsx"
+import { useTranslation } from 'react-i18next';
 
 export default function FormSection() {
+  const { t } = useTranslation();
   const form = useRef();
   const [status, setStatus] = useState(''); // '', 'enviando', 'exito', 'error'
 
@@ -35,19 +37,19 @@ export default function FormSection() {
         <div className="space-y-12">
           <div className="space-y-6">
             <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-black">
-              Escribime
+              {t('contact.title_1')}
             </h1>
             <div className="flex gap-4">
               <div className="w-12 h-[1px] bg-black mt-4"></div>
               <p className="text-gray-500 text-lg leading-relaxed max-w-md font-light italic">
-                Estoy presente para dar vida a tus ideas.
+                {t('contact.title_2')}
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold uppercase tracking-tighter">Redes Sociales</h3>
+              <h3 className="text-xl font-bold uppercase tracking-tighter">{t('contact.socials')}</h3>
               <div className="w-8 h-[1px] bg-gray-300 mb-4"></div>
               <div className="text-sm space-y-1 text-gray-600 tracking-wide font-light">
                 <Socials />
@@ -55,10 +57,10 @@ export default function FormSection() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-bold uppercase tracking-tighter">Horarios</h3>
+              <h3 className="text-xl font-bold uppercase tracking-tighter">{t('contact.schedule')}</h3>
               <div className="w-8 h-[1px] bg-gray-300 mb-4"></div>
               <div className="text-sm space-y-1 text-gray-600 tracking-wide font-light">
-                <p>Lunes a Sábados / 09:00 - 18:00</p>
+                <p>{t('contact.schedule_info')} / 09:00 - 18:00</p>
               </div>
             </div>
 
@@ -76,7 +78,7 @@ export default function FormSection() {
             {/* Input Nombre */}
             <div className="relative group">
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
-                Nombre
+                {t('contact.name')}
               </label>
               <input
                 type="text"
@@ -89,7 +91,7 @@ export default function FormSection() {
             {/* Input Email */}
             <div className="relative group">
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
-                Correo
+                {t('contact.email')}
               </label>
               <input
                 type="email"
@@ -101,7 +103,7 @@ export default function FormSection() {
 
             <div className="relative group">
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
-                Asunto
+                {t('contact.about')}
               </label>
               <input
                 type="text"
@@ -114,7 +116,7 @@ export default function FormSection() {
             {/* Input Mensaje */}
             <div className="relative group">
               <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
-                Mensaje
+                {t('contact.message')}
               </label>
               <textarea
                 name="message"
@@ -132,7 +134,7 @@ export default function FormSection() {
                 className="relative inline-block px-12 py-4 group overflow-hidden border border-black disabled:border-gray-300"
               >
                 <span className={`relative z-10 text-[11px] font-bold uppercase tracking-[0.4em] transition-colors duration-500 ${status === 'enviando' ? 'text-gray-400' : 'group-hover:text-white'}`}>
-                  {status === 'enviando' ? 'Enviando...' : 'Enviar'}
+                  {status === 'enviando' ? t('contact.sending') : t('contact.send')}
                 </span>
                 {status !== 'enviando' && (
                   <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
@@ -140,10 +142,10 @@ export default function FormSection() {
               </button>
 
               {status === 'exito' && (
-                <p className="text-[#00adb5] text-sm font-medium tracking-wide">¡Mensaje enviado con éxito!</p>
+                <p className="text-[#00adb5] text-sm font-medium tracking-wide">{t('contact.success')}</p>
               )}
               {status === 'error' && (
-                <p className="text-red-500 text-sm font-medium tracking-wide">Hubo un error. Intentá de nuevo.</p>
+                <p className="text-red-500 text-sm font-medium tracking-wide">{t('contact.error')}</p>
               )}
             </div>
           </form>

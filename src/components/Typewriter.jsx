@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function TypeWriter() {
+  const { t } = useTranslation();
   const [displayText, setDisplayText] = useState("");
   
-const line1 = "Mi proceso creativo siempre está";
-const line2Part1 = "listo para ";
-const line2Part2 = "nuevos desafíos.|";
+  const line1 = t('typewriter.t_1');
+  const line2Part1 = t('typewriter.t_2');
+  const line2Part2 = t('typewriter.t_3');
   
   const fullContent = `${line1}\n${line2Part1}${line2Part2}`;
 

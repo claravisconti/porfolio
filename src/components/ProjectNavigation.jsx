@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import { Link } from 'react-router-dom';
-import { projects } from '../data/projects';
+import { getProjects } from '../data/projects';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectNavigation({ currentId }) {
+  const { i18n, t } = useTranslation();
+  const projects = useMemo(() => {return getProjects()}, [i18n.language])
   // Buscamos el índice del proyecto actual
   const currentIndex = projects.findIndex(p => p.id === currentId);
   
@@ -22,7 +25,7 @@ export default function ProjectNavigation({ currentId }) {
                 <img src={prevProject.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="" />
               </div>
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 group-hover:text-black transition-colors flex items-center gap-2">
-                <span className="text-lg">←</span> Anterior
+                <span className="text-lg">←</span> {t('nav.previous')}
               </span>
             </Link>
           ) : <div />}
@@ -45,7 +48,7 @@ export default function ProjectNavigation({ currentId }) {
           {nextProject ? (
             <Link to={`/portfolio/project/${nextProject.slug}`} className="group flex items-center gap-4 text-right">
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 group-hover:text-black transition-colors flex items-center gap-2">
-                Siguiente <span className="text-lg">→</span>
+                {t('nav.next')} <span className="text-lg">→</span>
               </span>
               <div className="w-16 h-16 hidden md:block overflow-hidden bg-gray-100">
                 <img src={nextProject.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="" />

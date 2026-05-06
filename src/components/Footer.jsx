@@ -2,8 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Importamos useNavigate
 import Socials from "../components/Socials.jsx";
 import Iso from '../assets/images/Logo/Iso_blanco.svg';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   // Función para scrollear y navegar
@@ -38,19 +40,19 @@ export default function Footer() {
 
         {/* Columna 2: Navegación */}
         <div className="flex flex-col items-center text-center space-y-8">
-          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/50">Explorar</h4>
+          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/50">{t('footer.explore')}</h4>
           <nav className="flex flex-col gap-4">
             {/* Reemplazamos Link por botones que disparan handleNavigation */}
-            <button onClick={() => handleNavigation('/')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">Home</button>
-            <button onClick={() => handleNavigation('/portfolio')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">Portfolio</button>
-            <button onClick={() => handleNavigation('/about')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">Sobre Mí</button>
-            <button onClick={() => handleNavigation('/contact')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">Contacto</button>
+            <button onClick={() => handleNavigation('/')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">{t('nav.home')}</button>
+            <button onClick={() => handleNavigation('/portfolio')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">{t('nav.portfolio')}</button>
+            <button onClick={() => handleNavigation('/about')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">{t('nav.about')}</button>
+            <button onClick={() => handleNavigation('/contact')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">{t('nav.contact')}</button>
           </nav>
         </div>
 
         {/* Columna 3: Redes */}
         <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-8">
-          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/50">Seguime</h4>
+          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/50">{t('footer.follow')}</h4>
           <Socials />
         </div>
       </div>
@@ -58,7 +60,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="max-w-[90rem] mx-auto mt-20 pt-10 border-t border-white/10 flex flex-col items-center">
         <p className="text-[9px] text-white/40 uppercase tracking-[0.5em] text-center font-medium">
-          © 2026 Clara Visconti. TODOS LOS DERECHOS RESERVADOS.
+          © 2026 Clara Visconti. {t('footer.rights')}
         </p>
       </div>
     </footer>

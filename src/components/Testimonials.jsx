@@ -2,34 +2,35 @@ import { useState, useEffect } from 'react';
 import T1 from '../assets/images/Testimonials/T1.webp';
 import T2 from '../assets/images/Testimonials/T2.webp';
 import T3 from '../assets/images/Testimonials/T3.webp';
-
-const testimonials = [
-  {
-    id: "01",
-    name: "Martina Zuber",
-    role: "Fundadora de Bloom",
-    text: "Trabajar con Clara fue un antes y un después para mi marca. Logró captar la esencia minimalista que buscaba desde el primer día. Su ojo para el detalle en el packaging es realmente único.",
-    img: T1
-  },
-  {
-    id: "02",
-    name: "Facundo Rossi",
-    role: "Director de Marketing en TechBA",
-    text: "Buscábamos una identidad web que fuera moderna pero funcional, y el resultado superó nuestras expectativas. La comunicación fue fluida y entendió perfectamente los tiempos de nuestra empresa.",
-    img: T2
-  },
-  {
-    id: "03",
-    name: "Lucía Méndez",
-    role: "Emprendedora Gastronómica",
-    text: "Clara tiene una capacidad increíble para traducir conceptos abstractos en piezas visuales potentes. Las campañas que diseñó para el lanzamiento de mi local fueron clave para el éxito que tuvimos.",
-    img: T3
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Testimonials() {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
 
+  const testimonials = [
+    {
+      id: "01",
+      name: "Martina Zuber",
+      role: t('testimonials.r_1'),
+      text: t('testimonials.t_1'),
+      img: T1
+    },
+    {
+      id: "02",
+      name: "Facundo Rossi",
+      role: t('testimonials.r_2'),
+      text: t('testimonials.t_2'),
+      img: T2
+    },
+    {
+      id: "03",
+      name: "Lucía Méndez",
+      role: t('testimonials.r_3'),
+      text: t('testimonials.t_3'),
+      img: T3
+    }
+  ];
   // Auto-slide cada 6 segundos
   useEffect(() => {
     const timer = setInterval(() => {
@@ -59,7 +60,7 @@ export default function Testimonials() {
         {/* LADO DERECHO: Contenido */}
         <div className="md:col-span-7 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 text-center md:text-left relative">
           <div className="space-y-6 max-w-xl flex-grow">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase mb-6">Testimonio</h2>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase mb-6">{t('testimonials.title')}</h2>
             
             <div className="flex flex-col md:flex-row gap-4 items-center md:items-start mb-8">
                <div className="hidden md:block w-10 h-[1px] bg-white/60 mt-4 flex-shrink-0"></div>

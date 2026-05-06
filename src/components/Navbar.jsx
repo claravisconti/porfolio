@@ -3,8 +3,11 @@ import { useLocation, Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import Iso from '../assets/images/Logo/Iso_blanco.svg'; 
 import IsoTeal from '../assets/images/Logo/Iso_teal.svg'; 
+import LanguageSwitcher from './LanguagesSwitcher';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isPortfolioHovered, setIsPortfolioHovered] = useState(false);
   const [mobilePortfolioOpen, setMobilePortfolioOpen] = useState(false);
@@ -25,11 +28,11 @@ export default function Navbar() {
   const isHomePage = location.pathname === "/";
 
   const portfolioSubs = [
-    { name: 'Todos', href: '/portfolio' },
-    { name: 'Web', href: '/portfolio/web' },
-    { name: 'Campañas', href: '/portfolio/redes' },
-    { name: 'Packaging', href: '/portfolio/packaging' },
-    { name: 'Editorial', href: '/portfolio/editorial' },
+    { name: t('nav.all'), href: '/portfolio' },
+    { name: t('nav.web'), href: '/portfolio/web' },
+    { name: t('nav.campaigns'), href: t('portfolio.campaigns_route') },
+    { name: t('nav.packaging'), href: '/portfolio/packaging' },
+    { name: t('nav.editorial'), href: '/portfolio/editorial' },
   ];
 
   // Configuración de estilos según el contexto (Home vs Internas)
@@ -68,7 +71,7 @@ export default function Navbar() {
           {/* --- MENÚ DESKTOP --- */}
           <div className="hidden md:flex space-x-12 items-center">
             <Link to="/" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:tracking-[0.35em] ${isHomePage ? "text-white/80 hover:text-white" : "text-black/60 hover:text-black"}`}>
-              Home
+              {t('nav.home')}
             </Link>
 
             {/* Dropdown de Portfolio */}
@@ -81,7 +84,7 @@ export default function Navbar() {
                 to="/portfolio"
                 className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:tracking-[0.35em] flex items-center gap-1 ${isHomePage ? "text-white/80 hover:text-white" : "text-black/60 hover:text-black"}`}
               >
-                Portfolio
+                {t('nav.portfolio')}
               </Link>
 
               {/* Submenú Flotante */}
@@ -99,12 +102,14 @@ export default function Navbar() {
             </div>
 
             <Link to="/about" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:tracking-[0.35em] ${isHomePage ? "text-white/80 hover:text-white" : "text-black/60 hover:text-black"}`}>
-              Sobre mí
+              {t('nav.about')}
             </Link>
             <Link to="/contact" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:tracking-[0.35em] ${isHomePage ? "text-white/80 hover:text-white" : "text-black/60 hover:text-black"}`}>
-              Contacto
+              {t('nav.contact')}
             </Link>
           </div>
+
+          <LanguageSwitcher theme={theme}/>
 
           {/* --- BOTÓN BURGER (MOBILE) --- */}
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden z-[110] p-2 focus:outline-none">
@@ -122,7 +127,7 @@ export default function Navbar() {
         <div className="flex flex-col items-center space-y-8 w-full overflow-y-auto pt-20 pb-10">
 
           <Link to="/" className="text-white text-3xl font-bold uppercase tracking-[0.3em] hover:text-[#000000]">
-            Home
+            {t('nav.home')}
           </Link>
 
           {/* Portfolio Mobile Accordion */}
@@ -131,7 +136,7 @@ export default function Navbar() {
               onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
               className="flex items-center gap-2 text-white text-3xl font-bold uppercase tracking-[0.3em] focus:outline-none"
             >
-              Portfolio
+              {t('nav.portfolio')}
               <ChevronDown
                 size={24}
                 className={`transition-transform duration-300 ${mobilePortfolioOpen ? 'rotate-180' : ''}`}
@@ -152,11 +157,11 @@ export default function Navbar() {
           </div>
 
           <Link to="/about" className="text-white text-3xl font-bold uppercase tracking-[0.3em] hover:text-[#000000]">
-            Sobre mí
+            {t('nav.about')}
           </Link>
 
           <Link to="/contact" className="text-white text-3xl font-bold uppercase tracking-[0.3em] hover:text-[#000000]">
-            Contacto
+            {t('nav.contact')}
           </Link>
         </div>
       </div>

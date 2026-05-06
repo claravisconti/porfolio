@@ -1,29 +1,31 @@
 import { Monitor, PenTool, Box, Megaphone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const services = [
-  {
-    title: "Diseño Web",
-    desc: "Diseño interfaces intuitivas y estéticas que priorizan la experiencia del usuario sin perder el impacto visual.",
-    icon: <Monitor size={48} strokeWidth={1} /> // Un monitor para lo digital
-  },
-  {
-    title: "Institucional",
-    desc: "Creo identidades visuales desde cero, buscando una narrativa coherente y atemporal para cada proyecto.",
-    icon: <PenTool size={48} strokeWidth={1} /> // La pluma para la creación de logos/trazos
-  },
-  {
-    title: "Packaging",
-    desc: "Desarrollo envases que cuentan historias, enfocándome en la funcionalidad y la materialidad del diseño.",
-    icon: <Box size={48} strokeWidth={1} /> // Una caja para representar el producto físico
-  },
-  {
-    title: "Campañas",
-    desc: "Planifico y diseño el universo visual de campañas integrales, optimizando la comunicación en cada pieza.",
-    icon: <Megaphone size={48} strokeWidth={1} /> // Un megáfono para la comunicación y difusión
-  }
-];
 
 export default function Services() {
+  const { t } = useTranslation();
+  const services = [
+    {
+      title: t('services.t_1'),
+      desc: t('services.d_1'),
+      icon: <Monitor size={48} strokeWidth={1} /> // Un monitor para lo digital
+    },
+    {
+      title: t('services.t_2'),
+      desc: t('services.d_2'),
+      icon: <PenTool size={48} strokeWidth={1} /> // La pluma para la creación de logos/trazos
+    },
+    {
+      title: t('services.t_3'),
+      desc: t('services.d_3'),
+      icon: <Box size={48} strokeWidth={1} /> // Una caja para representar el producto físico
+    },
+    {
+      title: t('services.t_4'),
+      desc: t('services.d_4'),
+      icon: <Megaphone size={48} strokeWidth={1} /> // Un megáfono para la comunicación y difusión
+    }
+  ];
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-12">
