@@ -1,11 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import PortfolioMenu from '../components/PortfolioMenu';
 import Banner from '../components/Banner';
-import { projects } from '../data/projects';
+import { getProjects } from '../data/projects';
 import Hero1 from '../assets/images/Hero/Hero1.webp';
+import { useTranslation } from 'react-i18next';
 
 export default function PortfolioCategory({ category }) {
+  const { i18n } = useTranslation();
+  const projects = useMemo(() => {return getProjects()}, [i18n.language])
   const [visibleCount, setVisibleCount] = useState(6);
   const [allFilteredProjects, setAllFilteredProjects] = useState([]);
   const [displayProjects, setDisplayProjects] = useState([]);
@@ -16,7 +19,7 @@ export default function PortfolioCategory({ category }) {
   useEffect(() => {
     setVisibleCount(6); 
     setAllFilteredProjects(projects.filter(p => 
-      category.toLowerCase() === "todos" || p.category.toLowerCase() === category.toLowerCase()
+      ["todos", "all"].includes(category.toLowerCase()) || p.category.toLowerCase() === category.toLowerCase()
     ))
   }, [category]);
 

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import { Link } from 'react-router-dom';
-import { projects as realProjects } from '../data/projects'; // Ajusta la ruta
+import { getProjects } from '../data/projects'; // Ajusta la ruta
+import { useTranslation } from 'react-i18next';
 
 // Definimos las posiciones visuales de la grilla (las clases de Tailwind que ya tenías)
 const gridLayout = [
@@ -15,6 +16,8 @@ const gridLayout = [
 ];
 
 export default function PortfolioPreview() {
+  const { i18n, t } = useTranslation();
+  const realProjects = useMemo(() => {return getProjects()}, [i18n.language])
   // Tomamos los primeros 8 proyectos de tu archivo JS
   const previewProjects = realProjects.slice().sort(() => Math.random() - 0.5).slice(0, 8);
 
@@ -55,7 +58,7 @@ export default function PortfolioPreview() {
         <div className="py-12 md:py-20 flex justify-center bg-white w-full">
           <Link to="/portfolio" className="flex items-center gap-4 md:gap-6 group px-6">
             <span className="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-[#111] group-hover:text-accent transition-colors whitespace-nowrap">
-              Ver todos los proyectos
+              {t('portfolio.see_all')}
             </span>
             
             <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0 transition-all duration-500 group-hover:border-accent">

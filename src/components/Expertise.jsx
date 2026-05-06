@@ -1,13 +1,15 @@
 import React from 'react';
-
-const skills = [
-  { name: "Diseño Web", percentage: 90 },
-  { name: "Mobile", percentage: 85 },
-  { name: "Packaging", percentage: 80 },
-  { name: "Campañas", percentage: 75 },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Expertise() {
+  const { t } = useTranslation();
+  
+  const skills = [
+    { name: t('skills.design'), percentage: 90 },
+    { name: t('skills.mobile'), percentage: 85 },
+    { name: t('skills.packaging'), percentage: 80 },
+    { name: t('skills.campaigns'), percentage: 75 },
+  ];
   return (
     <section className="bg-white py-20 px-6 md:px-24">
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-start">
@@ -16,19 +18,17 @@ export default function Expertise() {
         <div className="space-y-8 md:space-y-10">
           <div className="space-y-4">
             <p className="text-[10px] uppercase tracking-[0.4em] text-[#00adb5] font-bold">
-              Especialidades
+              {t('skills.specialities')}
             </p>
             <h2 className="text-5xl md:text-[3.5rem] font-bold text-black leading-[1.1] tracking-tighter">
-              Mis áreas de <br className="hidden md:block" /> experiencia
+              {t('skills.title_1')} <br className="hidden md:block" /> {t('skills.title_2')}
             </h2>
           </div>
           
           <div className="flex gap-6 md:gap-8 items-start">
             <div className="w-12 md:w-16 h-[1px] bg-black mt-4 flex-shrink-0"></div>
             <p className="text-gray-500 text-base md:text-lg leading-relaxed font-light max-w-md italic">
-              Acompaño cada proyecto con una visión estratégica y creativa, 
-              buscando siempre el equilibrio entre la estética minimalista 
-              y la funcionalidad necesaria para cada marca.
+              {t('skills.body')}
             </p>
           </div>
         </div>

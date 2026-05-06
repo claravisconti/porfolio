@@ -38,49 +38,37 @@ import Portada_HCIC from '../assets/images/Campañas/Portada_HCIC.webp';
 import DigitalVector1 from '../assets/images/Web/Galeria/DigitalVector1.webp';
 import DigitalVector2 from '../assets/images/Web/Galeria/DigitalVector2.webp';
 import DigitalVector3 from '../assets/images/Web/Galeria/DigitalVector3.webp';
-
 import Bloom1 from '../assets/images/Web/Galeria/Bloom1.webp';
 import Bloom2 from '../assets/images/Web/Galeria/Bloom2.webp';
 import Bloom3 from '../assets/images/Web/Galeria/Bloom3.webp';
-
 import Fanfiction1 from '../assets/images/Web/Galeria/Fanfiction1.webp';
 import Fanfiction2 from '../assets/images/Web/Galeria/Fanfiction2.webp';
-
 import Payslip1 from '../assets/images/Web/Galeria/Payslip1.webp';
 import Payslip2 from '../assets/images/Web/Galeria/Payslip2.webp';
 import Payslip3 from '../assets/images/Web/Galeria/Payslip3.webp';
-
 import SweetBlossom1 from '../assets/images/Web/Galeria/SweetBlossom1.webp';
 import SweetBlossom2 from '../assets/images/Web/Galeria/SweetBlossom2.webp';
 import SweetBlossom3 from '../assets/images/Web/Galeria/SweetBlossom3.webp';
-
 import Food1 from '../assets/images/Web/Galeria/Food1.webp';
 import Food2 from '../assets/images/Web/Galeria/Food2.webp';
-
 import Orpheus1 from '../assets/images/Web/Galeria/Orpheus1.webp';
 import Orpheus2 from '../assets/images/Web/Galeria/Orpheus2.webp';
 import Orpheus3 from '../assets/images/Web/Galeria/Orpheus3.webp';
-
 import ElectroHaus1 from '../assets/images/Web/Galeria/ElectroHaus1.webp';
 import ElectroHaus2 from '../assets/images/Web/Galeria/ElectroHaus2.webp';
 import ElectroHaus3 from '../assets/images/Web/Galeria/ElectroHaus3.webp';
-
 import MagicTravel1 from '../assets/images/Web/Galeria/MagicTravel1.webp';
 import MagicTravel2 from '../assets/images/Web/Galeria/MagicTravel2.webp';
 import MagicTravel3 from '../assets/images/Web/Galeria/MagicTravel3.webp';
-
 import Hermes1 from '../assets/images/Web/Galeria/Hermes1.webp';
 import Hermes2 from '../assets/images/Web/Galeria/Hermes2.webp';
 import Hermes3 from '../assets/images/Web/Galeria/Hermes3.webp';
-
 import WineNight1 from '../assets/images/Web/Galeria/WineNight1.webp';
 import WineNight2 from '../assets/images/Web/Galeria/WineNight2.webp';
 import WineNight3 from '../assets/images/Web/Galeria/WineNight3.webp';
-
 import Ylang1 from '../assets/images/Web/Galeria/Ylang1.webp';
 import Ylang2 from '../assets/images/Web/Galeria/Ylang2.webp';
 import Ylang3 from '../assets/images/Web/Galeria/Ylang3.webp';
-
 import TravelMax1 from '../assets/images/Web/Galeria/TravelMax1.webp';
 import TravelMax2 from '../assets/images/Web/Galeria/TravelMax2.webp';
 import TravelMax3 from '../assets/images/Web/Galeria/TravelMax3.webp';
@@ -88,29 +76,22 @@ import TravelMax3 from '../assets/images/Web/Galeria/TravelMax3.webp';
 // Packaging Gallery
 import Silkylatte1 from '../assets/images/Packaging/Galeria/Silkylatte1.webp';
 import Silkylatte2 from '../assets/images/Packaging/Galeria/Silkylatte2.webp';
-
 import Fruits1 from '../assets/images/Packaging/Galeria/Fruits1.webp';
 import Fruits2 from '../assets/images/Packaging/Galeria/Fruits2.webp';
-
 import Crown1 from '../assets/images/Packaging/Galeria/Crown1.webp';
 import Crown2 from '../assets/images/Packaging/Galeria/Crown2.webp';
-
 import Artistik1 from '../assets/images/Packaging/Galeria/Artistik1.webp';
 import Artistik2 from '../assets/images/Packaging/Galeria/Artistik2.webp';
-
 import WhiteFields1 from '../assets/images/Packaging/Galeria/WhiteFields1.webp';
 import WhiteFields2 from '../assets/images/Packaging/Galeria/WhiteFields2.webp';
-
 import Hertz1 from '../assets/images/Packaging/Galeria/Hertz1.webp';
 import Hertz2 from '../assets/images/Packaging/Galeria/Hertz2.webp';
 
 // Editorial Gallery
 import Maison1 from '../assets/images/Editorial/Galeria/Maison1.webp';
 import Maison2 from '../assets/images/Editorial/Galeria/Maison2.webp';
-
 import Manifiesto1 from '../assets/images/Editorial/Galeria/Manifiesto1.webp';
 import Manifiesto2 from '../assets/images/Editorial/Galeria/Manifiesto2.webp';
-
 import VanGogh1 from '../assets/images/Editorial/Galeria/VanGogh1.webp';
 import VanGogh3 from '../assets/images/Editorial/Galeria/VanGogh3.webp';
 
@@ -127,8 +108,20 @@ import WID1 from '../assets/images/Campañas/Galeria/WID1.webp';
 import STC1 from '../assets/images/Campañas/Galeria/STC1.webp';
 import HCIC1 from '../assets/images/Campañas/Galeria/HCIC1.webp';
 
-const rawProjects = [
-  // --- WEB ---
+import i18n from '../i18n';
+
+// ─── Campos de categoría traducidos ───────────────────────────────────────────
+const categories = {
+  es: { web: 'Web', editorial: 'Editorial', packaging: 'Packaging', campaigns: 'Campañas' },
+  en: { web: 'Web', editorial: 'Editorial', packaging: 'Packaging', campaigns: 'Campaigns' },
+};
+
+// ─── Datos base (sin texto) ───────────────────────────────────────────────────
+// Campos compartidos entre idiomas: title, slug, year, image, gallery, colors, fonts, metrics (names only differ)
+// Para métricas e impacto los porcentajes/valores son universales; solo los labels cambian.
+
+const rawProjectsES = [
+  // ─── WEB ───────────────────────────────────────────────────────────────────
   {
     title: "Digital Vector",
     category: "Web",
@@ -139,6 +132,7 @@ const rawProjects = [
     problem: "La marca presentaba una desconexión entre su capacidad tecnológica y su presencia digital, lo que generaba una percepción de bajo valor y una reducida retención de clientes corporativos.",
     objective: "Desarrollar un ecosistema digital de alto rendimiento bajo una estética 'Tech-Luxury' que proyecte autoridad técnica y optimice el embudo de conversión B2B.",
     challenge: "Lograr el equilibrio entre una arquitectura de información técnica compleja y una experiencia de navegación minimalista impulsada por micro-interacciones de alta precisión.",
+    solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa y un sistema modular que garantiza escalabilidad. La navegación se simplificó mediante micro-interacciones sutiles que reducen la carga cognitiva y dirigen orgánicamente al usuario hacia los puntos de conversión.",
     colors: ["#121212", "#90189c", "#E5E5E5"],
     fonts: "Inter",
     metrics: [
@@ -152,8 +146,7 @@ const rawProjects = [
       { label: "Captación de Leads", value: "+20%" },
       { label: "Velocidad de carga", value: "0.8s" },
     ],
-    solution: "Se diseñó una interfaz basada en una retícula técnica rigurosa y un sistema modular que garantiza escalabilidad. La navegación se simplificó mediante micro-interacciones sutiles que reducen la carga cognitiva y dirigen orgánicamente al usuario hacia los puntos de conversión.",
-    gallery: [DigitalVector1, DigitalVector2, DigitalVector3]
+    gallery: [DigitalVector1, DigitalVector2, DigitalVector3],
   },
   {
     title: "Bloom Indumentaria",
@@ -165,6 +158,7 @@ const rawProjects = [
     problem: "La marca de autor Bloom presentaba una desconexión visual en su plataforma digital. El sitio anterior no lograba transmitir la exclusividad de sus piezas, resultando en una experiencia de usuario genérica que no justificaba el valor premium de sus productos.",
     objective: "Rediseñar la experiencia de compra bajo un enfoque 'Mobile-First' que funcione como una extensión digital del taller de diseño, priorizando la elegancia visual y la simplicidad operativa.",
     challenge: "Equilibrar la estética minimalista 'soft-luxury' con las funcionalidades críticas de conversión de un eCommerce, garantizando que la jerarquía visual no compita con el protagonismo de las prendas.",
+    solution: "Se implementó un diseño basado en espacios en blanco generosos y una paleta cromática neutra para resaltar el producto. Optimizamos el flujo de compra mediante una navegación táctil intuitiva, selectores de color dinámicos y un catálogo modular que permite una visualización clara y rápida de las colecciones.",
     colors: ["#F9F1F1", "#CB9991", "#111111", "#9D9D9C"],
     fonts: "Playfair Display / Lato",
     metrics: [
@@ -178,8 +172,7 @@ const rawProjects = [
       { label: "Captación de usuarios", value: "+50%" },
       { label: "Velocidad de navegación", value: "1.2s" },
     ],
-    solution: "Se implementó un diseño basado en espacios en blanco generosos y una paleta cromática neutra para resaltar el producto. Optimizamos el flujo de compra mediante una navegación táctil intuitiva, selectores de color dinámicos y un catálogo modular que permite una visualización clara y rápida de las colecciones.",
-    gallery: [Bloom1, Bloom2, Bloom3]
+    gallery: [Bloom1, Bloom2, Bloom3],
   },
   {
     title: "Fanfiction App",
@@ -191,6 +184,7 @@ const rawProjects = [
     problem: "Las plataformas actuales de lectura suelen saturar al usuario con interfaces ruidosas. En una comunidad donde el consumo de contenido es intensivo (horas de lectura), la fatiga visual y la dificultad para descubrir historias relevantes eran los puntos de dolor principales.",
     objective: "Crear una interfaz inmersiva 'Dark Mode' que priorice el confort visual, facilitando tanto el consumo de historias largas como la interacción social entre autores y lectores a través de métricas claras.",
     challenge: "Organizar grandes volúmenes de metadatos (etiquetas, advertencias, capítulos y reseñas) sin romper la estética minimalista, asegurando que la jerarquía de información sea clara en dispositivos móviles.",
+    solution: "Se diseñó una arquitectura de información centrada en el contenido, utilizando un esquema de color de alto contraste pero baja fatiga visual (fondos negros puros para pantallas OLED). Implementamos un sistema de reseñas y estadísticas en tiempo real que permite a los usuarios validar la calidad de los fanfics antes de iniciar la lectura.",
     colors: ["#000000", "#111827", "#6DB4B6", "#FFFFFF"],
     fonts: "Inter / Roboto",
     metrics: [
@@ -204,8 +198,7 @@ const rawProjects = [
       { label: "Tasa de Incremento", value: "4.3/5" },
       { label: "Favoritos", value: "1M+" },
     ],
-    solution: "Se diseñó una arquitectura de información centrada en el contenido, utilizando un esquema de color de alto contraste pero baja fatiga visual (fondos negros puros para pantallas OLED). Implementamos un sistema de reseñas y estadísticas en tiempo real que permite a los usuarios validar la calidad de los fanfics antes de iniciar la lectura.",
-    gallery: [Fanfiction1, Fanfiction2]
+    gallery: [Fanfiction1, Fanfiction2],
   },
   {
     title: "Payslip App",
@@ -217,6 +210,7 @@ const rawProjects = [
     problem: "La gestión tradicional de recibos de sueldo suele ser burocrática y fragmentada. Tanto empresas como empleados lidiaban con procesos de firma lentos, falta de trazabilidad en los estados del documento y una visualización de datos contables compleja para el usuario promedio.",
     objective: "Diseñar una plataforma SaaS integral que digitalice el ciclo de vida del recibo de sueldo (carga, visualización y firma), transformando documentos legales áridos en una experiencia intuitiva, segura y transparente en cualquier dispositivo.",
     challenge: "Equilibrar la rigidez de los datos financieros con una interfaz amigable. El mayor reto fue diseñar un sistema de estados (Pendiente/Firmado/Rechazado) visualmente jerarquizado y dashboards analíticos que permitieran un control rápido de la documentación pendiente.",
+    solution: "Implementamos un ecosistema multiplataforma con un dashboard centralizado. Para el empleado, priorizamos la accesibilidad móvil y la claridad del estatus del documento; para el empleador, desarrollamos herramientas de filtrado avanzado y gráficos de cumplimiento que permiten monitorear la gestión de nómina en tiempo real.",
     colors: ["#000000", "#7C3AED", "#10B981", "#EF4444"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -230,8 +224,7 @@ const rawProjects = [
       { label: "Reciclaje de Documentos", value: "100%" },
       { label: "Velocidad de sesión", value: "45s" },
     ],
-    solution: "Implementamos un ecosistema multiplataforma con un dashboard centralizado. Para el empleado, priorizamos la accesibilidad móvil y la claridad del estatus del documento; para el empleador, desarrollamos herramientas de filtrado avanzado y gráficos de cumplimiento que permiten monitorear la gestión de nómina en tiempo real.",
-    gallery: [Payslip1, Payslip2, Payslip3]
+    gallery: [Payslip1, Payslip2, Payslip3],
   },
   {
     title: "Sugar Blossom",
@@ -243,6 +236,7 @@ const rawProjects = [
     problem: "Una pastelería boutique con una estética muy definida buscaba digitalizar su catálogo y sistema de pedidos. El reto principal era evitar que la interfaz se sintiera 'fría' o genérica, logrando que el usuario percibiera la misma calidez y aroma artesanal que al entrar al local físico.",
     objective: "Diseñar una plataforma visualmente rica y sensorial que funcione como un escaparate digital, facilitando la reserva para eventos y la compra de productos premium mediante una navegación romántica y fluida.",
     challenge: "Equilibrar la ornamentación visual (ilustraciones botánicas y tipografías script) con la usabilidad. Era crítico que los elementos decorativos no distrajeran al usuario del proceso de compra, manteniendo un rendimiento de carga óptimo a pesar del uso de imágenes de alta resolución.",
+    solution: "Se desarrolló una interfaz basada en el concepto 'pastelería digital', utilizando una paleta cromática suave y micro-interacciones delicadas. Implementamos secciones dedicadas para 'Tea Time' y 'Eventos' con formularios simplificados, integrando fotografías de producto en gran formato que actúan como el centro de la experiencia UX.",
     colors: ["#D9ADAD", "#E8C3C3", "#6DB4B6", "#FFFFFF"],
     fonts: "Great Vibes / Montserrat",
     metrics: [
@@ -256,8 +250,7 @@ const rawProjects = [
       { label: "Consultas para Eventos", value: "+65%" },
       { label: "Satisfacción del Usuario", value: "4.9/5" },
     ],
-    solution: "Se desarrolló una interfaz basada en el concepto 'pastelería digital', utilizando una paleta cromática suave y micro-interacciones delicadas. Implementamos secciones dedicadas para 'Tea Time' y 'Eventos' con formularios simplificados, integrando fotografías de producto en gran formato que actúan como el centro de la experiencia UX.",
-    gallery: [SweetBlossom1, SweetBlossom2, SweetBlossom3]
+    gallery: [SweetBlossom1, SweetBlossom2, SweetBlossom3],
   },
   {
     title: "Foodie App",
@@ -269,6 +262,7 @@ const rawProjects = [
     problem: "En un mercado de delivery saturado, las aplicaciones suelen centrarse únicamente en la transacción, descuidando la experiencia sensorial del usuario. Foodie necesitaba una interfaz que transformara la tarea de pedir comida en un proceso visualmente apetecible y sin fricciones.",
     objective: "Diseñar una experiencia móvil integral que optimice el flujo de conversión desde el login hasta el checkout, utilizando una jerarquía visual clara, fotografía de alta calidad y un sistema de navegación intuitivo basado en categorías y recomendaciones personalizadas.",
     challenge: "Lograr un equilibrio entre la densidad de información (precios, tiempos de entrega, valoraciones, menús) y un diseño limpio que no abrume al usuario. El mayor reto fue unificar el flujo de 'Ofertas' y 'Recomendados' manteniendo la coherencia visual en cada etapa del proceso de compra.",
+    solution: "Se implementó un sistema de diseño 'Image-First' para despertar el apetito del usuario. Optimizamos el flujo de pago con un resumen de cuenta transparente y un sistema de inicio de sesión social para reducir el abandono. El uso estratégico del color amarillo no solo refuerza la identidad de marca, sino que estimula la rapidez y felicidad en la toma de decisiones.",
     colors: ["#FBBF24", "#FFFFFF", "#EF4444", "#111827"],
     fonts: "Inter / Montserrat",
     metrics: [
@@ -282,8 +276,7 @@ const rawProjects = [
       { label: "Tiempo promedio de pedido", value: "2.5m" },
       { label: "Satisfacción del Usuario", value: "4.8/5" },
     ],
-    solution: "Se implementó un sistema de diseño 'Image-First' para despertar el apetito del usuario. Optimizamos el flujo de pago con un resumen de cuenta transparente y un sistema de inicio de sesión social para reducir el abandono. El uso estratégico del color amarillo no solo refuerza la identidad de marca, sino que estimula la rapidez y felicidad en la toma de decisiones.",
-    gallery: [Food1, Food2]
+    gallery: [Food1, Food2],
   },
   {
     title: "Orpheus Opera",
@@ -295,6 +288,7 @@ const rawProjects = [
     problem: "La Ópera Orpheus enfrentaba el reto de conectar con nuevas audiencias en la era digital. Su presencia online anterior se percibía como elitista y estática, lo que generaba una barrera de entrada para el público joven y dificultaba la navegación en procesos críticos como la consulta de cartelera y compra de tickets.",
     objective: "Rediseñar la identidad digital de la ópera para convertirla en una plataforma inmersiva y dinámica. El objetivo era facilitar el descubrimiento de obras clásicas, promover la academia de artes y simplificar la gestión de reservas mediante un sistema de calendario visual y moderno.",
     challenge: "Mantener el equilibrio entre la solemnidad de la tradición operística y las tendencias actuales de diseño UX. Era fundamental que la interfaz fuera visualmente impactante —utilizando fotografía artística de gran formato— sin sacrificar la claridad funcional en dispositivos móviles.",
+    solution: "Se desarrolló una experiencia 'Dark Mode' sofisticada que utiliza el color bordó como hilo conductor emocional. Implementamos un sistema de filtrado por calendario intuitivo, perfiles detallados del elenco con galerías multimedia y secciones dedicadas a la academia. La arquitectura de información se centró en la conversión, integrando botones de reserva estratégicos que reducen el flujo de compra a pocos pasos.",
     colors: ["#3E0202", "#FFFFFF", "#F8F5F2", "#1A1A1A"],
     fonts: "Playfair Display / Inter",
     metrics: [
@@ -308,8 +302,7 @@ const rawProjects = [
       { label: "Reservas Mobile", value: "+42%" },
       { label: "Sesión Promedio", value: "4.8m" },
     ],
-    solution: "Se desarrolló una experiencia 'Dark Mode' sofisticada que utiliza el color bordó como hilo conductor emocional. Implementamos un sistema de filtrado por calendario intuitivo, perfiles detallados del elenco con galerías multimedia y secciones dedicadas a la academia. La arquitectura de información se centró en la conversión, integrando botones de reserva estratégicos que reducen el flujo de compra a pocos pasos.",
-    gallery: [Orpheus1, Orpheus2, Orpheus3]
+    gallery: [Orpheus1, Orpheus2, Orpheus3],
   },
   {
     title: "Electrohaus Landing",
@@ -321,6 +314,7 @@ const rawProjects = [
     problem: "En la industria de eventos, la saturación de información suele diluir la identidad del festival. Electrohaus necesitaba una landing page que no solo vendiera tickets, sino que funcionara como un prólogo visual del evento, capturando la agresividad y el ritmo de la música electrónica industrial.",
     objective: "Diseñar una experiencia web de alto impacto visual (Brutalismo Digital) que maximice la expectativa y la conversión de preventa mediante una jerarquía tipográfica audaz y un sistema de navegación fluido para dispositivos móviles.",
     challenge: "El principal desafío fue mantener una legibilidad óptima bajo una estética de alto contraste y elementos visuales disruptivos. La interfaz debía transmitir energía y movimiento constante sin comprometer la velocidad de carga, esencial para usuarios que acceden desde redes sociales.",
+    solution: "Se implementó un diseño basado en el brutalismo digital, utilizando tipografía de gran formato como elemento gráfico principal. La solución incluyó efectos de scroll interactivos que simulan el pulso de la música, una paleta de color neón sobre fondos negros profundos para resaltar el Line-up, y un flujo de compra de tickets integrado que minimiza los clics del usuario.",
     colors: ["#000000", "#ff3fe0", "#FFFFFF", "#1A1A1A"],
     fonts: "Archivo Black / Space Mono",
     metrics: [
@@ -334,8 +328,7 @@ const rawProjects = [
       { label: "Compartidos en redes", value: "12K" },
       { label: "Sesión Promedio", value: "3.5m" },
     ],
-    solution: "Se implementó un diseño basado en el brutalismo digital, utilizando tipografía de gran formato como elemento gráfico principal. La solución incluyó efectos de scroll interactivos que simulan el pulso de la música, una paleta de color neón sobre fondos negros profundos para resaltar el Line-up, y un flujo de compra de tickets integrado que minimiza los clics del usuario.",
-    gallery: [ElectroHaus1, ElectroHaus2, ElectroHaus3]
+    gallery: [ElectroHaus1, ElectroHaus2, ElectroHaus3],
   },
   {
     title: "Magic Travel Game",
@@ -347,6 +340,7 @@ const rawProjects = [
     problem: "Como juego indie en un mercado saturado, Magic Travel necesitaba una carta de presentación que no solo explicara de qué trata el juego, sino que hiciera sentir al usuario la atmósfera mágica antes de descargarlo. El mayor obstáculo era organizar la información de personajes, niveles y recompensas sin romper la estética onírica de la marca.",
     objective: "Diseñar una landing page inmersiva que funcione como portal al universo del juego, optimizando la jerarquía visual para destacar el pre-registro y las mecánicas de evolución de personajes y compañeros.",
     challenge: "El desafío técnico fue integrar una gran cantidad de elementos ilustrativos y decoraciones ornamentales manteniendo un rendimiento fluido. Desde el punto de vista de UX, debíamos presentar las recompensas y niveles de forma lúdica, imitando la interfaz interna del juego.",
+    solution: "Creamos un diseño basado en capas y texturas suaves que emulan el cielo y el agua. Implementamos tarjetas de personajes interactivas y un carrusel de recompensas que permite visualizar la evolución de las mascotas. El uso de marcos ornamentales dorados eleva la percepción de calidad del juego, posicionándolo como una experiencia premium.",
     colors: ["#A5C9ED", "#F3E5D8", "#7B9ACC", "#FFFFFF"],
     fonts: "Cormorant Garamond / Montserrat",
     metrics: [
@@ -360,8 +354,7 @@ const rawProjects = [
       { label: "Crecimiento comunidad", value: "+120%" },
       { label: "Tiempo promedio", value: "4.2m" },
     ],
-    solution: "Creamos un diseño basado en capas y texturas suaves que emulan el cielo y el agua. Implementamos tarjetas de personajes interactivas y un carrusel de recompensas que permite visualizar la evolución de las mascotas. El uso de marcos ornamentales dorados eleva la percepción de calidad del juego, posicionándolo como una experiencia premium.",
-    gallery: [MagicTravel1, MagicTravel2, MagicTravel3]
+    gallery: [MagicTravel1, MagicTravel2, MagicTravel3],
   },
   {
     title: "Hermes Hotel",
@@ -373,6 +366,7 @@ const rawProjects = [
     problem: "El Hotel Hermes necesitaba una presencia digital que estuviera a la altura de su servicio boutique de cinco estrellas. Su plataforma anterior no lograba transmitir la exclusividad de sus espacios, resultando en una alta tasa de rebote y una dependencia excesiva de agencias de reserva externas.",
     objective: "Diseñar una experiencia web inmersiva y de alto rendimiento que actúe como una conserjería digital, permitiendo a los huéspedes explorar las habitaciones, servicios de wellness y espacios de eventos con una navegación fluida que incite a la reserva directa.",
     challenge: "El principal reto fue equilibrar la carga de imágenes de alta resolución en gran formato con una velocidad de carga ultrarrápida. Además, debíamos crear una arquitectura de información clara que segmentara los servicios de hospitalidad, relajación y corporativos sin perder la elegancia visual.",
+    solution: "Se implementó un sistema de diseño basado en 'Layouts Editoriales', utilizando amplios espacios en blanco y una tipografía serif para los encabezados que evoca revistas de diseño de alta gama. Optimizamos el flujo de reserva mediante botones de acción discretos pero omnipresentes y creamos páginas específicas para cada servicio que funcionan como galerías de arte interactivas.",
     colors: ["#F8F5F2", "#1A1A1A", "#338ea8", "#D9D9D9"],
     fonts: "Tenor Sans / Playfair Display",
     metrics: [
@@ -386,8 +380,7 @@ const rawProjects = [
       { label: "Sesión Promedio", value: "5.5m" },
       { label: "Rebote Mobile", value: "-25%" },
     ],
-    solution: "Se implementó un sistema de diseño basado en 'Layouts Editoriales', utilizando amplios espacios en blanco y una tipografía serif para los encabezados que evoca revistas de diseño de alta gama. Optimizamos el flujo de reserva mediante botones de acción discretos pero omnipresentes y creamos páginas específicas para cada servicio que funcionan como galerías de arte interactivas.",
-    gallery: [Hermes1, Hermes2, Hermes3]
+    gallery: [Hermes1, Hermes2, Hermes3],
   },
   {
     title: "Wine Night",
@@ -399,6 +392,7 @@ const rawProjects = [
     problem: "Las catas de vino premium a menudo fallan en trasladar la mística de la bodega al entorno digital. El cliente necesitaba un portal que no solo gestionara reservas exclusivas, sino que educara al usuario sobre el origen y la nota de cata de cada etiqueta, eliminando la fricción en el proceso de registro para eventos de cupo limitado.",
     objective: "Diseñar una plataforma de marca que funcione como una invitación de lujo, priorizando la narrativa visual de las bodegas y facilitando una experiencia de reserva instantánea para una audiencia de perfil alto.",
     challenge: "El reto consistió en crear una interfaz que respete la tradición vinícola (estética clásica y orgánica) sin sacrificar la modernidad funcional. Debíamos organizar un catálogo de eventos por regiones y bodegas, manteniendo una jerarquía visual limpia que destaque la calidad de las botellas.",
+    solution: "Se implementó un diseño basado en el concepto de 'Cava Digital', utilizando una paleta de colores profundos y texturas que evocan el papel artesanal. Desarrollamos secciones narrativas para cada bodega, integrando galerías inmersivas y un motor de reservas optimizado. El uso de micro-interacciones sutiles refuerza la sensación de exclusividad en cada navegación.",
     colors: ["#2D0A0A", "#FDFCF0", "#C5A059", "#1A1A1A"],
     fonts: "Cinzel / Open Sans",
     metrics: [
@@ -412,8 +406,7 @@ const rawProjects = [
       { label: "Reserva Promedio", value: "1.5m" },
       { label: "Reseñas de Usuario", value: "5/5" },
     ],
-    solution: "Se implementó un diseño basado en el concepto de 'Cava Digital', utilizando una paleta de colores profundos y texturas que evocan el papel artesanal. Desarrollamos secciones narrativas para cada bodega, integrando galerías inmersivas y un motor de reservas optimizado. El uso de micro-interacciones sutiles refuerza la sensación de exclusividad en cada navegación.",
-    gallery: [WineNight1, WineNight2, WineNight3]
+    gallery: [WineNight1, WineNight2, WineNight3],
   },
   {
     title: "Ylang Ylang",
@@ -424,8 +417,8 @@ const rawProjects = [
     services: "Diseño UI/UX / E-commerce de Bienestar",
     problem: "El centro necesitaba digitalizar su oferta de servicios de lujo, permitiendo que los clientes no solo conocieran los tratamientos, sino que pudieran adquirirlos y reservarlos online, manteniendo una estética que reflejara serenidad y profesionalismo médico.",
     objective: "Crear un oasis digital que funcione como una extensión del centro físico, facilitando la compra de tratamientos premium y la gestión de citas en un entorno visualmente relajante y sofisticado.",
-    challenge: "Equilibrar tres áreas distintas del negocio: los tratamientos faciales/corporales tradicionales, la medicina estética avanzada y la venta directa de productos en tienda, todo bajo una misma jerarquía visual limpia[cite: 1].",
-    solution: "Se diseñó una plataforma e-commerce minimalista con una paleta de tonos crema y tierra. Se implementó un catálogo de servicios dividido por categorías (Faciales, Corporales, Medicina Estética) con fichas detalladas que incluyen duración y precio, optimizando el flujo de 'Añadir al carrito' para una conversión inmediata[cite: 1].",
+    challenge: "Equilibrar tres áreas distintas del negocio: los tratamientos faciales/corporales tradicionales, la medicina estética avanzada y la venta directa de productos en tienda, todo bajo una misma jerarquía visual limpia.",
+    solution: "Se diseñó una plataforma e-commerce minimalista con una paleta de tonos crema y tierra. Se implementó un catálogo de servicios dividido por categorías (Faciales, Corporales, Medicina Estética) con fichas detalladas que incluyen duración y precio, optimizando el flujo de 'Añadir al carrito' para una conversión inmediata.",
     colors: ["#632E32", "#F9F6F1", "#333333", "#FFFFFF"],
     fonts: "Cormorant Garamond / Montserrat",
     metrics: [
@@ -440,7 +433,7 @@ const rawProjects = [
       { label: "Rebote Mobile", value: "-25%" },
     ],
     description: "Centro de Estética y Belleza en Córdoba con servicio de Medicina Estética incorporado. El portal combina la calidez del bienestar emocional con la efectividad de la aparatología de alta gama.",
-    gallery: [Ylang1, Ylang2, Ylang3]
+    gallery: [Ylang1, Ylang2, Ylang3],
   },
   {
     title: "Travelmax",
@@ -452,7 +445,7 @@ const rawProjects = [
     problem: "La necesidad de una plataforma que permita a los usuarios explorar y reservar viajes no convencionales (desde el Antiguo Egipto hasta ciudades futuristas) con una interfaz clara que gestione itinerarios complejos y pagos multidivisa.",
     objective: "Diseñar un ecosistema digital de alta gama que combine la exploración visual de destinos con un motor de reservas eficiente, integrando servicios adicionales como traslados, seguros y guías personalizadas.",
     challenge: "Organizar categorías de viaje radicalmente distintas (Historia, Ciencia, Educación) manteniendo una coherencia visual que transmita confianza, modernidad y facilidad de uso en el proceso de checkout.",
-    solution: "Se implementó una interfaz limpia y modular basada en 'cards' interactivas que destacan el puntaje de satisfacción y detalles técnicos del paquete[cite: 1]. El sistema incluye un flujo de pago en tres pasos (Medio de pago, Datos personales, Confirmación) optimizado para transacciones rápidas. Además, se diseñó un área de usuario para la gestión de itinerarios y visualización de destinos sugeridos[cite: 1].",
+    solution: "Se implementó una interfaz limpia y modular basada en 'cards' interactivas que destacan el puntaje de satisfacción y detalles técnicos del paquete. El sistema incluye un flujo de pago en tres pasos (Medio de pago, Datos personales, Confirmación) optimizado para transacciones rápidas. Además, se diseñó un área de usuario para la gestión de itinerarios y visualización de destinos sugeridos.",
     colors: ["#4C58A4", "#FFFFFF", "#F2F2F2", "#333333"],
     fonts: "Montserrat / Inter",
     metrics: [
@@ -467,9 +460,10 @@ const rawProjects = [
       { label: "Rebote Mobile", value: "-14%" },
     ],
     description: "Plataforma de viajes premium que permite experimentar otras culturas y épocas. Desde la construcción de la Gran Pirámide hasta el Tokio futurista, Travelmax redefine el turismo mediante tecnología avanzada y curaduría de destinos únicos.",
-    gallery: [TravelMax1, TravelMax2, TravelMax3]
+    gallery: [TravelMax1, TravelMax2, TravelMax3],
   },
-  // --- EDITORIAL ---
+
+  // ─── EDITORIAL ─────────────────────────────────────────────────────────────
   {
     title: "Revista Maison",
     category: "Editorial",
@@ -480,8 +474,9 @@ const rawProjects = [
     problem: "Maison presentaba una estética saturada que competía visualmente con las fotografías de arquitectura, dificultando la lectura de ensayos extensos.",
     objective: "Rediseñar la identidad editorial mediante un sistema de retículas flexible que priorice el aire, la jerarquía tipográfica y el protagonismo visual de las obras.",
     challenge: "Crear una grilla que permitiera alojar desde despieces técnicos de planos hasta artículos de opinión, manteniendo una coherencia visual premium y minimalista.",
+    solution: "Se estableció una retícula de 12 columnas que permite variaciones asimétricas. La mezcla de una tipografía Serif humanista con una Sans-Serif técnica reforzó el equilibrio entre el arte y la precisión arquitectónica.",
     colors: ["#1A1A1A", "#FFFFFF", "#F2F2F2"],
-    fonts: "Editor’s Note / Helvetica Now",
+    fonts: "Editor's Note / Helvetica Now",
     metrics: [
       { name: "Jerarquía de Lectura", percentage: 95 },
       { name: "Equilibrio Visual", percentage: 92 },
@@ -493,8 +488,7 @@ const rawProjects = [
       { label: "Lectores Estimados", value: "15K" },
       { label: "Frecuencia", value: "Trimestral" },
     ],
-    solution: "Se estableció una retícula de 12 columnas que permite variaciones asimétricas. La mezcla de una tipografía Serif humanista con una Sans-Serif técnica reforzó el equilibrio entre el arte y la precisión arquitectónica.",
-    gallery: [Maison1, Maison2]
+    gallery: [Maison1, Maison2],
   },
   {
     title: "Revista Manifiesto",
@@ -506,20 +500,20 @@ const rawProjects = [
     problem: "La necesidad de crear una publicación que unifique disciplinas tan diversas como el arte digital, la arquitectura y la moda bajo una misma estética disruptiva.",
     objective: "Diseñar un sistema de grillas flexible que permita a cada sección tener su propia identidad visual sin perder la coherencia de la marca Manifiesto.",
     challenge: "Experimentar con la tipografía audaz y el uso de espacios en blanco para guiar al lector a través de artículos de alta densidad visual.",
+    solution: "Se implementó una arquitectura de información basada en contrastes: tipografías de gran escala para titulares y una estructura limpia para el cuerpo de texto. Se utilizaron separadores cromáticos para diferenciar las secciones de Arquitectura, Moda y Arte.",
     colors: ["#7c569b", "#e3b90d", "#d14b8f"],
     fonts: "Helvetica Neue / Bold Display",
     metrics: [
       { name: "Jerarquía Visual", percentage: 100 },
       { name: "Diseño de Grilla", percentage: 95 },
-      { name: "Curaduría Fotográfica", percentage: 90 }
+      { name: "Curaduría Fotográfica", percentage: 90 },
     ],
     impact: [
       { label: "Secciones Curadas", value: "3" },
       { label: "Estilos Visuales", value: "Híbrido" },
       { label: "Edición Limitada", value: "2021" },
     ],
-    solution: "Se implementó una arquitectura de información basada en contrastes: tipografías de gran escala para titulares y una estructura limpia para el cuerpo de texto. Se utilizaron separadores cromáticos para diferenciar las secciones de Arquitectura, Moda y Arte.",
-    gallery: [Manifiesto1, Manifiesto2]
+    gallery: [Manifiesto1, Manifiesto2],
   },
   {
     title: "Vincent van Gogh",
@@ -531,6 +525,7 @@ const rawProjects = [
     problem: "La biografía de Van Gogh suele presentarse de forma estática, perdiendo la intensidad emocional y la vibración cromática que definen su legado.",
     objective: "Diseñar una narrativa digital inmersiva que permita al usuario entender la psique del artista a través de sus propias palabras y obras.",
     challenge: "Equilibrar la alta carga visual de las pinturas con una interfaz minimalista que no compita con el arte, integrando datos históricos de forma fluida.",
+    solution: "Se implementó una arquitectura basada en el contraste: fondos oscuros para resaltar la luz de las obras y tipografía de gran escala para citas potentes. La navegación se divide en 'Estilo', 'Vida' y 'Obras', incluyendo una línea de tiempo interactiva que conecta hitos vitales con su producción artística.",
     colors: ["#2B3441", "#E3B90D", "#F5F5F5", "#1A1A1A"],
     fonts: "Playfair Display / Inter",
     metrics: [
@@ -544,10 +539,10 @@ const rawProjects = [
       { label: "Estilos Visuales", value: "Digital" },
       { label: "Edición Limitada", value: "2026" },
     ],
-    solution: "Se implementó una arquitectura basada en el contraste: fondos oscuros para resaltar la luz de las obras y tipografía de gran escala para citas potentes. La navegación se divide en 'Estilo', 'Vida' y 'Obras', incluyendo una línea de tiempo interactiva que conecta hitos vitales con su producción artística.",
-    gallery: [VanGogh1, VanGogh3]
+    gallery: [VanGogh1, VanGogh3],
   },
-  // --- PACKAGING ---
+
+  // ─── PACKAGING ─────────────────────────────────────────────────────────────
   {
     title: "Silkylatte",
     category: "Packaging",
@@ -558,6 +553,7 @@ const rawProjects = [
     problem: "La marca no lograba diferenciarse en una góndola saturada de colores vibrantes y plásticos brillantes, lo que diluía su mensaje de producto 100% orgánico.",
     objective: "Diseñar un sistema de empaque táctil y honesto que comunique naturalidad inmediata a través de la materialidad y una estética de lujo crudo.",
     challenge: "Lograr un diseño de etiqueta que sea funcional para la cadena de frío pero que mantenga la textura visual de un papel artesanal sin tratar.",
+    solution: "Diseñamos un packaging con colores tierra y texturas que emulan papel sin procesar. Las ilustraciones de grabados clásicos comunican tradición, logrando que el producto destaque por su sobriedad y elegancia.",
     colors: ["#D2B48C", "#4B3621", "#F5F5DC"],
     fonts: "Cormorant Garamond / Montserrat",
     metrics: [
@@ -571,8 +567,7 @@ const rawProjects = [
       { label: "Material Reciclado", value: "100%" },
       { label: "Intención de Compra", value: "+35%" },
     ],
-    solution: "Diseñamos un packaging con colores tierra y texturas que emulan papel sin procesar. Las ilustraciones de grabados clásicos comunican tradición, logrando que el producto destaque por su sobriedad y elegancia.",
-    gallery: [Silkylatte1, Silkylatte2]
+    gallery: [Silkylatte1, Silkylatte2],
   },
   {
     title: "Fruits Naturals",
@@ -584,20 +579,20 @@ const rawProjects = [
     problem: "Refrescar una línea de jugos frutales para destacar en góndola frente a competidores genéricos, enfatizando el aporte vitamínico.",
     objective: "Crear una identidad visual luminosa y natural que transmita frescura inmediata y claridad nutricional.",
     challenge: "Equilibrar la información técnica (tabla nutricional y beneficios) con un diseño aspiracional basado en paisajes naturales.",
+    solution: "Se diseñó un sistema de packaging con una arquitectura visual dividida: un tercio superior celeste que evoca naturalidad y pureza, y una base de color sólida según el sabor. Se incorporó un sello circular distintivo para la Vitamina C.",
     colors: ["#3E3274", "#F4A01C", "#B5C330"],
     fonts: "Rounded Sans / Script Organic",
     metrics: [
       { name: "Impacto Visual en Góndola", percentage: 95 },
       { name: "Jerarquía de Información", percentage: 100 },
-      { name: "Coherencia de Línea", percentage: 90 }
+      { name: "Coherencia de Línea", percentage: 90 },
     ],
     impact: [
       { label: "Sabor y Variedad", value: "3" },
       { label: "Aporte Vitamínico", value: "100%" },
       { label: "Presencia Mercado", value: "Nacional" },
     ],
-    solution: "Se diseñó un sistema de packaging con una arquitectura visual dividida: un tercio superior celeste que evoca naturalidad y pureza, y una base de color sólida según el sabor. Se incorporó un sello circular distintivo para la Vitamina C.",
-    gallery: [Fruits1, Fruits2]
+    gallery: [Fruits1, Fruits2],
   },
   {
     title: "Crown",
@@ -609,20 +604,20 @@ const rawProjects = [
     problem: "Lograr que un packaging fabricado con materiales sustentables mantenga una estética premium y femenina para el mercado de cuidado capilar.",
     objective: "Diseñar una identidad visual suave y sofisticada basada en fragancias florales, comunicando delicadeza y ecología en un mismo concepto.",
     challenge: "Utilizar una paleta cromática minimalista que destaque los componentes botánicos sin sobrecargar visualmente el envase ergonómico.",
+    solution: "Se desarrolló una línea gráfica centrada en ilustraciones florales de estilo cerezo japonés, utilizando una paleta de rosas suaves y blancos rotos. La arquitectura del envase prioriza la ergonomía y la reducción de materiales.",
     colors: ["#D4A5A5", "#FDEFF4", "#9DB196"],
     fonts: "Helvetica Neue / Playfair Display",
     metrics: [
       { name: "Sustentabilidad de Materiales", percentage: 100 },
       { name: "Aceptación Visual Premium", percentage: 95 },
-      { name: "Reducción de Tintas", percentage: 85 }
+      { name: "Reducción de Tintas", percentage: 85 },
     ],
     impact: [
       { label: "Plástico Reciclado", value: "PCR" },
       { label: "Línea de Cuidado", value: "Premium" },
       { label: "Fórmula Vegana", value: "100%" },
     ],
-    solution: "Se desarrolló una línea gráfica centrada en ilustraciones florales de estilo cerezo japonés, utilizando una paleta de rosas suaves y blancos rotos. La arquitectura del envase prioriza la ergonomía y la reducción de materiales.",
-    gallery: [Crown1, Crown2]
+    gallery: [Crown1, Crown2],
   },
   {
     title: "Artistik",
@@ -634,6 +629,7 @@ const rawProjects = [
     problem: "El mercado del vino joven está saturado de etiquetas tradicionales o excesivamente geométricas, lo que dificulta atraer a un consumidor que busca una conexión más artística y conceptual con el producto.",
     objective: "Crear una identidad visual que posicione al vino como una pieza de arte coleccionable, utilizando una narrativa surrealista que evoque las notas orgánicas y sensoriales de cada varietal.",
     challenge: "Desarrollar un sistema de ilustración que mantenga una coherencia estilística entre vinos tintos y blancos, permitiendo que cada etiqueta tenga su propia personalidad pero pertenezca a la misma familia visual.",
+    solution: "Se diseñó un sistema de etiquetas envolventes sobre un fondo gris neutro que resalta ilustraciones pictóricas centrales. Para el Malbec, se utilizaron tonos verdes y ocres con elementos de follaje sobre un rostro; para el Sauvignon Blanc, tonos amarillos cítricos y rosados suaves. La tipografía sans-serif minimalista para el nombre 'Artistik' equilibra la carga visual del arte, logrando un acabado sofisticado y moderno.",
     colors: ["#D1D3D4", "#5C6731", "#E6A15C", "#F4C95D"],
     fonts: "Inter / Playfair Display",
     metrics: [
@@ -647,8 +643,7 @@ const rawProjects = [
       { label: "Línea de Cuidado", value: "Moderno" },
       { label: "Fórmula Vegana", value: "100%" },
     ],
-    solution: "Se diseñó un sistema de etiquetas envolventes sobre un fondo gris neutro que resalta ilustraciones pictóricas centrales[cite: 1]. Para el Malbec, se utilizaron tonos verdes y ocres con elementos de follaje sobre un rostro; para el Sauvignon Blanc, tonos amarillos cítricos y rosados suaves[cite: 1]. La tipografía sans-serif minimalista para el nombre 'Artistik' equilibra la carga visual del arte, logrando un acabado sofisticado y moderno[cite: 1].",
-    gallery: [Artistik1, Artistik2]
+    gallery: [Artistik1, Artistik2],
   },
   {
     title: "White Fields",
@@ -660,6 +655,7 @@ const rawProjects = [
     problem: "La necesidad de irrumpir en la categoría de tés con una propuesta que comunique frescura inmediata y origen natural, diferenciando claramente los sabores cítricos en una góndola competitiva.",
     objective: "Desarrollar un sistema de packaging dinámico que utilice el color y la ilustración como principales identificadores de sabor, manteniendo una estética limpia y artesanal.",
     challenge: "Crear un patrón visual que sea atractivo tanto en el frente como en los laterales de la caja, asegurando que la jerarquía tipográfica de la marca White Fields sea legible sobre fondos ilustrados complejos.",
+    solution: "Se implementó un diseño de 'super-gráfico' basado en rodajas de frutas (limón y naranja) que envuelven la totalidad del envase. Se utilizó un panel central blanco con bordes ornamentales para enmarcar la marca, creando un contraste de 'aire' visual que equilibra la intensidad cromática del patrón cítrico. La inclusión de un mockup lateral con una taza e ingredientes reales (jengibre y rodajas) refuerza la promesa de sabor natural.",
     colors: ["#F9A825", "#FFD600", "#FFFFFF", "#4E342E"],
     fonts: "Beautiful / Playfair Display",
     metrics: [
@@ -673,8 +669,7 @@ const rawProjects = [
       { label: "Variedad", value: "Cítricos" },
       { label: "Contenido", value: "50g" },
     ],
-    solution: "Se implementó un diseño de 'super-gráfico' basado en rodajas de frutas (limón y naranja) que envuelven la totalidad del envase[cite: 1]. Se utilizó un panel central blanco con bordes ornamentales para enmarcar la marca, creando un contraste de 'aire' visual que equilibra la intensidad cromática del patrón cítrico[cite: 1]. La inclusión de un mockup lateral con una taza e ingredientes reales (jengibre y rodajas) refuerza la promesa de sabor natural[cite: 1].",
-    gallery: [WhiteFields1, WhiteFields2]
+    gallery: [WhiteFields1, WhiteFields2],
   },
   {
     title: "Hertz",
@@ -686,6 +681,7 @@ const rawProjects = [
     problem: "La necesidad de crear una marca de cerveza artesanal que se distancie de los códigos visuales rústicos habituales, buscando una identidad que evoque elegancia, ritmo y tradición desde una perspectiva técnica y artística.",
     objective: "Posicionar a Hertz como una cerveza de autor donde cada variedad representa una 'nota musical' distinta, utilizando la herencia histórica y la precisión del sonido como pilares de marca.",
     challenge: "Integrar iconografía musical compleja (instrumentos como el saxofón y el arpa) en una etiqueta de estilo heráldico sin perder la legibilidad de la marca y manteniendo un equilibrio entre lo clásico y lo moderno.",
+    solution: "Se desarrolló un sistema de etiquetas circulares con bandas rojas transversales que contienen la tipografía principal 'HERTZ' en un estilo serif robusto. Para la variante 'Estadounidense', se utilizó la ilustración de un saxofón, evocando el Jazz; para la variante 'Alemana', se utilizó un arpa, simbolizando la música clásica europea. El uso de acabados en oro y plata refuerza la categoría artesanal premium del producto.",
     colors: ["#A31D24", "#C6A15B", "#E6E7E8", "#1A1A1B"],
     fonts: "Bodoni / Montserrat",
     metrics: [
@@ -699,10 +695,10 @@ const rawProjects = [
       { label: "Estilos", value: "Jazz" },
       { label: "Concepto", value: "Hz" },
     ],
-    solution: "Se desarrolló un sistema de etiquetas circulares con bandas rojas transversales que contienen la tipografía principal 'HERTZ' en un estilo serif robusto[cite: 1]. Para la variante 'Estadounidense', se utilizó la ilustración de un saxofón, evocando el Jazz; para la variante 'Alemana', se utilizó un arpa, simbolizando la música clásica europea[cite: 1]. El uso de acabados en oro y plata refuerza la categoría artesanal premium del producto[cite: 1].",
-    gallery: [Hertz1, Hertz2]
+    gallery: [Hertz1, Hertz2],
   },
-  // --- CAMPAÑAS ---
+
+  // ─── CAMPAÑAS ──────────────────────────────────────────────────────────────
   {
     title: "M+ Brand Fidelity",
     category: "Campañas",
@@ -727,7 +723,7 @@ const rawProjects = [
       { label: "Temas Clave", value: "5" },
       { label: "Calidad Visual", value: "Premium" },
     ],
-    gallery: [Fidelity1]
+    gallery: [Fidelity1],
   },
   {
     title: "Consumer Pulse",
@@ -753,7 +749,7 @@ const rawProjects = [
       { label: "CTR en LinkedIn", value: "4.8%" },
       { label: "Páginas Curadas", value: "200+" },
     ],
-    gallery: [ConsumerPulse1]
+    gallery: [ConsumerPulse1],
   },
   {
     title: "Consumer's Report",
@@ -765,7 +761,7 @@ const rawProjects = [
     problem: "La necesidad de estandarizar la comunicación visual de una marca de consumo masivo para sus equipos regionales, manteniendo la coherencia en un mercado global fragmentado.",
     objective: "Diseñar un sistema de comunicación visual impactante que convierta investigaciones de sentimiento económico en contenido social accionable y estéticamente superior.",
     challenge: "Equilibrar el uso de imágenes conceptuales de alto impacto con una estructura de diseño modular que permita una producción rápida y consistente en diferentes países.",
-    solution: "Se creó un sistema basado en 'Visual Metaphors' y un manual de diseño digital. La pieza central utiliza fotografía macro con intervenciones digitales (código de barras) para simbolizar el enfoque analítico sobre el consumo, complementado con llamadas a la acción claras como 'Get the report'[cite: 1].",
+    solution: "Se creó un sistema basado en 'Visual Metaphors' y un manual de diseño digital. La pieza central utiliza fotografía macro con intervenciones digitales (código de barras) para simbolizar el enfoque analítico sobre el consumo, complementado con llamadas a la acción claras como 'Get the report'.",
     colors: ["#000000", "#FFFFFF", "#E5E5E5"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -779,7 +775,7 @@ const rawProjects = [
       { label: "Consistencia Global", value: "100%" },
       { label: "Engagement Social", value: "Alto" },
     ],
-    gallery: [Consumer1]
+    gallery: [Consumer1],
   },
   {
     title: "True Loyalty",
@@ -791,7 +787,7 @@ const rawProjects = [
     problem: "Las campañas de fidelización tradicionales en banca privada suelen percibirse como transaccionales y estáticas, fallando en conectar con las motivaciones profundas del cliente.",
     objective: "Transformar la lealtad de marca en un sistema vivo y adaptativo basado en behavioral science, premiando la relación a largo plazo mediante una narrativa de ingeniería emocional.",
     challenge: "Arquitectar sistemas de comportamiento que traten los datos de los usuarios como un organismo que se sintoniza en tiempo real, sin perder la calidez humana del servicio premium.",
-    solution: "Se desarrolló 'The Loyalty Engineer's Playbook', una campaña que utiliza geometrías circulares y una paleta color bordó profunda para simbolizar ciclos de retroalimentación[cite: 1]. La dirección de arte integra retratos íntimos que humanizan los 'Adaptive Behavioral Systems', posicionando al banco como un facilitador de historias de vida reales[cite: 1].",
+    solution: "Se desarrolló 'The Loyalty Engineer's Playbook', una campaña que utiliza geometrías circulares y una paleta color bordó profunda para simbolizar ciclos de retroalimentación. La dirección de arte integra retratos íntimos que humanizan los 'Adaptive Behavioral Systems', posicionando al banco como un facilitador de historias de vida reales.",
     colors: ["#A11C33", "#000000", "#FFFFFF"],
     fonts: "Plus Jakarta Sans / Inter",
     metrics: [
@@ -805,7 +801,7 @@ const rawProjects = [
       { label: "Data Behavioral", value: "Real-time" },
       { label: "Sistemas", value: "Adaptive" },
     ],
-    gallery: [TrueLoyalty1]
+    gallery: [TrueLoyalty1],
   },
   {
     title: "Bloomberg Screentime",
@@ -817,7 +813,7 @@ const rawProjects = [
     problem: "En un ecosistema mediático saturado, el desafío era representar visualmente cómo la IA y las nuevas audiencias están reescribiendo las reglas de la creatividad y la producción.",
     objective: "Diseñar una identidad visual para el evento anual de Bloomberg que capture la tensión entre la tecnología moderna y la narrativa cinematográfica tradicional.",
     challenge: "Crear un sistema visual que se adapte a múltiples formatos de pantalla, simbolizando la 'fluidez digital' y la evolución de los guiones escritos por algoritmos.",
-    solution: "Se desarrolló un concepto basado en 'ventanas circulares' que enmarcan escenas de producción en entornos surrealistas (Mars-like sets)[cite: 1]. La paleta de colores minimalista en negro y crema eleva la sofisticación de la marca, mientras que frases como 'AI is writing scripts' provocan la reflexión sobre el futuro de la industria[cite: 1].",
+    solution: "Se desarrolló un concepto basado en 'ventanas circulares' que enmarcan escenas de producción en entornos surrealistas (Mars-like sets). La paleta de colores minimalista en negro y crema eleva la sofisticación de la marca, mientras que frases como 'AI is writing scripts' provocan la reflexión sobre el futuro de la industria.",
     colors: ["#000000", "#D9BBA9", "#FFFFFF"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -831,7 +827,7 @@ const rawProjects = [
       { label: "Temática", value: "AI & Media" },
       { label: "Visuales", value: "Cinematic" },
     ],
-    gallery: [BloombergScreentime1]
+    gallery: [BloombergScreentime1],
   },
   {
     title: "Drupal Anniversary",
@@ -843,7 +839,7 @@ const rawProjects = [
     problem: "La necesidad de revitalizar la percepción de Drupal ante una nueva generación de desarrolladores, alejándose de una imagen técnica estática para mostrar un ecosistema vibrante y con trayectoria.",
     objective: "Celebrar los hitos de la plataforma (25 años) mediante una identidad visual que simbolice la evolución, la colaboración global y la versatilidad de la herramienta.",
     challenge: "Transformar la herencia de una tecnología robusta en una narrativa visual moderna que resulte atractiva tanto para desarrolladores senior como para nuevos talentos.",
-    solution: "Se diseñó un sistema visual centrado en tipografía geométrica de gran formato entrelazada con patrones de líneas vibrantes en degradados de azul a púrpura[cite: 1]. Esta estética lineal representa la interconexión del código y la comunidad, logrando una pieza de 'stop-scroll' que comunica celebración y vanguardia técnica simultáneamente[cite: 1].",
+    solution: "Se diseñó un sistema visual centrado en tipografía geométrica de gran formato entrelazada con patrones de líneas vibrantes en degradados de azul a púrpura. Esta estética lineal representa la interconexión del código y la comunidad, logrando una pieza de 'stop-scroll' que comunica celebración y vanguardia técnica simultáneamente.",
     colors: ["#000000", "#2E98D1", "#7E3A94", "#FFFFFF"],
     fonts: "Plus Jakarta Sans / Inter",
     metrics: [
@@ -857,7 +853,7 @@ const rawProjects = [
       { label: "Concepto", value: "Build Anything" },
       { label: "Audiencia", value: "Global" },
     ],
-    gallery: [Drupal1]
+    gallery: [Drupal1],
   },
   {
     title: "Advertising Week",
@@ -869,7 +865,7 @@ const rawProjects = [
     problem: "La necesidad de generar contenido visual de alto impacto en tiempo real durante una semana de conferencias masivas en Nueva York, capturando la esencia de los ponentes de forma inmediata.",
     objective: "Posicionar a la marca en el epicentro de la conversación de la industria mediante una narrativa visual que combine 'human insights' con la estética futurista del marketing digital.",
     challenge: "Desarrollar un flujo de trabajo ultra-rápido que permitiera transformar declaraciones complejas en piezas gráficas de calidad editorial en cuestión de minutos.",
-    solution: "Se implementó un sistema de diseño 'Live-to-Feed' basado en plantillas dinámicas y una paleta de colores vibrantes (púrpura y cian). La dirección de arte utiliza retratos con proyecciones de datos y formas circulares orgánicas para suavizar la tecnología, logrando que el contenido se sienta tanto innovador como accesible[cite: 1].",
+    solution: "Se implementó un sistema de diseño 'Live-to-Feed' basado en plantillas dinámicas y una paleta de colores vibrantes (púrpura y cian). La dirección de arte utiliza retratos con proyecciones de datos y formas circulares orgánicas para suavizar la tecnología, logrando que el contenido se sienta tanto innovador como accesible.",
     colors: ["#000000", "#9E567E", "#2A94C1", "#FFFFFF"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -883,7 +879,7 @@ const rawProjects = [
       { label: "Concepto", value: "Inflection Point" },
       { label: "Tiempo de Entrega", value: "Real-Time" },
     ],
-    gallery: [AdvertisingWeek1]
+    gallery: [AdvertisingWeek1],
   },
   {
     title: "DrupalCon",
@@ -895,7 +891,7 @@ const rawProjects = [
     problem: "Comunicar la evolución de Drupal hacia la era de la búsqueda por IA en el primer evento presencial post-pandemia, necesitando una estética que equilibrara la madurez técnica con la energía del reencuentro.",
     objective: "Generar una identidad visual modular y escalable que permitiera destacar tanto los 'Lightning Talks' como la presencia de líderes de la industria en un formato social de alto impacto.",
     challenge: "Organizar múltiples niveles de información (horarios, ponentes, temas técnicos y branding) dentro de una sola pieza gráfica sin perder la claridad ni el dinamismo visual.",
-    solution: "Se implementó un sistema de diseño basado en bloques de color inspirados en el estilo suizo, utilizando una cuadrícula de 4x4 para albergar iconos personalizados, fotografías de ponentes y tipografía sans-serif[cite: 1]. El uso de una paleta multicolor sobre fondo blanco refuerza la idea de una comunidad inclusiva, diversa y preparada para los desafíos de la IA[cite: 1].",
+    solution: "Se implementó un sistema de diseño basado en bloques de color inspirados en el estilo suizo, utilizando una cuadrícula de 4x4 para albergar iconos personalizados, fotografías de ponentes y tipografía sans-serif. El uso de una paleta multicolor sobre fondo blanco refuerza la idea de una comunidad inclusiva, diversa y preparada para los desafíos de la IA.",
     colors: ["#F15A2B", "#FBB03B", "#29ABE2", "#0071BC", "#39B54A"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -909,7 +905,7 @@ const rawProjects = [
       { label: "Booth", value: "#112" },
       { label: "Concepto", value: "Be human. Think digital." },
     ],
-    gallery: [DrupalCon1]
+    gallery: [DrupalCon1],
   },
   {
     title: "Women's International Day 2026",
@@ -921,7 +917,7 @@ const rawProjects = [
     problem: "La necesidad de alejarse de los mensajes genéricos corporativos para el Día Internacional de la Mujer, buscando una campaña que empoderara de forma visualmente única y no estereotipada.",
     objective: "Honrar la diversidad de roles femeninos en la sociedad y los negocios mediante una narrativa visual inclusiva que proyecte autenticidad y liderazgo.",
     challenge: "Integrar múltiples perfiles y profesiones en una composición armónica que comunique unidad sin perder la individualidad de cada historia.",
-    solution: "Se desarrolló un sistema de mosaico cromático basado en bloques de colores primarios y secundarios suaves[cite: 1]. La dirección de arte utiliza retratos fotográficos directos que capturan la personalidad de cada mujer, complementados con citas de liderazgo (ej. Caroline Kennedy, CEO) sobre un fondo rosa predominante que actúa como hilo conductor de la campaña[cite: 1].",
+    solution: "Se desarrolló un sistema de mosaico cromático basado en bloques de colores primarios y secundarios suaves. La dirección de arte utiliza retratos fotográficos directos que capturan la personalidad de cada mujer, complementados con citas de liderazgo (ej. Caroline Kennedy, CEO) sobre un fondo rosa predominante que actúa como hilo conductor de la campaña.",
     colors: ["#E16A8C", "#F8B739", "#A7C957", "#FFFFFF"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -935,7 +931,7 @@ const rawProjects = [
       { label: "Narrativa", value: "Diversidad y Poder" },
       { label: "Alcance", value: "Récord Histórico" },
     ],
-    gallery: [WID1]
+    gallery: [WID1],
   },
   {
     title: "Save The Children",
@@ -947,7 +943,7 @@ const rawProjects = [
     problem: "Generar conciencia y donaciones en una era de fatiga informativa, donde las imágenes de crisis suelen ser ignoradas por saturación.",
     objective: "Comunicar el éxito de la escala del impacto global de la organización mediante una narrativa visual positiva y esperanzadora que celebre a las familias y comunidades.",
     challenge: "Humanizar los datos de impacto social sin recurrir al realismo crudo, creando una conexión emocional a través de un lenguaje visual universal y moderno.",
-    solution: "Se desarrolló una identidad basada en ilustraciones de trazo orgánico y personajes simplificados en colores vibrantes sobre fondos crema[cite: 1]. Esta estética amable y directa permite resaltar hitos como ser 'Winner' y 'Finalist' en los Shorty Awards dentro de la categoría Non-Profit, posicionando la campaña como un referente de innovación en el sector social[cite: 1].",
+    solution: "Se desarrolló una identidad basada en ilustraciones de trazo orgánico y personajes simplificados en colores vibrantes sobre fondos crema. Esta estética amable y directa permite resaltar hitos como ser 'Winner' y 'Finalist' en los Shorty Awards dentro de la categoría Non-Profit, posicionando la campaña como un referente de innovación en el sector social.",
     colors: ["#E34234", "#00A651", "#1B75BC", "#F0E6D2"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -961,7 +957,7 @@ const rawProjects = [
       { label: "Categoría", value: "Non-Profit" },
       { label: "Concepto", value: "Scaling Global Impact" },
     ],
-    gallery: [STC1]
+    gallery: [STC1],
   },
   {
     title: "Healthcare Interactive Conference",
@@ -973,7 +969,7 @@ const rawProjects = [
     problem: "La Healthcare Interactive Conference necesitaba una identidad visual que comunicara liderazgo en la intersección de la medicina, los datos y la IA, alejándose de los códigos visuales tradicionales de la salud.",
     objective: "Definir el futuro digital de la atención médica mediante una narrativa visual que proyecte precisión tecnológica y visión estratégica.",
     challenge: "Diseñar un sistema que capture la complejidad de la analítica de datos y la inteligencia artificial sin perder la figura humana como centro de la innovación médica.",
-    solution: "Se desarrolló un concepto visual basado en 'Digital Vision', utilizando fotografía con iluminación de neón y reflejos de datos digitales. La composición integra formas geométricas en tonos lavanda y cian, que actúan como contenedores de información, mientras que el logo de HCIC mantiene una estructura sólida y corporativa que ancla la propuesta tecnológica[cite: 1].",
+    solution: "Se desarrolló un concepto visual basado en 'Digital Vision', utilizando fotografía con iluminación de neón y reflejos de datos digitales. La composición integra formas geométricas en tonos lavanda y cian, que actúan como contenedores de información, mientras que el logo de HCIC mantiene una estructura sólida y corporativa que ancla la propuesta tecnológica.",
     colors: ["#7A81FF", "#00AEEF", "#000000", "#FFFFFF"],
     fonts: "Inter / Plus Jakarta Sans",
     metrics: [
@@ -987,12 +983,884 @@ const rawProjects = [
       { label: "Concepto", value: "Digital Future" },
       { label: "Temática", value: "Marketing, Data & AI" },
     ],
-    gallery: [HCIC1]
-  }
+    gallery: [HCIC1],
+  },
 ];
 
-// 2. Exportamos una constante que genera el ID según el orden
-export const projects = rawProjects.map((project, index) => ({
-  ...project,
-  id: index + 1 // El primer proyecto será ID: 1, el segundo ID: 2, etc.
-}));
+// ─── English version ────────────────────────────────────────────────────────
+const rawProjectsEN = [
+  // ─── WEB ───────────────────────────────────────────────────────────────────
+  {
+    title: "Digital Vector",
+    category: "Web",
+    image: Portada_DigitalVector,
+    slug: "digitalVector",
+    year: "2026",
+    services: "UI/UX Design / Web Development",
+    problem: "The brand had a disconnect between its technological capabilities and its digital presence, leading to a low-value perception and reduced retention of corporate clients.",
+    objective: "Develop a high-performance digital ecosystem under a 'Tech-Luxury' aesthetic that projects technical authority and optimizes the B2B conversion funnel.",
+    challenge: "Striking the balance between a complex technical information architecture and a minimalist navigation experience driven by high-precision micro-interactions.",
+    solution: "An interface was designed based on a rigorous technical grid and a modular system that ensures scalability. Navigation was simplified through subtle micro-interactions that reduce cognitive load and organically guide users toward conversion points.",
+    colors: ["#121212", "#90189c", "#E5E5E5"],
+    fonts: "Inter",
+    metrics: [
+      { name: "UX Optimization", percentage: 95 },
+      { name: "Mobile Performance", percentage: 90 },
+      { name: "Accessibility (WCAG)", percentage: 88 },
+      { name: "User Retention", percentage: 92 },
+    ],
+    impact: [
+      { label: "User Attention", value: "+40%" },
+      { label: "Lead Acquisition", value: "+20%" },
+      { label: "Load Speed", value: "0.8s" },
+    ],
+    gallery: [DigitalVector1, DigitalVector2, DigitalVector3],
+  },
+  {
+    title: "Bloom Indumentaria",
+    category: "Web",
+    image: Portada_Bloom,
+    slug: "bloom",
+    year: "2024",
+    services: "UI/UX Design / Web Development",
+    problem: "The Bloom designer brand had a visual disconnect on its digital platform. The previous site failed to convey the exclusivity of its pieces, resulting in a generic user experience that didn't justify the premium value of its products.",
+    objective: "Redesign the shopping experience under a 'Mobile-First' approach that works as a digital extension of the design studio, prioritizing visual elegance and operational simplicity.",
+    challenge: "Balancing the 'soft-luxury' minimalist aesthetic with the critical conversion features of an eCommerce, ensuring the visual hierarchy doesn't compete with the garments as the main focus.",
+    solution: "A design was implemented based on generous white spaces and a neutral color palette to highlight the product. We optimized the purchase flow through intuitive touch navigation, dynamic color selectors, and a modular catalog enabling clear and fast visualization of collections.",
+    colors: ["#F9F1F1", "#CB9991", "#111111", "#9D9D9C"],
+    fonts: "Playfair Display / Lato",
+    metrics: [
+      { name: "Mobile Optimization", percentage: 98 },
+      { name: "Conversion Rate", percentage: 85 },
+      { name: "Checkout Usability", percentage: 90 },
+      { name: "Load Speed", percentage: 94 },
+    ],
+    impact: [
+      { label: "App Sales", value: "+35%" },
+      { label: "User Acquisition", value: "+50%" },
+      { label: "Navigation Speed", value: "1.2s" },
+    ],
+    gallery: [Bloom1, Bloom2, Bloom3],
+  },
+  {
+    title: "Fanfiction App",
+    category: "Web",
+    image: Portada_Fanfiction,
+    slug: "fanfiction",
+    year: "2025",
+    services: "UI/UX Design / Product Strategy",
+    problem: "Current reading platforms tend to overwhelm users with noisy interfaces. In a community with intensive content consumption (hours of reading), visual fatigue and difficulty discovering relevant stories were the main pain points.",
+    objective: "Create an immersive 'Dark Mode' interface that prioritizes visual comfort, facilitating both long-form story consumption and social interaction between authors and readers through clear metrics.",
+    challenge: "Organizing large volumes of metadata (tags, warnings, chapters, and reviews) without breaking the minimalist aesthetic, ensuring the information hierarchy is clear on mobile devices.",
+    solution: "An information architecture centered on content was designed, using a high-contrast but low-fatigue color scheme (pure black backgrounds for OLED screens). We implemented a real-time review and statistics system that allows users to validate the quality of fanfics before starting to read.",
+    colors: ["#000000", "#111827", "#6DB4B6", "#FFFFFF"],
+    fonts: "Inter / Roboto",
+    metrics: [
+      { name: "Night Readability", percentage: 96 },
+      { name: "Intuitive Navigation", percentage: 92 },
+      { name: "Community Engagement", percentage: 88 },
+      { name: "Load Performance", percentage: 95 },
+    ],
+    impact: [
+      { label: "User Loyalty", value: "+45%" },
+      { label: "Growth Rate", value: "4.3/5" },
+      { label: "Favorites", value: "1M+" },
+    ],
+    gallery: [Fanfiction1, Fanfiction2],
+  },
+  {
+    title: "Payslip App",
+    category: "Web",
+    image: Portada_Payslip,
+    slug: "payslip",
+    year: "2023",
+    services: "SaaS Design / HR Technology / Product Strategy",
+    problem: "Traditional payslip management is often bureaucratic and fragmented. Both companies and employees struggled with slow signing processes, lack of traceability in document statuses, and a complex accounting data display for the average user.",
+    objective: "Design a comprehensive SaaS platform that digitizes the payslip lifecycle (upload, display, and signature), transforming dry legal documents into an intuitive, secure, and transparent experience on any device.",
+    challenge: "Balancing the rigidity of financial data with a friendly interface. The biggest challenge was designing a visually hierarchical status system (Pending/Signed/Rejected) and analytical dashboards that allow quick control over pending documentation.",
+    solution: "We implemented a multi-platform ecosystem with a centralized dashboard. For the employee, we prioritized mobile accessibility and document status clarity; for the employer, we developed advanced filtering tools and compliance charts to monitor payroll management in real time.",
+    colors: ["#000000", "#7C3AED", "#10B981", "#EF4444"],
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Signing Efficiency", percentage: 95 },
+      { name: "Data Clarity", percentage: 90 },
+      { name: "Adoption Rate", percentage: 88 },
+      { name: "Perceived Security", percentage: 98 },
+    ],
+    impact: [
+      { label: "Documentation Cycle", value: "+70%" },
+      { label: "Paperless Rate", value: "100%" },
+      { label: "Session Speed", value: "45s" },
+    ],
+    gallery: [Payslip1, Payslip2, Payslip3],
+  },
+  {
+    title: "Sugar Blossom",
+    category: "Web",
+    image: Portada_SweetBlossom,
+    slug: "blossom",
+    year: "2024",
+    services: "Web Design / Branding / E-commerce",
+    problem: "A boutique bakery with a very defined aesthetic wanted to digitize its catalog and order system. The main challenge was avoiding a 'cold' or generic interface, making users feel the same warmth and artisanal aroma as when entering the physical store.",
+    objective: "Design a visually rich and sensory platform that works as a digital storefront, facilitating event bookings and premium product purchases through romantic and fluid navigation.",
+    challenge: "Balancing visual ornamentation (botanical illustrations and script typefaces) with usability. It was critical that decorative elements didn't distract users from the purchase process, maintaining optimal load performance despite high-resolution images.",
+    solution: "An interface was developed based on the 'digital bakery' concept, using a soft color palette and delicate micro-interactions. We implemented dedicated sections for 'Tea Time' and 'Events' with simplified forms, integrating large-format product photography as the center of the UX experience.",
+    colors: ["#D9ADAD", "#E8C3C3", "#6DB4B6", "#FFFFFF"],
+    fonts: "Great Vibes / Montserrat",
+    metrics: [
+      { name: "Visual Aesthetics", percentage: 98 },
+      { name: "Order Conversion", percentage: 82 },
+      { name: "User Retention", percentage: 89 },
+      { name: "Load Speed", percentage: 91 },
+    ],
+    impact: [
+      { label: "Online Sales", value: "+40%" },
+      { label: "Event Inquiries", value: "+65%" },
+      { label: "User Satisfaction", value: "4.9/5" },
+    ],
+    gallery: [SweetBlossom1, SweetBlossom2, SweetBlossom3],
+  },
+  {
+    title: "Foodie App",
+    category: "Web",
+    image: Portada_Foodie,
+    slug: "food",
+    year: "2025",
+    services: "Mobile Product Design / UI/UX Design",
+    problem: "In a saturated delivery market, apps tend to focus solely on the transaction, neglecting the user's sensory experience. Foodie needed an interface that transformed the task of ordering food into a visually appetizing and frictionless process.",
+    objective: "Design a comprehensive mobile experience that optimizes the conversion flow from login to checkout, using a clear visual hierarchy, high-quality photography, and an intuitive navigation system based on categories and personalized recommendations.",
+    challenge: "Achieving a balance between information density (prices, delivery times, ratings, menus) and a clean design that doesn't overwhelm users. The biggest challenge was unifying the 'Offers' and 'Recommended' flow while maintaining visual consistency at every stage of the purchase process.",
+    solution: "An 'Image-First' design system was implemented to stimulate the user's appetite. We optimized the payment flow with a transparent account summary and a social login system to reduce abandonment. The strategic use of yellow not only reinforces brand identity but stimulates speed and happiness in decision-making.",
+    colors: ["#FBBF24", "#FFFFFF", "#EF4444", "#111827"],
+    fonts: "Inter / Montserrat",
+    metrics: [
+      { name: "Order Speed", percentage: 94 },
+      { name: "User Retention", percentage: 86 },
+      { name: "Checkout Usability", percentage: 92 },
+      { name: "Visual Engagement", percentage: 98 },
+    ],
+    impact: [
+      { label: "Conversion Rate", value: "+38%" },
+      { label: "Average Order Time", value: "2.5m" },
+      { label: "User Satisfaction", value: "4.8/5" },
+    ],
+    gallery: [Food1, Food2],
+  },
+  {
+    title: "Orpheus Opera",
+    category: "Web",
+    image: Portada_Orpheus,
+    slug: "orpheus",
+    year: "2023",
+    services: "Digital Identity / UX Design / Booking System",
+    problem: "Orpheus Opera faced the challenge of connecting with new audiences in the digital age. Its previous online presence felt elitist and static, creating a barrier for young audiences and making it difficult to navigate critical processes like checking the program and buying tickets.",
+    objective: "Redesign the opera's digital identity to turn it into an immersive and dynamic platform. The goal was to facilitate the discovery of classic works, promote the arts academy, and simplify booking management through a modern, visual calendar system.",
+    challenge: "Maintaining the balance between the solemnity of operatic tradition and current UX design trends. It was essential that the interface be visually striking—using large-format artistic photography—without sacrificing functional clarity on mobile devices.",
+    solution: "A sophisticated 'Dark Mode' experience was developed using bordeaux as the emotional thread. We implemented an intuitive calendar filtering system, detailed cast profiles with multimedia galleries, and dedicated academy sections. The information architecture focused on conversion, integrating strategic booking buttons that reduce the purchase flow to just a few steps.",
+    colors: ["#3E0202", "#FFFFFF", "#F8F5F2", "#1A1A1A"],
+    fonts: "Playfair Display / Inter",
+    metrics: [
+      { name: "Ticket Booking", percentage: 96 },
+      { name: "Media Interaction", percentage: 84 },
+      { name: "User Retention", percentage: 91 },
+      { name: "Accessibility", percentage: 95 },
+    ],
+    impact: [
+      { label: "New Subscribers", value: "+55%" },
+      { label: "Mobile Bookings", value: "+42%" },
+      { label: "Average Session", value: "4.8m" },
+    ],
+    gallery: [Orpheus1, Orpheus2, Orpheus3],
+  },
+  {
+    title: "Electrohaus Landing",
+    category: "Web",
+    image: Portada_Electrohaus,
+    slug: "electrohaus",
+    year: "2026",
+    services: "Interaction Design / Event Web / Art Direction",
+    problem: "In the events industry, information overload often dilutes a festival's identity. Electrohaus needed a landing page that not only sold tickets but also worked as a visual prologue to the event, capturing the aggression and rhythm of industrial electronic music.",
+    objective: "Design a high-visual-impact web experience (Digital Brutalism) that maximizes anticipation and pre-sale conversion through bold typographic hierarchy and a fluid mobile navigation system.",
+    challenge: "The main challenge was maintaining optimal readability under a high-contrast aesthetic with disruptive visual elements. The interface needed to convey constant energy and movement without compromising load speed, essential for users accessing from social media.",
+    solution: "A design based on digital brutalism was implemented, using large-format typography as the main graphic element. The solution included interactive scroll effects simulating the pulse of music, a neon color palette on deep black backgrounds to highlight the line-up, and an integrated ticket purchase flow that minimizes user clicks.",
+    colors: ["#000000", "#ff3fe0", "#FFFFFF", "#1A1A1A"],
+    fonts: "Archivo Black / Space Mono",
+    metrics: [
+      { name: "Visual Impact", percentage: 98 },
+      { name: "Pre-sale Conversion", percentage: 85 },
+      { name: "Mobile Optimization", percentage: 96 },
+      { name: "Social Engagement", percentage: 92 },
+    ],
+    impact: [
+      { label: "Tickets Sold Out", value: "48hrs" },
+      { label: "Social Shares", value: "12K" },
+      { label: "Average Session", value: "3.5m" },
+    ],
+    gallery: [ElectroHaus1, ElectroHaus2, ElectroHaus3],
+  },
+  {
+    title: "Magic Travel Game",
+    category: "Web",
+    image: Portada_MagicTravel,
+    slug: "magictravel",
+    year: "2022",
+    services: "Game Web Design / UI Design / Branding",
+    problem: "As an indie game in a saturated market, Magic Travel needed a showcase that not only explained the game but made users feel the magical atmosphere before downloading it. The biggest obstacle was organizing character, level, and reward information without breaking the brand's dreamlike aesthetic.",
+    objective: "Design an immersive landing page that works as a portal to the game universe, optimizing the visual hierarchy to highlight pre-registration and character and companion evolution mechanics.",
+    challenge: "The technical challenge was integrating a large number of illustrative elements and ornamental decorations while maintaining smooth performance. From a UX perspective, we needed to present rewards and levels in a playful way, mimicking the game's internal interface.",
+    solution: "We created a design based on layers and soft textures emulating sky and water. We implemented interactive character cards and a reward carousel that visualizes pet evolution. The use of golden ornamental frames elevates the game's quality perception, positioning it as a premium experience.",
+    colors: ["#A5C9ED", "#F3E5D8", "#7B9ACC", "#FFFFFF"],
+    fonts: "Cormorant Garamond / Montserrat",
+    metrics: [
+      { name: "Pre-registrations", percentage: 94 },
+      { name: "Visual Immersion", percentage: 98 },
+      { name: "Mechanics Clarity", percentage: 88 },
+      { name: "Landing Retention", percentage: 90 },
+    ],
+    impact: [
+      { label: "Daily Downloads", value: "5K+" },
+      { label: "Community Growth", value: "+120%" },
+      { label: "Average Time", value: "4.2m" },
+    ],
+    gallery: [MagicTravel1, MagicTravel2, MagicTravel3],
+  },
+  {
+    title: "Hermes Hotel",
+    category: "Web",
+    image: Portada_Hermes,
+    slug: "hermes",
+    year: "2019",
+    services: "Luxury Web Design / UI/UX Design / Booking Strategy",
+    problem: "Hotel Hermes needed a digital presence worthy of its five-star boutique service. Its previous platform failed to convey the exclusivity of its spaces, resulting in a high bounce rate and excessive dependency on external booking agencies.",
+    objective: "Design an immersive, high-performance web experience that acts as a digital concierge, allowing guests to explore rooms, wellness services, and event spaces with fluid navigation that encourages direct booking.",
+    challenge: "The main challenge was balancing large-format high-resolution image loading with ultra-fast load speeds. We also needed to create a clear information architecture that segmented hospitality, relaxation, and corporate services without losing visual elegance.",
+    solution: "A design system based on 'Editorial Layouts' was implemented, using generous white spaces and serif headings that evoke high-end design magazines. We optimized the booking flow with discreet but ever-present action buttons and created service-specific pages that function as interactive art galleries.",
+    colors: ["#F8F5F2", "#1A1A1A", "#338ea8", "#D9D9D9"],
+    fonts: "Tenor Sans / Playfair Display",
+    metrics: [
+      { name: "Direct Bookings", percentage: 92 },
+      { name: "Mobile Experience", percentage: 95 },
+      { name: "Visual Engagement", percentage: 98 },
+      { name: "Load Time", percentage: 90 },
+    ],
+    impact: [
+      { label: "Direct Bookings", value: "+30%" },
+      { label: "Average Session", value: "5.5m" },
+      { label: "Mobile Bounce", value: "-25%" },
+    ],
+    gallery: [Hermes1, Hermes2, Hermes3],
+  },
+  {
+    title: "Wine Night",
+    category: "Web",
+    image: Portada_WineNight,
+    slug: "winenight",
+    year: "2021",
+    services: "UI/UX Design / Web Development",
+    problem: "Premium wine tastings often fail to translate the mystique of the winery into a digital environment. The client needed a portal that not only managed exclusive reservations but also educated users about the origin and tasting notes of each label, eliminating friction in the registration process for limited-capacity events.",
+    objective: "Design a brand platform that works as a luxury invitation, prioritizing the visual narrative of the wineries and facilitating an instant booking experience for an upscale audience.",
+    challenge: "The challenge was creating an interface that respects wine tradition (classic and organic aesthetic) without sacrificing functional modernity. We needed to organize an event catalog by regions and wineries, maintaining a clean visual hierarchy that highlights bottle quality.",
+    solution: "A design based on the 'Digital Cave' concept was implemented, using a palette of deep colors and textures evoking artisanal paper. We developed narrative sections for each winery, integrating immersive galleries and an optimized booking engine. Subtle micro-interactions reinforce the sense of exclusivity with every navigation.",
+    colors: ["#2D0A0A", "#FDFCF0", "#C5A059", "#1A1A1A"],
+    fonts: "Cinzel / Open Sans",
+    metrics: [
+      { name: "Event Conversion", percentage: 94 },
+      { name: "Editorial Engagement", percentage: 88 },
+      { name: "Mobile Usability", percentage: 96 },
+      { name: "User Loyalty", percentage: 82 },
+    ],
+    impact: [
+      { label: "Sold-Out Rate", value: "95%" },
+      { label: "Avg. Booking Time", value: "1.5m" },
+      { label: "User Reviews", value: "5/5" },
+    ],
+    gallery: [WineNight1, WineNight2, WineNight3],
+  },
+  {
+    title: "Ylang Ylang",
+    category: "Web",
+    image: Portada_Ylang,
+    slug: "ylang-ylang",
+    year: "2021",
+    services: "UI/UX Design / Wellness E-commerce",
+    problem: "The center needed to digitize its luxury service offering, allowing clients to not only learn about treatments but also purchase and book them online, while maintaining an aesthetic that reflected serenity and medical professionalism.",
+    objective: "Create a digital oasis that works as an extension of the physical center, facilitating the purchase of premium treatments and appointment management in a visually relaxing and sophisticated environment.",
+    challenge: "Balancing three distinct areas of the business: traditional facial/body treatments, advanced aesthetic medicine, and direct in-store product sales, all under a single clean visual hierarchy.",
+    solution: "A minimalist e-commerce platform was designed with a cream and earth tone palette. A service catalog divided by categories (Facial, Body, Aesthetic Medicine) was implemented with detailed cards including duration and price, optimizing the 'Add to Cart' flow for immediate conversion.",
+    colors: ["#632E32", "#F9F6F1", "#333333", "#FFFFFF"],
+    fonts: "Cormorant Garamond / Montserrat",
+    metrics: [
+      { name: "Treatment Conversion", percentage: 92 },
+      { name: "Service Clarity", percentage: 98 },
+      { name: "Mobile Usability", percentage: 95 },
+      { name: "Page Load", percentage: 89 },
+    ],
+    impact: [
+      { label: "Direct Bookings", value: "+30%" },
+      { label: "Average Session", value: "5.5m" },
+      { label: "Mobile Bounce", value: "-25%" },
+    ],
+    description: "Aesthetics and Beauty Center in Córdoba with integrated Aesthetic Medicine services. The portal combines the warmth of emotional wellbeing with the effectiveness of high-end equipment.",
+    gallery: [Ylang1, Ylang2, Ylang3],
+  },
+  {
+    title: "Travelmax",
+    category: "Web",
+    image: Portada_TravelMax,
+    slug: "travelmax",
+    year: "2026",
+    services: "UI/UX Design / Fullstack Development",
+    problem: "The need for a platform that allows users to explore and book unconventional trips (from Ancient Egypt to futuristic cities) with a clear interface managing complex itineraries and multi-currency payments.",
+    objective: "Design a high-end digital ecosystem that combines visual destination exploration with an efficient booking engine, integrating additional services like transfers, insurance, and personalized guides.",
+    challenge: "Organizing radically different travel categories (History, Science, Education) while maintaining visual coherence that conveys trust, modernity, and ease of use throughout the checkout process.",
+    solution: "A clean, modular interface based on interactive cards was implemented, highlighting satisfaction scores and package technical details. The system includes a three-step payment flow (Payment method, Personal data, Confirmation) optimized for fast transactions. A user area for itinerary management and suggested destination visualization was also designed.",
+    colors: ["#4C58A4", "#FFFFFF", "#F2F2F2", "#333333"],
+    fonts: "Montserrat / Inter",
+    metrics: [
+      { name: "Checkout Efficiency", percentage: 98 },
+      { name: "User Retention", percentage: 85 },
+      { name: "Satisfaction (CSAT)", percentage: 96 },
+      { name: "Mobile Conversion", percentage: 91 },
+    ],
+    impact: [
+      { label: "Direct Bookings", value: "+20%" },
+      { label: "Average Session", value: "4.5m" },
+      { label: "Mobile Bounce", value: "-14%" },
+    ],
+    description: "Premium travel platform for experiencing other cultures and eras. From the construction of the Great Pyramid to futuristic Tokyo, Travelmax redefines tourism through advanced technology and unique destination curation.",
+    gallery: [TravelMax1, TravelMax2, TravelMax3],
+  },
+
+  // ─── EDITORIAL ─────────────────────────────────────────────────────────────
+  {
+    title: "Revista Maison",
+    category: "Editorial",
+    image: Portada_Maison,
+    slug: "maison",
+    year: "2022",
+    services: "Editorial Design / Layout / Art Direction",
+    problem: "Maison had a saturated aesthetic that visually competed with architectural photography, making it difficult to read long-form essays.",
+    objective: "Redesign the editorial identity through a flexible grid system that prioritizes breathing room, typographic hierarchy, and the visual prominence of the works.",
+    challenge: "Creating a grid that could accommodate everything from technical plan breakdowns to opinion articles, maintaining a premium, minimalist visual coherence.",
+    solution: "A 12-column grid was established allowing asymmetric variations. The blend of a humanist Serif typeface with a technical Sans-Serif reinforced the balance between art and architectural precision.",
+    colors: ["#1A1A1A", "#FFFFFF", "#F2F2F2"],
+    fonts: "Editor's Note / Helvetica Now",
+    metrics: [
+      { name: "Reading Hierarchy", percentage: 95 },
+      { name: "Visual Balance", percentage: 92 },
+      { name: "Layout Scalability", percentage: 90 },
+      { name: "Brand Consistency", percentage: 98 },
+    ],
+    impact: [
+      { label: "Pages Designed", value: "120+" },
+      { label: "Estimated Readers", value: "15K" },
+      { label: "Frequency", value: "Quarterly" },
+    ],
+    gallery: [Maison1, Maison2],
+  },
+  {
+    title: "Revista Manifiesto",
+    category: "Editorial",
+    image: Portada_Manifiesto,
+    slug: "manifiesto",
+    year: "2021",
+    services: "Editorial Design / Art Direction",
+    problem: "The need to create a publication that unifies such diverse disciplines as digital art, architecture, and fashion under a single disruptive aesthetic.",
+    objective: "Design a flexible grid system that allows each section to have its own visual identity without losing the coherence of the Manifiesto brand.",
+    challenge: "Experimenting with bold typography and the use of white space to guide readers through visually dense articles.",
+    solution: "An information architecture based on contrasts was implemented: large-scale typefaces for headlines and a clean structure for body text. Chromatic dividers were used to differentiate the Architecture, Fashion, and Art sections.",
+    colors: ["#7c569b", "#e3b90d", "#d14b8f"],
+    fonts: "Helvetica Neue / Bold Display",
+    metrics: [
+      { name: "Visual Hierarchy", percentage: 100 },
+      { name: "Grid Design", percentage: 95 },
+      { name: "Photo Curation", percentage: 90 },
+    ],
+    impact: [
+      { label: "Curated Sections", value: "3" },
+      { label: "Visual Styles", value: "Hybrid" },
+      { label: "Limited Edition", value: "2021" },
+    ],
+    gallery: [Manifiesto1, Manifiesto2],
+  },
+  {
+    title: "Vincent van Gogh",
+    category: "Editorial",
+    image: Portada_VanGogh,
+    slug: "van-gogh-experience",
+    year: "2021",
+    services: "UI/UX Design / Digital Storytelling / Art Direction",
+    problem: "Van Gogh's biography is often presented in a static way, losing the emotional intensity and chromatic vibration that define his legacy.",
+    objective: "Design an immersive digital narrative that allows users to understand the artist's psyche through his own words and works.",
+    challenge: "Balancing the high visual load of the paintings with a minimalist interface that doesn't compete with the art, integrating historical data fluidly.",
+    solution: "An architecture based on contrast was implemented: dark backgrounds to highlight the light in the works and large-scale typography for powerful quotes. Navigation is divided into 'Style', 'Life', and 'Works', including an interactive timeline connecting life milestones with artistic production.",
+    colors: ["#2B3441", "#E3B90D", "#F5F5F5", "#1A1A1A"],
+    fonts: "Playfair Display / Inter",
+    metrics: [
+      { name: "Narrative Immersion", percentage: 98 },
+      { name: "Chromatic Fidelity", percentage: 100 },
+      { name: "User Retention", percentage: 92 },
+      { name: "Emotional Impact", percentage: 95 },
+    ],
+    impact: [
+      { label: "Curated Sections", value: "7" },
+      { label: "Visual Styles", value: "Digital" },
+      { label: "Limited Edition", value: "2026" },
+    ],
+    gallery: [VanGogh1, VanGogh3],
+  },
+
+  // ─── PACKAGING ─────────────────────────────────────────────────────────────
+  {
+    title: "Silkylatte",
+    category: "Packaging",
+    image: Portada_Silkylatte,
+    slug: "silkylatte",
+    year: "2024",
+    services: "Structural & Label Design / Branding",
+    problem: "The brand struggled to stand out on a shelf saturated with vibrant colors and shiny plastics, diluting its 100% organic product message.",
+    objective: "Design a tactile and honest packaging system that communicates naturalness immediately through materiality and a raw luxury aesthetic.",
+    challenge: "Achieving a label design that is functional for the cold chain while maintaining the visual texture of unprocessed artisanal paper.",
+    solution: "We designed packaging with earthy colors and textures emulating unprocessed paper. Classic engraving illustrations communicate tradition, making the product stand out through its sobriety and elegance.",
+    colors: ["#D2B48C", "#4B3621", "#F5F5DC"],
+    fonts: "Cormorant Garamond / Montserrat",
+    metrics: [
+      { name: "Shelf Differentiation", percentage: 96 },
+      { name: "Sustainability (PCR)", percentage: 100 },
+      { name: "Brand Recognition", percentage: 89 },
+      { name: "Package Ergonomics", percentage: 92 },
+    ],
+    impact: [
+      { label: "Retail Visibility", value: "+20%" },
+      { label: "Recycled Material", value: "100%" },
+      { label: "Purchase Intent", value: "+35%" },
+    ],
+    gallery: [Silkylatte1, Silkylatte2],
+  },
+  {
+    title: "Fruits Naturals",
+    category: "Packaging",
+    image: Portada_Fruits,
+    slug: "fruits",
+    year: "2018",
+    services: "Brand Identity / Packaging Design",
+    problem: "Refreshing a fruit juice line to stand out on the shelf against generic competitors, emphasizing vitamin content.",
+    objective: "Create a bright, natural visual identity that conveys immediate freshness and nutritional clarity.",
+    challenge: "Balancing technical information (nutritional table and benefits) with an aspirational design based on natural landscapes.",
+    solution: "A packaging system with a divided visual architecture was designed: a sky-blue upper third evoking naturalness and purity, and a solid color base according to flavor. A distinctive circular seal for Vitamin C was incorporated.",
+    colors: ["#3E3274", "#F4A01C", "#B5C330"],
+    fonts: "Rounded Sans / Script Organic",
+    metrics: [
+      { name: "Shelf Visual Impact", percentage: 95 },
+      { name: "Information Hierarchy", percentage: 100 },
+      { name: "Line Coherence", percentage: 90 },
+    ],
+    impact: [
+      { label: "Flavors & Varieties", value: "3" },
+      { label: "Vitamin Content", value: "100%" },
+      { label: "Market Presence", value: "National" },
+    ],
+    gallery: [Fruits1, Fruits2],
+  },
+  {
+    title: "Crown",
+    category: "Packaging",
+    image: Portada_Crown,
+    slug: "crown",
+    year: "2020",
+    services: "Sustainable Packaging / Art Direction",
+    problem: "Making packaging manufactured with sustainable materials maintain a premium and feminine aesthetic for the hair care market.",
+    objective: "Design a soft and sophisticated visual identity based on floral fragrances, communicating delicacy and ecology in one concept.",
+    challenge: "Using a minimalist color palette that highlights botanical components without visually overloading the ergonomic packaging.",
+    solution: "A graphic line centered on Japanese cherry blossom-style floral illustrations was developed, using a palette of soft pinks and off-whites. The packaging architecture prioritizes ergonomics and material reduction.",
+    colors: ["#D4A5A5", "#FDEFF4", "#9DB196"],
+    fonts: "Helvetica Neue / Playfair Display",
+    metrics: [
+      { name: "Material Sustainability", percentage: 100 },
+      { name: "Premium Visual Acceptance", percentage: 95 },
+      { name: "Ink Reduction", percentage: 85 },
+    ],
+    impact: [
+      { label: "Recycled Plastic", value: "PCR" },
+      { label: "Care Line", value: "Premium" },
+      { label: "Vegan Formula", value: "100%" },
+    ],
+    gallery: [Crown1, Crown2],
+  },
+  {
+    title: "Artistik",
+    category: "Packaging",
+    image: Portada_Artistik,
+    slug: "artistik",
+    year: "2024",
+    services: "Label Design / Product Branding",
+    problem: "The young wine market is saturated with traditional or overly geometric labels, making it difficult to attract consumers seeking a more artistic and conceptual connection with the product.",
+    objective: "Create a visual identity that positions the wine as a collectible art piece, using a surrealist narrative that evokes the organic and sensory notes of each varietal.",
+    challenge: "Developing an illustration system that maintains stylistic coherence between red and white wines, allowing each label its own personality while belonging to the same visual family.",
+    solution: "A system of wraparound labels on a neutral gray background highlighting central pictorial illustrations was designed. For the Malbec, green and ochre tones with foliage elements over a face were used; for the Sauvignon Blanc, citrus yellows and soft pinks. The minimalist sans-serif typography for the 'Artistik' name balances the visual weight of the art, achieving a sophisticated and modern finish.",
+    colors: ["#D1D3D4", "#5C6731", "#E6A15C", "#F4C95D"],
+    fonts: "Inter / Playfair Display",
+    metrics: [
+      { name: "Visual Impact", percentage: 94 },
+      { name: "Varietal Differentiation", percentage: 98 },
+      { name: "Target Affinity", percentage: 91 },
+      { name: "Brand Consistency", percentage: 95 },
+    ],
+    impact: [
+      { label: "Material", value: "Glass" },
+      { label: "Care Line", value: "Modern" },
+      { label: "Vegan Formula", value: "100%" },
+    ],
+    gallery: [Artistik1, Artistik2],
+  },
+  {
+    title: "White Fields",
+    category: "Packaging",
+    image: Portada_WhiteFields,
+    slug: "white-fields",
+    year: "2024",
+    services: "Packaging Design / Food Branding",
+    problem: "The need to break into the tea category with a proposal that communicates immediate freshness and natural origin, clearly differentiating citrus flavors on a competitive shelf.",
+    objective: "Develop a dynamic packaging system using color and illustration as the main flavor identifiers, maintaining a clean and artisanal aesthetic.",
+    challenge: "Creating a visual pattern that is attractive both on the front and sides of the box, ensuring the White Fields brand typographic hierarchy is legible over complex illustrated backgrounds.",
+    solution: "A 'super-graphic' design based on fruit slices (lemon and orange) wrapping the entire package was implemented. A white central panel with ornamental borders was used to frame the brand, creating a 'breathing room' contrast that balances the chromatic intensity of the citrus pattern. The inclusion of a side mockup with a cup and real ingredients (ginger and slices) reinforces the natural flavor promise.",
+    colors: ["#F9A825", "#FFD600", "#FFFFFF", "#4E342E"],
+    fonts: "Beautiful / Playfair Display",
+    metrics: [
+      { name: "Flavor Recognition", percentage: 98 },
+      { name: "Visual Appeal", percentage: 95 },
+      { name: "Brand Clarity", percentage: 92 },
+      { name: "Line Coherence", percentage: 96 },
+    ],
+    impact: [
+      { label: "Ingredients", value: "Organic" },
+      { label: "Variety", value: "Citrus" },
+      { label: "Content", value: "50g" },
+    ],
+    gallery: [WhiteFields1, WhiteFields2],
+  },
+  {
+    title: "Hertz",
+    category: "Packaging",
+    image: Portada_Hertz,
+    slug: "cerveza-hertz",
+    year: "2024",
+    services: "Branding / Label Design / Product Strategy",
+    problem: "The need to create a craft beer brand that distances itself from the usual rustic visual codes, seeking an identity that evokes elegance, rhythm, and tradition from a technical and artistic perspective.",
+    objective: "Position Hertz as a signature beer where each variety represents a different 'musical note', using historical heritage and the precision of sound as brand pillars.",
+    challenge: "Integrating complex musical iconography (instruments like the saxophone and harp) into a heraldic-style label without losing brand legibility and maintaining a balance between the classic and the modern.",
+    solution: "A system of circular labels with red transverse bands containing the main 'HERTZ' typography in a robust serif style was developed. For the 'American' variant, a saxophone illustration was used, evoking Jazz; for the 'German' variant, a harp was used, symbolizing classical European music. The use of gold and silver finishes reinforces the premium craft category.",
+    colors: ["#A31D24", "#C6A15B", "#E6E7E8", "#1A1A1B"],
+    fonts: "Bodoni / Montserrat",
+    metrics: [
+      { name: "Visual Hierarchy", percentage: 95 },
+      { name: "Style Differentiation", percentage: 97 },
+      { name: "Premium Perception", percentage: 93 },
+      { name: "Historical Coherence", percentage: 90 },
+    ],
+    impact: [
+      { label: "Origin", value: "USA" },
+      { label: "Styles", value: "Jazz" },
+      { label: "Concept", value: "Hz" },
+    ],
+    gallery: [Hertz1, Hertz2],
+  },
+
+  // ─── CAMPAIGNS ─────────────────────────────────────────────────────────────
+  {
+    title: "M+ Brand Fidelity",
+    category: "Campaigns",
+    image: Portada_Fidelity,
+    slug: "fidelity",
+    year: "2023",
+    services: "Digital Strategy / Social Art Direction",
+    problem: "The need to communicate complex insights about the future of retail on social platforms without losing the sophistication of a high-level brand consultancy.",
+    objective: "Design a visual narrative for Instagram that positions the brand as a thought leader, transforming market data into an immersive aesthetic experience with high impact.",
+    challenge: "Making abstract concepts like 'Experiential' or 'Value-led' feel human and tangible through art direction that balances cinematic photography with technical typography.",
+    solution: "A 'Social-Editorial' design system was implemented using a palette of deep, desaturated tones, Swiss-style sans-serif typefaces, and a strategic use of shadows and textures that elevate educational content to an aspirational design piece.",
+    colors: ["#1A1A1A", "#8C8C7E", "#FFFFFF"],
+    fonts: "Plus Jakarta Sans / Inter",
+    metrics: [
+      { name: "Brand Positioning", percentage: 94 },
+      { name: "Editorial Engagement", percentage: 88 },
+      { name: "Concept Clarity", percentage: 92 },
+      { name: "Visual Consistency", percentage: 98 },
+    ],
+    impact: [
+      { label: "Interaction", value: "+45%" },
+      { label: "Key Topics", value: "5" },
+      { label: "Visual Quality", value: "Premium" },
+    ],
+    gallery: [Fidelity1],
+  },
+  {
+    title: "Consumer Pulse",
+    category: "Campaigns",
+    image: Portada_ConsumerPulse,
+    slug: "consumerPulse",
+    year: "2025",
+    services: "Data Visualization / Content Strategy",
+    problem: "The difficulty of synthesizing dense macroeconomic reports into agile, attractive content pieces for B2B decision-making.",
+    objective: "Transform complex statistical data on inflation, AI, and consumption into a compelling visual narrative that fosters conversation on professional networks.",
+    challenge: "Humanizing logistical and economic data through disruptive art direction that avoids conventional statistical charts.",
+    solution: "A visualization ecosystem based on isometric 3D renders and large-scale typography (Mega-type) was designed. The use of visual metaphors, like the container map, communicates global commerce concepts instantly and memorably.",
+    colors: ["#1F5D6B", "#D1E3E2", "#FFFFFF", "#F2F2F2"],
+    fonts: "Plus Jakarta Sans / Inter",
+    metrics: [
+      { name: "Data Clarity", percentage: 96 },
+      { name: "Visual Impact", percentage: 94 },
+      { name: "Information Retention", percentage: 89 },
+      { name: "B2B Shareability", percentage: 92 },
+    ],
+    impact: [
+      { label: "Engagement", value: "+50%" },
+      { label: "LinkedIn CTR", value: "4.8%" },
+      { label: "Curated Pages", value: "200+" },
+    ],
+    gallery: [ConsumerPulse1],
+  },
+  {
+    title: "Consumer's Report",
+    category: "Campaigns",
+    image: Portada_Consumer,
+    slug: "consumer",
+    year: "2022",
+    services: "Social Design Strategy / Art Direction",
+    problem: "The need to standardize the visual communication of a mass consumer brand for its regional teams, maintaining coherence in a fragmented global market.",
+    objective: "Design an impactful visual communication system that converts economic sentiment research into actionable and aesthetically superior social content.",
+    challenge: "Balancing the use of high-impact conceptual images with a modular design structure that enables fast and consistent production across different countries.",
+    solution: "A system based on 'Visual Metaphors' and a digital design manual was created. The central piece uses macro photography with digital interventions (barcodes) to symbolize the analytical approach to consumption, complemented by clear calls to action like 'Get the report'.",
+    colors: ["#000000", "#FFFFFF", "#E5E5E5"],
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Production Efficiency", percentage: 95 },
+      { name: "Brand Coherence", percentage: 98 },
+      { name: "Visual Impact (Stop-scroll)", percentage: 92 },
+      { name: "Regional Adaptability", percentage: 90 },
+    ],
+    impact: [
+      { label: "Graphic Production", value: "+50%" },
+      { label: "Global Consistency", value: "100%" },
+      { label: "Social Engagement", value: "High" },
+    ],
+    gallery: [Consumer1],
+  },
+  {
+    title: "True Loyalty",
+    category: "Campaigns",
+    image: Portada_TrueLoyalty,
+    slug: "trueLoyalty",
+    year: "2017",
+    services: "Art Direction / Behavioral Design",
+    problem: "Traditional loyalty campaigns in private banking are often perceived as transactional and static, failing to connect with clients' deeper motivations.",
+    objective: "Transform brand loyalty into a living, adaptive system based on behavioral science, rewarding long-term relationships through an emotional engineering narrative.",
+    challenge: "Architecting behavioral systems that treat user data as an organism that tunes in real time, without losing the human warmth of premium service.",
+    solution: "The 'Loyalty Engineer's Playbook' was developed—a campaign using circular geometries and a deep bordeaux palette to symbolize feedback cycles. The art direction integrates intimate portraits that humanize 'Adaptive Behavioral Systems', positioning the bank as a facilitator of real life stories.",
+    colors: ["#A11C33", "#000000", "#FFFFFF"],
+    fonts: "Plus Jakarta Sans / Inter",
+    metrics: [
+      { name: "Emotional Connection", percentage: 95 },
+      { name: "Real-Time Tuning", percentage: 88 },
+      { name: "Client Retention", percentage: 92 },
+      { name: "Perceived Innovation", percentage: 90 },
+    ],
+    impact: [
+      { label: "Bank NPS", value: "+40%" },
+      { label: "Behavioral Data", value: "Real-time" },
+      { label: "Systems", value: "Adaptive" },
+    ],
+    gallery: [TrueLoyalty1],
+  },
+  {
+    title: "Bloomberg Screentime",
+    category: "Campaigns",
+    image: Portada_BloombergScreentime,
+    slug: "bloombergScreentime",
+    year: "2024",
+    services: "Event Branding / Motion Graphics",
+    problem: "In a saturated media ecosystem, the challenge was to visually represent how AI and new audiences are rewriting the rules of creativity and production.",
+    objective: "Design a visual identity for Bloomberg's annual event that captures the tension between modern technology and traditional cinematic narrative.",
+    challenge: "Creating a visual system that adapts to multiple screen formats, symbolizing 'digital fluidity' and the evolution of algorithm-written scripts.",
+    solution: "A concept based on 'circular windows' framing production scenes in surrealist environments (Mars-like sets) was developed. The minimalist black and cream color palette elevates brand sophistication, while phrases like 'AI is writing scripts' provoke reflection on the industry's future.",
+    colors: ["#000000", "#D9BBA9", "#FFFFFF"],
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Event Impact", percentage: 95 },
+      { name: "Multi-screen Consistency", percentage: 98 },
+      { name: "Sector Engagement", percentage: 92 },
+      { name: "Visual Innovation", percentage: 94 },
+    ],
+    impact: [
+      { label: "Location", value: "Los Angeles" },
+      { label: "Theme", value: "AI & Media" },
+      { label: "Visuals", value: "Cinematic" },
+    ],
+    gallery: [BloombergScreentime1],
+  },
+  {
+    title: "Drupal Anniversary",
+    category: "Campaigns",
+    image: Portada_Drupal,
+    slug: "drupal",
+    year: "2016",
+    services: "Community Branding / Social Design",
+    problem: "The need to revitalize Drupal's perception for a new generation of developers, moving away from a static technical image to showcase a vibrant ecosystem with history.",
+    objective: "Celebrate platform milestones (25 years) through a visual identity that symbolizes evolution, global collaboration, and the tool's versatility.",
+    challenge: "Transforming the heritage of a robust technology into a modern visual narrative that appeals to both senior developers and new talent.",
+    solution: "A visual system centered on large-format geometric typography interwoven with vibrant line patterns in blue-to-purple gradients was designed. This linear aesthetic represents the interconnection of code and community, creating a 'stop-scroll' piece that communicates celebration and technical vanguard simultaneously.",
+    colors: ["#000000", "#2E98D1", "#7E3A94", "#FFFFFF"],
+    fonts: "Plus Jakarta Sans / Inter",
+    metrics: [
+      { name: "Community Impact", percentage: 95 },
+      { name: "Brand Modernization", percentage: 92 },
+      { name: "Milestone Recognition", percentage: 100 },
+      { name: "Social Engagement", percentage: 88 },
+    ],
+    impact: [
+      { label: "Anniversary", value: "25 Years" },
+      { label: "Concept", value: "Build Anything" },
+      { label: "Audience", value: "Global" },
+    ],
+    gallery: [Drupal1],
+  },
+  {
+    title: "Advertising Week",
+    category: "Campaigns",
+    image: Portada_AdvertisingWeek,
+    slug: "advertisingWeek",
+    year: "2023",
+    services: "Real-Time Content / Event Branding",
+    problem: "The need to generate high-impact visual content in real time during a week of massive conferences in New York, capturing the essence of speakers immediately.",
+    objective: "Position the brand at the epicenter of the industry conversation through a visual narrative combining 'human insights' with the futuristic aesthetic of digital marketing.",
+    challenge: "Developing an ultra-fast workflow that could transform complex statements into editorial-quality graphic pieces within minutes.",
+    solution: "A 'Live-to-Feed' design system was implemented based on dynamic templates and a vibrant color palette (purple and cyan). The art direction uses portraits with data projections and organic circular shapes to soften the technology, making the content feel both innovative and accessible.",
+    colors: ["#000000", "#9E567E", "#2A94C1", "#FFFFFF"],
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Response Speed", percentage: 98 },
+      { name: "Conversion Mastery", percentage: 94 },
+      { name: "Production Quality", percentage: 96 },
+      { name: "Social Impact", percentage: 91 },
+    ],
+    impact: [
+      { label: "Location", value: "New York, NY" },
+      { label: "Concept", value: "Inflection Point" },
+      { label: "Delivery Time", value: "Real-Time" },
+    ],
+    gallery: [AdvertisingWeek1],
+  },
+  {
+    title: "DrupalCon",
+    category: "Campaigns",
+    image: Portada_DrupalCon,
+    slug: "drupalCon",
+    year: "2021",
+    services: "Event Identity / Information Design",
+    problem: "Communicating Drupal's evolution toward the AI search era at the first in-person post-pandemic event, needing an aesthetic that balanced technical maturity with the energy of reunion.",
+    objective: "Generate a modular and scalable visual identity that could highlight both 'Lightning Talks' and the presence of industry leaders in a high-impact social format.",
+    challenge: "Organizing multiple levels of information (schedules, speakers, technical topics, and branding) within a single graphic piece without losing clarity or visual dynamism.",
+    solution: "A design system based on Swiss-style color blocks was implemented, using a 4x4 grid to host custom icons, speaker photographs, and sans-serif typography. The use of a multicolor palette on a white background reinforces the idea of an inclusive, diverse community ready for AI challenges.",
+    colors: ["#F15A2B", "#FBB03B", "#29ABE2", "#0071BC", "#39B54A"],
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Informational Clarity", percentage: 97 },
+      { name: "Record Attendance", percentage: 100 },
+      { name: "Visual Coherence", percentage: 95 },
+      { name: "Social Impact", percentage: 89 },
+    ],
+    impact: [
+      { label: "Theme", value: "AI Search Era" },
+      { label: "Booth", value: "#112" },
+      { label: "Concept", value: "Be human. Think digital." },
+    ],
+    gallery: [DrupalCon1],
+  },
+  {
+    title: "Women's International Day 2026",
+    category: "Campaigns",
+    image: Portada_IWD,
+    slug: "iwd",
+    year: "2026",
+    services: "Social Impact Design / Art Direction",
+    problem: "The need to move away from generic corporate messaging for International Women's Day, seeking a campaign that empowers in a visually unique and non-stereotyped way.",
+    objective: "Honor the diversity of women's roles in society and business through an inclusive visual narrative projecting authenticity and leadership.",
+    challenge: "Integrating multiple profiles and professions into a harmonious composition that communicates unity without losing the individuality of each story.",
+    solution: "A chromatic mosaic system based on soft primary and secondary color blocks was developed. The art direction uses direct photographic portraits capturing each woman's personality, complemented by leadership quotes (e.g., Caroline Kennedy, CEO) on a predominant pink background that acts as the campaign's connecting thread.",
+    colors: ["#E16A8C", "#F8B739", "#A7C957", "#FFFFFF"],
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Share Rate", percentage: 98 },
+      { name: "Diversity Representation", percentage: 100 },
+      { name: "Engagement Impact", percentage: 94 },
+      { name: "Brand Perception", percentage: 92 },
+    ],
+    impact: [
+      { label: "Campaign", value: "International Women's Day" },
+      { label: "Narrative", value: "Diversity & Power" },
+      { label: "Reach", value: "Historic Record" },
+    ],
+    gallery: [WID1],
+  },
+  {
+    title: "Save The Children",
+    category: "Campaigns",
+    image: Portada_STC,
+    slug: "stc",
+    year: "2024",
+    services: "NGO Strategy / Art Direction",
+    problem: "Generating awareness and donations in an era of information fatigue, where crisis images are often ignored due to saturation.",
+    objective: "Communicate the success of the organization's global impact scale through a positive and hopeful visual narrative that celebrates families and communities.",
+    challenge: "Humanizing social impact data without resorting to raw realism, creating an emotional connection through a universal and modern visual language.",
+    solution: "An identity based on organic stroke illustrations and simplified characters in vibrant colors on cream backgrounds was developed. This friendly and direct aesthetic highlights milestones like being 'Winner' and 'Finalist' at the Shorty Awards in the Non-Profit category, positioning the campaign as a reference for innovation in the social sector.",
+    colors: ["#E34234", "#00A651", "#1B75BC", "#F0E6D2"],
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Visual Impact", percentage: 96 },
+      { name: "Emotional Connection", percentage: 94 },
+      { name: "Message Clarity", percentage: 98 },
+      { name: "Industry Recognition", percentage: 100 },
+    ],
+    impact: [
+      { label: "Award", value: "Winner Shorty Awards" },
+      { label: "Category", value: "Non-Profit" },
+      { label: "Concept", value: "Scaling Global Impact" },
+    ],
+    gallery: [STC1],
+  },
+  {
+    title: "Healthcare Interactive Conference",
+    category: "Campaigns",
+    image: Portada_HCIC,
+    slug: "hcic",
+    year: "2026",
+    services: "Health Branding / Event Strategy",
+    problem: "The Healthcare Interactive Conference needed a visual identity that communicated leadership at the intersection of medicine, data, and AI, moving away from traditional healthcare visual codes.",
+    objective: "Define the digital future of healthcare through a visual narrative projecting technological precision and strategic vision.",
+    challenge: "Designing a system that captures the complexity of data analytics and artificial intelligence without losing the human figure as the center of medical innovation.",
+    solution: "A visual concept based on 'Digital Vision' was developed, using photography with neon lighting and digital data reflections. The composition integrates geometric shapes in lavender and cyan tones acting as information containers, while the HCIC logo maintains a solid, corporate structure that anchors the technological proposal.",
+    colors: ["#7A81FF", "#00AEEF", "#000000", "#FFFFFF"],
+    fonts: "Inter / Plus Jakarta Sans",
+    metrics: [
+      { name: "Strategic Clarity", percentage: 96 },
+      { name: "Innovation Impact", percentage: 98 },
+      { name: "Brand Consistency", percentage: 94 },
+      { name: "Sector Engagement", percentage: 92 },
+    ],
+    impact: [
+      { label: "Location", value: "Las Vegas, NV" },
+      { label: "Concept", value: "Digital Future" },
+      { label: "Theme", value: "Marketing, Data & AI" },
+    ],
+    gallery: [HCIC1],
+  },
+];
+
+// ─── Export según idioma activo ───────────────────────────────────────────────
+const getProjects = () => {
+  const lang = i18n.language?.startsWith('en') ? 'en' : 'es';
+  const raw = lang === 'en' ? rawProjectsEN : rawProjectsES;
+  return raw.map((project, index) => ({ ...project, id: index + 1 }));
+};  
+
+// Hook para componentes que necesitan reaccionar al cambio de idioma en tiempo real
+export { getProjects };
