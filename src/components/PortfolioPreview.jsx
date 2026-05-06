@@ -3,23 +3,32 @@ import { Link } from 'react-router-dom';
 import { getProjects } from '../data/projects'; // Ajusta la ruta
 import { useTranslation } from 'react-i18next';
 
-// Definimos las posiciones visuales de la grilla (las clases de Tailwind que ya tenías)
+// Definimos las posiciones visuales de la grilla
 const gridLayout = [
-  "md:col-start-1 md:row-start-1 md:row-end-5", // Col 1 arriba
-  "md:col-start-1 md:row-start-5 md:row-end-9", // Col 1 abajo
-  "md:col-start-2 md:row-start-1 md:row-end-6", // Col 2 arriba
-  "md:col-start-2 md:row-start-6 md:row-end-9", // Col 2 abajo
-  "md:col-start-3 md:row-start-1 md:row-end-5", // Col 3 arriba
-  "md:col-start-3 md:row-start-5 md:row-end-9", // Col 3 abajo
-  "md:col-start-4 md:row-start-1 md:row-end-4", // Col 4 arriba
-  "md:col-start-4 md:row-start-4 md:row-end-9", // Col 4 abajo
+  "md:col-start-1 md:row-start-1 md:row-end-5", 
+  "md:col-start-1 md:row-start-5 md:row-end-9", 
+  "md:col-start-2 md:row-start-1 md:row-end-6", 
+  "md:col-start-2 md:row-start-6 md:row-end-9", 
+  "md:col-start-3 md:row-start-1 md:row-end-5", 
+  "md:col-start-3 md:row-start-5 md:row-end-9", 
+  "md:col-start-4 md:row-start-1 md:row-end-4", 
+  "md:col-start-4 md:row-start-4 md:row-end-9", 
 ];
 
 export default function PortfolioPreview() {
   const { i18n, t } = useTranslation();
+  
   const realProjects = useMemo(() => {return getProjects()}, [i18n.language])
-  // Tomamos los primeros 8 proyectos de tu archivo JS
-  const previewProjects = realProjects.slice().sort(() => Math.random() - 0.5).slice(0, 8);
+  
+  // Tomamos 8 proyectos aleatorios para la preview
+  const previewProjects = useMemo(() => {
+    return realProjects.slice().sort(() => Math.random() - 0.5).slice(0, 8);
+  }, [realProjects]);
+
+  // Función reutilizable para subir al inicio
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <section className="bg-white w-full overflow-hidden">
@@ -31,16 +40,15 @@ export default function PortfolioPreview() {
             <Link 
               to={`/portfolio/project/${project.slug}`}
               key={project.id || index} 
+              onClick={handleScrollToTop} // <-- Sube al inicio al entrar a un proyecto
               className={`relative overflow-hidden group cursor-pointer border-[0.5px] border-white/10 bg-gray-100 ${gridLayout[index]}`}
             >
-              {/* Imagen Real del Proyecto */}
               <img 
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
               
-              {/* Overlay con Información Real */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-700 flex flex-col items-center justify-center p-4">
                 <span className="text-[10px] text-accent opacity-0 group-hover:opacity-100 uppercase tracking-[0.3em] mb-2 transition-all duration-500 delay-100">
                   {project.category}
@@ -56,7 +64,11 @@ export default function PortfolioPreview() {
 
         {/* Botón View All Projects */}
         <div className="py-12 md:py-20 flex justify-center bg-white w-full">
-          <Link to="/portfolio" className="flex items-center gap-4 md:gap-6 group px-6">
+          <Link 
+            to="/portfolio" 
+            onClick={handleScrollToTop} // <-- Sube al inicio al ir al portfolio general
+            className="flex items-center gap-4 md:gap-6 group px-6"
+          >
             <span className="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-[#111] group-hover:text-accent transition-colors whitespace-nowrap">
               {t('portfolio.see_all')}
             </span>
