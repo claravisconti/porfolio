@@ -3,8 +3,17 @@ import Footer from './components/Footer';
 import AppRoutes from './routes';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import WhatsAppButton from './components/WhatsAppButton';
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 function App() {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+    });
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
