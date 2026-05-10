@@ -10,7 +10,7 @@ ReactGA.initialize("G-XSZFR9EYG3");
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/porfolio">
+    <BrowserRouter>
       <App />
     </BrowserRouter >
   </React.StrictMode>,
