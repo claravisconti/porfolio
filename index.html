@@ -1,52 +1,45 @@
 <!doctype html>
 <html lang="es">
-  <head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSZFR9EYG3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- SEO básico -->
+  <title>Clara Visconti | UX/UI Designer</title>
+  <meta name="description" content="Portfolio de Clara Visconti, diseñadora UX/UI especializada en experiencias digitales e interfaces." />
+  <meta name="author" content="Clara Visconti" />
 
-      gtag('config', 'G-XSZFR9EYG3');
-    </script>
+  <!-- Open Graph (Redes Sociales) -->
+  <meta property="og:title" content="Clara Visconti | UX/UI Designer" />
+  <meta property="og:description" content="Portfolio UX/UI de Clara Visconti. Diseño de experiencias digitales e interfaces." />
+  <meta property="og:image" content="https://claravisconti.com.ar/preview.jpg" />
+  <meta property="og:url" content="https://claravisconti.com.ar/" />
+  <meta property="og:type" content="website" />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clara Visconti | UX/UI Designer" />
+  <meta name="twitter:image" content="https://claravisconti.com.ar/preview.jpg" />
 
-    <!-- SEO básico -->
-    <title>Clara Visconti | UX/UI Designer</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/Iso_teal.svg" />
+  
+  <!-- IMPORTANTE: No agregamos links de fuentes aquí porque ya las cargamos en el CSS local -->
+</head>
 
-    <meta
-      name="description"
-      content="Portfolio de Clara Visconti, diseñadora UX/UI especializada en experiencias digitales e interfaces."
-    />
+<body>
+  <div id="root"></div>
+  
+  <!-- Scripts al final para no bloquear el renderizado -->
+  <script type="module" src="/src/main.jsx"></script>
 
-    <meta name="author" content="Clara Visconti" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Clara Visconti | UX/UI Designer" />
-    <meta property="og:description" content="Portfolio UX/UI de Clara Visconti. Diseño de experiencias digitales e interfaces." />
-    <meta property="og:image" content="https://claravisconti.com.ar/preview.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://claravisconti.com.ar/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Clara Visconti | UX/UI Designer" />
-    <meta name="twitter:description" content="Portfolio UX/UI de Clara Visconti." />
-    <meta name="twitter:image" content="https://claravisconti.com.ar/preview.jpg" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/Iso_teal.svg" />
-
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- Google Analytics (Al final mejora el tiempo de interacción) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSZFR9EYG3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XSZFR9EYG3');
+  </script>
+</body>
 </html>

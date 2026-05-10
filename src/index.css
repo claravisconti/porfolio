@@ -1,12 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* 4. Definición del Tema */
+/* 1. Carga de Fuente Local (Adiós a los 930ms de espera) */
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* 2. Definición del Tema */
 @theme {
-  /* Renombramos para seguir la convención de Tailwind v4 */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-logo: "NewYorkChalet", serif;
-  /* Ahora podés usar la clase font-logo */
 
   --color-main: #ffffff;
   --color-content: #121212;
@@ -16,19 +22,18 @@
   --color-surface: #f8fafc;
 }
 
-/* 5. Estilos Base y Utilidades */
+/* 3. Estilos Base */
 @layer base {
   body {
     font-family: var(--font-sans);
-    @apply bg-white text-black;
-    /* Aseguramos un inicio limpio */
+    @apply bg-white text-black antialiased;
   }
 }
 
+/* 4. Utilidades (Mantenemos bg-hero por si lo usas en secciones internas) */
 @utility bg-hero {
   background-image: url('./assets/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
