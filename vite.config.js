@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react' // ← Verifica que diga @vitejs/ y no 
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/porfolio/', // El nombre de tu repositorio en GitHub
+  base: '/', // El nombre de tu repositorio en GitHub
   plugins: [
     react(),
     tailwindcss(),
