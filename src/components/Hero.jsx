@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -11,23 +11,27 @@ export default function Hero() {
 
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [loadVideo, setLoadVideo] = useState(false);
 
-  const isFirstRender = useRef(true);
-
-  // detectar mobile sin reflows repetidos
+  // mobile detect (una vez)
   useEffect(() => {
-    const mobile = window.matchMedia('(max-width: 768px)').matches;
-    setIsMobile(mobile);
+    setIsMobile(window.matchMedia('(max-width: 768px)').matches);
   }, []);
 
-  // scroll passive + sin overhead
+  // scroll
   useEffect(() => {
     const handleScroll = () => setHasScrolled(true);
-
     window.addEventListener('scroll', handleScroll, { passive: true });
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // delay video (CLAVE PARA LCP)
+  useEffect(() => {
+    const t = setTimeout(() => setLoadVideo(true), 600);
+    return () => clearTimeout(t);
+  }, []);
+
+  const videoSrc = isMobile ? heroMobile : hero;
 
   return (
     <section className="relative w-full h-[100svh] bg-black overflow-hidden">
@@ -36,26 +40,28 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/30 z-10" />
 
-        {isMobile ? (
-          // 🧠 MOBILE: NO autoplay video → solo poster (gran mejora LCP)
-          <img
-            src={poster}
-            alt=""
-            className="w-full h-full object-cover"
-            loading="eager"
-            decoding="async"
-          />
-        ) : (
+        {/* Poster SIEMPRE primero */}
+        <img
+          src={poster}
+          alt=""
+          className={`w-full h-full object-cover transition-opacity duration-700 ${
+            loadVideo ? 'opacity-0' : 'opacity-100'
+          }`}
+          loading="eager"
+          decoding="async"
+        />
+
+        {/* Video después */}
+        {loadVideo && (
           <video
             autoPlay
             loop
             muted
             playsInline
             preload="metadata"
-            poster={poster}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover absolute inset-0"
           >
-            <source src={hero} type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
           </video>
         )}
       </div>
@@ -63,13 +69,9 @@ export default function Hero() {
       {/* CONTENT */}
       <div className="relative z-20 h-full flex flex-col justify-end items-center pb-20 px-6">
 
-        <div
-          className={`flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center transition-all duration-1000 ease-out ${
-            hasScrolled
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10 pointer-events-none'
-          }`}
-        >
+        <div className={`flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center transition-all duration-1000 ease-out ${
+          hasScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}>
 
           <Link
             to="/portfolio"
