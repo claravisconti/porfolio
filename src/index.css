@@ -1,22 +1,6 @@
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter.woff2") format("woff2");
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* 2. Tailwind CSS v4 */
 @import "tailwindcss";
 
-/* 3. Configuración de fuente local (fuera del theme) */
-/* @font-face {
-  font-family: "NewYorkChalet";
-  src: url("/fonts/NewYorkChalet.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* 4. Definición del Tema */
 @theme {
