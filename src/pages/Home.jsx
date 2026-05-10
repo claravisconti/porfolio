@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 
 export default function Home() {
   const { i18n } = useTranslation();
-  
+
   useEffect(() => {
     const hash = window.location.hash; // "#/?lang=en"
     const [path, queryString] = hash.split('?');
@@ -29,13 +29,16 @@ export default function Home() {
   }, []);
   return (
     <>
+      <h1 className="sr-only">
+        Clara Visconti — UX/UI Designer especializada en diseño de interfaces, experiencias digitales y productos web
+      </h1>
       <Hero />
       <Services />
       <Typewriter />
-      <PortfolioPreview/>
-      <Testimonials/>
-      <Expertise/>
-      <LargeTextSlider/>
+      <PortfolioPreview />
+      <Testimonials />
+      <Expertise />
+      <LargeTextSlider />
     </>
   );
 }
