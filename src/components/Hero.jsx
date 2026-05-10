@@ -7,7 +7,6 @@ import hero from '../assets/videos/Hero.mp4';
 import heroMobile from '../assets/videos/HeroMobile.mp4';
 
 // Updated Image Imports
-import posterDesktop from '../assets/images/Hero/Hero.webp';
 import posterMobile from '../assets/images/Hero/HeroMobile.webp';
 
 export default function Hero() {
@@ -16,7 +15,7 @@ export default function Hero() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [loadVideo, setLoadVideo] = useState(false);
 
-  // Determine mobile immediately for the source switch
+  // Determine mobile immediately
   const isMobile = useMemo(() => {
     return window.matchMedia('(max-width: 768px)').matches;
   }, []);
@@ -28,20 +27,21 @@ export default function Hero() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    // Delay video loading (LCP priority)
+    // LÓGICA DE CARGA: 
+    // En Desktop cargamos el video rápido (0ms) porque no hay imagen.
+    // En Mobile esperamos (800ms) para que la imagen cargue primero.
+    const delay = isMobile ? 800 : 0;
     const videoTimer = setTimeout(() => {
       setLoadVideo(true);
-    }, 800);
+    }, delay);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(videoTimer);
     };
-  }, [hasScrolled]);
+  }, [hasScrolled, isMobile]);
 
-  // Select sources based on device
   const videoSrc = isMobile ? heroMobile : hero;
-  const posterSrc = isMobile ? posterMobile : posterDesktop;
 
   return (
     <section 
@@ -53,17 +53,19 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/30 z-10" />
 
         {/* 
-            DYNAMIC POSTER IMAGE: 
-            Now uses posterMobile for phones and posterDesktop for computers.
+            SOLO MOBILE: 
+            La imagen solo se renderiza si es Mobile.
         */}
-        <img
-          src={posterSrc}
-          alt="Clara Visconti Artist"
-          className="w-full h-full object-cover absolute inset-0"
-          fetchpriority="high" 
-          loading="eager"
-          decoding="async"
-        />
+        {isMobile && (
+          <img
+            src={posterMobile}
+            alt="Clara Visconti Artist"
+            className="w-full h-full object-cover absolute inset-0"
+            fetchpriority="high" 
+            loading="eager"
+            decoding="async"
+          />
+        )}
 
         {/* VIDEO LAYER */}
         {loadVideo && (
@@ -83,7 +85,6 @@ export default function Hero() {
 
       {/* CONTENT LAYER */}
       <div className="relative z-20 h-full flex flex-col justify-end items-center pb-20 px-6">
-        
         <div 
           className={`flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center transition-all duration-1000 ease-out ${
             hasScrolled 
@@ -105,7 +106,6 @@ export default function Hero() {
             {t('hero.about')}
           </Link>
         </div>
-
       </div>
     </section>
   );
