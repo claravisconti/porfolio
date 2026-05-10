@@ -14,9 +14,9 @@ export default function Banner({ title, image }) {
 
       {/* Texto en el borde inferior */}
       <div className="relative z-10 w-full px-6 md:px-24 pb-0">
-        <h1 className="text-white text-7xl md:text-[12rem] font-bold tracking-tighter leading-[0.8] text-center opacity-100 mb-[-0.1em]">
+        <h2 className="text-white text-7xl md:text-[12rem] font-bold tracking-tighter leading-[0.8] text-center opacity-100 mb-[-0.1em]">
           {title}
-        </h1>
+        </h2>
       </div>
     </section>
   );

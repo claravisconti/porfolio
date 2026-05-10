@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
-import Iso from '../assets/images/Logo/Iso_blanco.svg'; 
-import IsoTeal from '../assets/images/Logo/Iso_teal.svg'; 
+import Iso from '../assets/images/Logo/Iso_blanco.svg';
+import IsoTeal from '../assets/images/Logo/Iso_teal.svg';
 import LanguageSwitcher from './LanguagesSwitcher';
 import { useTranslation } from 'react-i18next';
 
@@ -60,12 +60,12 @@ export default function Navbar() {
             />
 
             {/* Nombre: Fuente New York Chalet sin punto final */}
-            <span
+            <h1
               className={`font-logo text-3xl tracking-tight leading-none pt-1 transition-colors duration-500 
               ${isOpen ? 'text-white' : theme.text}`}
             >
               Clara Visconti
-            </span>
+            </h1>
           </Link>
 
           {/* --- MENÚ DESKTOP --- */}
@@ -90,9 +90,9 @@ export default function Navbar() {
               {/* Submenú Flotante */}
               <div className={`absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-2xl min-w-[200px] py-4 transition-all duration-300 transform ${isPortfolioHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
                 {portfolioSubs.map((sub) => (
-                  <Link 
-                    key={sub.name} 
-                    to={sub.href} 
+                  <Link
+                    key={sub.name}
+                    to={sub.href}
                     className="block px-8 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black hover:bg-gray-50 transition-colors"
                   >
                     {sub.name}
@@ -109,7 +109,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <LanguageSwitcher theme={theme}/>
+          <LanguageSwitcher theme={theme} />
 
           {/* --- BOTÓN BURGER (MOBILE) --- */}
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden z-[110] p-2 focus:outline-none" aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}>

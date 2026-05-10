@@ -8,17 +8,17 @@ import { useTranslation } from 'react-i18next';
 
 export default function PortfolioCategory({ category }) {
   const { i18n } = useTranslation();
-  const projects = useMemo(() => {return getProjects()}, [i18n.language])
+  const projects = useMemo(() => { return getProjects() }, [i18n.language])
   const [visibleCount, setVisibleCount] = useState(6);
   const [allFilteredProjects, setAllFilteredProjects] = useState([]);
   const [displayProjects, setDisplayProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(false); // Estado para controlar el retraso
-  
+
   const loaderRef = useRef(null);
 
   useEffect(() => {
-    setVisibleCount(6); 
-    setAllFilteredProjects(projects.filter(p => 
+    setVisibleCount(6);
+    setAllFilteredProjects(projects.filter(p =>
       ["todos", "all"].includes(category.toLowerCase()) || p.category.toLowerCase() === category.toLowerCase()
     ))
   }, [category]);
@@ -39,14 +39,14 @@ export default function PortfolioCategory({ category }) {
           setTimeout(() => {
             setVisibleCount((prev) => prev + 6);
             setIsLoading(false); // Liberamos la carga
-          }, 500); 
+          }, 500);
         }
       },
       { rootMargin: "0px 0px 50px 0px" } // Se activa justo al llegar o un poco antes
     );
 
     if (loaderRef.current) observer.observe(loaderRef.current);
-    
+
     return () => {
       if (loaderRef.current) observer.disconnect();
     };
@@ -65,20 +65,25 @@ export default function PortfolioCategory({ category }) {
         {/* GRILLA DE PROYECTOS */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayProjects.map((project, index) => (
-            <Link 
-              to={`/portfolio/project/${project.slug}`} 
-              key={`${project.id}-${index}`} 
+            <Link
+              to={`/portfolio/project/${project.slug}`}
+              key={`${project.id}-${index}`}
               className="group animate-fadeIn"
             >
               <div className="overflow-hidden bg-gray-100 aspect-square relative">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                <img
+                  src={project.image}
+                  alt={`Proyecto ${project.title}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center text-white p-6 text-center">
                   <p className="text-[10px] uppercase tracking-[0.3em] mb-2 text-gray-300">{project.category}</p>
+
+                  {/* Mantenemos h3: perfecto orden jerárquico */}
                   <h3 className="text-xl font-bold uppercase tracking-tight">{project.title}</h3>
+
                   <div className="w-8 h-[1px] bg-[#00adb5] mt-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 </div>
               </div>
@@ -87,9 +92,14 @@ export default function PortfolioCategory({ category }) {
         </div>
 
         {/* CENTINELA CON EFECTO VISUAL DE CARGA */}
-        <div ref={loaderRef} className="h-40 flex items-center justify-center">
+        <div
+          ref={loaderRef}
+          className="h-40 flex items-center justify-center"
+          aria-live="polite"
+        >
           {isLoading && (
-            <div className="flex gap-2">
+            <div className="flex gap-2" role="status">
+              <span className="sr-only">Cargando más proyectos...</span>
               <div className="w-2 h-2 bg-[#00adb5] rounded-full animate-bounce [animation-delay:-0.3s]"></div>
               <div className="w-2 h-2 bg-[#00adb5] rounded-full animate-bounce [animation-delay:-0.15s]"></div>
               <div className="w-2 h-2 bg-[#00adb5] rounded-full animate-bounce"></div>
