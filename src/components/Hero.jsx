@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import hero from '../assets/videos/Hero.mp4';
-import heroMobile from '../assets/videos/HeroMobile.webm';
+import heroMobile from '../assets/videos/HeroMobile.mp4';
 import poster from '../assets/images/Hero/Hero1.webp';
 
 export default function Hero() {
