@@ -40,7 +40,7 @@ export default function ScrollToTopButton() {
                      transition-all duration-300 ease-in-out 
                      hover:bg-[#5aa1a3] hover:-translate-y-1 hover:scale-105 
                      animate-in fade-in slide-in-from-bottom-5"
-          title="Volver arriba"
+          aria-label="Volver arriba"
         >
           <FaChevronUp className="text-2xl" />
         </button>

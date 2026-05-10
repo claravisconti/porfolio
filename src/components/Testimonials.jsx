@@ -41,10 +41,10 @@ export default function Testimonials() {
 
   return (
     <section className="bg-accent text-white flex flex-col items-center overflow-hidden">
-      
+
       {/* SECCIÓN SUPERIOR: Contenido y Círculo */}
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center py-20 md:pt-32 md:pb-24 px-6 md:px-24 relative z-10">
-        
+
         {/* LADO IZQUIERDO: Círculo Perfecto */}
         <div className="md:col-span-5 flex justify-center">
           <div className="relative w-full max-w-[280px] md:max-w-[400px] aspect-square rounded-full overflow-hidden shadow-2xl">
@@ -61,10 +61,10 @@ export default function Testimonials() {
         <div className="md:col-span-7 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 text-center md:text-left relative">
           <div className="space-y-6 max-w-xl flex-grow">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase mb-6">{t('testimonials.title')}</h2>
-            
+
             <div className="flex flex-col md:flex-row gap-4 items-center md:items-start mb-8">
-               <div className="hidden md:block w-10 h-[1px] bg-white/60 mt-4 flex-shrink-0"></div>
-               <p className="text-base md:text-xl font-light leading-relaxed opacity-95 italic">
+              <div className="hidden md:block w-10 h-[1px] bg-white/60 mt-4 flex-shrink-0"></div>
+              <p className="text-base md:text-xl font-light leading-relaxed opacity-95 italic">
                 "{testimonials[current].text}"
               </p>
             </div>
@@ -84,15 +84,14 @@ export default function Testimonials() {
                 key={t.id}
                 onClick={() => setCurrent(index)}
                 className="group flex flex-col items-center"
+                aria-label={`Ver testimonio ${t.id}`}
               >
-                <span className={`text-[10px] md:text-[11px] font-bold tracking-[0.4em] transition-all duration-500 ${
-                  current === index ? 'opacity-100 scale-110' : 'opacity-30 group-hover:opacity-60'
-                }`}>
+                <span className={`text-[10px] md:text-[11px] font-bold tracking-[0.4em] transition-all duration-500 ${current === index ? 'opacity-100 scale-110' : 'opacity-30 group-hover:opacity-60'
+                  }`}>
                   {t.id}
                 </span>
-                <div className={`w-[1px] bg-white transition-all duration-500 mt-2 ${
-                  current === index ? 'h-6 opacity-100' : 'h-0 opacity-0 group-hover:h-3 group-hover:opacity-60'
-                }`}></div>
+                <div className={`w-[1px] bg-white transition-all duration-500 mt-2 ${current === index ? 'h-6 opacity-100' : 'h-0 opacity-0 group-hover:h-3 group-hover:opacity-60'
+                  }`}></div>
               </button>
             ))}
           </div>

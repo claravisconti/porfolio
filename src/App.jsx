@@ -8,12 +8,11 @@ import ReactGA from "react-ga4";
 
 function App() {
   useEffect(() => {
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname,
-    });
+    setTimeout(() => {
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    }, 1000);
   }, []);
-
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

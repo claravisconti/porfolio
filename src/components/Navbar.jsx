@@ -112,7 +112,7 @@ export default function Navbar() {
           <LanguageSwitcher theme={theme}/>
 
           {/* --- BOTÓN BURGER (MOBILE) --- */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden z-[110] p-2 focus:outline-none">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden z-[110] p-2 focus:outline-none" aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}>
             <div className="relative w-6 h-5">
               <span className={`absolute block w-full h-0.5 transition-all duration-300 ${isOpen ? 'rotate-45 top-2 bg-white' : `top-0 ${theme.burger}`}`}></span>
               <span className={`absolute block w-full h-0.5 transition-all duration-300 top-2 ${isOpen ? 'opacity-0' : `opacity-100 ${theme.burger}`}`}></span>

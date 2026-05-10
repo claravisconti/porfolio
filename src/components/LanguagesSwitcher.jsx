@@ -31,6 +31,7 @@ export default function LanguageSwitcher({theme}) {
     <div ref={ref} className="relative inline-block">
       <button
         onClick={() => setOpen((prev) => !prev)}
+        aria-label="Cambiar idioma"
         className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-150 ${theme.navBg} ${theme.text}`}
       >
         {current.label}

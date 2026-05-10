@@ -93,6 +93,7 @@ export default function Hero() {
             key={slide.id}
             onClick={() => setCurrent(index)}
             className="group flex items-center gap-2 md:gap-4"
+            aria-label={`Ir a slide ${slide.id}`}
           >
             <span className={`text-[10px] md:text-[11px] font-bold tracking-widest transition-all ${index === current ? 'text-white scale-110' : 'text-white/40' // 👈 LÍNEA ACTIVA A BLANCO
               }`}>
