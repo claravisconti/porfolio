@@ -4,8 +4,7 @@
 @font-face {
   font-family: 'Inter';
   /* Apuntamos a la ruta fija de public para evitar el error 404 */
-  src: url('/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2-variations'),
-       url('/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2');
+  src: url('/fonts/Inter.woff2') format('woff2');
   font-weight: 100 900;
   font-display: swap; /* Permite que el texto sea visible mientras carga la fuente */
   font-style: normal;
