@@ -1,0 +1,1 @@
+import{d as e,u as t}from"./vendor-DN5-bHFz.js";import{n,t as r}from"./Hero1-D4pqv6_E.js";import{n as i,t as a}from"./Services-CxCZjUOD.js";var o=t();function s(){let{t}=e();return(0,o.jsxs)(`div`,{children:[(0,o.jsx)(n,{title:t(`nav.about`),image:r}),(0,o.jsxs)(`div`,{className:`max-w-[90rem] mx-auto grid ...`,children:[(0,o.jsx)(i,{}),(0,o.jsx)(a,{})]})]})}export{s as default};
