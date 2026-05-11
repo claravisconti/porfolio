@@ -34,6 +34,7 @@ export default function Hero() {
           loop
           muted
           playsInline
+          title="Clara Visconti Design Portfolio Video"
           className="w-full h-full object-cover absolute inset-0"
         >
           <source src={videoSrc} type="video/mp4" />
