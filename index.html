@@ -8,41 +8,28 @@
   <title>Clara Visconti | Web and Graphic Designer</title>
   <meta name="description" content="Portfolio de Clara Visconti, diseñadora UX/UI especializada en experiencias digitales e interfaces." />
   
-  <!-- 1. LCP OPTIMIZATION (Precarga de imágenes críticas) -->
-  <!-- Esto sí se puede dejar manual porque son rutas fijas en /public -->
+  <!-- 1. PRECARGA SELECTIVA (Solo para avisar al navegador qué viene) -->
   <link rel="preload" href="/images/HeroMobile.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
   <link rel="preload" href="/images/Hero.webp" as="image" fetchpriority="high" media="(min-width: 769px)">
-  
-  <!-- 2. FUENTES -->
   <link rel="preload" href="/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-  <!-- 3. PRECARGA DE VIDEO -->
-  <link rel="preload" href="/videos/Hero.mp4" as="video" type="video/mp4">
-
-  <!-- NOTA: No pongas <link> a /assets/ aquí. 
-       Vite los inyectará automáticamente al hacer el build. -->
 
   <meta name="author" content="Clara Visconti" />
   <meta property="og:title" content="Clara Visconti | UX/UI Designer" />
   <meta property="og:image" content="https://claravisconti.com.ar/preview.jpg" />
   <link rel="icon" type="image/svg+xml" href="/Iso_teal.svg" />
-
+  
+  <!-- Eliminamos el estilo de body negro y la capa fantasma fija -->
 </head>
 
 <body>
-  <!-- "Imagen Fantasma" para que Lighthouse vea contenido antes que React cargue -->
-  <div class="lcp-preloader">
-    <picture>
-      <source srcset="/images/HeroMobile.webp" media="(max-width: 768px)">
-      <img src="/images/Hero.webp" alt="" fetchpriority="high">
-    </picture>
-  </div>
-
+  <!-- Eliminamos el div del preloader/imagen fantasma que duplicaba el Hero -->
+  
   <div id="root"></div>
 
-  <!-- RUTA DE DESARROLLO: Vite la transformará sola al hacer build -->
+  <!-- RUTA ESTÁNDAR: Deja que Vite maneje todo el CSS y JS solo -->
   <script type="module" src="/src/main.jsx"></script>
 
+  <!-- Analíticas con delay (esto está bien para no trabar la carga inicial) -->
   <script>
     window.addEventListener('load', function () {
       setTimeout(function () {
