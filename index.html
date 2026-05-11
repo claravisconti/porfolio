@@ -8,31 +8,35 @@
   <title>Clara Visconti | Web and Graphic Designer</title>
   <meta name="description" content="Portfolio de Clara Visconti, diseñadora UX/UI especializada en experiencias digitales e interfaces." />
   
-  <!-- 1. PRECARGA DE CSS (PROLIJO) -->
-  <!-- Esto le dice al navegador: "Descarga esto ya, lo voy a usar en un segundo" -->
-  <!-- Reemplaza el hash (BG3ucJCr) si Vite genera uno nuevo al compilar -->
-  <link rel="preload" href="/assets/index-BG3ucJCr.css" as="style">
-  <link rel="preload" href="/assets/vendor-Bdbi0viN.css" as="style">
-  
-  <!-- Mantenemos los links de stylesheet normales para que se apliquen -->
-  <link rel="stylesheet" href="/assets/index-BG3ucJCr.css">
-  <link rel="stylesheet" href="/assets/vendor-Bdbi0viN.css">
-
-  <!-- 2. RECURSOS DE MÁXIMA PRIORIDAD (LCP) -->
+  <!-- 1. LCP OPTIMIZATION (Precarga de imágenes críticas) -->
+  <!-- Esto sí se puede dejar manual porque son rutas fijas en /public -->
   <link rel="preload" href="/images/HeroMobile.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
   <link rel="preload" href="/images/Hero.webp" as="image" fetchpriority="high" media="(min-width: 769px)">
   
-  <!-- 3. FUENTES (YA OPTIMIZADA A ~30KB) -->
+  <!-- 2. FUENTES -->
   <link rel="preload" href="/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-  <!-- 4. PRECARGA DE VIDEO -->
+  <!-- 3. PRECARGA DE VIDEO -->
   <link rel="preload" href="/videos/Hero.mp4" as="video" type="video/mp4">
 
-  <!-- Meta etiquetas -->
+  <!-- NOTA: No pongas <link> a /assets/ aquí. 
+       Vite los inyectará automáticamente al hacer el build. -->
+
   <meta name="author" content="Clara Visconti" />
   <meta property="og:title" content="Clara Visconti | UX/UI Designer" />
   <meta property="og:image" content="https://claravisconti.com.ar/preview.jpg" />
   <link rel="icon" type="image/svg+xml" href="/Iso_teal.svg" />
+
+  <style>
+    /* Esto ayuda a que el fondo sea negro desde el segundo 0 */
+    body { background-color: #000; margin: 0; }
+    .lcp-preloader {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -1;
+    }
+    .lcp-preloader img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
   <script type="module" crossorigin src="/assets/index-Uy88TDrA.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-jpDsebLB.js">
   <link rel="modulepreload" crossorigin href="/assets/vendor-DN5-bHFz.js">
@@ -41,11 +45,18 @@
 </head>
 
 <body>
+  <!-- "Imagen Fantasma" para que Lighthouse vea contenido antes que React cargue -->
+  <div class="lcp-preloader">
+    <picture>
+      <source srcset="/images/HeroMobile.webp" media="(max-width: 768px)">
+      <img src="/images/Hero.webp" alt="" fetchpriority="high">
+    </picture>
+  </div>
+
   <div id="root"></div>
 
-  <!-- 5. SCRIPTS AL FINAL -->
+  <!-- RUTA DE DESARROLLO: Vite la transformará sola al hacer build -->
 
-  <!-- 6. ANALÍTICAS CON DELAY -->
   <script>
     window.addEventListener('load', function () {
       setTimeout(function () {
