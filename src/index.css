@@ -3,10 +3,9 @@
 /* 1. Carga de Fuente Local (Desde la carpeta /public) */
 @font-face {
   font-family: 'Inter';
-  /* Apuntamos a la ruta fija de public para evitar el error 404 */
   src: url('/fonts/Inter.woff2') format('woff2');
   font-weight: 100 900;
-  font-display: swap; /* Permite que el texto sea visible mientras carga la fuente */
+  font-display: swap;
   font-style: normal;
 }
 
@@ -28,8 +27,7 @@
   body {
     font-family: var(--font-sans);
     @apply bg-white text-black antialiased;
-    /* Evita saltos visuales de scrollbar en Windows */
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
 
   /* Mejora de Accesibilidad: Foco claro para navegación por teclado */
