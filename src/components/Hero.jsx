@@ -44,7 +44,7 @@ export default function Hero() {
   const videoSrc = isMobile ? heroMobile : hero;
 
   return (
-    <section 
+    <section
       className="relative w-full h-[100svh] bg-black overflow-hidden"
       aria-label="Hero Section"
     >
@@ -61,7 +61,7 @@ export default function Hero() {
             src={posterMobile}
             alt="Clara Visconti Artist"
             className="w-full h-full object-cover absolute inset-0"
-            fetchpriority="high" 
+            fetchpriority="high"
             loading="eager"
             decoding="async"
           />
@@ -70,13 +70,13 @@ export default function Hero() {
         {/* VIDEO LAYER */}
         {loadVideo && (
           <video
+            aria-hidden="true"
             autoPlay
             loop
             muted
             playsInline
-            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
-              loadVideo ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${loadVideo ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             <source src={videoSrc} type="video/mp4" />
           </video>
@@ -85,12 +85,11 @@ export default function Hero() {
 
       {/* CONTENT LAYER */}
       <div className="relative z-20 h-full flex flex-col justify-end items-center pb-20 px-6">
-        <div 
-          className={`flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center transition-all duration-1000 ease-out ${
-            hasScrolled 
-              ? 'opacity-100 translate-y-0' 
+        <div
+          className={`flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center transition-all duration-1000 ease-out ${hasScrolled
+              ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10 pointer-events-none'
-          }`}
+            }`}
         >
           <Link
             to="/portfolio"
