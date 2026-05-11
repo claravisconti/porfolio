@@ -1,17 +1,24 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO básico -->
-  <title>Clara Visconti | UX/UI Designer</title>
-  <meta name="description" content="Portfolio de Clara Visconti, diseñadora UX/UI especializada en experiencias digitales e interfaces." />
+  <title>Clara Visconti | Web and Graphic Designer</title>
+  <meta name="description"
+    content="Portfolio de Clara Visconti, diseñadora UX/UI especializada en experiencias digitales e interfaces." />
   <meta name="author" content="Clara Visconti" />
+
+  <!-- OPTIMIZACIÓN DE FUENTES: Rompe la cadena crítica -->
+  <!-- Reemplaza 'Inter-Var.woff2' por el nombre exacto que aparece en tu carpeta dist/assets después del build -->
+  <link rel="preload" href="/assets/Inter-Var.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <!-- Open Graph (Redes Sociales) -->
   <meta property="og:title" content="Clara Visconti | UX/UI Designer" />
-  <meta property="og:description" content="Portfolio UX/UI de Clara Visconti. Diseño de experiencias digitales e interfaces." />
+  <meta property="og:description"
+    content="Portfolio UX/UI de Clara Visconti. Diseño de experiencias digitales e interfaces." />
   <meta property="og:image" content="https://claravisconti.com.ar/preview.jpg" />
   <meta property="og:url" content="https://claravisconti.com.ar/" />
   <meta property="og:type" content="website" />
@@ -23,23 +30,40 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/Iso_teal.svg" />
-  
-  <!-- IMPORTANTE: No agregamos links de fuentes aquí porque ya las cargamos en el CSS local -->
 </head>
 
 <body>
   <div id="root"></div>
-  
-  <!-- Scripts al final para no bloquear el renderizado -->
+
+  <!-- script principal de React -->
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- Google Analytics (Al final mejora el tiempo de interacción) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSZFR9EYG3"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XSZFR9EYG3');
+    window.addEventListener('load', function () {
+      // Esperamos 3.5 segundos para que la web cargue perfecto al inicio
+      setTimeout(function () {
+
+        // 1. GOOGLE ANALYTICS (G4)
+        var gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XSZFR9EYG3";
+        document.head.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XSZFR9EYG3');
+
+        // 2. MICROSOFT CLARITY
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wotthqne6g");
+
+      }, 3500);
+    });
   </script>
 </body>
+
 </html>
