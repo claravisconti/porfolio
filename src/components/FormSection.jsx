@@ -36,9 +36,9 @@ export default function FormSection() {
         {/* COLUMNA IZQUIERDA: Información */}
         <div className="space-y-12">
           <div className="space-y-6">
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-black">
+            <h4 className="text-6xl md:text-8xl font-bold tracking-tighter text-black">
               {t('contact.title_1')}
-            </h1>
+            </h4>
             <div className="flex gap-4">
               <div className="w-12 h-[1px] bg-black mt-4"></div>
               <p className="text-gray-500 text-lg leading-relaxed max-w-md font-light italic">
@@ -77,7 +77,7 @@ export default function FormSection() {
 
             {/* Input Nombre */}
             <div className="relative group">
-              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
+              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-600 group-focus-within:text-black transition-colors">
                 {t('contact.name')}
               </label>
               <input
@@ -90,7 +90,7 @@ export default function FormSection() {
 
             {/* Input Email */}
             <div className="relative group">
-              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
+              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-600 group-focus-within:text-black transition-colors">
                 {t('contact.email')}
               </label>
               <input
@@ -102,7 +102,7 @@ export default function FormSection() {
             </div>
 
             <div className="relative group">
-              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
+              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-600 group-focus-within:text-black transition-colors">
                 {t('contact.about')}
               </label>
               <input
@@ -115,7 +115,7 @@ export default function FormSection() {
 
             {/* Input Mensaje */}
             <div className="relative group">
-              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 group-focus-within:text-black transition-colors">
+              <label className="text-[10px] uppercase tracking-[0.3em] text-gray-600 group-focus-within:text-black transition-colors">
                 {t('contact.message')}
               </label>
               <textarea

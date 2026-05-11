@@ -31,7 +31,7 @@ const TextSlider = () => {
                 Un solo H2. El hover cambia el color y activa el stroke 
                 exactamente sobre las mismas coordenadas.
               */}
-              <h2 className="text-9xl font-bold uppercase tracking-tighter transition-all duration-500 
+              <h3 className="text-9xl font-bold uppercase tracking-tighter transition-all duration-500 
                              text-[#f0f0f0] 
                              group-hover:text-transparent"
                   style={{
@@ -40,7 +40,7 @@ const TextSlider = () => {
                   }}
               >
                 {word}
-              </h2>
+              </h3>
 
               {/* Estilo local para inyectar el stroke solo en hover sin mover el texto */}
               <style jsx>{`

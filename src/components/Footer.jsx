@@ -40,7 +40,7 @@ export default function Footer() {
 
         {/* Columna 2: Navegación */}
         <div className="flex flex-col items-center text-center space-y-8">
-          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/50">{t('footer.explore')}</h4>
+          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/70">{t('footer.explore')}</h4>
           <nav className="flex flex-col gap-4">
             {/* Reemplazamos Link por botones que disparan handleNavigation */}
             <button onClick={() => handleNavigation('/')} className="text-[11px] font-bold uppercase tracking-[0.2em] hover:text-black transition-colors">{t('nav.home')}</button>
@@ -52,14 +52,14 @@ export default function Footer() {
 
         {/* Columna 3: Redes */}
         <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-8">
-          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/50">{t('footer.follow')}</h4>
+          <h4 className="text-[11px] font-bold tracking-[0.3em] uppercase text-white/70">{t('footer.follow')}</h4>
           <Socials />
         </div>
       </div>
 
       {/* Copyright */}
-      <div className="max-w-[90rem] mx-auto mt-20 pt-10 border-t border-white/10 flex flex-col items-center">
-        <p className="text-[9px] text-white/40 uppercase tracking-[0.5em] text-center font-medium">
+      <div className="max-w-[90rem] mx-auto mt-20 pt-10 flex flex-col items-center">
+        <p className="text-[9px] text-white uppercase tracking-[0.5em] text-center font-medium">
           © 2026 Clara Visconti. {t('footer.rights')}
         </p>
       </div>

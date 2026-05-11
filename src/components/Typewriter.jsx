@@ -28,9 +28,9 @@ export default function TypeWriter() {
     return (
       <div className="w-full max-w-[95rem]"> 
         {/* Línea 1 */}
-        <h2 className="text-6xl lg:text-[5.5rem] font-bold text-[#111] leading-[1] tracking-tighter text-left">
+        <h3 className="text-6xl lg:text-[5.5rem] font-bold text-[#111] leading-[1] tracking-tighter text-left">
           {lines[0]}
-        </h2>
+        </h3>
         
         {/* Línea 2 con color TEAL */}
         {lines[1] !== undefined && (

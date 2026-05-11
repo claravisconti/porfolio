@@ -2,15 +2,15 @@ import React, { useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProjects } from '../data/projects';
 import ProjectNavigation from '../components/ProjectNavigation';
-import Banner from '../components/Banner'; 
-import Hero from '../assets/images/Hero/Hero1.webp'; 
+import Banner from '../components/Banner';
+import Hero from '../assets/images/Hero/Hero1.webp';
 import { Monitor, Target, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function ProjectDetail() {
   const { slug } = useParams();
   const { i18n, t } = useTranslation();
-  
+
   // Memorizamos los proyectos para evitar re-cálculos innecesarios
   const projects = useMemo(() => {
     return getProjects();
@@ -31,9 +31,9 @@ export default function ProjectDetail() {
   return (
     <div className="bg-white min-h-screen text-black">
       {/* BANNER SUPERIOR: El Banner ya configuramos que use <h2> para la categoría */}
-      <Banner 
-        title={project.category} 
-        image={Hero} 
+      <Banner
+        title={project.category}
+        image={Hero}
       />
 
       {/* SECCIÓN 1: INTRODUCCIÓN Y TÍTULO PRINCIPAL (H1) */}
@@ -44,23 +44,23 @@ export default function ProjectDetail() {
               {project.category}
             </p>
             {/* H1: Título principal de la página de detalle */}
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.95] md:leading-[0.85] mb-6 md:mb-10">
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.95] md:leading-[0.85] mb-6 md:mb-10">
               {project.title}
-            </h1>
+            </h2>
           </div>
 
           {/* FICHA TÉCNICA */}
           <div className="lg:w-1/3 flex flex-col sm:flex-row lg:flex-col justify-center lg:justify-end gap-8 md:gap-8 pt-6 pb-1 lg:border-l border-gray-100 lg:pl-8 w-full">
             <div className="text-center lg:text-left">
-              <h2 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">{t('project.year')}</h2>
+              <h3 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">{t('project.year')}</h3>
               <p className="text-[12px] md:text-sm font-bold uppercase">{project.year}</p>
             </div>
             <div className="text-center lg:text-left">
-              <h2 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">{t('project.services')}</h2>
+              <h3>{t('project.services')}</h3>
               <p className="text-[12px] md:text-sm font-bold uppercase">{project.services}</p>
             </div>
             <div className="text-center lg:text-left">
-              <h2 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">{t('project.author')}</h2>
+              <h3 className="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1 font-bold">{t('project.author')}</h3>
               <p className="text-[12px] md:text-sm font-bold uppercase">María Clara Visconti</p>
             </div>
           </div>
@@ -71,9 +71,9 @@ export default function ProjectDetail() {
       {project.gallery?.[0] && (
         <section className="max-w-7xl mx-auto md:px-16 mb-16 md:mb-24">
           <div className="w-full aspect-[4/5] md:aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
-            <img 
-              src={project.gallery[0]} 
-              alt={`Vista principal del proyecto ${project.title}`} 
+            <img
+              src={project.gallery[0]}
+              alt={`Vista principal del proyecto ${project.title}`}
               className="w-full h-full object-cover"
               fetchpriority="high"
             />
@@ -111,10 +111,10 @@ export default function ProjectDetail() {
                     <h4 className="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold italic">{t('project.colors')}</h4>
                     <div className="flex gap-4">
                       {project.colors.map((c, i) => (
-                        <div 
-                          key={i} 
-                          className="w-10 h-10 rounded-full border border-gray-100 shadow-sm" 
-                          style={{ backgroundColor: c }} 
+                        <div
+                          key={i}
+                          className="w-10 h-10 rounded-full border border-gray-100 shadow-sm"
+                          style={{ backgroundColor: c }}
                           title={`Color Hex: ${c}`}
                         />
                       ))}
@@ -129,14 +129,14 @@ export default function ProjectDetail() {
                   </div>
                 )}
               </div>
-              
+
               {/* IMAGEN DE DETALLE */}
               {project.gallery?.[1] && (
                 <div className="md:col-span-8">
-                  <img 
-                    src={project.gallery[1]} 
-                    alt="Detalle de diseño e interfaz" 
-                    className="w-full aspect-video md:aspect-[16/10] object-cover rounded-sm shadow-sm" 
+                  <img
+                    src={project.gallery[1]}
+                    alt="Detalle de diseño e interfaz"
+                    className="w-full aspect-video md:aspect-[16/10] object-cover rounded-sm shadow-sm"
                     loading="lazy"
                   />
                 </div>
@@ -175,9 +175,9 @@ export default function ProjectDetail() {
           {project.impact?.length > 0 && (
             <section className="max-w-7xl mx-auto px-6 md:px-16 py-20 md:py-16">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
-                <h2 className="text-4xl md:text-7xl font-black uppercase leading-none tracking-tighter">
+                <h3 className="text-4xl md:text-7xl font-black uppercase leading-none tracking-tighter">
                   {t('project.metrics_1')} <br />{t('project.metrics_2')}
-                </h2>
+                </h3>
                 <div className="flex flex-col md:flex-row gap-12 md:gap-16 w-full lg:w-auto items-center">
                   {project.impact.map((imp, i) => (
                     <div key={i} className="flex flex-col items-center">
@@ -198,10 +198,10 @@ export default function ProjectDetail() {
           {project.gallery?.[2] && (
             <section className="hidden md:block max-w-7xl mx-auto pt-24 md:pt-20 md:px-16 pb-24 md:pb-8">
               <div className="w-full aspect-video overflow-hidden bg-gray-50 md:rounded-sm">
-                <img 
-                  src={project.gallery[2]} 
-                  alt="Resultado final del proyecto" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src={project.gallery[2]}
+                  alt="Resultado final del proyecto"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
@@ -213,7 +213,7 @@ export default function ProjectDetail() {
         <section className="max-w-7xl mx-auto px-6 md:px-16 pb-24 text-center md:text-left">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
             <div className="md:col-span-4">
-              <h2 className="font-bold uppercase tracking-widest text-xs italic">{t('project.project')}</h2>
+              <h3 className="font-bold uppercase tracking-widest text-xs italic">{t('project.project')}</h3>
             </div>
             <div className="md:col-span-8">
               <p className="text-base text-gray-600 leading-relaxed font-light">{project.description}</p>
@@ -221,11 +221,11 @@ export default function ProjectDetail() {
           </div>
           <div className="space-y-8">
             {project.gallery?.slice(1).map((img, i) => img && (
-              <img 
-                key={i} 
-                src={img} 
-                className="w-full object-cover rounded-sm" 
-                alt={`Imagen de galería ${i + 1}`} 
+              <img
+                key={i}
+                src={img}
+                className="w-full object-cover rounded-sm"
+                alt={`Imagen de galería ${i + 1}`}
                 loading="lazy"
               />
             ))}

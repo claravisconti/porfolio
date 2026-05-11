@@ -56,9 +56,9 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="sr-only">
+      <h2 className="sr-only">
         Clara Visconti — UX/UI Designer especializada en diseño de interfaces, experiencias digitales y productos web
-      </h1>
+      </h2>
 
       {/* HERO SIEMPRE INMEDIATO */}
       <Hero />

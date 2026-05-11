@@ -20,9 +20,9 @@ export default function Expertise() {
             <p className="text-[10px] uppercase tracking-[0.4em] text-[#00adb5] font-bold">
               {t('skills.specialities')}
             </p>
-            <h2 className="text-5xl md:text-[3.5rem] font-bold text-black leading-[1.1] tracking-tighter">
+            <h3 className="text-5xl md:text-[3.5rem] font-bold text-black leading-[1.1] tracking-tighter">
               {t('skills.title_1')} <br className="hidden md:block" /> {t('skills.title_2')}
-            </h2>
+            </h3>
           </div>
           
           <div className="flex gap-6 md:gap-8 items-start">
