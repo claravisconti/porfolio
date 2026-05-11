@@ -2,15 +2,11 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-// Videos
-import hero from '../assets/videos/Hero.mp4';
-import heroMobile from '../assets/videos/HeroMobile.mp4';
-
 export default function Hero() {
   const { t } = useTranslation();
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  // Determinar si es mobile inmediatamente para elegir el video correcto
+  // Determinar si es mobile inmediatamente
   const isMobile = useMemo(() => {
     return window.matchMedia('(max-width: 768px)').matches;
   }, []);
@@ -27,7 +23,12 @@ export default function Hero() {
     };
   }, [hasScrolled]);
 
-  const videoSrc = isMobile ? heroMobile : hero;
+  /**
+   * IMPORTANT:
+   * Al estar en /public, ya no usamos 'import'.
+   * Usamos el string directo de la ruta.
+   */
+  const videoSrc = isMobile ? "/videos/HeroMobile.mp4" : "/videos/Hero.mp4";
 
   return (
     <section
@@ -40,11 +41,12 @@ export default function Hero() {
 
         {/* 
             VIDEO LAYER: 
-            Se renderiza directamente sin condiciones de carga.
-            Añadimos 'muted' y 'playsInline' para asegurar el autoPlay en todos los navegadores.
+            Usamos 'key' para que React refresque el video si cambia el videoSrc.
+            'preload="auto"' ayuda a que el buffer empiece lo antes posible.
         */}
         <video
-          key={videoSrc} // Ayuda a React a cambiar el video si se redimensiona la pantalla
+          key={videoSrc}
+          preload="auto"
           aria-hidden="true"
           autoPlay
           loop

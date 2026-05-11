@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
-/* 1. Carga de Fuente Local (Adiós a los 930ms de espera) */
+/* 1. Carga de Fuente Local (Desde la carpeta /public) */
 @font-face {
   font-family: 'Inter';
-  src: url('./assets/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2-variations');
+  /* Apuntamos a la ruta fija de public para evitar el error 404 */
+  src: url('/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2-variations'),
+       url('/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2');
   font-weight: 100 900;
-  font-display: swap;
+  font-display: swap; /* Permite que el texto sea visible mientras carga la fuente */
   font-style: normal;
 }
 
@@ -27,13 +29,12 @@
   body {
     font-family: var(--font-sans);
     @apply bg-white text-black antialiased;
+    /* Evita saltos visuales de scrollbar en Windows */
+    overflow-x: hidden; 
   }
-}
 
-/* 4. Utilidades (Mantenemos bg-hero por si lo usas en secciones internas) */
-@utility bg-hero {
-  background-image: url('./assets/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Mejora de Accesibilidad: Foco claro para navegación por teclado */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-[#6db4b6];
+  }
 }
