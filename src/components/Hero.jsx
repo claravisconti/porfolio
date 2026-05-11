@@ -6,16 +6,11 @@ import { useTranslation } from 'react-i18next';
 import hero from '../assets/videos/Hero.mp4';
 import heroMobile from '../assets/videos/HeroMobile.mp4';
 
-// Updated Image Imports
-import posterMobile from '../assets/images/Hero/HeroMobile.webp';
-
 export default function Hero() {
   const { t } = useTranslation();
-
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [loadVideo, setLoadVideo] = useState(false);
 
-  // Determine mobile immediately
+  // Determinar si es mobile inmediatamente para elegir el video correcto
   const isMobile = useMemo(() => {
     return window.matchMedia('(max-width: 768px)').matches;
   }, []);
@@ -26,20 +21,11 @@ export default function Hero() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-
-    // LÓGICA DE CARGA: 
-    // En Desktop cargamos el video rápido (0ms) porque no hay imagen.
-    // En Mobile esperamos (800ms) para que la imagen cargue primero.
-    const delay = isMobile ? 800 : 0;
-    const videoTimer = setTimeout(() => {
-      setLoadVideo(true);
-    }, delay);
-
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      clearTimeout(videoTimer);
     };
-  }, [hasScrolled, isMobile]);
+  }, [hasScrolled]);
 
   const videoSrc = isMobile ? heroMobile : hero;
 
@@ -53,43 +39,31 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/30 z-10" />
 
         {/* 
-            SOLO MOBILE: 
-            La imagen solo se renderiza si es Mobile.
+            VIDEO LAYER: 
+            Se renderiza directamente sin condiciones de carga.
+            Añadimos 'muted' y 'playsInline' para asegurar el autoPlay en todos los navegadores.
         */}
-        {isMobile && (
-          <img
-            src={posterMobile}
-            alt="Clara Visconti Artist"
-            className="w-full h-full object-cover absolute inset-0"
-            fetchpriority="high"
-            loading="eager"
-            decoding="async"
-          />
-        )}
-
-        {/* VIDEO LAYER */}
-        {loadVideo && (
-          <video
-            aria-hidden="true"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${loadVideo ? 'opacity-100' : 'opacity-0'
-              }`}
-          >
-            <source src={videoSrc} type="video/mp4" />
-          </video>
-        )}
+        <video
+          key={videoSrc} // Ayuda a React a cambiar el video si se redimensiona la pantalla
+          aria-hidden="true"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover absolute inset-0"
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
       </div>
 
       {/* CONTENT LAYER */}
       <div className="relative z-20 h-full flex flex-col justify-end items-center pb-20 px-6">
         <div
-          className={`flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center transition-all duration-1000 ease-out ${hasScrolled
+          className={`flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center transition-all duration-1000 ease-out ${
+            hasScrolled
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10 pointer-events-none'
-            }`}
+          }`}
         >
           <Link
             to="/portfolio"
