@@ -1,9 +1,8 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { getProjects } from '../data/projects'; // Ajusta la ruta
 import { useTranslation } from 'react-i18next';
 
-// Definimos las posiciones visuales de la grilla
 const gridLayout = [
   "md:col-start-1 md:row-start-1 md:row-end-5", 
   "md:col-start-1 md:row-start-5 md:row-end-9", 
@@ -18,20 +17,38 @@ const gridLayout = [
 export default function PortfolioPreview() {
   const { i18n, t } = useTranslation();
   
-  const realProjects = useMemo(() => {return getProjects()}, [i18n.language])
+  const realProjects = useMemo(() => { return getProjects() }, [i18n.language]);
   
-  // Tomamos 8 proyectos aleatorios para la preview
   const previewProjects = useMemo(() => {
     return realProjects.slice().sort(() => Math.random() - 0.5).slice(0, 8);
   }, [realProjects]);
 
-  // Función reutilizable para subir al inicio
-  const handleScrollToTop = () => {
-    window.scrollTo(0, 0);
+  // --- FUNCIÓN MEJORADA: SCROLL + TRACKING DE PROYECTO ---
+  const handleProjectClick = (projectTitle) => {
+    window.scrollTo(0, 0); // Sube al inicio
+
+    if (window.gtag) {
+      window.gtag('event', 'select_content', {
+        'content_type': 'Project',
+        'item_id': projectTitle // Guarda el nombre del proyecto clickeado
+      });
+    }
+  };
+
+  // --- TRACKING PARA EL BOTÓN "VER TODOS" ---
+  const handleSeeAllClick = () => {
+    window.scrollTo(0, 0); // Sube al inicio
+
+    if (window.gtag) {
+      window.gtag('event', 'click_cta', {
+        'cta_location': 'Portfolio_Preview',
+        'cta_destination': 'all_projects'
+      });
+    }
   };
 
   return (
-    <section className="bg-white w-full overflow-hidden">
+    <section className="bg-white w-full overflow-hidden" aria-label="Portfolio Preview">
       <div className="w-full">
         
         {/* Grilla principal */}
@@ -40,7 +57,7 @@ export default function PortfolioPreview() {
             <Link 
               to={`/portfolio/project/${project.slug}`}
               key={project.id || index} 
-              onClick={handleScrollToTop} // <-- Sube al inicio al entrar a un proyecto
+              onClick={() => handleProjectClick(project.title)} // <--- Cambiado aquí
               className={`relative overflow-hidden group cursor-pointer border-[0.5px] border-white/10 bg-gray-100 ${gridLayout[index]}`}
             >
               <img 
@@ -66,7 +83,7 @@ export default function PortfolioPreview() {
         <div className="py-12 md:py-20 flex justify-center bg-white w-full">
           <Link 
             to="/portfolio" 
-            onClick={handleScrollToTop} // <-- Sube al inicio al ir al portfolio general
+            onClick={handleSeeAllClick} // <--- Cambiado aquí
             className="flex items-center gap-4 md:gap-6 group px-6"
           >
             <span className="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-[#111] group-hover:text-accent transition-colors whitespace-nowrap">

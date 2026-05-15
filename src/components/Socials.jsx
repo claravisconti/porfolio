@@ -1,7 +1,17 @@
-import { FaBehance, FaLinkedin, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
+import { FaBehance, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { IoMailOutline } from 'react-icons/io5';
 
 export default function Socials() {
+
+    // Función genérica para trackear clics en redes sociales
+    const trackSocialClick = (platform) => {
+        if (window.gtag) {
+            window.gtag('event', 'click_social', {
+                'social_platform': platform
+            });
+        }
+    };
+
     return (
         <div className="flex gap-8 text-2xl items-center">
             <a
@@ -10,6 +20,7 @@ export default function Socials() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Chat de WhatsApp"
+                onClick={() => trackSocialClick('WhatsApp')} // <--- Tracking
             >
                 <FaWhatsapp size={22} />
             </a>
@@ -20,6 +31,7 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 className="hover:text-[#000000] transition-colors duration-300"
                 title="Enviar Email"
+                onClick={() => trackSocialClick('Email')} // <--- Tracking
             >
                 <IoMailOutline />
             </a>
@@ -30,18 +42,21 @@ export default function Socials() {
                 rel="noopener noreferrer"
                 className="hover:text-[#000000] transition-colors duration-300"
                 title="Behance"
+                onClick={() => trackSocialClick('Behance')} // <--- Tracking
             >
                 <FaBehance />
             </a>
-            <a href="https://www.linkedin.com/in/mariaclaravisconti" className="hover:text-[#000000] transition-colors duration-300" target="_blank"
-                rel="noopener noreferrer" title="LinkedinW">
 
+            <a
+                href="https://www.linkedin.com/in/mariaclaravisconti"
+                className="hover:text-[#000000] transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Linkedin"
+                onClick={() => trackSocialClick('LinkedIn')} // <--- Tracking
+            >
                 <FaLinkedin />
             </a>
-
-            {/* <a href="#" className="hover:text-[#00adb5] transition-colors duration-300" title="Facebook">
-              <FaFacebookF size={20} /> 
-            </a>  */}
         </div>
     );
 }

@@ -19,6 +19,14 @@ export default function FormSection() {
       'vtg61ipfhKbdmTdoX'
     )
       .then(() => {
+        // Notifica a Google Analytics que se completó el formulario con éxito
+        if (window.gtag) {
+          window.gtag('event', 'generate_lead', {
+            'event_category': 'Contact',
+            'event_label': 'Formulario de Contacto'
+          });
+        }
+
         setStatus('exito');
         form.current.reset();
         setTimeout(() => setStatus(''), 5000);

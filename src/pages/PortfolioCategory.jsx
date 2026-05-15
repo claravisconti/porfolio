@@ -12,7 +12,7 @@ export default function PortfolioCategory({ category }) {
   const [visibleCount, setVisibleCount] = useState(6);
   const [allFilteredProjects, setAllFilteredProjects] = useState([]);
   const [displayProjects, setDisplayProjects] = useState([]);
-  const [isLoading, setIsLoading] = useState(false); // Estado para controlar el retraso
+  const [isLoading, setIsLoading] = useState(false);
 
   const loaderRef = useRef(null);
 
@@ -27,22 +27,41 @@ export default function PortfolioCategory({ category }) {
     setDisplayProjects(allFilteredProjects.slice(0, visibleCount))
   }, [visibleCount, allFilteredProjects]);
 
+  // --- TRACKING PARA CLIC EN PROYECTOS DEL LISTADO ---
+  const handleProjectClick = (projectTitle) => {
+    if (window.gtag) {
+      window.gtag('event', 'select_content', {
+        'content_type': 'Project_Category_List',
+        'item_id': projectTitle,
+        'project_category': category
+      });
+    }
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const target = entries[0];
-        // Si llegamos al final, no estamos cargando ya, y hay más para mostrar
         if (target.isIntersecting && !isLoading && allFilteredProjects.length > visibleCount) {
-          setIsLoading(true); // Bloqueamos nuevas cargas y mostramos el indicador
+          setIsLoading(true);
 
-          // FORZAMOS EL RETRASO AQUÍ (800ms para que se note)
           setTimeout(() => {
-            setVisibleCount((prev) => prev + 6);
-            setIsLoading(false); // Liberamos la carga
+            const nextCount = visibleCount + 6;
+            
+            // --- TRACKING EN EL INFINITE SCROLL ---
+            if (window.gtag) {
+              window.gtag('event', 'infinite_scroll_load', {
+                'category_page': category,
+                'items_loaded_count': nextCount
+              });
+            }
+
+            setVisibleCount(nextCount);
+            setIsLoading(false);
           }, 500);
         }
       },
-      { rootMargin: "0px 0px 50px 0px" } // Se activa justo al llegar o un poco antes
+      { rootMargin: "0px 0px 50px 0px" }
     );
 
     if (loaderRef.current) observer.observe(loaderRef.current);
@@ -50,13 +69,12 @@ export default function PortfolioCategory({ category }) {
     return () => {
       if (loaderRef.current) observer.disconnect();
     };
-  }, [allFilteredProjects.length, visibleCount, isLoading]); // Importante incluir isLoading aquí
+  }, [allFilteredProjects.length, visibleCount, isLoading, category]);
 
   return (
     <div className="bg-white min-h-screen">
       <Banner title={category} image={Hero1} />
 
-      {/* CONTENEDOR BOXED */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="pt-12 pb-6">
           <PortfolioMenu />
@@ -68,6 +86,7 @@ export default function PortfolioCategory({ category }) {
             <Link
               to={`/portfolio/project/${project.slug}`}
               key={`${project.id}-${index}`}
+              onClick={() => handleProjectClick(project.title)} // <--- Tracking al hacer click
               className="group animate-fadeIn"
             >
               <div className="overflow-hidden bg-gray-100 aspect-square relative">
@@ -80,10 +99,7 @@ export default function PortfolioCategory({ category }) {
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center text-white p-6 text-center">
                   <p className="text-[10px] uppercase tracking-[0.3em] mb-2 text-gray-300">{project.category}</p>
-
-                  {/* Mantenemos h3: perfecto orden jerárquico */}
                   <h3 className="text-xl font-bold uppercase tracking-tight">{project.title}</h3>
-
                   <div className="w-8 h-[1px] bg-[#00adb5] mt-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 </div>
               </div>

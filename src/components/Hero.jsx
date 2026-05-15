@@ -18,6 +18,16 @@ export default function Hero() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasScrolled]);
 
+  // --- FUNCIÓN DE TRACKING PARA LOS BOTONES DEL HERO ---
+  const trackHeroClick = (destination) => {
+    if (window.gtag) {
+      window.gtag('event', 'click_cta', {
+        'cta_location': 'Hero',
+        'cta_destination': destination // 'portfolio' o 'about'
+      });
+    }
+  };
+
   // Rutas consistentes desde /public
   const videoSrc = isMobile ? "/videos/HeroMobile.mp4" : "/videos/Hero.mp4";
   const posterSrc = isMobile ? "/images/HeroMobile.webp" : "/images/Hero.webp";
@@ -28,7 +38,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/30 z-10" />
         <video
           key={videoSrc}
-          poster={posterSrc} // Ruta directa
+          poster={posterSrc}
           preload="auto"
           autoPlay
           loop
@@ -45,12 +55,23 @@ export default function Hero() {
         <div className={`flex flex-col sm:flex-row gap-4 w-full max-w-md sm:max-w-none justify-center transition-all duration-1000 ease-out ${
             hasScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
           }`}>
-          <Link to="/portfolio" className="px-12 py-5 bg-white text-black text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all text-center min-w-[200px]">
+          
+          <Link 
+            to="/portfolio" 
+            onClick={() => trackHeroClick('portfolio')} // <--- Tracking
+            className="px-12 py-5 bg-white text-black text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all text-center min-w-[200px]"
+          >
             {t('hero.see')}
           </Link>
-          <Link to="/about" className="px-12 py-5 border border-white/40 text-white text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-white hover:text-black transition-all text-center min-w-[200px]">
+          
+          <Link 
+            to="/about" 
+            onClick={() => trackHeroClick('about')} // <--- Tracking
+            className="px-12 py-5 border border-white/40 text-white text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-white hover:text-black transition-all text-center min-w-[200px]"
+          >
             {t('hero.about')}
           </Link>
+
         </div>
       </div>
     </section>
